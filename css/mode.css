@@ -1,0 +1,7 @@
+body {
+    /* Dark mode color toggle */
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    /*color: var(--md-typeset-a-color);*/
+    /*color: var(--md-primary-bg-color);*/
+}
