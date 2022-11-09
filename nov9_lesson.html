@@ -25,6 +25,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#object-oriented-programming">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -557,9 +560,45 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          November 9, 2022
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="nov9_lesson.html">
         November 9, 2022
       </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-oriented-programming">
+    Object Oriented Programming
+  </a>
+<nav aria-label="Object Oriented Programming" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#we-can-make-models-and-patterns-that-help-us-solve-problems">
+    We Can Make Models, and Patterns, that Help Us Solve Problems
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#favor-composition-over-inheritence">
+    Favor Composition over Inheritence
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#walk-through-lab-code">
+    Walk Through Lab Code
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -576,6 +615,36 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-oriented-programming">
+    Object Oriented Programming
+  </a>
+<nav aria-label="Object Oriented Programming" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#we-can-make-models-and-patterns-that-help-us-solve-problems">
+    We Can Make Models, and Patterns, that Help Us Solve Problems
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#favor-composition-over-inheritence">
+    Favor Composition over Inheritence
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#walk-through-lab-code">
+    Walk Through Lab Code
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -583,9 +652,32 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>November 9, 2022</h1>
+<h2 id="object-oriented-programming">Object Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permanent link">¶</a></h2>
+<ul>
+<li>It’s Just the Beginning, but WHY???</li>
+</ul>
+<h3 id="we-can-make-models-and-patterns-that-help-us-solve-problems">We Can Make Models, <strong>and Patterns</strong>, that Help Us Solve Problems<a class="headerlink" href="#we-can-make-models-and-patterns-that-help-us-solve-problems" title="Permanent link">¶</a></h3>
+<p><img alt="UML Model of a Room" src="images/room.png"/></p>
+<h3 id="favor-composition-over-inheritence">Favor Composition over Inheritence<a class="headerlink" href="#favor-composition-over-inheritence" title="Permanent link">¶</a></h3>
+<ul>
+<li>Wait, what’s <strong>Inheritance</strong>?
+<img alt="Inheritance in a Nutshell" src="images/feline.png"/></li>
+<li>OK, that makes sense, but what is <strong>Composition</strong>?
+<img alt="Composition in a Nutshell" src="images/composition.webp"/><ul>
+<li>But how can I favor composition?<ul>
+<li>One way is <strong>Interfaces</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="walk-through-lab-code">Walk Through Lab Code<a class="headerlink" href="#walk-through-lab-code" title="Permanent link">¶</a></h3>
+<p><a href="https://github.com/THartmanOfTheRedwoods/Java-Lab-010">Lab 10</a></p>
 <div class="mermaid">classDiagram
 class WeatherStation
+WeatherStation : -URL url
 WeatherStation : -List~Display~ displays
+WeatherStation : -Gson gson
 WeatherStation : -float temperature
 WeatherStation : -float humidity
 WeatherStation : -float pressure
