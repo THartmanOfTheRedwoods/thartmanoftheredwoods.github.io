@@ -1,0 +1,1981 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional.">
+      
+      
+        <meta name="author" content="Trevor Hartman">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Structured Query Language (SQL) - THartmanOfTheRedwoods Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/mode.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#structured-query-language-sql" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            THartmanOfTheRedwoods Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Structured Query Language (SQL)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../git/gitflow.html" class="md-tabs__link">
+        Git
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../java/format_specifiers.html" class="md-tabs__link">
+        Java
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../markdown-cheat-sheet.html" class="md-tabs__link">
+      Markdown
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tomcat/install.html" class="md-tabs__link">
+        Tomcat
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tux/os_command_map.html" class="md-tabs__link">
+        Tux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../vim/cheat-sheet.html" class="md-tabs__link">
+        Vim
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../virtualbox/win11install.html" class="md-tabs__link">
+        VirtualBox
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../windows/os_command_map.html" class="md-tabs__link">
+        Windows
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../hardware/cables.html" class="md-tabs__link">
+        Hardware
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../archive.html" class="md-tabs__link">
+        Class Notes
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
+
+    </a>
+    THartmanOfTheRedwoods Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/gitflow.html" class="md-nav__link">
+        Workflows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Java" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/format_specifiers.html" class="md-nav__link">
+        Format Specifiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/operators.html" class="md-nav__link">
+        Operators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/associativity.html" class="md-nav__link">
+        Operator Prcedence &amp; Associativity
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown-cheat-sheet.html" class="md-nav__link">
+        Markdown
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Tomcat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tomcat" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tomcat
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tomcat/install.html" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Tux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Tux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/os_command_map.html" class="md-nav__link">
+        Command Cheatsheet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/imagemagick.html" class="md-nav__link">
+        ImageMagick
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/pandoc.html" class="md-nav__link">
+        Pandoc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/parallel.html" class="md-nav__link">
+        Parallel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/tesseract.html" class="md-nav__link">
+        Tesseract
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Vim
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vim" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Vim
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vim/cheat-sheet.html" class="md-nav__link">
+        Cheatsheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          VirtualBox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="VirtualBox" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          VirtualBox
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtualbox/win11install.html" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Windows" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/os_command_map.html" class="md-nav__link">
+        Command Cheatsheet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9_2">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Network" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/arp.html" class="md-nav__link">
+        Arp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/nbtstat.html" class="md-nav__link">
+        Nbtstat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/netstat.html" class="md-nav__link">
+        Netstat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/ping.html" class="md-nav__link">
+        Ping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/ipconfig.html" class="md-nav__link">
+        Ipconfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/net.html" class="md-nav__link">
+        Net
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/nslookup.html" class="md-nav__link">
+        Nslookup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/tracert.html" class="md-nav__link">
+        Tracert
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Hardware
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hardware" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Hardware
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/cables.html" class="md-nav__link">
+        Cables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Class Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Class Notes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Class Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive.html" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_11_2">
+          CIS-50
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CIS-50" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          CIS-50
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_1.html" class="md-nav__link">
+        Database Systems
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structured-query-language-sql" class="md-nav__link">
+    Structured Query Language (SQL)
+  </a>
+  
+    <nav class="md-nav" aria-label="Structured Query Language (SQL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criteria-for-an-ideal-db-language-which-sql-is" class="md-nav__link">
+    Criteria for an ideal DB Language, which SQL is!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categories-of-sql" class="md-nav__link">
+    Categories of SQL
+  </a>
+  
+    <nav class="md-nav" aria-label="Categories of SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#queries-and-operations" class="md-nav__link">
+    Queries and Operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intro-to-data-types" class="md-nav__link">
+    Intro to Data Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro to Data Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-fundamental-types-of-data" class="md-nav__link">
+    3 Fundamental Types of Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieval-select-query" class="md-nav__link">
+    Retrieval (SELECT Query)
+  </a>
+  
+    <nav class="md-nav" aria-label="Retrieval (SELECT Query)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-terms" class="md-nav__link">
+    Basic Terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-structure" class="md-nav__link">
+    Basic Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-notes" class="md-nav__link">
+    Other Notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joining" class="md-nav__link">
+    Joining
+  </a>
+  
+    <nav class="md-nav" aria-label="Joining">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-terms_1" class="md-nav__link">
+    Basic Terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-structure_1" class="md-nav__link">
+    Basic Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort-searchrestriction-criteria" class="md-nav__link">
+    Sort, Search/Restriction Criteria
+  </a>
+  
+    <nav class="md-nav" aria-label="Sort, Search/Restriction Criteria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-terms_2" class="md-nav__link">
+    Basic Terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-structure_2" class="md-nav__link">
+    Basic Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregation" class="md-nav__link">
+    Aggregation
+  </a>
+  
+    <nav class="md-nav" aria-label="Aggregation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-terms_3" class="md-nav__link">
+    Basic Terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-structure_3" class="md-nav__link">
+    Basic Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subqueries-and-preprocessing" class="md-nav__link">
+    Subqueries and Preprocessing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-manipulation-functions" class="md-nav__link">
+    Data Manipulation Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-query-principles" class="md-nav__link">
+    Key Query Principles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+  <h1>Structured Query Language (SQL)</h1>
+
+<h2 id="structured-query-language-sql">Structured Query Language (SQL)<a class="headerlink" href="#structured-query-language-sql" title="Permanent link">&para;</a></h2>
+<h3 id="criteria-for-an-ideal-db-language-which-sql-is">Criteria for an <strong>ideal</strong> DB Language, which SQL is!<a class="headerlink" href="#criteria-for-an-ideal-db-language-which-sql-is" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create database and table structures, perform basic data management chores (CRUD)</li>
+<li>Perform complex queries designed to transform raw data into useful information.</li>
+<li>Require minimal user effort</li>
+<li>Easy to learn<ul>
+<li>Fewer than 100 words in command set</li>
+<li>Declarative, NOT Procedural (i.e. you just declare what you want in SQL and the RDBMS figures out how to get/do your command).</li>
+</ul>
+</li>
+<li>Portable<ul>
+<li>ANSI/ISO SQL standard exist, so only minor dialect differences between competing DB Software manufacturers.</li>
+</ul>
+</li>
+</ul>
+<h3 id="categories-of-sql">Categories of SQL<a class="headerlink" href="#categories-of-sql" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Data Manipulation Language (DML): Manipulates data<ul>
+<li>INSERT, SELECT, UPDATE, DELETE
+<img alt="Data Manipulation Language" src="chap07_01.png" /></li>
+</ul>
+</li>
+<li>Data Definition Language (DDL): Creates or alters schema and structure<ul>
+<li>CREATE, DROP, ALTER, TRUNCATE, RENAME</li>
+</ul>
+</li>
+<li>Transaction Control Language (TCL): Manages multiple DML commands from Bus. Rules in <strong>transactions</strong>.<ul>
+<li>A <strong>transaction</strong> is a logical unit of work of set of DML commands.</li>
+<li>COMMIT, ROLLBACK, SAVEPOINT
+<img alt="Data Definition &amp; Transaction Control Language" src="chap07_02.png" /></li>
+</ul>
+</li>
+<li>Data Control Language (DCL): Access Control, security and permissions.<ul>
+<li>GRANT, REVOKE
+<img alt="Data Control Language" src="chap07_03.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="queries-and-operations">Queries and Operations<a class="headerlink" href="#queries-and-operations" title="Permanent link">&para;</a></h4>
+<details class="important sql note" open="open">
+<summary>Important</summary>
+<p>Most SQL data manipulation commands operate over an entire table/relation, which is why SQL commands are said to be <strong>set-oriented</strong> commands. This is important because it allows users to treat SQL commands like building blocks. Once you know the building blocks, you can put them together to declare more complex sets you want.</p>
+</details>
+<h3 id="intro-to-data-types">Intro to Data Types<a class="headerlink" href="#intro-to-data-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Data Type is basically the <strong>KIND</strong> of data that an attribute represents.</li>
+<li>Different RDBMs have similar and different data types, but all DB types fall under 3 categories:</li>
+</ul>
+<h4 id="3-fundamental-types-of-data">3 Fundamental Types of Data<a class="headerlink" href="#3-fundamental-types-of-data" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Character data: Any printable characters such as alphabetic values, digits, punctuation, and special characters.</li>
+<li>Numeric data: digits, such that the data has a specific numeric value.</li>
+<li>Date data: DATES and Times ;-)</li>
+</ul>
+<h3 id="retrieval-select-query">Retrieval (SELECT Query)<a class="headerlink" href="#retrieval-select-query" title="Permanent link">&para;</a></h3>
+<h4 id="basic-terms">Basic Terms<a class="headerlink" href="#basic-terms" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SELECT: specifies the attributes to be returned by the query</li>
+<li>FROM: specifies the table(s) from which the data will be retrieved</li>
+<li>WHERE: filters the rows of data based on provided criteria</li>
+<li>GROUP BY: groups the rows of data into collections based on sharing the same values in one or more attributes</li>
+<li>HAVING: filters the groups formed in the GROUP BY clause based on provided criteria</li>
+<li>ORDER BY: sorts the final query result rows in ascending or descending order based on the values of one or more attributes.</li>
+</ul>
+<h4 id="basic-structure">Basic Structure<a class="headerlink" href="#basic-structure" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    SELECT [wildcard | column-list] FROM [table-list];
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Column-list: Relational projection of attributes to return.</li>
+<li>Table-list: Relations to be joined in query. </li>
+<li>Wildcard: &ldquo;*&rdquo; characters used to designate ALL columns in the relations.</li>
+</ul>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>    # Get all rows and columns from product table.
+    SELECT * FROM Product;
+
+    # Get all rows but only columns P_CODE, P_DESCRIPT, P_PRICE, and P_QOH  from product table.
+    SELECT P_CODE, P_DESCRIPT, P_PRICE, P_QOH FROM Product;
+
+    # Get all rows but only columns P_CODE, P_DESCRIPT, P_PRICE, and P_QOH  from product table.
+    # Alias/Rename the resulting columns in the relation to: Id, Description, Price, and Qty.
+    SELECT P_CODE AS Id, P_DESCRIPT AS Description, P_PRICE AS Price, P_QOH AS Qty FROM Product;
+
+    # Get all rows but only columns P_DESCRIPT, P_QOH, P_PRICE, and derived/calculated column INV_VAL  from product table.
+    SELECT P_DESCRIPT, P_QOH, P_PRICE, P_QOH * P_PRICE AS INV_VAL FROM PRODUCT;
+
+    # Get a list of products and the warranty cutoff date for products
+    # Swap out Date function as needed based on RDBMS Access: DATE(), SQL Server: GETDATE(), MySQL: CURDATE(), Oracle: SYSDATE 
+    SELECT P_CODE, P_INDATE, SYSDATE – 90 AS CUTOFF FROM PRODUCT;
+
+    # Select all the UNIQUE vendors that have products (i.e. DISTINCT removes repeats).
+    SELECT DISTINCT V_CODE FROM PRODUCT;
+</code></pre></div></td></tr></table></div>
+<h4 id="other-notes">Other Notes<a class="headerlink" href="#other-notes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>When using Arithmetic Operators in derived/calculated columns PEMDAS applies.</li>
+<li>Dates are typically stored as a number in RDBMs as the number of days since a specific date in history.<ul>
+<li>Thus Date arithmetic is + or - the number of days.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="SQL Arithmetic Operators" src="chap07_04.png" /></p>
+<h3 id="joining">Joining<a class="headerlink" href="#joining" title="Permanent link">&para;</a></h3>
+<h4 id="basic-terms_1">Basic Terms<a class="headerlink" href="#basic-terms_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>FROM: specifies the table(s) from which the data will be retrieved. Tables joined by PK/FK pairs or a auto selected common attribute..</li>
+<li>NATURAL JOIN: returns all rows with matching values in the matching columns and eliminates duplicate columns.<ul>
+<li>Joins on attributes with identical names and data-types</li>
+<li>Joins only common values in chosen attribute(s)</li>
+<li>Eliminates duplicate common attribute</li>
+<li>If no common attributes, returns <strong>relational product</strong> of 2 tables (i.e. each row from table1 duplicated with each row of table2).</li>
+<li>Usage is discouraged becuase table changes can affect common attribute joins</li>
+</ul>
+</li>
+<li>JOIN USING: returns only the rows with matching values in the column indicated in the USING clause.<ul>
+<li>The column must exist in both tables.</li>
+<li>Eliminates duplicate common attribute</li>
+<li>Only in MySQL and Oracle</li>
+<li>Oracle doesn&rsquo;t allow usage of table qualifiers can&rsquo;t be used with the common attribute.</li>
+</ul>
+</li>
+<li>JOIN ON: joins tables with no common attribute based on equality condition.<ul>
+<li>Attributes equality condition must have the same data-type.</li>
+<li>Preferred Join method because its the most widely supported.</li>
+<li>Does NOT eliminate duplicate common attribute(s)</li>
+<li>table qualifier must be used to referr to duplicate common attributes.</li>
+</ul>
+</li>
+<li>OUTER JOINS:<ul>
+<li>LEFT: returns not only the rows matching the join condition, but also the rows in the left table with unmatched values in the right table.</li>
+<li>RIGHT: returns not only the rows matching the join condition, but also the rows in the right table with unmatched values in the left table.</li>
+<li>FULL: returns not only the rows matching the join condition, but also the rows with unmatched values in the table on eithr side.<ul>
+<li>Only supported by Oracle and SqlServer</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CROSS JOIN: Cartesian/Relational Product, joins all rows from table1 to all rows in table2<ul>
+<li>Not supported in Access</li>
+</ul>
+</li>
+<li>TABLE ALIAS: A way of renaming a table in a query for 3 common purposes:<ul>
+<li>Shortening names</li>
+<li>Improving query human readability.</li>
+<li>Recursive Joins (table joined to itself)</li>
+</ul>
+</li>
+</ul>
+<h4 id="basic-structure_1">Basic Structure<a class="headerlink" href="#basic-structure_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>NATURAL JOIN: SELECT [column-list] FROM [table1] NATURAL JOIN [table2]</li>
+<li>JOIN USING: SELECT [column-list] FROM [table1] JOIN [table2] USING ([common-column])</li>
+<li>JOIN ON: SELECT [column-list] FROM [table1] JOIN [table2] ON [join-condition]</li>
+<li>LEFT OUTER JOIN: SELECT [column-list] FROM [table1] LEFT OUTER JOIN [table2] ON [join-condition]</li>
+<li>RIGHT OUTER JOIN: SELECT [column-list] FROM [table1] RIGHT OUTER JOIN [table2] ON [join-condition]</li>
+<li>FULL OUTER JOIN: SELECT [column-list] FROM [table1] FULL OUTER JOIN [table2] ON [join-condition]</li>
+<li>CROSS JOIN: SELECT [column-list] FROM [table1] CROSS JOIN [table2]</li>
+</ul>
+<h4 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>    # Natural join to get all customers and their invoices joined on some auto selected common attribute.
+    SELECT CUS_CODE, CUS_LNAME, INV_NUMBER, INV_DATE FROM CUSTOMER NATURAL JOIN INVOICE;
+
+    # Join Using to get product to vendor relation USING V_CODE.
+    SELECT P_CODE, P_DESCRIPT, V_CODE, V_NAME, V_AREACODE, V_PHONE FROM PRODUCT JOIN VENDOR USING (V_CODE);
+
+    # Joins Invoice and Line tables utilizing ON equality clause. 
+    SELECT INVOICE.INV_NUMBER, PRODUCT.P_CODE, P_DESCRIPT, LINE_UNITS, LINE_PRICE FROM INVOICE JOIN LINE ON INVOICE.INV_NUMBER = LINE.INV_NUMBER JOIN PRODUCT ON LINE.P_CODE = PRODUCT.P_CODE;
+
+    # Demonstrating using table qualifiers to project duplicate common attributes.
+    SELECT P_CODE, VENDOR.V_CODE, V_NAME FROM PRODUCT JOIN VENDOR ON PRODUCT.V_CODE = VENDOR.V_CODE;
+
+    # Result includes all product rows without matching vendors as well as all vendor rows without matching products
+    SELECT P_CODE, VENDOR.V_CODE, V_NAME FROM VENDOR FULL JOIN PRODUCT ON VENDOR. V_CODE = PRODUCT.V_CODE;
+
+    # Combines all invoices with all invoice lines.
+    SELECT * FROM INVOICE CROSS JOIN LINE;
+
+    # Example of a table alias to handle a recursive joining an employee to their manager
+    SELECT E.EMP_NUM, E.EMP_LNAME, E.EMP_MGR, M.EMP_LNAME FROM EMP E JOIN EMP M ON E.EMP_MGR = M.EMP_NUM;
+</code></pre></div></td></tr></table></div>
+<h3 id="sort-searchrestriction-criteria">Sort, Search/Restriction Criteria<a class="headerlink" href="#sort-searchrestriction-criteria" title="Permanent link">&para;</a></h3>
+<h4 id="basic-terms_2">Basic Terms<a class="headerlink" href="#basic-terms_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ORDER BY: Sorts result rows by list of columns in order from first to last in list.<ul>
+<li>NULLS in order by column list results either come first or last depending on the RDBMS</li>
+<li>Oracle allows ordering NULLS with <strong>ORDER BY column DESC NULLS LAST;</strong> or <strong>NULLS FIRST</strong></li>
+</ul>
+</li>
+<li>WHERE: Adds conditional restrictions to SELECT or search criteria allowing limits to rows in query results.<ul>
+<li><img alt="Comparison Operators in Where clause" src="chap07_05.png" /><ul>
+<li>Comparison Operators can be used on <strong>character</strong> data to compare alphebetically left-to-right.</li>
+<li>Numbers or Dates stored incorrectly as character data can produce anomalies when comparison operators are used.</li>
+</ul>
+</li>
+<li>Logical Operators (AND, OR, and NOT): Allow to test multiple conditions in WHERE condition list<ul>
+<li>AND: Used in WHERE or HAVING clause, and all conditions must be true.</li>
+<li>OR: Used in WHERE or HAVING clause, and any of the conditions must be true.</li>
+<li>NOT: negates result of other conditions, turns TRUE to FALSE and vice versa</li>
+<li>Logical operators can be combined, but must be organized with parenthesis.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Old Syle Joins: Joins that have a comma separated list of tables in the FROM clause and the join conditions in the WHERE clause.<ul>
+<li>No longer recommended for 2 major reasons<ul>
+<li>Splits joins between FROM and WHERE clauses making them less human readable.</li>
+<li>Susceptable to undetected errors because RDBMS can&rsquo;t determine if JOIN clauses actually exist syntactically.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Most RDBMS search criteria are case sensitive, so its a good idea to wrap column with UPPER() functions before performing comparisons in the following Special Operators.</p>
+</details>
+<ul>
+<li>Special Operators:<ul>
+<li>BETWEEN: Used to check if value is in a range (Always list LOW test value first to avoid Empty results).</li>
+<li>IN: Used to check if value is in a list.<ul>
+<li>Used heavily in <strong>sub-queries</strong> as a subquery can return the list of things to compare to.</li>
+</ul>
+</li>
+<li>LIKE: Used to match a character pattern<ul>
+<li>Like can use multiple wild-cards in its matches.</li>
+<li>&rsquo;%&rsquo; is a wild-card strings to match anything before, between, or after its appearance.</li>
+<li>&lsquo;_&rsquo; is a wild-card to match just a single character wherever it appears.</li>
+<li>Access uses &lsquo;*&rsquo; and &lsquo;?&rsquo; instead of &lsquo;%&rsquo; and &lsquo;_&rsquo;</li>
+</ul>
+</li>
+<li>IS NULL: Used to detect NULL values specifically.<ul>
+<li>This operator is needed because using the = operator to compare to NULL is undefined, meaning it will always be false, thus yeilding empty results..</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="basic-structure_2">Basic Structure<a class="headerlink" href="#basic-structure_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ORDER By: SELECT [column-list] FROM [table-list] ORDER BY [column-list ASC | DESC];</li>
+<li>WHERE: SELECT [columnlist] FROM [tablelist] WHERE [conditionlist] ORDER BY [columnlist ASC | DESC];</li>
+<li>BETWEEN: SELECT [columnlist] FROM [tablelist] WHERE [column] (NOT) BETWEEN [min value] AND [max value];</li>
+<li>IN: SELECT [columnlist] FROM [tablelist] WHERE [column] (NOT) IN ( [comma-sep-value-list] );</li>
+<li>LIKE: SELECT [columnlist] FROM [tablelist] WHERE UPPER( [column] ) (NOT) LIKE [&lsquo;pattern to match&rsquo;];</li>
+<li>IS NULL: SELECT [columnlist] FROM [tablelist] WHERE [column] IS (NOT) NULL;</li>
+</ul>
+<h4 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code>    # Get list of products sorted by Price from High to Low.
+    SELECT P_CODE, P_DESCRIPT, P_QOH, P_PRICE
+      FROM PRODUCT ORDER BY P_PRICE DESC;
+
+    # Cascading order sequence lname, fname, then middle initial
+    SELECT EMP_LNAME, EMP_FNAME, EMP_INITIAL, EMP_AREACODE, EMP_PHONE
+      FROM EMPLOYEE
+    ORDER BY EMP_LNAME, EMP_FNAME, EMP_INITIAL;
+
+    # Order by with derived column/attribute
+    SELECT P_CODE, P_DESCRIPT, V_CODE, P_PRICE * P_QOH AS TOTAL
+      FROM PRODUCT
+    ORDER BY V_CODE, TOTAL DESC;
+
+    # Select product info for all vendors except 21344
+    SELECT P_DESCRIPT, P_QOH, P_PRICE, V_CODE FROM PRODUCT WHERE V_CODE &lt;&gt; 21344;
+
+    # Date Query MSSQL
+    SELECT P_DESCRIPT, P_QOH, P_MIN, P_PRICE, P_INDATE FROM PRODUCT WHERE P_INDATE &gt;= &#39;20-Jan-2018&#39;;
+
+    # Date Query MySQL
+    SELECT P_DESCRIPT, P_QOH, P_MIN, P_PRICE, P_INDATE FROM PRODUCT WHERE P_INDATE &gt;= &#39;2018-01-21&#39;;
+
+    # Date Query Access
+    SELECT P_DESCRIPT, P_QOH, P_MIN, P_PRICE, P_INDATE FROM PRODUCT WHERE P_INDATE &gt;= #20-Jan-2018#;
+
+    # Get all the products from Vendor 25595 and 24288 that are over $100
+    SELECT P_DESCRIPT, P_PRICE, V_CODE
+      FROM PRODUCT WHERE (V_CODE = 25595 OR V_CODE = 24288) AND P_PRICE &gt; 100;
+    # Or with IN operator
+    SELECT * FROM PRODUCT WHERE V_CODE IN (&#39;25595&#39;, &#39;24288&#39;) AND P_PRICE &gt; 100;
+
+    # Get vendors with a contact where the last name contains OS as the 2nd and 3rd characters.
+    SELECT V_NAME, V_CONTACT, V_AREACODE, V_PHONE FROM VENDOR WHERE UPPER(V_CONTACT) LIKE &#39;_OS%&#39;;
+
+    # Get all products that don&#39;t have a vendor (i.e. NULL vendor).
+    SELECT P_CODE, P_DESCRIPT, V_CODE FROM PRODUCT WHERE V_CODE IS NULL;
+</code></pre></div></td></tr></table></div>
+<h3 id="aggregation">Aggregation<a class="headerlink" href="#aggregation" title="Permanent link">&para;</a></h3>
+<p><img alt="Aggregate Functions" src="chap07_06.png" /></p>
+<h4 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>COUNT typically doesn&rsquo;t count NULLs, so you&rsquo;ll want COUNT(*) if you want a row count.</li>
+<li>COUNT can be combined with DISTINCT to only count unique values e.g. <code>SELECT COUNT(DISTINCT V_CODE) AS CNT FROM PRODUCT;</code></li>
+<li>MAX and MIN are great for getting oldest or newest dates</li>
+</ul>
+<h4 id="basic-terms_3">Basic Terms<a class="headerlink" href="#basic-terms_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>GROUP BY: Groups rows into smaller collections by a column list<ul>
+<li>Treats all NULLs as if they are the same when grouping.</li>
+</ul>
+</li>
+</ul>
+<h4 id="basic-structure_3">Basic Structure<a class="headerlink" href="#basic-structure_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>GROUP BY: SELECT [columnlist] FROM [tablelist] WHERE [conditionlist] GROUP BY [columnlist] HAVING [group conditionlist] ORDER BY [columnlist ASC | DESC]</li>
+</ul>
+<h4 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>    # Get a list of all unique vendors you sell products from
+    SELECT COUNT(DISTINCT V_CODE) AS &quot;COUNT DISTINCT&quot; FROM PRODUCT;
+
+    # Get the highest and lowest prices in the product table
+    SELECT MAX(P_PRICE) AS MAXPRICE, MIN(P_PRICE) AS MINPRICE FROM PRODUCT;
+
+    # Get Total still owed by customers
+    SELECT SUM(CUS_BALANCE) AS TOTBALANCE FROM CUSTOMER;
+
+    # Get the average price of products in the product table
+    SELECT AVG(P_PRICE) AS AVGPRICE FROM PRODUCT;
+
+    # Get average price of products by vendor
+    SELECT V_CODE, AVG(P_PRICE) AS AVGPRICE FROM PRODUCT GROUP BY V_CODE;
+
+    # Get a count of products and averagre prices for each vendor
+    SELECT V_CODE, V_NAME, COUNT(P_CODE) AS NUMPROD, AVG(P_PRICE) AS AVGPRICE
+      FROM PRODUCT JOIN VENDOR ON PRODUCT.V_CODE = VENDOR.V_CODE
+    GROUP BY V_CODE, V_NAME ORDER BY V_NAME;
+</code></pre></div></td></tr></table></div>
+<h3 id="subqueries-and-preprocessing">Subqueries and Preprocessing<a class="headerlink" href="#subqueries-and-preprocessing" title="Permanent link">&para;</a></h3>
+<h3 id="data-manipulation-functions">Data Manipulation Functions<a class="headerlink" href="#data-manipulation-functions" title="Permanent link">&para;</a></h3>
+<h3 id="key-query-principles">Key Query Principles<a class="headerlink" href="#key-query-principles" title="Permanent link">&para;</a></h3>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <!-- Footer -->
+<footer class="md-footer">
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and theme information -->
+<div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ©2022 THartmanOfTheRedwoods Wiki, All rights reserved.
+    </div>
+  
+  
+    Made by
+    <a
+      href="https://github.com/viable-hartman/"
+      target="_blank" rel="noopener"
+    >
+      Trevor Hartman
+    </a>
+  
+</div>
+
+      <!-- Social links -->
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/THartmanOfTheRedwoods" target="_blank" rel="noopener" title="Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="mailto:trevor-hartman@redwoods.edu" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": "1.0.0"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
