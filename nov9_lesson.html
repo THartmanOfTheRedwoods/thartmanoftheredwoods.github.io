@@ -8,16 +8,27 @@
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
 <link href="assets/images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
 <title>Object Oriented Programming - THartmanOfTheRedwoods Wiki</title>
-<link href="assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
 <link href="assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
 <link href="css/mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-</head>
+<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="red" data-md-color-primary="red" data-md-color-scheme="slate" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -469,6 +480,26 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" id="__nav_11_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_3">
+          CIS-18
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CIS-18" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_3">
+<span class="md-nav__icon md-icon"></span>
+          CIS-18
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="CIS-18/sprint.html">
+        Sprint Planning
+      </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -523,13 +554,13 @@
 <li>It’s Just the Beginning, but WHY???</li>
 </ul>
 <h3 id="we-can-make-models-and-patterns-that-help-us-solve-problems">We Can Make Models, <strong>and Patterns</strong>, that Help Us Solve Problems<a class="headerlink" href="#we-can-make-models-and-patterns-that-help-us-solve-problems" title="Permanent link">¶</a></h3>
-<p><img alt="UML Model of a Room" src="images/room.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/room.png"><img alt="UML Model of a Room" src="images/room.png"/></a></p>
 <h3 id="favor-composition-over-inheritence">Favor Composition over Inheritence<a class="headerlink" href="#favor-composition-over-inheritence" title="Permanent link">¶</a></h3>
 <ul>
 <li>Wait, what’s <strong>Inheritance</strong>?
-<img alt="Inheritance in a Nutshell" src="images/feline.png"/></li>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/feline.png"><img alt="Inheritance in a Nutshell" src="images/feline.png"/></a></li>
 <li>OK, that makes sense, but what is <strong>Composition</strong>?
-<img alt="Composition in a Nutshell" src="images/composition.webp"/><ul>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/composition.webp"><img alt="Composition in a Nutshell" src="images/composition.webp"/></a><ul>
 <li>But how can I favor composition?<ul>
 <li>One way is <strong>Interfaces</strong></li>
 </ul>
@@ -626,9 +657,9 @@ I_Display --* WeatherStation
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": ".", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": "1.0.0"}</script>
-<script src="assets/javascripts/bundle.5a2dcb6a.min.js"></script>
-<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({
+<script id="__config" type="application/json">{"base": ".", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+<script src="assets/javascripts/bundle.5cf534bf.min.js"></script>
+<script src="https://unpkg.com/mermaid@9.2.1/dist/mermaid.min.js"></script><script>mermaid.initialize({
     theme: (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'
-});</script></body>
+});</script><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

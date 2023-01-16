@@ -1,2317 +1,1279 @@
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-        <meta name="description" content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional.">
-      
-      
-        <meta name="author" content="Trevor Hartman">
-      
-      
-      <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
-    
-    
-      
-        <title>Cheatsheet - THartmanOfTheRedwoods Wiki</title>
-      
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
-      
-      
+<!DOCTYPE html>
 
-    
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../css/mode.css">
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
-  
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#vim-cheatsheet" class="md-skip">
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
+<meta content="Trevor Hartman" name="author"/>
+<link href="../tux/tesseract.html" rel="prev"/>
+<link href="../virtualbox/win11install.html" rel="next"/>
+<link href="../assets/images/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
+<title>Cheatsheet - THartmanOfTheRedwoods Wiki</title>
+<link href="../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
+<link href="../css/mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="red" data-md-color-primary="red" data-md-color-scheme="slate" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#vim-cheatsheet">
           Skip to content
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-      <div data-md-component="outdated" hidden>
-        
-      </div>
-    
-    
-      
-
-  
-
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-component="outdated" hidden="">
+</div>
 <header class="md-header md-header--lifted" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
-      
-  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             THartmanOfTheRedwoods Wiki
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               Cheatsheet
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-      <form class="md-header__option" data-md-component="palette">
-        
-          
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-            </label>
-          
-        
-          
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
-          
-        
-      </form>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="red" data-md-color-media="" data-md-color-primary="red" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<ol class="md-search-result__list"></ol>
 </div>
-    
-    
-  </nav>
-  
-    
-      
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../index.html" class="md-tabs__link">
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../index.html">
       Home
     </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../git/gitflow.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../git/gitflow.html">
         Git
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../java/format_specifiers.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../java/format_specifiers.html">
         Java
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../markdown-cheat-sheet.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../markdown-cheat-sheet.html">
       Markdown
     </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../tomcat/install.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../tomcat/install.html">
         Tomcat
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../tux/os_command_map.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../tux/os_command_map.html">
         Tux
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-    
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="cheat-sheet.html" class="md-tabs__link md-tabs__link--active">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="cheat-sheet.html">
         Vim
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../virtualbox/win11install.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../virtualbox/win11install.html">
         VirtualBox
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../windows/os_command_map.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../windows/os_command_map.html">
         Windows
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../hardware/cables.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../hardware/cables.html">
         Hardware
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../archive.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../archive.html">
         Class Notes
       </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
+</li>
+</ul>
+</div>
 </nav>
-    
-  
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
-      
-  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
-
-    </a>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
+</a>
     THartmanOfTheRedwoods Wiki
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../index.html">
         Home
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2">
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
           Git
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Git" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Git" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
           Git
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../git/gitflow.html" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git/gitflow.html">
         Workflows
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
           Java
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Java" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Java" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
           Java
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../java/format_specifiers.html" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/format_specifiers.html">
         Format Specifiers
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../java/operators.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/operators.html">
         Operators
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../java/associativity.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/associativity.html">
         Operator Prcedence &amp; Associativity
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../markdown-cheat-sheet.html" class="md-nav__link">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../markdown-cheat-sheet.html">
         Markdown
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5">
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
           Tomcat
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Tomcat" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tomcat" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
           Tomcat
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tomcat/install.html" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tomcat/install.html">
         Install
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_6">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
           Tux
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Tux" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tux" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
           Tux
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tux/os_command_map.html" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/os_command_map.html">
         Command Cheatsheet
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tux/imagemagick.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/imagemagick.html">
         ImageMagick
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tux/pandoc.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/pandoc.html">
         Pandoc
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tux/parallel.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/parallel.html">
         Parallel
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tux/tesseract.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/tesseract.html">
         Tesseract
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_7">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
           Vim
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Vim" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Vim" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
           Vim
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
           Cheatsheet
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="cheat-sheet.html" class="md-nav__link md-nav__link--active">
+</label>
+<a class="md-nav__link md-nav__link--active" href="cheat-sheet.html">
         Cheatsheet
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Sub-Menu
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#vim-cheatsheet" class="md-nav__link">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim-cheatsheet">
     Vim Cheatsheet
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#comment" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comment">
     Comment
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#help" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#help">
     Help
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#starting-up" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting-up">
     Starting Up
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#modes" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modes">
     Modes
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-help" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-help">
     Getting Help
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#fundamentals" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fundamentals">
     Fundamentals
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#moving-through-text" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#moving-through-text">
     Moving through text
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#jumps-moving-through-text-and-files" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jumps-moving-through-text-and-files">
     Jumps (Moving through text and files...)
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#modify-jump-to-file" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modify-jump-to-file">
     Modify Jump to File
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#changes-moving-through-them" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changes-moving-through-them">
     Changes (Moving through them...)
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#searching" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#searching">
     Searching
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#substitution" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#substitution">
     Substitution
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#special-characters-in-substitution-command-replacement-strings" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#special-characters-in-substitution-command-replacement-strings">
     Special Characters in Substitution Command Replacement Strings
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#editing-in-replace-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-in-replace-mode">
     Editing in Replace Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mark-text" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mark-text">
     Mark Text
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#automatic-marks" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-marks">
     Automatic Marks
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#repeatable-and-reversible-actions" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#repeatable-and-reversible-actions">
     Repeatable and Reversible Actions
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#run-commands-in-the-shell" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-commands-in-the-shell">
     Run Commands in the Shell
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-files" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-files">
     Working with Files
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#write-changes-from-a-buffer-to-a-file" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#write-changes-from-a-buffer-to-a-file">
     Write Changes from a Buffer to a File
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#manipulate-file-buffers" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manipulate-file-buffers">
     Manipulate File Buffers
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-hidden-files" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#managing-hidden-files">
     Managing Hidden Files
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-the-filesystem" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-filesystem">
     Working with the Filesystem
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#split-windows" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#split-windows">
     Split Windows
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tabs" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tabs">
     Tabs
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-to-normal-mode-from-insert-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#switch-to-normal-mode-from-insert-mode">
     Switch to Normal Mode from Insert Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-to-insert-normal-mode-from-insert-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#switch-to-insert-normal-mode-from-insert-mode">
     Switch to Insert-Normal Mode from Insert Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-to-visual-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#switch-to-visual-mode">
     Switch to Visual Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#selection-in-visual-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selection-in-visual-mode">
     Selection in Visual Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#using-a-visual-operator" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-a-visual-operator">
     Using a Visual Operator
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#delimited-text-objects-begin-and-end-with-matching-symbols" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#delimited-text-objects-begin-and-end-with-matching-symbols">
     Delimited Text Objects (Begin and end with matching symbols.
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#bounded-text-objects-defined-by-boundaries" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bounded-text-objects-defined-by-boundaries">
     Bounded Text Objects (Defined by boundaries.)
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#command-line-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line-mode">
     Command Line Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#command-line-window" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line-window">
     Command Line Window
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operators">
     Operators
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#indentation" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#indentation">
     Indentation
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#editing" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing">
     Editing
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#deleting-c-instead-of-d-to-enter-insert-after-the-edit" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deleting-c-instead-of-d-to-enter-insert-after-the-edit">
     Deleting (c instead of d to enter insert after the edit).
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#editing-in-insert-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-in-insert-mode">
     Editing In Insert Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-expression-register" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-expression-register">
     Using the Expression Register
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#copying-cutting-and-pasting-yanking-deleting-and-putting" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#copying-cutting-and-pasting-yanking-deleting-and-putting">
     Copying, Cutting, and Pasting (Yanking, Deleting, and Putting)
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#default-registers" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-registers">
     Default Registers
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#addition" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#addition">
     Addition
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#compound-commands" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compound-commands">
     Compound Commands
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#screen-redraw" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#screen-redraw">
     Screen Redraw
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ex-commands" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ex-commands">
     Ex Commands
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#global-commands" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#global-commands">
     Global Commands
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#macros" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#macros">
     Macros
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vim-script" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim-script">
     Vim Script
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tags" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tags">
     Tags
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#quickfix-list" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quickfix-list">
     Quickfix List
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#location-list" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#location-list">
     Location List
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#grepping-externally" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grepping-externally">
     Grepping Externally
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletion" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#autocompletion">
     Autocompletion
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletion-method-table" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#autocompletion-method-table">
     Autocompletion Method Table
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletion-pop-up-menu" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#autocompletion-pop-up-menu">
     Autocompletion Pop-up Menu
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletion-source-material" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#autocompletion-source-material">
     Autocompletion Source Material
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#spelling" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spelling">
     Spelling
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#programming" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming">
     Programming
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---find--replace-across-many-files" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---find--replace-across-many-files">
     Recipes - Find &amp; Replace Across Many Files
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---clear-a-register" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---clear-a-register">
     Recipes - Clear a Register
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---sort-a-list" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---sort-a-list">
     Recipes - Sort a List
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---use-tags" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---use-tags">
     Recipes - Use Tags
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---use-ack-instead-of-grep-for-grep" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---use-ack-instead-of-grep-for-grep">
     Recipes - Use ack instead of grep for :grep
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---add-a-local-dictionary-for-project-jargon-spellings" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---add-a-local-dictionary-for-project-jargon-spellings">
     Recipes - Add a "local" Dictionary for Project Jargon Spellings
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---change-vim-on-the-fly" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---change-vim-on-the-fly">
     Recipes - Change Vim on the Fly
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---customize-with-vim-files" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---customize-with-vim-files">
     Recipes - Customize with .vim Files
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---filetype-specific-customization" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---filetype-specific-customization">
     Recipes - Filetype Specific Customization
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reciples---change-encoding-eg-fix-excel-exports-to-csv" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reciples---change-encoding-eg-fix-excel-exports-to-csv">
     Reciples - Change Encoding (e.g. fix Excel exports to csv)
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---paste-tablecolumn-data-from-webclipboard" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---paste-tablecolumn-data-from-webclipboard">
     Recipes - Paste Table/Column Data from Web/Clipboard
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---search-for-special-characters" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---search-for-special-characters">
     Recipes - search for special characters
   </a>
-  
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-      
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_8">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8">
           VirtualBox
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="VirtualBox" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="VirtualBox" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
           VirtualBox
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../virtualbox/win11install.html" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../virtualbox/win11install.html">
         Install
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
-      
-      
-      
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_9">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9">
           Windows
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Windows" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
-          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Windows" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
           Windows
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../windows/os_command_map.html" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/os_command_map.html">
         Command Cheatsheet
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_9_2">
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" id="__nav_9_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9_2">
           Network
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Network" data-md-level="2">
-        <label class="md-nav__title" for="__nav_9_2">
-          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Network" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_9_2">
+<span class="md-nav__icon md-icon"></span>
           Network
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../windows/network/arp.html" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/arp.html">
         Arp
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../windows/network/nbtstat.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/nbtstat.html">
         Nbtstat
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../windows/network/netstat.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/netstat.html">
         Netstat
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../windows/network/ping.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/ping.html">
         Ping
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../windows/network/ipconfig.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/ipconfig.html">
         Ipconfig
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../windows/network/net.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/net.html">
         Net
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../windows/network/nslookup.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/nslookup.html">
         Nslookup
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../windows/network/tracert.html" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/tracert.html">
         Tracert
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_10">
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10">
           Hardware
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Hardware" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
-          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Hardware" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
           Hardware
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hardware/cables.html" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware/cables.html">
         Cables
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
-      
-      
-      
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_11">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11">
           Class Notes
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Class Notes" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
-          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Class Notes" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
           Class Notes
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../archive.html" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archive.html">
         Index
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_11_2">
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" id="__nav_11_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_2">
           CIS-50
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="CIS-50" data-md-level="2">
-        <label class="md-nav__title" for="__nav_11_2">
-          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CIS-50" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_2">
+<span class="md-nav__icon md-icon"></span>
           CIS-50
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../CIS-50/Chapter_1.html" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_1.html">
         Database Systems
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-  </ul>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" id="__nav_11_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_3">
+          CIS-18
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CIS-18" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_3">
+<span class="md-nav__icon md-icon"></span>
+          CIS-18
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/sprint.html">
+        Sprint Planning
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Sub-Menu
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#vim-cheatsheet" class="md-nav__link">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim-cheatsheet">
     Vim Cheatsheet
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#comment" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comment">
     Comment
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#help" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#help">
     Help
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#starting-up" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting-up">
     Starting Up
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#modes" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modes">
     Modes
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-help" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-help">
     Getting Help
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#fundamentals" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fundamentals">
     Fundamentals
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#moving-through-text" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#moving-through-text">
     Moving through text
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#jumps-moving-through-text-and-files" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jumps-moving-through-text-and-files">
     Jumps (Moving through text and files...)
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#modify-jump-to-file" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modify-jump-to-file">
     Modify Jump to File
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#changes-moving-through-them" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changes-moving-through-them">
     Changes (Moving through them...)
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#searching" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#searching">
     Searching
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#substitution" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#substitution">
     Substitution
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#special-characters-in-substitution-command-replacement-strings" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#special-characters-in-substitution-command-replacement-strings">
     Special Characters in Substitution Command Replacement Strings
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#editing-in-replace-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-in-replace-mode">
     Editing in Replace Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mark-text" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mark-text">
     Mark Text
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#automatic-marks" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-marks">
     Automatic Marks
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#repeatable-and-reversible-actions" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#repeatable-and-reversible-actions">
     Repeatable and Reversible Actions
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#run-commands-in-the-shell" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-commands-in-the-shell">
     Run Commands in the Shell
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-files" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-files">
     Working with Files
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#write-changes-from-a-buffer-to-a-file" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#write-changes-from-a-buffer-to-a-file">
     Write Changes from a Buffer to a File
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#manipulate-file-buffers" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manipulate-file-buffers">
     Manipulate File Buffers
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-hidden-files" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#managing-hidden-files">
     Managing Hidden Files
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-the-filesystem" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-filesystem">
     Working with the Filesystem
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#split-windows" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#split-windows">
     Split Windows
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tabs" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tabs">
     Tabs
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-to-normal-mode-from-insert-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#switch-to-normal-mode-from-insert-mode">
     Switch to Normal Mode from Insert Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-to-insert-normal-mode-from-insert-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#switch-to-insert-normal-mode-from-insert-mode">
     Switch to Insert-Normal Mode from Insert Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-to-visual-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#switch-to-visual-mode">
     Switch to Visual Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#selection-in-visual-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selection-in-visual-mode">
     Selection in Visual Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#using-a-visual-operator" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-a-visual-operator">
     Using a Visual Operator
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#delimited-text-objects-begin-and-end-with-matching-symbols" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#delimited-text-objects-begin-and-end-with-matching-symbols">
     Delimited Text Objects (Begin and end with matching symbols.
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#bounded-text-objects-defined-by-boundaries" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bounded-text-objects-defined-by-boundaries">
     Bounded Text Objects (Defined by boundaries.)
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#command-line-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line-mode">
     Command Line Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#command-line-window" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line-window">
     Command Line Window
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operators">
     Operators
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#indentation" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#indentation">
     Indentation
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#editing" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing">
     Editing
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#deleting-c-instead-of-d-to-enter-insert-after-the-edit" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deleting-c-instead-of-d-to-enter-insert-after-the-edit">
     Deleting (c instead of d to enter insert after the edit).
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#editing-in-insert-mode" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-in-insert-mode">
     Editing In Insert Mode
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-expression-register" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-expression-register">
     Using the Expression Register
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#copying-cutting-and-pasting-yanking-deleting-and-putting" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#copying-cutting-and-pasting-yanking-deleting-and-putting">
     Copying, Cutting, and Pasting (Yanking, Deleting, and Putting)
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#default-registers" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-registers">
     Default Registers
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#addition" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#addition">
     Addition
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#compound-commands" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compound-commands">
     Compound Commands
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#screen-redraw" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#screen-redraw">
     Screen Redraw
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ex-commands" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ex-commands">
     Ex Commands
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#global-commands" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#global-commands">
     Global Commands
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#macros" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#macros">
     Macros
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vim-script" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim-script">
     Vim Script
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tags" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tags">
     Tags
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#quickfix-list" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quickfix-list">
     Quickfix List
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#location-list" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#location-list">
     Location List
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#grepping-externally" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grepping-externally">
     Grepping Externally
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletion" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#autocompletion">
     Autocompletion
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletion-method-table" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#autocompletion-method-table">
     Autocompletion Method Table
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletion-pop-up-menu" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#autocompletion-pop-up-menu">
     Autocompletion Pop-up Menu
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletion-source-material" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#autocompletion-source-material">
     Autocompletion Source Material
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#spelling" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spelling">
     Spelling
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#programming" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming">
     Programming
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---find--replace-across-many-files" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---find--replace-across-many-files">
     Recipes - Find &amp; Replace Across Many Files
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---clear-a-register" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---clear-a-register">
     Recipes - Clear a Register
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---sort-a-list" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---sort-a-list">
     Recipes - Sort a List
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---use-tags" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---use-tags">
     Recipes - Use Tags
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---use-ack-instead-of-grep-for-grep" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---use-ack-instead-of-grep-for-grep">
     Recipes - Use ack instead of grep for :grep
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---add-a-local-dictionary-for-project-jargon-spellings" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---add-a-local-dictionary-for-project-jargon-spellings">
     Recipes - Add a "local" Dictionary for Project Jargon Spellings
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---change-vim-on-the-fly" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---change-vim-on-the-fly">
     Recipes - Change Vim on the Fly
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---customize-with-vim-files" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---customize-with-vim-files">
     Recipes - Customize with .vim Files
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---filetype-specific-customization" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---filetype-specific-customization">
     Recipes - Filetype Specific Customization
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reciples---change-encoding-eg-fix-excel-exports-to-csv" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reciples---change-encoding-eg-fix-excel-exports-to-csv">
     Reciples - Change Encoding (e.g. fix Excel exports to csv)
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---paste-tablecolumn-data-from-webclipboard" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---paste-tablecolumn-data-from-webclipboard">
     Recipes - Paste Table/Column Data from Web/Clipboard
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recipes---search-for-special-characters" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes---search-for-special-characters">
     Recipes - search for special characters
   </a>
-  
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-  
-
-
-
-
-  <h1>Cheatsheet</h1>
-
-<h3 id="vim-cheatsheet">Vim Cheatsheet<a class="headerlink" href="#vim-cheatsheet" title="Permanent link">&para;</a></h3>
-<h3 id="comment">Comment<a class="headerlink" href="#comment" title="Permanent link">&para;</a></h3>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Cheatsheet</h1>
+<h3 id="vim-cheatsheet">Vim Cheatsheet<a class="headerlink" href="#vim-cheatsheet" title="Permanent link">¶</a></h3>
+<h3 id="comment">Comment<a class="headerlink" href="#comment" title="Permanent link">¶</a></h3>
 <p>Go the vim way. Start by only using hjkl to move the cursor.</p>
-<h3 id="help">Help<a class="headerlink" href="#help" title="Permanent link">&para;</a></h3>
+<h3 id="help">Help<a class="headerlink" href="#help" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    www.vimdoc.sourceforge.net
 </code></pre></div></td></tr></table></div>
-<h3 id="starting-up">Starting Up<a class="headerlink" href="#starting-up" title="Permanent link">&para;</a></h3>
+<h3 id="starting-up">Starting Up<a class="headerlink" href="#starting-up" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    vim {filename}
     vim {filename} +n       Open {filename} and position the cursor on line n.
     vim *.txt
 </code></pre></div></td></tr></table></div>
-<h3 id="modes">Modes<a class="headerlink" href="#modes" title="Permanent link">&para;</a></h3>
+<h3 id="modes">Modes<a class="headerlink" href="#modes" title="Permanent link">¶</a></h3>
 <ul>
 <li>Normal</li>
 <li>Insert</li>
@@ -2320,14 +1282,14 @@
 </ul>
 <details class="note" open="open">
 <summary>Note</summary>
-<p>Below, the dash &ldquo;-&rdquo; between buttons signals holding the first button, then pressing the second.</p>
+<p>Below, the dash “-” between buttons signals holding the first button, then pressing the second.</p>
 </details>
-<h3 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h3>
+<h3 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>    vimtutor
     :help
 </code></pre></div></td></tr></table></div>
-<h3 id="fundamentals">Fundamentals<a class="headerlink" href="#fundamentals" title="Permanent link">&para;</a></h3>
+<h3 id="fundamentals">Fundamentals<a class="headerlink" href="#fundamentals" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2344,7 +1306,7 @@
     s                               Delete the character under the cursor and enter insert mode.
     J
 </code></pre></div></td></tr></table></div>
-<h3 id="moving-through-text">Moving through text<a class="headerlink" href="#moving-through-text" title="Permanent link">&para;</a></h3>
+<h3 id="moving-through-text">Moving through text<a class="headerlink" href="#moving-through-text" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2375,7 +1337,7 @@
     &lt;ctrl-f&gt;, &lt;ctrl-d&gt;              Page Down.
     &lt;number&gt;|                       Move to column &lt;number&gt;.
 </code></pre></div></td></tr></table></div>
-<h3 id="jumps-moving-through-text-and-files">Jumps (Moving through text and files&hellip;)<a class="headerlink" href="#jumps-moving-through-text-and-files" title="Permanent link">&para;</a></h3>
+<h3 id="jumps-moving-through-text-and-files">Jumps (Moving through text and files…)<a class="headerlink" href="#jumps-moving-through-text-and-files" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -2389,7 +1351,7 @@
 <td>Jump to line number.</td>
 </tr>
 <tr>
-<td>//patern<CR>/?pattern<CR>/n/N</td>
+<td>//patern<cr>/?pattern<cr>/n/N</cr></cr></td>
 <td>Jump to the next (previous) occurrence of pattern.</td>
 </tr>
 <tr>
@@ -2413,19 +1375,19 @@
 <td>Jump to file name under the cursor.</td>
 </tr>
 <tr>
-<td><ctrl-]></td>
+<td><ctrl-]></ctrl-]></td>
 <td>Jump to the definition of keyword under the cursor. (What!?)</td>
 </tr>
 <tr>
-<td>&lsquo;{mark}/`{mark}</td>
-<td>Jump to a mark (more on this elsewhere&hellip;)</td>
+<td>‘{mark}/`{mark}</td>
+<td>Jump to a mark (more on this elsewhere…)</td>
 </tr>
 </tbody>
 </table>
-<h3 id="modify-jump-to-file">Modify Jump to File<a class="headerlink" href="#modify-jump-to-file" title="Permanent link">&para;</a></h3>
+<h3 id="modify-jump-to-file">Modify Jump to File<a class="headerlink" href="#modify-jump-to-file" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    :set suffixesadd+=.rb           Etc. Add the specified extension and vim will try to use them with gf.
 </code></pre></div></td></tr></table></div>
-<h3 id="changes-moving-through-them">Changes (Moving through them&hellip;)<a class="headerlink" href="#changes-moving-through-them" title="Permanent link">&para;</a></h3>
+<h3 id="changes-moving-through-them">Changes (Moving through them…)<a class="headerlink" href="#changes-moving-through-them" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2436,7 +1398,7 @@
     `^                              Jumps to the last insertion.
     gi                              Move to last insertion point and enter insert mode.
 </code></pre></div></td></tr></table></div>
-<h3 id="searching">Searching<a class="headerlink" href="#searching" title="Permanent link">&para;</a></h3>
+<h3 id="searching">Searching<a class="headerlink" href="#searching" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2468,12 +1430,12 @@
 <span class="normal">29</span>
 <span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code>    /{pattern}                      Search forward in the buffer for {pattern}.
     ?{pattern}                      Search backwards in the buffer for pattern.
-    n                               Repeat the search going &quot;forward&quot; (in the expected direction)..
+    n                               Repeat the search going "forward" (in the expected direction)..
     N                               Repeat the search with direction reversed.
-    /&lt;cr&gt;                           Jump forward to the next match of pattern (don&#39;t preserve direction or offset).
-    ?&lt;cr&gt;                           Jump backward to the next match of pattern (don&#39;t preserve direction or offset).
+    /&lt;cr&gt;                           Jump forward to the next match of pattern (don't preserve direction or offset).
+    ?&lt;cr&gt;                           Jump backward to the next match of pattern (don't preserve direction or offset).
     f&lt;char&gt;                         Search for the next instance of character &lt;char&gt;.
-    ;                               Repeat the last search &quot;f&quot; performed.
+    ;                               Repeat the last search "f" performed.
     ,                               Reverse the last character search command.
     F&lt;char&gt;                         Search backwards through the text for the next instance of &lt;char&gt;.
     t&lt;char&gt;                         Search forward to the next character before the next occurrence of &lt;char&gt;.
@@ -2484,20 +1446,20 @@
     \C                              Use case in *this* search(regardless of set setting). (Put anywhere in search term.)
     :set smartcase                  Ignore case in the search by default unless we include a capital letter in the search.
     /#\([0-9a-fA-F]\{6}\)           Search for six consecutive hexadecimal numbers preceeded by a # sign. (Optionally also escape the closing }).
-    /\v                             Active the &quot;very magic search switch.&quot; (All characters assume special meaning except _, a-zA-Z0-9.
+    /\v                             Active the "very magic search switch." (All characters assume special meaning except _, a-zA-Z0-9.
     /\v#([0-9a-fA-F]{6})            Search for six consecutive hexadecimal numbers preceeded by a # sign. 
     /\v#(\x{6}|\x{3})               Search for six or three consecutive hexadecimal numbers (w/ hex character class) preceeded by a # sign. 
-    /\V                             Activate the &quot;very nonmagic&quot; search switch. (All characters except \ lose special meaning - literal search.)
-    ?\V                             Activate the &quot;very nonmagic&quot; search switch. (All characters except \ and ? lose special meaning - literal search.)
-    /\v&lt;word&gt;                       Use &lt;&gt; to mark the boundaries of a word (e.g., search for &quot;the&quot; and not &quot;these&quot;, etc.).
+    /\V                             Activate the "very nonmagic" search switch. (All characters except \ lose special meaning - literal search.)
+    ?\V                             Activate the "very nonmagic" search switch. (All characters except \ and ? lose special meaning - literal search.)
+    /\v&lt;word&gt;                       Use &lt;&gt; to mark the boundaries of a word (e.g., search for "the" and not "these", etc.).
     :nohlsearch                     Unlike :set nohlsearch or :set hls!, this turns of highlighting until the next search is performed. (:noh)
     &lt;ctrl-r&gt; &lt;ctrl-w&gt;               Autocomplete search field using remainder of highlighted selection (when :set incsearch is active).
     /{pattern}/e                    Position the cursor at the end of the pattern when searching (default is the beginning).
-    //e                             Anchor the next search of a previous pattern to the end (no need to have /e&#39;d initially). Can be used as a motion.
+    //e                             Anchor the next search of a previous pattern to the end (no need to have /e'd initially). Can be used as a motion.
     &lt;ctrl-r&gt; /                      Paste the contents of the last search register in place (insert mode, command line mode).
-    :let @/=&#39;Pragmatic Vim&#39;         Set the last search register to &#39;Pragmatic Vim&#39;.
+    :let @/='Pragmatic Vim'         Set the last search register to 'Pragmatic Vim'.
 </code></pre></div></td></tr></table></div>
-<h3 id="substitution">Substitution<a class="headerlink" href="#substitution" title="Permanent link">&para;</a></h3>
+<h3 id="substitution">Substitution<a class="headerlink" href="#substitution" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2517,14 +1479,14 @@
     g&amp;                              Repeat the last substitution over the entire file.
     :%s/{pat1}/{pat2}/gc            Search and replace pat1 with pat2 and prompt each time over the whole file.
     :%s/{pat1}/&lt;ctrl-{register}&gt;/   Search and replace pat1 with the contents of register {register}.
-    :%s/{pat1}/\=@{register}/       Use the contents of register {register}, passing the contents by value. (e.g. @0 for the yank register, @&quot; for default)
+    :%s/{pat1}/\=@{register}/       Use the contents of register {register}, passing the contents by value. (e.g. @0 for the yank register, @" for default)
     :%s//{string}/gc                Search and replace using the last match.
-    :%s///gn                        Count the number of matches of the last search pattern used, don&#39;t do anything (n suppression).
+    :%s///gn                        Count the number of matches of the last search pattern used, don't do anything (n suppression).
     :&amp;&amp;                             Replay the last substitution over the current line.
     :%&amp;&amp;                            Repeat the last substitution over the entire file (longer g&amp;).
-    :&#39;&lt;,&#39;&gt;&amp;&amp;                        Replay the last substitution over the visually selected range (get &#39;&lt;,&#39;&gt; automatically with : from visual mode).
+    :'&lt;,'&gt;&amp;&amp;                        Replay the last substitution over the visually selected range (get '&lt;,'&gt; automatically with : from visual mode).
 </code></pre></div></td></tr></table></div>
-<h3 id="special-characters-in-substitution-command-replacement-strings">Special Characters in Substitution Command Replacement Strings<a class="headerlink" href="#special-characters-in-substitution-command-replacement-strings" title="Permanent link">&para;</a></h3>
+<h3 id="special-characters-in-substitution-command-replacement-strings">Special Characters in Substitution Command Replacement Strings<a class="headerlink" href="#special-characters-in-substitution-command-replacement-strings" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2547,7 +1509,7 @@
     ~                               Use {string} from previous substitute.
     \={Vim script}                  Evaluate {Vim script} expression, use the reult as the replacement {string}.
 </code></pre></div></td></tr></table></div>
-<h3 id="editing-in-replace-mode">Editing in Replace Mode<a class="headerlink" href="#editing-in-replace-mode" title="Permanent link">&para;</a></h3>
+<h3 id="editing-in-replace-mode">Editing in Replace Mode<a class="headerlink" href="#editing-in-replace-mode" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2558,16 +1520,16 @@
     gR                              Virtual replace mode (treats tab stops as though they were a single space).
     r{char}                         Replace a single character.
     gr{char}                        Replace a single character in virtual mode.
-    Vr-                             Select a line and replace all the characters with &quot;-&quot;
+    Vr-                             Select a line and replace all the characters with "-"
 </code></pre></div></td></tr></table></div>
-<h3 id="mark-text">Mark Text<a class="headerlink" href="#mark-text" title="Permanent link">&para;</a></h3>
+<h3 id="mark-text">Mark Text<a class="headerlink" href="#mark-text" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    m{a-zA-Z}                       Lower case letters mark only the buffer, uppercase are global (across all buffers).
-    &#39;{mark}                         Jump to the line where the mark was set.
+    '{mark}                         Jump to the line where the mark was set.
     `{mark}                         Jump to the exact point the mark was set.
 </code></pre></div></td></tr></table></div>
-<h3 id="automatic-marks">Automatic Marks<a class="headerlink" href="#automatic-marks" title="Permanent link">&para;</a></h3>
+<h3 id="automatic-marks">Automatic Marks<a class="headerlink" href="#automatic-marks" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2578,15 +1540,15 @@
 <span class="normal">8</span>
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>    Keystrokes                      Buffer Positions
     ----------                      ----------------
-    &#39;&#39;                              Position before the last jump within current file.
-    &#39;.                              Location of last change (beginning of line).
-    &#39;^                              Location of last insertion (beginning of line).
-    &#39;[                              Start of last change or yank.
-    &#39;]                              End of last change or yank.
-    &#39;&lt;                              Start of last visual selection.
-    &#39;&gt;                              End of last visual selection.
+    ''                              Position before the last jump within current file.
+    '.                              Location of last change (beginning of line).
+    '^                              Location of last insertion (beginning of line).
+    '[                              Start of last change or yank.
+    ']                              End of last change or yank.
+    '&lt;                              Start of last visual selection.
+    '&gt;                              End of last visual selection.
 </code></pre></div></td></tr></table></div>
-<h3 id="repeatable-and-reversible-actions">Repeatable and Reversible Actions<a class="headerlink" href="#repeatable-and-reversible-actions" title="Permanent link">&para;</a></h3>
+<h3 id="repeatable-and-reversible-actions">Repeatable and Reversible Actions<a class="headerlink" href="#repeatable-and-reversible-actions" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2605,7 +1567,7 @@
     Perform substituion.            :s/target/replacement   &amp;           u
     Execute a sequence of changes.  qx{changes}q            @x          u
 </code></pre></div></td></tr></table></div>
-<h3 id="run-commands-in-the-shell">Run Commands in the Shell<a class="headerlink" href="#run-commands-in-the-shell" title="Permanent link">&para;</a></h3>
+<h3 id="run-commands-in-the-shell">Run Commands in the Shell<a class="headerlink" href="#run-commands-in-the-shell" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2618,9 +1580,9 @@
 <span class="normal">10</span>
 <span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>    :!                          Access the shell.
     :!ls                        Run ls in the shell. (Note, :ls shows the contents of the buffer list.)
-    %                           On vim&#39;s command line, this is short hand for the current filename. 
+    %                           On vim's command line, this is short hand for the current filename. 
     :!ruby %                    Runs the current (ruby) file being edited.
-    :shell                      Start an interactive shell session inside vim. (Use &quot;exit&quot; to return to vim.)
+    :shell                      Start an interactive shell session inside vim. (Use "exit" to return to vim.)
     :read !{cmd}                Put the output of cmd into the current buffer.
     :write !{cmd}               Use the current buffer as input for cmd.
     :write {file}               Write the current buffer into {file}.
@@ -2628,7 +1590,7 @@
     :[range]!{cmd}              Pass the lines in range to cmd and replace the range with the output of cmd.
     :!mkdir -p %:h              Make all the directories needed to write a file into its current path.
 </code></pre></div></td></tr></table></div>
-<h3 id="working-with-files">Working with Files<a class="headerlink" href="#working-with-files" title="Permanent link">&para;</a></h3>
+<h3 id="working-with-files">Working with Files<a class="headerlink" href="#working-with-files" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2637,17 +1599,17 @@
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>    :cd {path}                  Change vim&#39;s working directory.
-    :pwd                        Show vim&#39;s present working directory.
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>    :cd {path}                  Change vim's working directory.
+    :pwd                        Show vim's present working directory.
     :edit {filename}            Open a file into the buffer for editing.
     :edit!                      Re-read the current file into the buffer and discard exisitng changes. (:e!)
     :edit %&lt;tab&gt;                % is a short-hand for the active buffer filepath.
     :edit %:h&lt;tab&gt;              The :h modifier removes the filename while preserving the rest of the path.
     :find {file}                Open a file by name without a fully qualified path. (&lt;tab&gt; completion is available.)
-    :set path+={dir}/**         Add a directory to the vim &quot;$PATH&quot;. (** matches all subdirectories below {dir})
+    :set path+={dir}/**         Add a directory to the vim "$PATH". (** matches all subdirectories below {dir})
     :set path?                  Inspect the value of the path.
 </code></pre></div></td></tr></table></div>
-<h3 id="write-changes-from-a-buffer-to-a-file">Write Changes from a Buffer to a File<a class="headerlink" href="#write-changes-from-a-buffer-to-a-file" title="Permanent link">&para;</a></h3>
+<h3 id="write-changes-from-a-buffer-to-a-file">Write Changes from a Buffer to a File<a class="headerlink" href="#write-changes-from-a-buffer-to-a-file" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2656,7 +1618,7 @@
     :saveas
     :w !sudo tee % &gt; /dev/null            Write the current buffer as the super-user. (% expands to the path of the current buffer.)
 </code></pre></div></td></tr></table></div>
-<h3 id="manipulate-file-buffers">Manipulate File Buffers<a class="headerlink" href="#manipulate-file-buffers" title="Permanent link">&para;</a></h3>
+<h3 id="manipulate-file-buffers">Manipulate File Buffers<a class="headerlink" href="#manipulate-file-buffers" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2684,7 +1646,7 @@
     :bfirst                               Move to the first buffer. (:bf)
     :blast                                Move to the last buffer. (:bl)
     :buffer N                             Move to buffer N (:ls shows the buffer numbers). (:buf N)
-    :buffer {buffname}                    Move to the buffer with name {buffname} (shown by :ls, no need for &quot; characters).
+    :buffer {buffname}                    Move to the buffer with name {buffname} (shown by :ls, no need for " characters).
     &lt;ctrl-^&gt;                              Toggle between the current and alternate buffers.
     :bufdo                                Run an Ex command on all the buffers.
     :bdelete N1 N2                        Delete buffers numbered N1 and N2.
@@ -2698,10 +1660,10 @@
     :next                                 Move through the argument list.
     :prev                                 Move through the argument list.
     :argdo                                Execute the same command on every buffer in the set.
-    :argdo %s//{pat1}/ge                  Substitute the last search match with {pat1} in all of &quot;argslist&quot; across the whole files, suppressing error messages.
+    :argdo %s//{pat1}/ge                  Substitute the last search match with {pat1} in all of "argslist" across the whole files, suppressing error messages.
     :argdo update                         Save every file, but only if it has been changed.
 </code></pre></div></td></tr></table></div>
-<h3 id="managing-hidden-files">Managing Hidden Files<a class="headerlink" href="#managing-hidden-files" title="Permanent link">&para;</a></h3>
+<h3 id="managing-hidden-files">Managing Hidden Files<a class="headerlink" href="#managing-hidden-files" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2709,14 +1671,14 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>    :ls                                                                                                                      
-      1 %a + &quot;a.txt&quot;                        line 17   # &lt;- &quot;+&quot; &lt;- Modified.
-      2      &quot;b.txt&quot;                        line 0
+      1 %a + "a.txt"                        line 17   # &lt;- "+" &lt;- Modified.
+      2      "b.txt"                        line 0
     :bn!
     :ls
-      1 #h + &quot;a.txt&quot;                        line 17   # &lt;- &quot;h&quot; &lt;- Hidden file.
-      2 %a   &quot;b.txt&quot;                        line 1
+      1 #h + "a.txt"                        line 17   # &lt;- "h" &lt;- Hidden file.
+      2 %a   "b.txt"                        line 1
 </code></pre></div></td></tr></table></div>
-<h3 id="working-with-the-filesystem">Working with the Filesystem<a class="headerlink" href="#working-with-the-filesystem" title="Permanent link">&para;</a></h3>
+<h3 id="working-with-the-filesystem">Working with the Filesystem<a class="headerlink" href="#working-with-the-filesystem" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2726,8 +1688,8 @@
 <span class="normal">7</span>
 <span class="normal">8</span>
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>    vim .                                   Open a filesystem browser in the current directory.
-    k,j &lt;cr&gt;                                Navigate vim&#39;s representation of the filesystem, open the selected file.
-    :edit {path - directory name}           Open a filesystem browser in the specified directory. (always recall &quot;:edit .&quot; or &quot;:e.&quot;)
+    k,j &lt;cr&gt;                                Navigate vim's representation of the filesystem, open the selected file.
+    :edit {path - directory name}           Open a filesystem browser in the specified directory. (always recall ":edit ." or ":e.")
     :edit %:h                               Open a filesystem browser in the directory of the current file.
     :Explore
     netrw-%                                 Create new files. (% in netrw, etc.)
@@ -2735,7 +1697,7 @@
     netrw-rename                            Rename a file.
     netrw-del                               Delete a file.
 </code></pre></div></td></tr></table></div>
-<h3 id="split-windows">Split Windows<a class="headerlink" href="#split-windows" title="Permanent link">&para;</a></h3>
+<h3 id="split-windows">Split Windows<a class="headerlink" href="#split-windows" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2758,7 +1720,7 @@
     &lt;ctrl-w&gt; {s/v} :edit {filename}         Create a split and edit.
     :split {filename}                       Combo - create a split and edit. (Horizontal.) (:sp {file})
     :vsplit {filename}                      Combo - create a split and edit. (Vertical.) (:vsp {file})
-    &lt;ctrl-w&gt; w                              Cycle focus between open windows. Also, &lt;ctrl-w&gt; &lt;ctrl-w&gt; (ctrl-&quot;ww&quot;).
+    &lt;ctrl-w&gt; w                              Cycle focus between open windows. Also, &lt;ctrl-w&gt; &lt;ctrl-w&gt; (ctrl-"ww").
     &lt;ctrl-w&gt; h                              shift focus to the left.
     &lt;ctrl-w&gt; j                              shift focus below.
     &lt;ctrl-w&gt; k                              shift focus above.
@@ -2772,7 +1734,7 @@
     [N]&lt;ctrl-|&gt;                             Set active window width to N columns.
     [ Look up more details on window-moving in the help and check Vim-casts.org ]
 </code></pre></div></td></tr></table></div>
-<h3 id="tabs">Tabs<a class="headerlink" href="#tabs" title="Permanent link">&para;</a></h3>
+<h3 id="tabs">Tabs<a class="headerlink" href="#tabs" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2797,15 +1759,15 @@
     gT                                      Previous tab.
     :tabprevious                            Previous tab. (:tabp)
 </code></pre></div></td></tr></table></div>
-<h3 id="switch-to-normal-mode-from-insert-mode">Switch to Normal Mode from Insert Mode<a class="headerlink" href="#switch-to-normal-mode-from-insert-mode" title="Permanent link">&para;</a></h3>
+<h3 id="switch-to-normal-mode-from-insert-mode">Switch to Normal Mode from Insert Mode<a class="headerlink" href="#switch-to-normal-mode-from-insert-mode" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;esc&gt;
     &lt;ctrl-[&gt;
 </code></pre></div></td></tr></table></div>
-<h3 id="switch-to-insert-normal-mode-from-insert-mode">Switch to Insert-Normal Mode from Insert Mode<a class="headerlink" href="#switch-to-insert-normal-mode-from-insert-mode" title="Permanent link">&para;</a></h3>
+<h3 id="switch-to-insert-normal-mode-from-insert-mode">Switch to Insert-Normal Mode from Insert Mode<a class="headerlink" href="#switch-to-insert-normal-mode-from-insert-mode" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;ctrl-o&gt;
 </code></pre></div></td></tr></table></div>
-<h3 id="switch-to-visual-mode">Switch to Visual Mode<a class="headerlink" href="#switch-to-visual-mode" title="Permanent link">&para;</a></h3>
+<h3 id="switch-to-visual-mode">Switch to Visual Mode<a class="headerlink" href="#switch-to-visual-mode" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2816,17 +1778,17 @@
     &lt;ctrl-v&gt;                Enter block-wise visual mode.
     o                       Go to the other end of highlighted text.
 </code></pre></div></td></tr></table></div>
-<h3 id="selection-in-visual-mode">Selection in Visual Mode<a class="headerlink" href="#selection-in-visual-mode" title="Permanent link">&para;</a></h3>
+<h3 id="selection-in-visual-mode">Selection in Visual Mode<a class="headerlink" href="#selection-in-visual-mode" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>    gv                      Reselect the last visual selection.
     vit                     Select inside a tag (e.g., (cursor here-&gt;)&lt;a&gt;select me&lt;/a&gt;) on a line.
 </code></pre></div></td></tr></table></div>
-<h3 id="using-a-visual-operator">Using a Visual Operator<a class="headerlink" href="#using-a-visual-operator" title="Permanent link">&para;</a></h3>
+<h3 id="using-a-visual-operator">Using a Visual Operator<a class="headerlink" href="#using-a-visual-operator" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>    vU                      Make the selection uppercase.
     vu                      Make the selection lowercase.
 </code></pre></div></td></tr></table></div>
-<h3 id="delimited-text-objects-begin-and-end-with-matching-symbols">Delimited Text Objects (Begin and end with matching symbols.<a class="headerlink" href="#delimited-text-objects-begin-and-end-with-matching-symbols" title="Permanent link">&para;</a></h3>
+<h3 id="delimited-text-objects-begin-and-end-with-matching-symbols">Delimited Text Objects (Begin and end with matching symbols.<a class="headerlink" href="#delimited-text-objects-begin-and-end-with-matching-symbols" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2852,14 +1814,14 @@
     i]                      Inside of [brackets].
     a&gt;                      A pair of &lt;angle brackets&gt;.
     i&gt;                      Inside of &lt;angle brackets&gt;.
-    a&#39;                      A pair of &#39;single quotes&#39;.
-    i&#39;                      Inside of &#39;single quotes&#39;.
-    a&quot;                      A pair of &quot;double quotes&quot;.
-    i&quot;                      Inside a pair of &quot;double quotes&quot;.
+    a'                      A pair of 'single quotes'.
+    i'                      Inside of 'single quotes'.
+    a"                      A pair of "double quotes".
+    i"                      Inside a pair of "double quotes".
     at                      A pair of &lt;xml&gt;tags&lt;/xml&gt;.
     it                      Inside a of &lt;xml&gt;tags&lt;/xml&gt;.
 </code></pre></div></td></tr></table></div>
-<h3 id="bounded-text-objects-defined-by-boundaries">Bounded Text Objects (Defined by boundaries.)<a class="headerlink" href="#bounded-text-objects-defined-by-boundaries" title="Permanent link">&para;</a></h3>
+<h3 id="bounded-text-objects-defined-by-boundaries">Bounded Text Objects (Defined by boundaries.)<a class="headerlink" href="#bounded-text-objects-defined-by-boundaries" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2878,7 +1840,7 @@
     ip                      Current paragraph.
     ap                      Current paragraph plus one blank line.
 </code></pre></div></td></tr></table></div>
-<h3 id="command-line-mode">Command Line Mode<a class="headerlink" href="#command-line-mode" title="Permanent link">&para;</a></h3>
+<h3 id="command-line-mode">Command Line Mode<a class="headerlink" href="#command-line-mode" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2889,7 +1851,7 @@
     *                       /\&lt;&lt;ctrl-r&gt; &lt;ctrl-w&gt;\&gt;&lt;cr&gt;
     /&lt;ctrl-r&gt; &lt;ctrl-w&gt;       Search for the word under the cursor.
 </code></pre></div></td></tr></table></div>
-<h3 id="command-line-window">Command Line Window<a class="headerlink" href="#command-line-window" title="Permanent link">&para;</a></h3>
+<h3 id="command-line-window">Command Line Window<a class="headerlink" href="#command-line-window" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2900,14 +1862,14 @@
     q/                      Bring up the window with a history of searches.
     &lt;ctrl-f&gt;                Switch from the command line mode to the command line window.
 </code></pre></div></td></tr></table></div>
-<h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h3>
+<h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    &gt;                       Shift (the line?) right.
     &lt;                       Shift (the line?) left.
     gUit                    Select text inside a tag and shift it to uppercase (tip 23).
 </code></pre></div></td></tr></table></div>
-<h3 id="indentation">Indentation<a class="headerlink" href="#indentation" title="Permanent link">&para;</a></h3>
+<h3 id="indentation">Indentation<a class="headerlink" href="#indentation" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2918,7 +1880,7 @@
     =G                      Autoindet from here to the end of the file.
     ==                      Indent current line.
 </code></pre></div></td></tr></table></div>
-<h3 id="editing">Editing<a class="headerlink" href="#editing" title="Permanent link">&para;</a></h3>
+<h3 id="editing">Editing<a class="headerlink" href="#editing" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2945,7 +1907,7 @@
     gu                      Make lower case. (requires motion?) guaw = convert a word, guap = paragraph 
     gU                      Make upper case. (requires motion?) gUaw = CONVERT a word, gUap = paragraph, gUgU converts a line.
 </code></pre></div></td></tr></table></div>
-<h3 id="deleting-c-instead-of-d-to-enter-insert-after-the-edit">Deleting (c instead of d to enter insert after the edit).<a class="headerlink" href="#deleting-c-instead-of-d-to-enter-insert-after-the-edit" title="Permanent link">&para;</a></h3>
+<h3 id="deleting-c-instead-of-d-to-enter-insert-after-the-edit">Deleting (c instead of d to enter insert after the edit).<a class="headerlink" href="#deleting-c-instead-of-d-to-enter-insert-after-the-edit" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2964,7 +1926,7 @@
     d0                      Delete to the beginning of the line.
     0d$ / dd                Delete the line.
 </code></pre></div></td></tr></table></div>
-<h3 id="editing-in-insert-mode">Editing In Insert Mode<a class="headerlink" href="#editing-in-insert-mode" title="Permanent link">&para;</a></h3>
+<h3 id="editing-in-insert-mode">Editing In Insert Mode<a class="headerlink" href="#editing-in-insert-mode" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2983,10 +1945,10 @@
     &lt;ctrl-v&gt; {nondigit}     Enter a nondigit literally (e.g., a literal tab instead of spaces in case exapandtab is active).
     &lt;ctrl-k&gt; {char1}{char2} Enter a unicode character via digraph, e.g. &lt;ctrl-k&gt; ?I = ¿. View a list of digraphs with :digraphs
 </code></pre></div></td></tr></table></div>
-<h3 id="using-the-expression-register">Using the Expression Register<a class="headerlink" href="#using-the-expression-register" title="Permanent link">&para;</a></h3>
+<h3 id="using-the-expression-register">Using the Expression Register<a class="headerlink" href="#using-the-expression-register" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;ctrl-r&gt; =              In insert mode.
 </code></pre></div></td></tr></table></div>
-<h3 id="copying-cutting-and-pasting-yanking-deleting-and-putting">Copying, Cutting, and Pasting (Yanking, Deleting, and Putting)<a class="headerlink" href="#copying-cutting-and-pasting-yanking-deleting-and-putting" title="Permanent link">&para;</a></h3>
+<h3 id="copying-cutting-and-pasting-yanking-deleting-and-putting">Copying, Cutting, and Pasting (Yanking, Deleting, and Putting)<a class="headerlink" href="#copying-cutting-and-pasting-yanking-deleting-and-putting" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3012,11 +1974,11 @@
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code>    Regisers are [a..z] for overwriting and [A..Z] for appending.
-    The system clipboard is &quot;+ (X11 at least).
-    &quot;{register}             Prefix to specify the register for holding the yank/delete. Defaults to unnamed (&quot;). 
+    The system clipboard is "+ (X11 at least).
+    "{register}             Prefix to specify the register for holding the yank/delete. Defaults to unnamed ("). 
     :reg                    Examine the contents of the registers.
-    :reg &quot;0                 Examine the contents of the yank register. (Also shows the contents of &quot;&quot; (unnamed).)
-    y{motion}               Copy (? ... $, l, w) into the unnamed register. Also copy into the yank register (&quot;0)!
+    :reg "0                 Examine the contents of the yank register. (Also shows the contents of "" (unnamed).)
+    y{motion}               Copy (? ... $, l, w) into the unnamed register. Also copy into the yank register ("0)!
     yiw                     Copy a word.
     yi[                     Copy everything inside the [] braces (cursor should be inside the []).
     yy                      Copy a line.
@@ -3026,36 +1988,36 @@
     p                       Paste (removed with x, copied with y, for example) after the cursor position.
     P                       Paste (removed with x, copied with y, for example) before the cursor position.
     puP / Pup               Paste the other way when you get it wrong...
-    &quot;&quot;p                     Paste from the unnamed register (&quot;&quot;p == p).
-    &quot;ap                     Paste from register a.
-    &quot;0p                     Paste from the yank register (may also be equivalent to the unnamed or another register).
+    ""p                     Paste from the unnamed register (""p == p).
+    "ap                     Paste from register a.
+    "0p                     Paste from the yank register (may also be equivalent to the unnamed or another register).
     xp                      Cut and paste a character - effectively transpose two characters.  
     diw                     Cut a word.
     dd                      Cut a line.
     ddp                     Cut and paste a line (one below the current line) - effectively transpose two lines.
     v{selection}p           Swap the highlighted portion in visual mode with the contents of (the unnamed) register, and vice versa.
-    &quot;{register}v{sel}p      Swap the highlighted portion in visual mode with the contents of the register, and vice versa.
-    &lt;ctrl-r&gt;{register}      Insert Mode: Paste from register {register}. (Recall &lt;ctrl-r&quot;&gt; to get the unnamed!) Useful with Ex commands too!
+    "{register}v{sel}p      Swap the highlighted portion in visual mode with the contents of the register, and vice versa.
+    &lt;ctrl-r&gt;{register}      Insert Mode: Paste from register {register}. (Recall &lt;ctrl-r"&gt; to get the unnamed!) Useful with Ex commands too!
 </code></pre></div></td></tr></table></div>
-<h3 id="default-registers">Default Registers<a class="headerlink" href="#default-registers" title="Permanent link">&para;</a></h3>
+<h3 id="default-registers">Default Registers<a class="headerlink" href="#default-registers" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>    &quot;=                      Expression Register
-    &quot;%                      Name of current file.
-    &quot;#                      Name of alternate file.
-    &quot;.                      Last inserted text.
-    &quot;:                      Last Ex command.
-    &quot;/                      Last search pattern (can be set explicitly with :let ).
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>    "=                      Expression Register
+    "%                      Name of current file.
+    "#                      Name of alternate file.
+    ".                      Last inserted text.
+    ":                      Last Ex command.
+    "/                      Last search pattern (can be set explicitly with :let ).
 </code></pre></div></td></tr></table></div>
-<h3 id="addition">Addition<a class="headerlink" href="#addition" title="Permanent link">&para;</a></h3>
+<h3 id="addition">Addition<a class="headerlink" href="#addition" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>    N &lt;ctrl-a&gt;                                      Add N to the next number on the line, e.g. 10 -&gt; 20
     N &lt;ctrl-x&gt;                                      Subtract N from the next number on the line, e.g., 30 -&gt; 20
 </code></pre></div></td></tr></table></div>
-<h3 id="compound-commands">Compound Commands<a class="headerlink" href="#compound-commands" title="Permanent link">&para;</a></h3>
+<h3 id="compound-commands">Compound Commands<a class="headerlink" href="#compound-commands" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -3070,7 +2032,7 @@
     o           A&lt;CR&gt;                               # Leverage undo power by finishing lines with {stop} &lt;esc&gt; o
     O           ko
 </code></pre></div></td></tr></table></div>
-<h3 id="screen-redraw">Screen Redraw<a class="headerlink" href="#screen-redraw" title="Permanent link">&para;</a></h3>
+<h3 id="screen-redraw">Screen Redraw<a class="headerlink" href="#screen-redraw" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -3079,7 +2041,7 @@
     zt                                              Redraw the screen with the cursor position at the top of the page.
     &lt;ctrl-l&gt;                                        Clear and redraw the screen.
 </code></pre></div></td></tr></table></div>
-<h3 id="ex-commands">Ex Commands<a class="headerlink" href="#ex-commands" title="Permanent link">&para;</a></h3>
+<h3 id="ex-commands">Ex Commands<a class="headerlink" href="#ex-commands" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3140,19 +2102,19 @@
     :[range]normal{commands}                        Execute normal mode {commands} on each specified line.
     :[range]substitute/{pattern}/{string}/[flags]   Replace {pattern} with {string} on the specified lines. (:[range]s/{pattern}/{string}/[flags])
     :%s/{pattern}/{string}/[flags]                  Do the substitution over the entire file, looking for pattern, etc.
-    :%s/{pattern}/{string}/[flags={g,c,n,&amp;}]        Flags: g=global (all in a line), c=confirm, n=no subs, report number, &amp;=reuse flags from last &quot;s&quot;
+    :%s/{pattern}/{string}/[flags={g,c,n,&amp;}]        Flags: g=global (all in a line), c=confirm, n=no subs, report number, &amp;=reuse flags from last "s"
     :[range]global/{pattern}/[cmd]                  Execute Ex [cmd] on all specified lines with a {pattern} match.
     :qall!                                          Quit and discard all unsaved changes in all open buffers.
     :wall                                           Write all modified buffers to disk. (:wa)
     :write
-    :wnext                                          Write, followed by &quot;next.&quot;
+    :wnext                                          Write, followed by "next."
     :tabnew
     :split
     :prev/:next
     :bprev/:bnext
     @:                                              Repeat the last Ex command.
     :normal &lt;cmd&gt;                                   For each selected line, execute the normal mode command &lt;cmd&gt;. (jVG :normal .)
-    :%normal A;                                     Select all modes and run normal &quot;A;&quot; (append a semicolon to every line).
+    :%normal A;                                     Select all modes and run normal "A;" (append a semicolon to every line).
     :%normal i//                                    Comment out every line (.js or .cpp).                                  
     :delete {register}                              Cut the current line into {register} 
     :yank {register}                                Copy the current line into {register} 
@@ -3160,7 +2122,7 @@
     :edit!                                          Undo all changes (back to last save?).
     :sort                                           Sort!
 </code></pre></div></td></tr></table></div>
-<h3 id="global-commands">Global Commands<a class="headerlink" href="#global-commands" title="Permanent link">&para;</a></h3>
+<h3 id="global-commands">Global Commands<a class="headerlink" href="#global-commands" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -3172,12 +2134,12 @@
     :[range]global[!]/{pattern}/[range][cmd]        Template is expandable...
     :g/re/p                                         Print a regular expression globally. ^_^
     :g/re/d                                         Delete all lines matching a regular expression globally. 
-    :[range] vglobal /{pattern}/ [cmd]              Execute an Ex command on each line that doesn&#39;t match a pattern.
+    :[range] vglobal /{pattern}/ [cmd]              Execute an Ex command on each line that doesn't match a pattern.
     :v/re/d                                         Delete all lines NOT matching a regular expression globally. 
     :g/TODO/yank A                                  Copy all lines with TODO in them into register a (use upper case to append).
     :g/{/ .+1,/}/-1 sort                            Sort all items between all braces {} in a bufer.
 </code></pre></div></td></tr></table></div>
-<h3 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">&para;</a></h3>
+<h3 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3188,10 +2150,10 @@
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>    q{register}                                     Start recording a macro to {register} (e.g. &quot;q&quot;). Lower-case to overwrite, upper case to append.
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>    q{register}                                     Start recording a macro to {register} (e.g. "q"). Lower-case to overwrite, upper case to append.
     qq                                              Start recording into register q.
     q                                               Stop recording.
-    qQ                                              Append additional commands to the macro in register &quot;q&quot;.
+    qQ                                              Append additional commands to the macro in register "q".
     q                                               Stop appending.
     :reg {register}                                 Examine the macro in {register}. (Useful before appending.)
     @{register}                                     Execute the macro in {register}.
@@ -3200,7 +2162,7 @@
     :normal @{register}                             Apply the macro to every visually selected line of text (e.g. vG:normal @a)
     :argdo normal @{register}                       Apply the macro to all open buffers. (Often lead with :edit! to undo file where we recorded the macro.)
 </code></pre></div></td></tr></table></div>
-<h3 id="vim-script">Vim Script<a class="headerlink" href="#vim-script" title="Permanent link">&para;</a></h3>
+<h3 id="vim-script">Vim Script<a class="headerlink" href="#vim-script" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -3209,9 +2171,9 @@
     :echo i                                         Print i (not to the buffer).
     :let i += 1                                     Increment i.
     &lt;ctrl-r&gt; =i&lt;cr&gt;                                 Insert i into the buffer.
-    :let @a=substitute(@a, &#39;\~&#39;, &#39;vU&#39;, &#39;g&#39;)         Substitute text *inside* the register.
+    :let @a=substitute(@a, '\~', 'vU', 'g')         Substitute text *inside* the register.
 </code></pre></div></td></tr></table></div>
-<h3 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h3>
+<h3 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -3230,7 +2192,7 @@
     :tjump {keyword}                                Acts like g&lt;ctrl-]&gt;.
     :pop                                            Acts like &lt;ctrl-t&gt;.
 </code></pre></div></td></tr></table></div>
-<h3 id="quickfix-list">Quickfix List<a class="headerlink" href="#quickfix-list" title="Permanent link">&para;</a></h3>
+<h3 id="quickfix-list">Quickfix List<a class="headerlink" href="#quickfix-list" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3257,30 +2219,30 @@
     :setlocal makeprg=gmake\ acquire_data-lib    
     :setlocal makeprg=cmt\ make    
     :setglobal errorformat?                         Check the error format put into the Quickfix list. - %f=filename, %l=line, %m=message
-    :setlocal efm={format}                          Set the format to handle errors vim doesn&#39;t know well.
+    :setlocal efm={format}                          Set the format to handle errors vim doesn't know well.
     :compiler cmt make                              Activte the compiler plugin (set makeprg and errorformat).
     :args $VIMRUNTIME/compiler/*.vim                Look at the compiler plugins distributed with vim.
 </code></pre></div></td></tr></table></div>
-<h3 id="location-list">Location List<a class="headerlink" href="#location-list" title="Permanent link">&para;</a></h3>
+<h3 id="location-list">Location List<a class="headerlink" href="#location-list" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    :lnext, :lprev, ...
 </code></pre></div></td></tr></table></div>
-<h3 id="grepping-externally">Grepping Externally<a class="headerlink" href="#grepping-externally" title="Permanent link">&para;</a></h3>
+<h3 id="grepping-externally">Grepping Externally<a class="headerlink" href="#grepping-externally" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>    :grep {pattern} *                               Populate the Quickfix list with the search results (-n flag is automatically present).
-    :grepprg=&quot;grep -n $* /dev/null&quot;                 Set what :grep triggers in the external shell. (For example, call ack.)
-    :grepformat=&quot;%f:%l:%m,%f:%l%m,%f %l%m&quot;          Format the search results from the external grep triggered by :grep. (See errorformat for more.)
-    :vimgrep/{pattern}/[g][j] {file}                Use vim&#39;s built-in search engine (vim regex syntax). {File} cannot be blank. (* for any file in the directory.)
+    :grepprg="grep -n $* /dev/null"                 Set what :grep triggers in the external shell. (For example, call ack.)
+    :grepformat="%f:%l:%m,%f:%l%m,%f %l%m"          Format the search results from the external grep triggered by :grep. (See errorformat for more.)
+    :vimgrep/{pattern}/[g][j] {file}                Use vim's built-in search engine (vim regex syntax). {File} cannot be blank. (* for any file in the directory.)
     :vimgrep/{pattern}/**                           Search through all files in subdirectories recursvely. Navigate in quickfix (use :copen).
     :vimgrep/{&lt;ctrl-r&gt;/}/**                         Paste the last search from the search register into the pattern for external searching.
 </code></pre></div></td></tr></table></div>
-<h3 id="autocompletion">Autocompletion<a class="headerlink" href="#autocompletion" title="Permanent link">&para;</a></h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;ctrl-p&gt; / &lt;ctrl-n&gt;                             From insert mode, to select the &quot;previous&quot; and &quot;next&quot; items.
+<h3 id="autocompletion">Autocompletion<a class="headerlink" href="#autocompletion" title="Permanent link">¶</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;ctrl-p&gt; / &lt;ctrl-n&gt;                             From insert mode, to select the "previous" and "next" items.
 </code></pre></div></td></tr></table></div>
-<h3 id="autocompletion-method-table">Autocompletion Method Table<a class="headerlink" href="#autocompletion-method-table" title="Permanent link">&para;</a></h3>
+<h3 id="autocompletion-method-table">Autocompletion Method Table<a class="headerlink" href="#autocompletion-method-table" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -3291,15 +2253,15 @@
 <span class="normal">8</span>
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;ctrl-n&gt;                                        Generic keywords (built from a partial word list using a document scan).
     &lt;ctrl-x&gt;&lt;ctrl-n&gt;                                Current buffer keywords.
-    &lt;ctrl-x&gt;&lt;ctrl-i&gt;                                Included file keywords (e.g., #include (c,c++), import (ruby, python), etc.) (Tweak the &#39;include&#39; setting.)
+    &lt;ctrl-x&gt;&lt;ctrl-i&gt;                                Included file keywords (e.g., #include (c,c++), import (ruby, python), etc.) (Tweak the 'include' setting.)
     &lt;ctrl-x&gt;&lt;ctrl-]&gt;                                Included file keywords.
     &lt;ctrl-x&gt;&lt;ctrl-]&gt;                                Tags file keywords.
     &lt;ctrl-x&gt;&lt;ctrl-k&gt;                                Dictionary lookup - dictionary must be populated (best with :set spell).
     &lt;ctrl-x&gt;&lt;ctrl-l&gt;                                Whole line completion (duplicate an existing line from elsewhere in the buffer - use a few chars to start).
     &lt;ctrl-x&gt;&lt;ctrl-f&gt;                                Filename completion (uses :pwd, so :cd {path} to get a different set).
-    &lt;ctrl-x&gt;&lt;ctrl-o&gt;                                Omni completion (we need a plug-in for the language we&#39;re using, see compl-omni-filetypes).
+    &lt;ctrl-x&gt;&lt;ctrl-o&gt;                                Omni completion (we need a plug-in for the language we're using, see compl-omni-filetypes).
 </code></pre></div></td></tr></table></div>
-<h3 id="autocompletion-pop-up-menu">Autocompletion Pop-up Menu<a class="headerlink" href="#autocompletion-pop-up-menu" title="Permanent link">&para;</a></h3>
+<h3 id="autocompletion-pop-up-menu">Autocompletion Pop-up Menu<a class="headerlink" href="#autocompletion-pop-up-menu" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -3318,16 +2280,16 @@
     &lt;ctrl-l&gt;                                        Add one character from the current match.
     {char}                                          Stop completion and insert {char}.
 </code></pre></div></td></tr></table></div>
-<h3 id="autocompletion-source-material">Autocompletion Source Material<a class="headerlink" href="#autocompletion-source-material" title="Permanent link">&para;</a></h3>
+<h3 id="autocompletion-source-material">Autocompletion Source Material<a class="headerlink" href="#autocompletion-source-material" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>    :ls!                                            Look at the keywords in the buffer list. (???)
     :set include?                                   Inspect included (e.g. header) files.
-    :set complete                                   Look at the list of &quot;locations&quot; included in the complete commands.
-    :set complete+=k                                Etc. See &#39;complete&#39; documentation for the include lists and defaults.
+    :set complete                                   Look at the list of "locations" included in the complete commands.
+    :set complete+=k                                Etc. See 'complete' documentation for the include lists and defaults.
 </code></pre></div></td></tr></table></div>
-<h3 id="spelling">Spelling<a class="headerlink" href="#spelling" title="Permanent link">&para;</a></h3>
+<h3 id="spelling">Spelling<a class="headerlink" href="#spelling" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -3344,40 +2306,40 @@
     :set spelllang=en_us                            Also, en_au, en_ca, en_gb, en_nz (try =fr, will prompt for download, etc.)
     &lt;ctrl-x&gt;s                                       Fix spelling from insert mode (:set spell must already be active).
 </code></pre></div></td></tr></table></div>
-<h3 id="programming">Programming<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h3>
+<h3 id="programming">Programming<a class="headerlink" href="#programming" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    shift-k                                         Open man page for word under the cursor.
 </code></pre></div></td></tr></table></div>
-<h3 id="recipes---find--replace-across-many-files">Recipes - Find &amp; Replace Across Many Files<a class="headerlink" href="#recipes---find--replace-across-many-files" title="Permanent link">&para;</a></h3>
+<h3 id="recipes---find--replace-across-many-files">Recipes - Find &amp; Replace Across Many Files<a class="headerlink" href="#recipes---find--replace-across-many-files" title="Permanent link">¶</a></h3>
 <ol>
 <li>Fully populate the args list (all files).    <code>:args **/*.txt</code></li>
 <li>Enable navigation w/o saving.                <code>:set hidden</code></li>
 <li>Set the search pattern.                      <code>/Pragmatic\ze Vim</code></li>
 <li>Replace with error suppression.              <code>:argdo %s//Practical/ge</code></li>
 </ol>
-<h3 id="recipes---clear-a-register">Recipes - Clear a Register<a class="headerlink" href="#recipes---clear-a-register" title="Permanent link">&para;</a></h3>
+<h3 id="recipes---clear-a-register">Recipes - Clear a Register<a class="headerlink" href="#recipes---clear-a-register" title="Permanent link">¶</a></h3>
 <ol>
 <li>Start and finish a macro with no steps.      <code>qaq</code></li>
 <li>Check the register (here - a).               <code>:reg a</code></li>
 </ol>
-<h3 id="recipes---sort-a-list">Recipes - Sort a List<a class="headerlink" href="#recipes---sort-a-list" title="Permanent link">&para;</a></h3>
+<h3 id="recipes---sort-a-list">Recipes - Sort a List<a class="headerlink" href="#recipes---sort-a-list" title="Permanent link">¶</a></h3>
 <ol>
 <li>Select the block of items.                   <code>v{motion}</code></li>
-<li>Apply the sort (: brings up &lsquo;&lt;,&rsquo;&gt;)           <code>:sort</code></li>
+<li>Apply the sort (: brings up ‘&lt;,’&gt;)           <code>:sort</code></li>
 </ol>
-<h3 id="recipes---use-tags">Recipes - Use Tags<a class="headerlink" href="#recipes---use-tags" title="Permanent link">&para;</a></h3>
+<h3 id="recipes---use-tags">Recipes - Use Tags<a class="headerlink" href="#recipes---use-tags" title="Permanent link">¶</a></h3>
 <ol>
 <li>Check to see tags options.                   <code>:set tags?</code></li>
 <li>Generate a tags file locally.                <code>:!ctags -R</code></li>
-<li>Ignore some noise&hellip; (etc.)                  <code>:!ctags -R --exclude=.git</code></li>
+<li>Ignore some noise… (etc.)                  <code>:!ctags -R --exclude=.git</code></li>
 <li>Shortcut to regenerate file.                 <code>:nnoremap &lt;f5&gt; :!ctags -R&lt;CR&gt;</code></li>
 <li>Set autocommand on save.                     <code>:autocmd BufWritePost * call system("ctags -R")</code></li>
 </ol>
-<h3 id="recipes---use-ack-instead-of-grep-for-grep">Recipes - Use ack instead of grep for :grep<a class="headerlink" href="#recipes---use-ack-instead-of-grep-for-grep" title="Permanent link">&para;</a></h3>
+<h3 id="recipes---use-ack-instead-of-grep-for-grep">Recipes - Use ack instead of grep for :grep<a class="headerlink" href="#recipes---use-ack-instead-of-grep-for-grep" title="Permanent link">¶</a></h3>
 <ol>
-<li>Set a different :grepprg                     <code>:set grepprg=ack\ --nogroup\ --column\ $*</code>     # May need ack-5.12 on my Mac&hellip;</li>
+<li>Set a different :grepprg                     <code>:set grepprg=ack\ --nogroup\ --column\ $*</code>     # May need ack-5.12 on my Mac…</li>
 <li>Set the format.                              <code>:set grepformat=%f:%l:%c:%m</code>                   # %c to go to the column!</li>
 </ol>
-<h3 id="recipes---add-a-local-dictionary-for-project-jargon-spellings">Recipes - Add a &ldquo;local&rdquo; Dictionary for Project Jargon Spellings<a class="headerlink" href="#recipes---add-a-local-dictionary-for-project-jargon-spellings" title="Permanent link">&para;</a></h3>
+<h3 id="recipes---add-a-local-dictionary-for-project-jargon-spellings">Recipes - Add a “local” Dictionary for Project Jargon Spellings<a class="headerlink" href="#recipes---add-a-local-dictionary-for-project-jargon-spellings" title="Permanent link">¶</a></h3>
 <ol>
 <li>Turn on spell checking.                      <code>:set spell</code></li>
 <li>Set a base language (if needed).             <code>:setlocal spelllang=en_us</code></li>
@@ -3386,7 +2348,7 @@
 <li>Add to the second spell file.                <code>:2zg</code></li>
 <li>Add to the original spell file.              <code>:1zg</code></li>
 </ol>
-<h3 id="recipes---change-vim-on-the-fly">Recipes - Change Vim on the Fly<a class="headerlink" href="#recipes---change-vim-on-the-fly" title="Permanent link">&para;</a></h3>
+<h3 id="recipes---change-vim-on-the-fly">Recipes - Change Vim on the Fly<a class="headerlink" href="#recipes---change-vim-on-the-fly" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -3403,7 +2365,7 @@
     :bufdo setlocal ts=4
     :windo setlocal number
 </code></pre></div></td></tr></table></div>
-<h3 id="recipes---customize-with-vim-files">Recipes - Customize with .vim Files<a class="headerlink" href="#recipes---customize-with-vim-files" title="Permanent link">&para;</a></h3>
+<h3 id="recipes---customize-with-vim-files">Recipes - Customize with .vim Files<a class="headerlink" href="#recipes---customize-with-vim-files" title="Permanent link">¶</a></h3>
 <ol>
 <li>Name the file.                               <code>vim ~/mysettings.vim</code></li>
 <li>Source it.                                   <code>:source ~/mysettings.vim</code></li>
@@ -3413,7 +2375,7 @@
         set shiftwidth=2
         set expandtab</li>
 </ol>
-<h3 id="recipes---filetype-specific-customization">Recipes - Filetype Specific Customization<a class="headerlink" href="#recipes---filetype-specific-customization" title="Permanent link">&para;</a></h3>
+<h3 id="recipes---filetype-specific-customization">Recipes - Filetype Specific Customization<a class="headerlink" href="#recipes---filetype-specific-customization" title="Permanent link">¶</a></h3>
 <ol>
 <li>
 <p>Edit customizations file (e.g., ~/.vimrc):</p>
@@ -3422,7 +2384,7 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>if has(&quot;autocmd&quot;)
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>if has("autocmd")
   filetype on
   autocmd FileType ruby setlocal ts=2 sts=2 sw=2 et
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noet
@@ -3440,7 +2402,7 @@ compiler nodelint
 </code></pre></div></td></tr></table></div>
 </li>
 </ol>
-<h3 id="reciples---change-encoding-eg-fix-excel-exports-to-csv">Reciples - Change Encoding (e.g. fix Excel exports to csv)<a class="headerlink" href="#reciples---change-encoding-eg-fix-excel-exports-to-csv" title="Permanent link">&para;</a></h3>
+<h3 id="reciples---change-encoding-eg-fix-excel-exports-to-csv">Reciples - Change Encoding (e.g. fix Excel exports to csv)<a class="headerlink" href="#reciples---change-encoding-eg-fix-excel-exports-to-csv" title="Permanent link">¶</a></h3>
 <p>See: http://stackoverflow.com/questions/64860/best-way-to-convert-text-files-between-character-sets</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -3448,97 +2410,64 @@ compiler nodelint
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>    $ file Consumer_Complaints_short.csv
     Consumer_Complaints_short.csv: Non-ISO extended-ASCII English text
-    $ vim +&quot;set nobomb | set fenc=utf8 |x&quot; Consumer_Complaints_short.csv
+    $ vim +"set nobomb | set fenc=utf8 |x" Consumer_Complaints_short.csv
     $ file Consumer_Complaints_short.csv
     Consumer_Complaints_short.csv: UTF-8 Unicode English text
 </code></pre></div></td></tr></table></div>
-<h3 id="recipes---paste-tablecolumn-data-from-webclipboard">Recipes - Paste Table/Column Data from Web/Clipboard<a class="headerlink" href="#recipes---paste-tablecolumn-data-from-webclipboard" title="Permanent link">&para;</a></h3>
+<h3 id="recipes---paste-tablecolumn-data-from-webclipboard">Recipes - Paste Table/Column Data from Web/Clipboard<a class="headerlink" href="#recipes---paste-tablecolumn-data-from-webclipboard" title="Permanent link">¶</a></h3>
 <ol>
 <li>Copy table from web</li>
 <li>
 <p>Go to exec mode and set the clipboard register to block mode</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    call setreg(&#39;+&#39;, @+, &#39;b&#39;)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    call setreg('+', @+, 'b')
 </code></pre></div></td></tr></table></div>
 </li>
 <li>
 <p>Insert and paste.</p>
 </li>
 </ol>
-<h3 id="recipes---search-for-special-characters">Recipes - search for special characters<a class="headerlink" href="#recipes---search-for-special-characters" title="Permanent link">&para;</a></h3>
-<p>For example, the &ldquo;new feed&rdquo; charcter is &ldquo;^L&rdquo;, this can be searched for with:</p>
+<h3 id="recipes---search-for-special-characters">Recipes - search for special characters<a class="headerlink" href="#recipes---search-for-special-characters" title="Permanent link">¶</a></h3>
+<p>For example, the “new feed” charcter is “^L”, this can be searched for with:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>        /&lt;ctrl-v&gt;&lt;ctrl-l&gt;
 </code></pre></div></td></tr></table></div>
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-        </div>
-        
-      </main>
-      
-        <!-- Footer -->
+</article>
+</div>
+</div>
+</main>
+<!-- Footer -->
 <footer class="md-footer">
-
-  <!-- Further information -->
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <!-- Copyright and theme information -->
+<!-- Further information -->
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<!-- Copyright and theme information -->
 <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
+<div class="md-copyright__highlight">
       ©2022 THartmanOfTheRedwoods Wiki, All rights reserved.
     </div>
   
   
     Made by
-    <a
-      href="https://github.com/viable-hartman/"
-      target="_blank" rel="noopener"
-    >
+    <a href="https://github.com/viable-hartman/" rel="noopener" target="_blank">
       Trevor Hartman
     </a>
-  
 </div>
-
-      <!-- Social links -->
-      
-        <div class="md-social">
-  
-    
-    
-    <a href="https://github.com/THartmanOfTheRedwoods" target="_blank" rel="noopener" title="Github" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-    </a>
-  
-    
-    
-    <a href="mailto:trevor-hartman@redwoods.edu" target="_blank" rel="noopener" title="" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
-    </a>
-  
+<!-- Social links -->
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/THartmanOfTheRedwoods" rel="noopener" target="_blank" title="Github">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:trevor-hartman@redwoods.edu" rel="noopener" target="_blank" title="">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"></path></svg>
+</a>
 </div>
-      
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": "1.0.0"}</script>
-    
-    
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
-      
-    
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+<script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
