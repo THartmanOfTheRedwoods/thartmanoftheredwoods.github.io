@@ -1,0 +1,1593 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
+<meta content="Trevor Hartman" name="author"/>
+<link href="../assets/images/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
+<title>Week 2 - THartmanOfTheRedwoods Wiki</title>
+<link href="../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
+<link href="../css/mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="red" data-md-color-primary="red" data-md-color-scheme="slate" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#inheritance">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            THartmanOfTheRedwoods Wiki
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Week 2
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="red" data-md-color-media="" data-md-color-primary="red" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../index.html">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../git/gitflow.html">
+        Git
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../java/format_specifiers.html">
+        Java
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../markdown-cheat-sheet.html">
+      Markdown
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../tomcat/install.html">
+        Tomcat
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../tux/os_command_map.html">
+        Tux
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../vim/cheat-sheet.html">
+        Vim
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../virtualbox/win11install.html">
+        VirtualBox
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../windows/os_command_map.html">
+        Windows
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../hardware/cables.html">
+        Hardware
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../archive.html">
+        Class Notes
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
+</a>
+    THartmanOfTheRedwoods Wiki
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../index.html">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Git" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git/gitflow.html">
+        Workflows
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Java" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/format_specifiers.html">
+        Format Specifiers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/operators.html">
+        Operators
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/associativity.html">
+        Operator Prcedence &amp; Associativity
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../markdown-cheat-sheet.html">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          Tomcat
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tomcat" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Tomcat
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tomcat/install.html">
+        Install
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          Tux
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tux" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Tux
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/os_command_map.html">
+        Command Cheatsheet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/imagemagick.html">
+        ImageMagick
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/pandoc.html">
+        Pandoc
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/parallel.html">
+        Parallel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/tesseract.html">
+        Tesseract
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+          Vim
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Vim" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Vim
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vim/cheat-sheet.html">
+        Cheatsheet
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8">
+          VirtualBox
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="VirtualBox" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          VirtualBox
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../virtualbox/win11install.html">
+        Install
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Windows" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/os_command_map.html">
+        Command Cheatsheet
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" id="__nav_9_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9_2">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Network" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_9_2">
+<span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/arp.html">
+        Arp
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/nbtstat.html">
+        Nbtstat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/netstat.html">
+        Netstat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/ping.html">
+        Ping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/ipconfig.html">
+        Ipconfig
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/net.html">
+        Net
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/nslookup.html">
+        Nslookup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/tracert.html">
+        Tracert
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10">
+          Hardware
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Hardware" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Hardware
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware/cables.html">
+        Cables
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11">
+          Class Notes
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Class Notes" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          Class Notes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archive.html">
+        Index
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" id="__nav_11_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_2">
+          CIS-50
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CIS-50" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_2">
+<span class="md-nav__icon md-icon"></span>
+          CIS-50
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_1.html">
+        Database Systems
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" id="__nav_11_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_3">
+          CIS-18
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CIS-18" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_3">
+<span class="md-nav__icon md-icon"></span>
+          CIS-18
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_1.html">
+        Week 1 Review
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="sprint.html">
+        Sprint Planning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_story_intro.html">
+        User Story Into
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="user_story_lesson.html">
+        User Story Lesson
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inheritance">
+    Inheritance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encapsulation">
+    Encapsulation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#polymorphism">
+    Polymorphism
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Week 2</h1>
+<h3 id="inheritance">Inheritance<a class="headerlink" href="#inheritance" title="Permanent link">¶</a></h3>
+<p><a href="https://www.mygreatlearning.com/blog/inheritance-in-java/">Reference</a>
+* i.e. many classes are related to each other.
+* Let’s one class acquire the methods, properties, and attributes of another class.</p>
+<p>Inheritance in Java with Examples – 2023
+By Great Learning Team Updated on Nov 23, 2022 153320
+What is Inheritance in Java?
+Inheritance in Java is a concept that acquires the properties from one class to other classes; for example, the relationship between father and son. Inheritance in Java is a process of acquiring all the behaviours of a parent object.</p>
+<p>The concept of inheritance in Java is that new classes can be constructed on top of older ones. You can use the parent class’s methods and properties when you inherit from an existing class. You can also add additional fields and methods to your existing class.
+The parent-child relationship, also known as the IS-A relationship, is represented by inheritance.</p>
+<p>To explain further,</p>
+<p>One object can acquire all of a parent object’s properties and actions through the technique of inheritance in Java Programming. It is a crucial component of OOPs (Object Oriented programming system).</p>
+<p>In Java, the idea of inheritance means that new classes can be built on top of existing ones. When you derive from an existing class, you can use its methods and properties. To your current class, you may also add new fields and methods.</p>
+<p>Must Learn Java Concepts
+Java Java Data Structures JDBC In Java OOPs In Java Java Algorithms Java Basic Programs Java Projects
+What is inheritance and example?
+A new item can inherit the traits of an older object through the process of inheritance. As an illustration, think of the class “human.” You might want to add other human characteristics in your class, such as height, weight, and so on. Therefore, one approach is to redefine each of those attributes in your class. Though not a good practise, it might be a useful approach to learn object-oriented programming. Inheriting all of those properties from one particular class is the best way to go about it. All of the attributes of class “human” (or “parent”) may be inherited by class “child.” The term “inheritance” in object-oriented programming refers to this.</p>
+<p>Class PetAnimal {</p>
+<p>// field and method of the parent class
+  String name;
+  public void eat() {
+    System.out.println(“I can eat”);
+  }
+}</p>
+<p>// inherit from PetAnimal
+class Dog extends PetAnimal {</p>
+<p>// new method in subclass
+  public void display() {
+    System.out.println(“My name is ” + name);
+  }
+}</p>
+<p>class Main {
+  public static void main(String[] args) {</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>// create an object of the subclass
+Dog labrador = new Dog();
+
+// access field of superclass
+labrador.name = "Rohu";
+labrador.display();
+
+// call method of superclass
+// using object of subclass
+labrador.eat();
+</code></pre></div></td></tr></table></div>
+<p>}
+}
+In Java, a class can inherit attributes and methods from another class. The class that inherits the properties is known as the sub-class or the child class. The class from which the properties are inherited is known as the superclass or the parent class.</p>
+<p>In Inheritance, the properties of the base class are acquired by the derived classes.</p>
+<p>Inheritance Syntax in Java
+1
+2
+3
+4
+5
+class derived_class extends base_class<br/>
+{<br/>
+   //methods 
+   //fields
+} 
+General format for Inheritance
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+class​ superclass 
+{ 
+ // superclass data variables 
+ // superclass member functions 
+} 
+class​ subclass ​extends​ superclass 
+{ 
+ // subclass data variables 
+ // subclass member functions 
+}
+Inheritance uses the “extends” keyword to create a derived class by reusing the base class code. </p>
+<p>Extends keyword in Java
+The extended keyword extends a class and is an indicator that a class is being inherited by another class. When you say class B extends a class A, it means that class B is inheriting the properties(methods, attributes) from class A. Here, class A is the superclass or parent class and class B is the subclass or child class.</p>
+<p>Inheritance Program Example
+class Base 
+ { 
+ public void M1() 
+ { 
+ System.out.println(“ Base Class Method ”); 
+ } 
+ } 
+class Derived extends Base 
+{ 
+ public void M2() 
+ { 
+ System.out.printIn(“ Derived Class Methods “); 
+ } 
+} 
+class Test 
+{ 
+ public static void main(String[] args) 
+ { 
+ Derived d = new Derived(); // creating object 
+ d.M1(); // print Base Class Method 
+ d.M2(); // print Derived Class Method 
+ } 
+} 
+Why use Inheritance in Java?
+The main advantage of inheritance is code reusability and also method overriding (runtime polymorphism). </p>
+<p>Inheritance is also known as the IS-A relationship. </p>
+<p>Terms Used in Inheritance 
+Class: ​A class is a collection of objects which have common properties. </p>
+<p>Derived Class/Sub-class: ​Derived class is a class that inherits from a base class. It is also known as subclass or child class. </p>
+<p>Base Class/Superclass: ​The base class is the main class where derived classes inherit the features. It is also known as the superclass or parent class. </p>
+<p>Reusability: ​The name itself says reuse the repeated code in the programs. It is a mechanism to reuse existing code when you are creating new classes. </p>
+<p>It’s impossible to write java programs without using inheritance. Enhancing your Java skills by taking up a certificate course will help you power ahead in your career. This java programming free certificate course covers the fundamentals of the subject, including Arrays and Functions, and can help gain great clarity and build a strong foundation.</p>
+<p>Types of Inheritance in Java
+The different 6 types of Inheritance in java are:</p>
+<p>Single inheritance.
+Multi-level inheritance.
+Multiple inheritance.
+Multipath inheritance.
+Hierarchical Inheritance.
+Hybrid Inheritance.
+Single Inheritance
+As the title indicates, just one class is subject to this kind of inheritance. The parent class gives rise to just one child class. The attributes in this sort of inheritance are only descended from one parent class, at most. Code reuse and the implementation of new features are made easier because the attributes are descended from a single base class. Below is a flowchart of a single inheritance:</p>
+<p>In Inheritance, we can access superclass methods and variables. We can also access subclass methods and variables through subclass objects only. We have to take care of superclass and subclass methods, and variable names shouldn’t conflict. </p>
+<p>Program Example: 
+class A 
+{ 
+ int a, b; 
+ void display() 
+ { 
+ System.out.println(“Inside class A values =”+a+” ”+b); 
+ } 
+} 
+class B extends A 
+{ 
+ int c; 
+ void show() 
+ { 
+ System.out.println(“Inside Class B values=”+a+” “+b+” “+c);  } 
+} 
+class SingleInheritance 
+{ 
+ public static void main(String args[]) 
+{ 
+ B obj = new B(); //derived class object 
+ obj.a=10; 
+ obj.b=20; 
+ obj.c=30; 
+ obj.display(); 
+ obj.show(); 
+ } 
+} 
+Multiple Inheritance in Java
+Defining derived class from numerous base classes is known as ‘Multiple Inheritance’. In this case, there is more than one superclass, and there can be one or more subclasses. </p>
+<p>Multiple inheritances are available in object-oriented programming with C++, but it is not available in Java. </p>
+<p>Java developers want to use multiple inheritances in some cases. Fortunately, Java developers have interface concepts expecting the developers to achieve multiple inheritances by using multiple interfaces. </p>
+<p>A subclass may inherit features from many parent classes under the concept of multiple inheritance. Contrary to popular belief, multiple inheritances are not the same as multi-level inheritance because the newly derived class in multiple inheritances may have more than one superclass. There are no limitations, and this newly derived class is free to inherit the features from the superclasses it has inherited from. Interfaces in Java can be used to achieve multiple inheritances.</p>
+<p>Ex: class Myclass implements interface1, interface2,…. </p>
+<p>Multi-Level Inheritance in Java
+In Multi-Level Inheritance in Java, a class extends to another class that is already extended from another class. For example, if there is a class A that extends class B and class B extends from another class C, then this scenario is known to follow Multi-level Inheritance.</p>
+<p>We can take an example of three classes, class Vehicle, class Car, and class SUV. Here, the class Vehicle is the grandfather class. The class Car extends class Vehicle and the class SUV extends class Car.</p>
+<p>At least two classes, if not more, are involved in the multi-level inheritance. A subclass that has just been formed becomes the base class for a new class, and one class inherits the features from its parent class.</p>
+<p>As the name implies, numerous base classes are involved in multi-level inheritance. As the newly derived class from the parent class becomes the base class for another newly derived class, the inherited features in multilevel inheritance in Java likewise come from several base classes.</p>
+<p>Multi-level inheritance:</p>
+<p>class Electronics {
+public Electronics(){
+System.out.println(“Class Electronics”);
+}
+public void deviceType() {
+System.out.println(“Device Type: Electronics”);
+}
+}
+class Grinder extends Electronics {
+public Grinder() {
+System.out.println(“Class Grinder”);
+}
+public void category() {
+System.out.println(“Category - Grinder”);
+}
+}
+class WetGrinder extends Grinder {
+public WetGrinder() {
+System.out.println(“Class WetGrinder”);
+}
+public void grinding_tech() {
+System.out.println(“Grinding Technology- WetGrinder”);
+}
+}
+public class Tester {
+public static void main(String[] arguments) {
+WetGrinder wt= new WetGrinder();
+wt.deviceType();
+wt.category();
+wt.grinding_tech();
+}
+}
+Output:
+Class Electronics
+Class Grinder
+Class WetGrinder
+Device Type: Electronics
+Category: Grinder
+Grinding Technology: WetGrinder
+Why Multiple Inheritance is not supported in Java?
+Let’s consider a case in Inheritance. Consider a class A, class B and class C. Now, let class C extend class A and class B. Now, consider a method read() in both class A and class B. The method read() in class A is different from the method read() in class B. But, while inheritance happens, the compiler has difficulty in deciding on which read() to inherit. So, in order to avoid such kind of ambiguity, multiple inheritance is not supported in Java. 
+Hierarchical Inheritance in Java
+Hierarchical inheritance in java is the sort of inheritance when numerous subclasses derive from a single class.</p>
+<p>A mixture of various inheritance types is called hierarchical inheritance.</p>
+<p>Due to the fact that numerous classes are descended from a single superclass, it differs from multilevel inheritance. These recently created classes take after this one superclass, inheriting its features, methods, etc. This procedure makes dynamic polymorphism and code reuse possible (method overriding).</p>
+<p>For example, consider a parent class Car. Now, consider child classes Audi, BMW and Mercedes. In Hierarchical Inheritance in Java, class Audi, class BMW and class Mercedes, all these three extend class Car.</p>
+<p>public class ClassH1 
+{
+    public void dispH1()
+    {
+        System.out.println(“disp() method of ClassH1”);
+    }
+}
+public class ClassH2 extends ClassH1 
+{
+    public void dispH2()
+    {
+        System.out.println(“disp() method of ClassH2”);
+    }
+}
+public class ClassH3 extends ClassH1
+{
+    public void dispH3()
+    {
+        System.out.println(“disp() method of ClassH3”);
+    }
+}
+public class ClassH4 extends ClassH1
+{
+    public void dispH4()
+    {
+        System.out.println(“disp() method of ClassH4”);
+    }
+}
+public class HierarchicalInheritanceTest 
+{
+    public static void main(String args[])
+    {
+        //Assigning ClassH2 object to ClassH2 reference
+        ClassH2 h2 = new ClassH2();
+        //call dispH2() method of ClassH2
+        h2.dispH2();
+        //call dispH1() method of ClassH1
+        h2.dispH1();</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>    //Assigning ClassH3 object to ClassH3 reference
+    ClassH3 h3 = new ClassH3();
+    //call dispH3() method of ClassH3
+    h3.dispH3();
+    //call dispH1() method of ClassH1
+    h3.dispH1();
+
+    //Assigning ClassH4 object to ClassH4 reference
+    ClassH4 h4 = new ClassH4();
+    //call dispH4() method of ClassH4
+    h4.dispH4();
+    //call dispH1() method of ClassH1
+    h4.dispH1();
+}
+</code></pre></div></td></tr></table></div>
+<p>}
+Output:
+disp() method of ClassH2
+disp() method of ClassH1
+disp() method of ClassH3
+disp() method of ClassH1
+disp() method of ClassH4
+disp() method of ClassH1
+Hybrid Inheritance in Java
+Hybrid Inheritance in Java is a combination of inheritance. In this type of Inheritance, more than one kind of inheritance is observed. For example, if we have class A and class B that extend class C and then there is another class D that extends class A, then this type of Inheritance is known as Hybrid Inheritance.</p>
+<p>Why? Because we clearly observe that there is two kinds of inheritance here- Hierarchical and Single Inheritance.</p>
+<p>A hybrid inheritance combines more than two inheritance types, such as multiple and single. Interfaces are the sole means through which it is possible because Java does not enable multiple inheritance. In essence, it combines straightforward, numerous, and hierarchical inheritances.</p>
+<p>In the diagram shown below, we see another example of Hybrid Inheritance.</p>
+<p>Inheritance Program in Java
+If we want to call methods and variables using the Parent class object, you will get an error. 
+Inheritance Example in Java-1:​
+class Parent 
+{ 
+ public void M1() 
+ { 
+ System.out.println(“Parent Class Method”); 
+ } 
+} 
+class Child extends Parent 
+{ 
+ public void M2() 
+ { 
+ System.out.println(“Child Class Method”); 
+ } 
+} 
+class Inh_In_Java 
+{ 
+ public static void main(String[] args) 
+ {
+  Parent p=new Parent(); 
+  p.M1(); 
+ ​ p.M2();​ // error-wrong way to call derived class method 
+ } 
+} 
+2. Creating objects will be very important </p>
+<p>Parent p=new Child(); ​// will not work </p>
+<p>Inheritance Example in Java-2:​
+class Parent 
+{ 
+ public void M1() 
+ { 
+ System.out.println(“Parent Class Method”); 
+ } 
+} 
+class Child extends Parent 
+{ 
+ public void M2() 
+ { 
+ System.out.println(“Child Class Method”); 
+ } 
+} 
+class Inh_In_Java 
+{ 
+ public static void main(String[] args) 
+ {
+ ​ Parent p=new Child(); 
+  p.M1(); 
+ ​ p.M2(); 
+ } 
+} 
+3. Child p=new Parent(); </p>
+<p>This implementation will not work because of incompatible types:  It is not possible to convert a Parent to a Child </p>
+<p>Inheritance Example in Java-3​: 
+class Parent 
+{ 
+ public void M1() 
+ { 
+ System.out.println(“Parent Class Method”); 
+ } 
+} 
+class Child extends Parent 
+{ 
+ public void M2() 
+ { 
+ System.out.println(“Child Class Method”); 
+ } 
+} 
+class Inh_In_Java 
+{
+ public static void main(String[] args) 
+ { 
+ Child p=new Parent(); 
+ p.M1(); 
+ p.M2(); 
+ } 
+} 
+4. From the above three examples, we understand that inheritance will be useful when derived class objects call base class(parent class or superclass) methods and variables. It will not throw an error. </p>
+<p>Inheritance Example in Java-4: 
+class Parent 
+{ 
+ public void M1() 
+ { 
+ System.out.println(“Parent Class Method”); 
+ } 
+} 
+class Child extends Parent 
+{ 
+ public void M2() 
+ { 
+ System.out.println(“Child Class Method”); 
+ } 
+} 
+class Inh_In_Java 
+{ 
+ public static void main(String[] args)
+ { 
+ Child p=new Child(); 
+ p.M1(); 
+ p.M2(); 
+ } 
+} 
+Method Overriding in Java
+If the child class has the same method in its implementation as that of its parent’s class, then the concept of method overriding comes into play.</p>
+<p>In method overriding, the child class has the same method as that of the parent class. The main use of this is to achieve runtime polymorphism.</p>
+<p>Method Overriding is used to provide specific implementation of a particular method which was provided by the parent’s class.</p>
+<p>Quick check – JavaScript Course</p>
+<p>Rules for Method overriding are:</p>
+<p>Methods must share the same name in child and parent class.
+It must have the same parameter as in the superclass.
+There must be an IS-A type of Inheritance.
+IS-A Relationship in java
+A combination of two or more classes in java is known as a relationship.</p>
+<p>In Java, we have two types of relationships:</p>
+<p>Is-A relationship
+Has-A relationship
+Is-A relationship 
+IS-A Relationship is completed related to inheritance. For example – a carrot is a vegetable; a fan is a device.</p>
+<p>This relationship can be achieved by:</p>
+<p>Usingextend Keyword
+To avoid code redundancy.
+Super keyword in Java
+Super keyword usage in inheritance, always refers to its immediate as an object. </p>
+<p>There are three usages of super keyword in Java: </p>
+<ol>
+<li>
+<p>We can invoke the superclass variables. </p>
+</li>
+<li>
+<p>We can invoke the superclass methods. </p>
+</li>
+<li>
+<p>We can invoke the superclass constructor. </p>
+</li>
+</ol>
+<p>Example for Super Keyword in Java: 
+class Superclass 
+{ 
+ int i =20; 
+void display() 
+{ 
+ System.out.println(“Superclass display method”); 
+ } 
+} 
+class Subclass extends Superclass 
+{ 
+ int i = 100; 
+ void display() 
+ { 
+ super.display(); 
+ System.out.println(“Subclass display method”); 
+ System.out.println(“ i value =”+i); 
+ System.out.println(“superclass i value =”+super.i); 
+ } 
+} 
+class SuperUse
+{ 
+ public static void main(String args[]) 
+{ 
+ Subclass obj = new Subclass(); 
+ obj.display(); 
+} 
+}
+Protected member in Inheritance
+A class’s private members are inaccessible from outside the class. The private members are only directly accessible to methods of that class. However, as was previously said, it could occasionally be required for a subclass to have access to a superclass’s private member. Anybody can access a private member if you make it public. In order to block direct access to a member of a superclass outside the class while yet allowing it to be used in a subclass, you must designate that member protected.</p>
+<p>This brings us to the end of the blog on Inheritance in Java. Hope this helps you to up-skill your Java skills. Also, if you are preparing for Interviews, check out these OOPS Interview questions to ace them like a pro. Also, now you can enrol in the free OOPs in Java Course as well.</p>
+<h3 id="encapsulation">Encapsulation<a class="headerlink" href="#encapsulation" title="Permanent link">¶</a></h3>
+<h3 id="polymorphism">Polymorphism<a class="headerlink" href="#polymorphism" title="Permanent link">¶</a></h3>
+<p><a href="https://www.mygreatlearning.com/blog/polymorphism-in-java/">Reference</a></p>
+<p>Polymorphism in Java with Examples – 2023
+By Great Learning Team Published on Jan 12, 2023 241209
+Polymorphism is the ability of an object to take on different forms. In Java, polymorphism refers to the ability of a class to provide different implementations of a method, depending on the type of object that is passed to the method.</p>
+<p>To put it simply, polymorphism in Java allows us to perform the same action in many different ways. Any Java object that can pass more than one IS-A test is polymorphic in Java. Therefore, all the Java objects are polymorphic as it has passed the IS-A test for their own type and for the class Object.</p>
+<p>This article also talks about two types of polymorphism in Java: compile time polymorphism and runtime polymorphism, Java polymorphism examples, method overloading, method overriding, why to use polymorphism in java, java programming, and many more.</p>
+<p>What is Polymorphism in Java?
+Polymorphism in Java is the task that performs a single action in different ways.</p>
+<p>So, languages that do not support polymorphism are not ‘Object-Oriented Languages’, but ‘Object-Based Languages’. Ada, for instance, is one such language. Since Java supports polymorphism, it is an Object-Oriented Language.</p>
+<p>Polymorphism occurs when there is inheritance, i.e., many classes are related to each other.</p>
+<p>Inheritance is a powerful feature in Java. Java Inheritance lets one class acquire the properties and attributes of another class. Polymorphism in Java allows us to use these inherited properties to perform different tasks. Thus, allowing us to achieve the same action in many different ways.</p>
+<p>What is Polymorphism?
+The derivation of the word Polymorphism is from two different Greek words- poly and morphs. “Poly” means numerous, and “Morphs” means forms. So, polymorphism means innumerable forms. Polymorphism, therefore, is one of the most significant features of Object-Oriented Programming.</p>
+<p>Must Learn Core Java Topics
+Java Algorithms Java Data Structures OOPs In Java JDBC In Java Java Basic Programs Java
+Real-Life Examples of Polymorphism
+An individual can have different relationships with different people. A woman can be a mother, a daughter, a sister, and a friend, all at the same time, i.e. she performs other behaviors in different situations.</p>
+<p>The human body has different organs. Every organ has a different function to perform; the heart is responsible for blood flow, the lungs for breathing, the brain for cognitive activity, and the kidneys for excretion. So we have a standard method function that performs differently depending upon the organ of the body. </p>
+<p>Polymorphism in Java Example
+A superclass named “Shapes” has a method called “area()”. Subclasses of “Shapes” can be “Triangle”, “circle”, “Rectangle”, etc. Each subclass has its way of calculating area. Using Inheritance and Polymorphism means, the subclasses can use the “area()” method to find the area’s formula for that shape.</p>
+<p>class Shapes {
+  public void area() {
+    System.out.println(“The formula for area of “);
+  }
+}
+class Triangle extends Shapes {
+  public void area() {
+    System.out.println(“Triangle is ½ * base * height “);
+  }
+}
+class Circle extends Shapes {
+  public void area() {
+    System.out.println(“Circle is 3.14 * radius * radius “);
+  }
+}
+class Main {
+  public static void main(String[] args) {
+    Shapes myShape = new Shapes();  // Create a Shapes object
+    Shapes myTriangle = new Triangle();  // Create a Triangle object
+    Shapes myCircle = new Circle();  // Create a Circle object
+    myShape.area();
+    myTriangle.area();
+    myShape.area();
+    myCircle.area();
+  }
+}
+Output:</p>
+<p>The formula for the area of the Triangle is ½ * base * height
+The formula for the area of the Circle is 3.14 * radius * radius</p>
+<p>class Shape {
+    public void draw() {
+        System.out.println(“Drawing a shape”);
+    }
+}</p>
+<p>class Circle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println(“Drawing a circle”);
+    }
+}</p>
+<p>class Square extends Shape {
+    @Override
+    public void draw() {
+        System.out.println(“Drawing a square”);
+    }
+}</p>
+<p>class Main {
+    public static void main(String[] args) {
+        Shape s1 = new Circle();
+        Shape s2 = new Square();</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    s1.draw(); // Output: "Drawing a circle"
+    s2.draw(); // Output: "Drawing a square"
+}
+</code></pre></div></td></tr></table></div>
+<p>}
+In this example, we have a base class Shape with a single method draw() that prints “Drawing a shape” to the console. We then create two subclasses, Circle and Square, that override the draw() method to print “Drawing a circle” and “Drawing a square” respectively.</p>
+<p>In the main method, we create two instances of the Shape class, s1 and s2, which are actually instances of the Circle and Square subclasses. When we call the draw() method on these objects, the correct implementation is called based on the actual type of the object, this is run-time polymorphism. The program will output: “Drawing a circle” and “Drawing a square”</p>
+<p>In this example, the draw() method is overridden in the subclasses, and this allows for the program to determine which method to use at runtime. This is known as runtime polymorphism or dynamic polymorphism, Because at runtime the JVM determines the actual type of the object and calls the corresponding method.</p>
+<p>Also Read: OOPs concepts in Java</p>
+<p>Types of Polymorphism
+You can perform Polymorphism in Java via two different methods:</p>
+<p>Method Overloading
+Method Overriding
+What is Method Overloading in Java?
+Method overloading is the process that can create multiple methods of the same name in the same class, and all the methods work in different ways. Method overloading occurs when there is more than one method of the same name in the class.</p>
+<p>Example of Method Overloading in Java
+class Shapes {
+  public void area() {
+    System.out.println(“Find area “);
+  }
+public void area(int r) {
+    System.out.println(“Circle area = “+3.14<em>r</em>r);
+  }</p>
+<p>public void area(double b, double h) {
+    System.out.println(“Triangle area=”+0.5<em>b</em>h);
+  }
+public void area(int l, int b) {
+    System.out.println(“Rectangle area=”+l*b);
+  }</p>
+<p>}</p>
+<p>class Main {
+  public static void main(String[] args) {
+    Shapes myShape = new Shapes();  // Create a Shapes object</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>myShape.area();
+myShape.area(5);
+myShape.area(6.0,1.2);
+myShape.area(6,2);
+</code></pre></div></td></tr></table></div>
+<p>}
+}
+Output:</p>
+<p>Find area
+Circle area = 78.5
+Triangle area=3.60
+Rectangle area=12</p>
+<p>What is Method Overriding in Java?
+Method overriding is the process when the subclass or a child class has the same method as declared in the parent class.</p>
+<p>Example of Method Overriding in Java
+class Vehicle{<br/>
+  //defining a method<br/>
+  void run(){System.out.println(“Vehicle is moving”);}<br/>
+}<br/>
+//Creating a child class<br/>
+class Car2 extends Vehicle{<br/>
+  //defining the same method as in the parent class<br/>
+  void run(){System.out.println(“car is running safely”);}  </p>
+<p>public static void main(String args[]){<br/>
+  Car2 obj = new Car2();//creating object<br/>
+  obj.run();//calling method<br/>
+  }<br/>
+}<br/>
+Output:</p>
+<p>Car is running safely
+Also, Polymorphism in Java can be classified into two types, i.e:</p>
+<p>Static/Compile-Time Polymorphism
+Dynamic/Runtime Polymorphism
+What is Compile-Time Polymorphism in Java?
+Compile Time Polymorphism In Java is also known as Static Polymorphism. Furthermore, the call to the method is resolved at compile-time. Compile-Time polymorphism is achieved through Method Overloading. This type of polymorphism can also be achieved through Operator Overloading. However, Java does not support Operator Overloading.</p>
+<p>Method Overloading is when a class has multiple methods with the same name, but the number, types, and order of parameters and the return type of the methods are different. Java allows the user freedom to use the same name for various functions as long as it can distinguish between them by the type and number of parameters. Check out some of the important questions on run time polymorphism in java interview questions.</p>
+<p>Example of Compile-Time Polymorphism in Java
+We will do addition in Java and understand the concept of compile time polymorphism using subtract() </p>
+<p>package staticPolymorphism; 
+public class Addition 
+{ 
+void sum(int a, int b) 
+{ 
+int c = a+b; 
+System.out.println(“ Addition of two numbers :” +c); } 
+void sum(int a, int b, int e) 
+{ 
+int c = a+b+e; 
+System.out.println(“ Addition of three numbers :” +c); } 
+public static void main(String[] args) 
+{ 
+Addition obj = new Addition(); 
+obj.sum ( 30,90); 
+obj.sum(45, 80, 22); 
+} 
+}
+The output of the program will be: </p>
+<p>Sum of two numbers: 120 </p>
+<p>Sum of three numbers: 147 </p>
+<p>In this program, the sum() method overloads with two types via different parameters. </p>
+<p>This is the basic concept of compile-time polymorphism in java where we can perform various operations by using multiple methods having the same name.</p>
+<p>What is Runtime Polymorphism in Java?
+Runtime polymorphism in Java is also popularly known as Dynamic Binding or Dynamic Method Dispatch. In this process, the call to an overridden method is resolved dynamically at runtime rather than at compile-time. You can achieve Runtime polymorphism via Method Overriding.</p>
+<p>Method Overriding is done when a child or a subclass has a method with the same name, parameters, and return type as the parent or the superclass; then that function overrides the function in the superclass. In simpler terms, if the subclass provides its definition to a method already present in the superclass; then that function in the base class is said to be overridden.</p>
+<p>Also, it should be noted that runtime polymorphism can only be achieved through functions and not data members. </p>
+<p>Overriding is done by using a reference variable of the superclass. The method to be called is determined based on the object which is being referred to by the reference variable. This is also known as Upcasting.</p>
+<p>Upcasting takes place when the Parent class’s reference variable refers to the object of the child class. For example:</p>
+<p>class A{} 
+class B extends A{}<br/>
+A a=new B(); //upcasting
+Examples of Runtime Polymorphism in Java
+Example 1:</p>
+<p>In this example, we are creating one superclass Animal and three subclasses, Herbivores, Carnivores, and Omnivores. Subclasses extend the superclass and override its eat() method. We will call the eat() method by the reference variable of Parent class, i.e. Animal class. As it refers to the base class object and the base class method overrides the superclass method; the base class method is invoked at runtime. As Java Virtual Machine or the JVM and not the compiler determines method invocation, it is, therefore, runtime polymorphism.</p>
+<p>class Animal{<br/>
+  void eat(){
+System.out.println(“Animals Eat”);
+}<br/>
+}<br/>
+class herbivores extends Animal{<br/>
+  void eat(){
+System.out.println(“Herbivores Eat Plants”);
+} 
+  }
+class omnivores extends Animal{<br/>
+  void eat(){
+System.out.println(“Omnivores Eat Plants and meat”);
+} 
+  }
+class carnivores extends Animal{<br/>
+  void eat(){
+System.out.println(“Carnivores Eat meat”);
+} 
+  }
+class main{
+  public static void main(String args[]){ 
+    Animal A = new Animal();
+    Animal h = new herbivores(); //upcasting<br/>
+    Animal o = new omnivores(); //upcasting<br/>
+    Animal c = new carnivores(); //upcasting<br/>
+    A.eat();
+    h.eat();
+    o.eat();<br/>
+    c.eat();  </p>
+<p>}<br/>
+}<br/>
+Output:</p>
+<p>Animals eat
+Herbivores Eat Plants
+Omnivores Eat Plants and meat
+Carnivores eat meat</p>
+<p>Example 2:</p>
+<p>In this example, we are creating one superclass Hillstations and three subclasses Manali, Mussoorie, Gulmarg. Subclasses extend the superclass and override its location() and famousfor() method. We will call the location() and famousfor() method by the Parent class’, i.e. Hillstations class. As it refers to the base class object and the base class method overrides the superclass method; the base class method is invoked at runtime. Also, as Java Virtual Machine or the JVM and not the compiler determines method invocation, it is runtime polymorphism.</p>
+<p>class Hillstations{<br/>
+  void location(){
+System.out.println(“Location is:”);
+}<br/>
+void famousfor(){
+System.out.println(“Famous for:”);
+}  </p>
+<p>}<br/>
+class Manali extends Hillstations {<br/>
+  void location(){
+System.out.println(“Manali is in Himachal Pradesh”);
+}<br/>
+void famousfor(){
+System.out.println(“It is Famous for Hadimba Temple and adventure sports”);
+}<br/>
+  }
+class Mussoorie extends Hillstations {<br/>
+  void location(){
+System.out.println(“Mussoorie is in Uttarakhand”);
+}<br/>
+void famousfor(){
+System.out.println(“It is Famous for education institutions”);
+}<br/>
+  }
+class Gulmarg extends Hillstations {<br/>
+  void location(){
+System.out.println(“Gulmarg is in J&amp;K”);
+}<br/>
+void famousfor(){
+System.out.println(“It is Famous for skiing”);
+}<br/>
+  }
+class main{
+  public static void main(String args[]){ 
+    Hillstations A = new Hillstations();
+    Hillstations M = new Manali();</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Hillstations Mu = new Mussoorie();
+
+Hillstations G = new Gulmarg();
+
+A.location();
+</code></pre></div></td></tr></table></div>
+<p>A.famousfor();</p>
+<p>M.location();
+M.famousfor();</p>
+<p>Mu.location();
+Mu.famousfor();</p>
+<p>G.location();
+G.famousfor();
+  }<br/>
+}<br/>
+Output:</p>
+<p>Location is:
+Famous for:
+Manali is in Himachal Pradesh
+It is Famous for Hadimba Temple and adventure sports
+Mussoorie is in Uttarakhand
+It is Famous for education institutions
+Gulmarg is in J&amp;K
+It is Famous for skiing</p>
+<p>Example of run-time polymorphism in java
+We will create two classes Car and Innova, Innova class will extend the car class and will override its run() method.</p>
+<p>class Car 
+{ 
+void run() 
+{ 
+System.out.println(“ running”); 
+} 
+}
+class innova extends Car 
+{ 
+void run(); 
+{ 
+System.out.println(“ running fast at 120km”); 
+} 
+public static void main(String args[]) 
+{ 
+Car c = new innova(); 
+c.run(); 
+} 
+} 
+The output of the following program will be; </p>
+<p>Running fast at 120 km. </p>
+<p>Another example for run-time polymorphism in Java</p>
+<p>Now, let us check if we can achieve runtime polymorphism via data members. </p>
+<p>class car 
+{ 
+int speedlimit = 125; 
+} 
+class innova extends car 
+{ 
+int speedlimit = 135; 
+public static void main(String args[]) 
+{ 
+car obj = new innova(); 
+System.out.println(obj.speedlimit);
+}
+The output of the following program will be : </p>
+<p>125 </p>
+<p>This clearly implies we can’t achieve Runtime polymorphism via data members. In short, a method is overridden, not the data members.</p>
+<p>Runtime polymorphism with multilevel inheritance
+class grandfather 
+{ 
+void swim() 
+{ 
+System.out.println(“ Swimming”); 
+} 
+} 
+class father extends grandfather 
+{ 
+void swim() 
+{ 
+System.out.println(“ Swimming in river”); 
+} 
+} 
+class son extends father 
+{ 
+void swim() 
+{ 
+System.out.println(“ Swimming in pool”);
+} 
+public static void main(String args[]) 
+{ 
+grandfather f1,f2,f3; 
+f1 =new grandfather(); 
+f2 = new father(); 
+f3 = new son(); 
+f1.swim(); 
+f2.swim(); 
+f3.swim(): 
+} 
+} 
+The output of the following program will be: </p>
+<p>Swimming, Swimming in river, Swimming in pool</p>
+<p>Another runtime polymorphism with multilevel inheritance example</p>
+<p>class soundAnimal 
+{ 
+public void Sound() 
+{ 
+System.out.println(“Different sounds of animal”); }
+} 
+class buffalo extends soundAnimal 
+{ 
+public void Sound() 
+{ 
+System.out.println(“The buffalo sound- gho,gho”); } 
+} 
+class snake extends soundAnimal 
+{ 
+public void Sound() 
+{ 
+System.out.println(“The snake sound- his,his”); } 
+} 
+class tiger extends soundAnimal
+{ 
+public void Sound() 
+{ 
+System.out.println(“The tiger sounds- roooo, rooo”); } 
+} 
+public class Animal Main 
+{ 
+public static void main(String[] args) 
+{ 
+soundAnimal Animal = new soundAnimal(); soundAnimal buffalo = new buffalo(); 
+soundAnimal snake = new snake(); 
+soundAnimal tiger = new tiger(); 
+Animal.Sound(); 
+buffalo.Sound();
+snake.Sound(); 
+tiger.Sound(); 
+} 
+} 
+The output of the following program will be; </p>
+<p>The buffalo sound- gho,gho </p>
+<p>The snake sound- his,his </p>
+<p>The tiger sound- roooo,roooo </p>
+<p>We hope you got an idea about runtime and compile-time polymorphism.</p>
+<p>Polymorphic Subtypes
+Subtype basically means that a subtype can serve as another type’s subtype, sounds a bit complicated? </p>
+<p>Let’s understand this with the help of an example:</p>
+<p>Assuming we have to draw some arbitrary shapes, we can introduce a class named ‘shape’ with a draw() method. By overriding draw() with other subclasses such as circle, square, rectangle, trapezium, etc we will introduce an array of type ‘shape’ whose elements store references will refer to ‘shape’ subclass references. Next time, we will call draw(), all shapes instances draw () method will be called.</p>
+<p>This Subtype polymorphism generally relies on upcasting and late binding. A casting where you cast up the inheritance hierarchy from subtype to a supertype is termed upcasting.</p>
+<p>To call non-final instance methods we use late binding. In short, a compiler should not perform any argument checks, type checks, method calls, etc, and leave everything on the runtime. </p>
+<p>What is Polymorphism in Programming?
+Polymorphism in programming is defined usage of a single symbol to represent multiple different types.</p>
+<p>What is Polymorphism Variables?
+A polymorphic variable is defined as a variable that can hold values of different types during the course of execution.</p>
+<p>Why use Polymorphism in Java?
+Polymorphism in Java makes it possible to write a method that can correctly process lots of different types of functionalities that have the same name. We can also gain consistency in our code by using polymorphism.</p>
+<p>Advantages of Polymorphism in Java
+It provides reusability to the code. The classes that are written, tested and implemented can be reused multiple times. Furthermore, it saves a lot of time for the coder. Also, the one can change the code without affecting the original code.
+A single variable can be used to store multiple data values. The value of a variable you inherit from the superclass into the subclass can be changed without changing that variable’s value in the superclass; or any other subclasses.
+With lesser lines of code, it becomes easier for the programmer to debug the code.
+Characteristics of Polymorphism
+Polymorphism has many other characteristics other than Method Overloading and Method Overriding. They include:</p>
+<p>Coercion
+Internal Operator Overloading
+Polymorphic Variables or Parameters
+1. Coercion
+Coercion deals with implicitly converting one type of object into a new object of a different kind. Also, this is done automatically to prevent type errors in the code. </p>
+<p>Programming languages such as C, java, etc support the conversion of value from one data type to another data type. Data type conversions are of two types, i.e., implicit and explicit. </p>
+<p>Implicit type conversion is automatically done in the program and this type of conversion is also termed coercion. </p>
+<p>For example, if an operand is an integer and another one is in float, the compiler implicitly converts the integer into float value to avoid type error.</p>
+<p>Example:</p>
+<p>class coercion {</p>
+<p>public static void main(String[] args) {
+    Double area = 3.14<em>5</em>7;
+System.out.println(area);
+String s = “happy”;
+int x=5;
+String word = s+x;
+System.out.println(word);</p>
+<p>}
+}
+Output:</p>
+<p>109.9
+happy5</p>
+<ol>
+<li>Internal Operator Overloading
+In Operator Overloading, an operator or symbol behaves in more ways than one depending upon the input context or the type of operands. It is a characteristic of static polymorphism. Although Java does not support user-defined operator overloading like C++, where the user can define how an operator works for different operands, there are few instances where Java internally overloads operators.</li>
+</ol>
+<p>Operator overloading is the concept of using the operator as per your choice. Therefore, an operator symbol or method name can be used as a ‘user-defined’ type as per the requirements. </p>
+<p>For example, ‘+’ can be used to perform the addition of numbers (same data type) or for concatenation of two or more strings.</p>
+<p>In the case of +, can be used for addition and also for concatenation.</p>
+<p>For example:</p>
+<p>class coercion {</p>
+<p>public static void main(String[] args) {</p>
+<p>String s = “happy”;
+String s1 = “world”;
+int x=5;
+int y=10;</p>
+<p>System.out.println(s+s1);
+System.out.println(x+y);</p>
+<p>}
+}
+Output :</p>
+<p>happyworld
+15</p>
+<p>Similarly, operators like! &amp;, and | are also in the overload position for logical and bitwise operations. In both of these cases, the type of argument will decide how the operator will interpret.</p>
+<ol>
+<li>Polymorphic Variables or Parameters
+In Java, the object or instance variables represent the polymorphic variables. This is because any object variables of a class can have an IS-A relationship with their own classes and subclasses.</li>
+</ol>
+<p>The Polymorphic Variable is a variable that can hold values of different types during the time of execution.</p>
+<p>Parametric polymorphism specifies that while class declaration, a field name can associate with different types, and a method name can associate with different parameters and return types.</p>
+<p>For example:</p>
+<p>class Shape
+{
+public void display()
+{
+System.out.println(“A Shape.”);
+}
+}
+class Triangle extends Shape
+{
+public void display()
+{
+System.out.println(“I am a triangle.”);
+}
+}
+class Main{
+public static void main(String[] args)
+{
+Shape obj;
+obj = new Shape();
+obj.display();
+obj = new Triangle();
+obj.display();
+}
+}
+Output:</p>
+<p>A Shape.
+I am a triangle.</p>
+<p>Here, the obj object is a polymorphic variable. This is because the superclass’s same object refers to the parent class (Shape) and the child class (Triangle). </p>
+<p>Problems with Polymorphism 
+With lots of advantages, there are also a few disadvantages of polymorphism.</p>
+<p>Polymorphism is quite challenging while implementation.
+It tends to reduce the readability of the code.
+It raises some serious performance issues in real-time as well.
+Type Identification During Downcasting </p>
+<p>Downcasting is termed as casting to a child type or casting a common type to an individual type.</p>
+<p>So, we use downcasting whenever we need to access or understand the behaviour of the subtypes. </p>
+<p>Example, </p>
+<p>This is a hierarchical example </p>
+<p>Food&gt; Vegetable&gt; Ladyfinger, Tomato </p>
+<p>Here, tomato and ladyfinger are two subclasses. </p>
+<p>In downcasting, we narrow the type of objects, which means we are converting common type to individual type. </p>
+<p>Vegetable vegetable = new Tomato(); </p>
+<p>Tomato castedTomato = (Tomato) vegetable; </p>
+<p>Here we are casting common type to an individual type, superclass to subclass which is not possible directly in java.</p>
+<p>We explicitly tell the compiler what the runtime type of the object is.</p>
+<p>Fragile base class problem </p>
+<p>Fragile base class problem is nothing but a fundamental architectural problem. </p>
+<p>Sometimes the improper design of a parent class can lead a subclass of a superclass to use superclass in some unpredicted ways. </p>
+<p>The fragility of inheritance will lead to broken codes even when all the criteria is met. </p>
+<p>This architectural problem is termed as a fragile base class problem in object-oriented programming systems and language. </p>
+<p>Basically, the reason for the fragile base problem is that the developer of the base class has no idea of the subclass design. There is no solution yet for this problem. </p>
+<p>Conclusion
+We hope you must have got a basic idea of polymorphism in Java and how we use it as well as problems related to them. </p>
+<p>Hence, this brings us to the end of the blog on Polymorphism in Java. Furthermore, to learn more about programming and other related concepts, check out the courses on Great Learning Academy and PG Programs in Software Engineering.  </p>
+<p>Also, if you are preparing for Interviews, check out these Interview Questions for Java to ace it like a pro.</p>
+</article>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="md-footer">
+<!-- Further information -->
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<!-- Copyright and theme information -->
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      ©2022 THartmanOfTheRedwoods Wiki, All rights reserved.
+    </div>
+  
+  
+    Made by
+    <a href="https://github.com/viable-hartman/" rel="noopener" target="_blank">
+      Trevor Hartman
+    </a>
+</div>
+<!-- Social links -->
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/THartmanOfTheRedwoods" rel="noopener" target="_blank" title="Github">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:trevor-hartman@redwoods.edu" rel="noopener" target="_blank" title="">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+<script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
