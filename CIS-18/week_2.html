@@ -7,9 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
+<link href="user_story_lesson.html" rel="prev"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
-<title>Week 2 - THartmanOfTheRedwoods Wiki</title>
+<title>Week 2 - Fundamental OOP Principles - THartmanOfTheRedwoods Wiki</title>
 <link href="../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +36,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#inheritance">
+<a class="md-skip" href="#fundamental-object-oriented-principles">
           Skip to content
         </a>
 </div>
@@ -61,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Week 2
+              Week 2 - Fundamental OOP Principles
             
           </span>
 </div>
@@ -166,7 +167,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../archive.html">
+<a class="md-tabs__link md-tabs__link--active" href="../archive.html">
         Class Notes
       </a>
 </li>
@@ -443,8 +444,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11">
           Class Notes
           <span class="md-nav__icon md-icon"></span>
@@ -485,8 +486,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" id="__nav_11_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" id="__nav_11_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11_3">
           CIS-18
           <span class="md-nav__icon md-icon"></span>
@@ -499,7 +500,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="week_1.html">
-        Week 1 Review
+        Week 1 - Review
       </a>
 </li>
 <li class="md-nav__item">
@@ -516,6 +517,72 @@
 <a class="md-nav__link" href="user_story_lesson.html">
         User Story Lesson
       </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Week 2 - Fundamental OOP Principles
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="week_2.html">
+        Week 2 - Fundamental OOP Principles
+      </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fundamental-object-oriented-principles">
+    Fundamental Object Oriented Principles
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encapsulation">
+    Encapsulation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inheritance">
+    Inheritance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstraction">
+    Abstraction
+  </a>
+<nav aria-label="Abstraction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-class">
+    Abstract Class
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#interface">
+    Interface
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#polymorphism">
+    Polymorphism
+  </a>
+<nav aria-label="Polymorphism" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-of-polymorphism-actual-type-dictates-action">
+    Example of Polymorphism: Actual Type Dictates Action
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -538,8 +605,8 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#inheritance">
-    Inheritance
+<a class="md-nav__link" href="#fundamental-object-oriented-principles">
+    Fundamental Object Oriented Principles
   </a>
 </li>
 <li class="md-nav__item">
@@ -548,9 +615,42 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#inheritance">
+    Inheritance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstraction">
+    Abstraction
+  </a>
+<nav aria-label="Abstraction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-class">
+    Abstract Class
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#interface">
+    Interface
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#polymorphism">
     Polymorphism
   </a>
+<nav aria-label="Polymorphism" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-of-polymorphism-actual-type-dictates-action">
+    Example of Polymorphism: Actual Type Dictates Action
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -559,267 +659,53 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Week 2</h1>
+<h1>Week 2 - Fundamental OOP Principles</h1>
+<h3 id="fundamental-object-oriented-principles">Fundamental Object Oriented Principles<a class="headerlink" href="#fundamental-object-oriented-principles" title="Permanent link">¶</a></h3>
+<details class="success" open="open">
+<summary>The Beginning</summary>
+<ul>
+<li><a href="#encapsulation">Encapsulation</a></li>
+<li><a href="#inheritance">Inheritance</a></li>
+<li><a href="#abstraction">Abstraction</a></li>
+<li><a href="#polymorphism">Polymorphism</a></li>
+</ul>
+</details>
+<h3 id="encapsulation">Encapsulation<a class="headerlink" href="#encapsulation" title="Permanent link">¶</a></h3>
+<details class="note" open="open">
+<summary>Definitions</summary>
+<p><strong>Encapsulation</strong>: Group single responsibilities and make sure sensitive data is hidden from users.</p>
+</details>
+<p>Below are the important things to remember about encasulation:</p>
+<ul>
+<li>Private access modifies should be used to protect instance variables you don’t wish to change outside the class</li>
+<li>Getters and Setters should be used to protect how objects interact with sensitive data and variables.</li>
+<li>Encasulation provides access control like R, W, or RW</li>
+<li>Flexibile: Proper encapsulation means developers won’t inadvertantly change encapsulated code while working on another piece of code that utilizes it.</li>
+</ul>
 <h3 id="inheritance">Inheritance<a class="headerlink" href="#inheritance" title="Permanent link">¶</a></h3>
-<p><a href="https://www.mygreatlearning.com/blog/inheritance-in-java/">Reference</a>
-* i.e. many classes are related to each other.
-* Let’s one class acquire the methods, properties, and attributes of another class.</p>
-<p>Inheritance in Java with Examples – 2023
-By Great Learning Team Updated on Nov 23, 2022 153320
-What is Inheritance in Java?
-Inheritance in Java is a concept that acquires the properties from one class to other classes; for example, the relationship between father and son. Inheritance in Java is a process of acquiring all the behaviours of a parent object.</p>
-<p>The concept of inheritance in Java is that new classes can be constructed on top of older ones. You can use the parent class’s methods and properties when you inherit from an existing class. You can also add additional fields and methods to your existing class.
-The parent-child relationship, also known as the IS-A relationship, is represented by inheritance.</p>
-<p>To explain further,</p>
-<p>One object can acquire all of a parent object’s properties and actions through the technique of inheritance in Java Programming. It is a crucial component of OOPs (Object Oriented programming system).</p>
-<p>In Java, the idea of inheritance means that new classes can be built on top of existing ones. When you derive from an existing class, you can use its methods and properties. To your current class, you may also add new fields and methods.</p>
-<p>Must Learn Java Concepts
-Java Java Data Structures JDBC In Java OOPs In Java Java Algorithms Java Basic Programs Java Projects
-What is inheritance and example?
-A new item can inherit the traits of an older object through the process of inheritance. As an illustration, think of the class “human.” You might want to add other human characteristics in your class, such as height, weight, and so on. Therefore, one approach is to redefine each of those attributes in your class. Though not a good practise, it might be a useful approach to learn object-oriented programming. Inheriting all of those properties from one particular class is the best way to go about it. All of the attributes of class “human” (or “parent”) may be inherited by class “child.” The term “inheritance” in object-oriented programming refers to this.</p>
-<p>Class PetAnimal {</p>
-<p>// field and method of the parent class
-  String name;
-  public void eat() {
-    System.out.println(“I can eat”);
-  }
-}</p>
-<p>// inherit from PetAnimal
-class Dog extends PetAnimal {</p>
-<p>// new method in subclass
-  public void display() {
-    System.out.println(“My name is ” + name);
-  }
-}</p>
-<p>class Main {
-  public static void main(String[] args) {</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>// create an object of the subclass
-Dog labrador = new Dog();
-
-// access field of superclass
-labrador.name = "Rohu";
-labrador.display();
-
-// call method of superclass
-// using object of subclass
-labrador.eat();
-</code></pre></div></td></tr></table></div>
-<p>}
-}
-In Java, a class can inherit attributes and methods from another class. The class that inherits the properties is known as the sub-class or the child class. The class from which the properties are inherited is known as the superclass or the parent class.</p>
-<p>In Inheritance, the properties of the base class are acquired by the derived classes.</p>
-<p>Inheritance Syntax in Java
-1
-2
-3
-4
-5
-class derived_class extends base_class<br/>
-{<br/>
-   //methods 
-   //fields
-} 
-General format for Inheritance
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-class​ superclass 
-{ 
- // superclass data variables 
- // superclass member functions 
-} 
-class​ subclass ​extends​ superclass 
-{ 
- // subclass data variables 
- // subclass member functions 
-}
-Inheritance uses the “extends” keyword to create a derived class by reusing the base class code. </p>
-<p>Extends keyword in Java
-The extended keyword extends a class and is an indicator that a class is being inherited by another class. When you say class B extends a class A, it means that class B is inheriting the properties(methods, attributes) from class A. Here, class A is the superclass or parent class and class B is the subclass or child class.</p>
-<p>Inheritance Program Example
-class Base 
- { 
- public void M1() 
- { 
- System.out.println(“ Base Class Method ”); 
- } 
- } 
-class Derived extends Base 
-{ 
- public void M2() 
- { 
- System.out.printIn(“ Derived Class Methods “); 
- } 
-} 
-class Test 
-{ 
- public static void main(String[] args) 
- { 
- Derived d = new Derived(); // creating object 
- d.M1(); // print Base Class Method 
- d.M2(); // print Derived Class Method 
- } 
-} 
-Why use Inheritance in Java?
-The main advantage of inheritance is code reusability and also method overriding (runtime polymorphism). </p>
-<p>Inheritance is also known as the IS-A relationship. </p>
-<p>Terms Used in Inheritance 
-Class: ​A class is a collection of objects which have common properties. </p>
-<p>Derived Class/Sub-class: ​Derived class is a class that inherits from a base class. It is also known as subclass or child class. </p>
-<p>Base Class/Superclass: ​The base class is the main class where derived classes inherit the features. It is also known as the superclass or parent class. </p>
-<p>Reusability: ​The name itself says reuse the repeated code in the programs. It is a mechanism to reuse existing code when you are creating new classes. </p>
-<p>It’s impossible to write java programs without using inheritance. Enhancing your Java skills by taking up a certificate course will help you power ahead in your career. This java programming free certificate course covers the fundamentals of the subject, including Arrays and Functions, and can help gain great clarity and build a strong foundation.</p>
-<p>Types of Inheritance in Java
-The different 6 types of Inheritance in java are:</p>
-<p>Single inheritance.
-Multi-level inheritance.
-Multiple inheritance.
-Multipath inheritance.
-Hierarchical Inheritance.
-Hybrid Inheritance.
-Single Inheritance
-As the title indicates, just one class is subject to this kind of inheritance. The parent class gives rise to just one child class. The attributes in this sort of inheritance are only descended from one parent class, at most. Code reuse and the implementation of new features are made easier because the attributes are descended from a single base class. Below is a flowchart of a single inheritance:</p>
-<p>In Inheritance, we can access superclass methods and variables. We can also access subclass methods and variables through subclass objects only. We have to take care of superclass and subclass methods, and variable names shouldn’t conflict. </p>
-<p>Program Example: 
-class A 
-{ 
- int a, b; 
- void display() 
- { 
- System.out.println(“Inside class A values =”+a+” ”+b); 
- } 
-} 
-class B extends A 
-{ 
- int c; 
- void show() 
- { 
- System.out.println(“Inside Class B values=”+a+” “+b+” “+c);  } 
-} 
-class SingleInheritance 
-{ 
- public static void main(String args[]) 
-{ 
- B obj = new B(); //derived class object 
- obj.a=10; 
- obj.b=20; 
- obj.c=30; 
- obj.display(); 
- obj.show(); 
- } 
-} 
-Multiple Inheritance in Java
-Defining derived class from numerous base classes is known as ‘Multiple Inheritance’. In this case, there is more than one superclass, and there can be one or more subclasses. </p>
-<p>Multiple inheritances are available in object-oriented programming with C++, but it is not available in Java. </p>
-<p>Java developers want to use multiple inheritances in some cases. Fortunately, Java developers have interface concepts expecting the developers to achieve multiple inheritances by using multiple interfaces. </p>
-<p>A subclass may inherit features from many parent classes under the concept of multiple inheritance. Contrary to popular belief, multiple inheritances are not the same as multi-level inheritance because the newly derived class in multiple inheritances may have more than one superclass. There are no limitations, and this newly derived class is free to inherit the features from the superclasses it has inherited from. Interfaces in Java can be used to achieve multiple inheritances.</p>
-<p>Ex: class Myclass implements interface1, interface2,…. </p>
-<p>Multi-Level Inheritance in Java
-In Multi-Level Inheritance in Java, a class extends to another class that is already extended from another class. For example, if there is a class A that extends class B and class B extends from another class C, then this scenario is known to follow Multi-level Inheritance.</p>
-<p>We can take an example of three classes, class Vehicle, class Car, and class SUV. Here, the class Vehicle is the grandfather class. The class Car extends class Vehicle and the class SUV extends class Car.</p>
-<p>At least two classes, if not more, are involved in the multi-level inheritance. A subclass that has just been formed becomes the base class for a new class, and one class inherits the features from its parent class.</p>
-<p>As the name implies, numerous base classes are involved in multi-level inheritance. As the newly derived class from the parent class becomes the base class for another newly derived class, the inherited features in multilevel inheritance in Java likewise come from several base classes.</p>
-<p>Multi-level inheritance:</p>
-<p>class Electronics {
-public Electronics(){
-System.out.println(“Class Electronics”);
-}
-public void deviceType() {
-System.out.println(“Device Type: Electronics”);
-}
-}
-class Grinder extends Electronics {
-public Grinder() {
-System.out.println(“Class Grinder”);
-}
-public void category() {
-System.out.println(“Category - Grinder”);
-}
-}
-class WetGrinder extends Grinder {
-public WetGrinder() {
-System.out.println(“Class WetGrinder”);
-}
-public void grinding_tech() {
-System.out.println(“Grinding Technology- WetGrinder”);
-}
-}
-public class Tester {
-public static void main(String[] arguments) {
-WetGrinder wt= new WetGrinder();
-wt.deviceType();
-wt.category();
-wt.grinding_tech();
-}
-}
-Output:
-Class Electronics
-Class Grinder
-Class WetGrinder
-Device Type: Electronics
-Category: Grinder
-Grinding Technology: WetGrinder
-Why Multiple Inheritance is not supported in Java?
-Let’s consider a case in Inheritance. Consider a class A, class B and class C. Now, let class C extend class A and class B. Now, consider a method read() in both class A and class B. The method read() in class A is different from the method read() in class B. But, while inheritance happens, the compiler has difficulty in deciding on which read() to inherit. So, in order to avoid such kind of ambiguity, multiple inheritance is not supported in Java. 
-Hierarchical Inheritance in Java
-Hierarchical inheritance in java is the sort of inheritance when numerous subclasses derive from a single class.</p>
-<p>A mixture of various inheritance types is called hierarchical inheritance.</p>
-<p>Due to the fact that numerous classes are descended from a single superclass, it differs from multilevel inheritance. These recently created classes take after this one superclass, inheriting its features, methods, etc. This procedure makes dynamic polymorphism and code reuse possible (method overriding).</p>
-<p>For example, consider a parent class Car. Now, consider child classes Audi, BMW and Mercedes. In Hierarchical Inheritance in Java, class Audi, class BMW and class Mercedes, all these three extend class Car.</p>
-<p>public class ClassH1 
-{
-    public void dispH1()
-    {
-        System.out.println(“disp() method of ClassH1”);
-    }
-}
-public class ClassH2 extends ClassH1 
-{
-    public void dispH2()
-    {
-        System.out.println(“disp() method of ClassH2”);
-    }
-}
-public class ClassH3 extends ClassH1
-{
-    public void dispH3()
-    {
-        System.out.println(“disp() method of ClassH3”);
-    }
-}
-public class ClassH4 extends ClassH1
-{
-    public void dispH4()
-    {
-        System.out.println(“disp() method of ClassH4”);
-    }
-}
-public class HierarchicalInheritanceTest 
-{
-    public static void main(String args[])
-    {
-        //Assigning ClassH2 object to ClassH2 reference
-        ClassH2 h2 = new ClassH2();
-        //call dispH2() method of ClassH2
-        h2.dispH2();
-        //call dispH1() method of ClassH1
-        h2.dispH1();</p>
+<details class="note" open="open">
+<summary>Definitions</summary>
+<p><strong>Inheritance</strong>: Share/inherit <strong>instance variables/attributes/fields</strong> and <strong>methods</strong> from <strong>superclass</strong> (parent) to <strong>subclass</strong> (child). The child inherits attributes and methods from the parent.</p>
+</details>
+<p>Below are the important things to remember about inheritance:</p>
+<ul>
+<li>Every Java class extends the class Object<ul>
+<li>Which means that every class we create inherits all the methods defined in the Object class (e.g. equals, hashCode, …)</li>
+</ul>
+</li>
+<li>To inherit from a class, you must extend it (i.e. <code>public class Engine extends Part</code>).</li>
+<li>Java can only inherit/extend a single parent (i.e. no multiple inheritance).</li>
+<li>Only <strong>public</strong> and <strong>protected</strong> methods can be inherited.<ul>
+<li>So if a method should be <strong>private</strong> but inheritable, it should be <strong>protected</strong></li>
+</ul>
+</li>
+<li>To change inherited methods, they must be overriden by defining a new implementation in the <strong>child/subclass</strong></li>
+<li>Mark a class <strong>final</strong> (i.e. <code>final class SomeClass { ... }</code>) if you don’t want it to be inherited.</li>
+<li>Actual type of an object/instance dictates which method is executed (Show display from week 1 again).</li>
+<li>If the class to be created is a special case of an existing class, inheritance is OK</li>
+<li>If you notice that inheriting adds more responsibilities to a class, you should form multiple classes of the class. There should only be one reason for each class to change (Single Responsibility Principle).</li>
+</ul>
+<object data="images/inheritance_uml.svg" height="600" width="650"> </object>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -833,728 +719,510 @@ public class HierarchicalInheritanceTest
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>    //Assigning ClassH3 object to ClassH3 reference
-    ClassH3 h3 = new ClassH3();
-    //call dispH3() method of ClassH3
-    h3.dispH3();
-    //call dispH1() method of ClassH1
-    h3.dispH1();
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Example parent/super-class</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Superclass</span><span class="w"> </span><span class="p">{</span>
 
-    //Assigning ClassH4 object to ClassH4 reference
-    ClassH4 h4 = new ClassH4();
-    //call dispH4() method of ClassH4
-    h4.dispH4();
-    //call dispH1() method of ClassH1
-    h4.dispH1();
-}
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">objectVariable</span><span class="p">;</span><span class="w"> </span><span class="c1">// Not visible to child/subclass</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">objectName</span><span class="p">;</span><span class="w"> </span><span class="c1">// Visible to child/subclass, but not visible outside class.</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Superclass</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="s">"Example"</span><span class="p">);</span><span class="w">  </span><span class="c1">// Example of calling its own overloaded contructor</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Superclass</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">objectVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">objectVariable</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>}
-Output:
-disp() method of ClassH2
-disp() method of ClassH1
-disp() method of ClassH3
-disp() method of ClassH1
-disp() method of ClassH4
-disp() method of ClassH1
-Hybrid Inheritance in Java
-Hybrid Inheritance in Java is a combination of inheritance. In this type of Inheritance, more than one kind of inheritance is observed. For example, if we have class A and class B that extend class C and then there is another class D that extends class A, then this type of Inheritance is known as Hybrid Inheritance.</p>
-<p>Why? Because we clearly observe that there is two kinds of inheritance here- Hierarchical and Single Inheritance.</p>
-<p>A hybrid inheritance combines more than two inheritance types, such as multiple and single. Interfaces are the sole means through which it is possible because Java does not enable multiple inheritance. In essence, it combines straightforward, numerous, and hierarchical inheritances.</p>
-<p>In the diagram shown below, we see another example of Hybrid Inheritance.</p>
-<p>Inheritance Program in Java
-If we want to call methods and variables using the Parent class object, you will get an error. 
-Inheritance Example in Java-1:​
-class Parent 
-{ 
- public void M1() 
- { 
- System.out.println(“Parent Class Method”); 
- } 
-} 
-class Child extends Parent 
-{ 
- public void M2() 
- { 
- System.out.println(“Child Class Method”); 
- } 
-} 
-class Inh_In_Java 
-{ 
- public static void main(String[] args) 
- {
-  Parent p=new Parent(); 
-  p.M1(); 
- ​ p.M2();​ // error-wrong way to call derived class method 
- } 
-} 
-2. Creating objects will be very important </p>
-<p>Parent p=new Child(); ​// will not work </p>
-<p>Inheritance Example in Java-2:​
-class Parent 
-{ 
- public void M1() 
- { 
- System.out.println(“Parent Class Method”); 
- } 
-} 
-class Child extends Parent 
-{ 
- public void M2() 
- { 
- System.out.println(“Child Class Method”); 
- } 
-} 
-class Inh_In_Java 
-{ 
- public static void main(String[] args) 
- {
- ​ Parent p=new Child(); 
-  p.M1(); 
- ​ p.M2(); 
- } 
-} 
-3. Child p=new Parent(); </p>
-<p>This implementation will not work because of incompatible types:  It is not possible to convert a Parent to a Child </p>
-<p>Inheritance Example in Java-3​: 
-class Parent 
-{ 
- public void M1() 
- { 
- System.out.println(“Parent Class Method”); 
- } 
-} 
-class Child extends Parent 
-{ 
- public void M2() 
- { 
- System.out.println(“Child Class Method”); 
- } 
-} 
-class Inh_In_Java 
-{
- public static void main(String[] args) 
- { 
- Child p=new Parent(); 
- p.M1(); 
- p.M2(); 
- } 
-} 
-4. From the above three examples, we understand that inheritance will be useful when derived class objects call base class(parent class or superclass) methods and variables. It will not throw an error. </p>
-<p>Inheritance Example in Java-4: 
-class Parent 
-{ 
- public void M1() 
- { 
- System.out.println(“Parent Class Method”); 
- } 
-} 
-class Child extends Parent 
-{ 
- public void M2() 
- { 
- System.out.println(“Child Class Method”); 
- } 
-} 
-class Inh_In_Java 
-{ 
- public static void main(String[] args)
- { 
- Child p=new Child(); 
- p.M1(); 
- p.M2(); 
- } 
-} 
-Method Overriding in Java
-If the child class has the same method in its implementation as that of its parent’s class, then the concept of method overriding comes into play.</p>
-<p>In method overriding, the child class has the same method as that of the parent class. The main use of this is to achieve runtime polymorphism.</p>
-<p>Method Overriding is used to provide specific implementation of a particular method which was provided by the parent’s class.</p>
-<p>Quick check – JavaScript Course</p>
-<p>Rules for Method overriding are:</p>
-<p>Methods must share the same name in child and parent class.
-It must have the same parameter as in the superclass.
-There must be an IS-A type of Inheritance.
-IS-A Relationship in java
-A combination of two or more classes in java is known as a relationship.</p>
-<p>In Java, we have two types of relationships:</p>
-<p>Is-A relationship
-Has-A relationship
-Is-A relationship 
-IS-A Relationship is completed related to inheritance. For example – a carrot is a vegetable; a fan is a device.</p>
-<p>This relationship can be achieved by:</p>
-<p>Usingextend Keyword
-To avoid code redundancy.
-Super keyword in Java
-Super keyword usage in inheritance, always refers to its immediate as an object. </p>
-<p>There are three usages of super keyword in Java: </p>
-<ol>
-<li>
-<p>We can invoke the superclass variables. </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Example child/subclass</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Subclass</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Superclass</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Subclass</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="s">"Subclass"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Example of calling parent/super class constructor</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"\n  from the child!"</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="abstraction">Abstraction<a class="headerlink" href="#abstraction" title="Permanent link">¶</a></h3>
+<details class="note" open="open">
+<summary>Definitions</summary>
+<p><strong>Abstration</strong>: The process of hiding certain details and showing only essential information to the user.</p>
+<p>We’ve already talked about using methods to encapsulate and abstract algorithms, but abstraction in OOP is more broad, and can be accomplished with two different Java constructs: <a href="#abstract-class">Abstract classes</a> and <a href="#interface">Interfaces</a>.</p>
+<p>Abstraction should be used frequently in APIs and libraries to hide implementation details that would only create complexity for the consumers of the API or library or to achieve class security by hiding instance variables or methods that the API/library designers know changing would change or alter desired functionality.</p>
+</details>
+<h4 id="abstract-class">Abstract Class<a class="headerlink" href="#abstract-class" title="Permanent link">¶</a></h4>
+<details class="note" open="open">
+<summary>Definitions</summary>
+<p><strong>Abstract class</strong>: A class that cannot be used to create objects because only some of the instance methods are implemented (i.e. not empty).</p>
+</details>
+<p>Below are the important things to remember about Abstract Classes:</p>
+<ul>
+<li>They are defined by <strong>public abstract class …</strong></li>
+<li>Useful when there exists a clear concept, but that concept is not a good candidate for an object in itself.</li>
+<li>They can contain <strong>normal implemented methods</strong> (usually methods common to concept).</li>
+<li><strong>Abstract methods</strong> are defined <strong>public abstract void methodName();</strong></li>
+<li>They must be inherited from another class, and the <strong>abstract methods</strong> (i.e. empty methods / method signatures)  must be implemented to create objects.</li>
+<li><a href="#inheritance">Inheritance</a> is used to implement Abstract classes.</li>
+<li>Unlike <strong>Interfaces</strong>, <strong>Abstract Classes</strong> can contain <strong>Object/Instance variables</strong> and <strong>Constructors</strong></li>
+</ul>
+<object data="images/abstract_uml.svg" height="600" width="650"> </object>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Example Abstract Class</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Operation</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Operation</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Example Inheriting from Abstract Class</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PlusOperation</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">PlusOperation</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="s">"PlusOperation"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"First number: "</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Second number: "</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The sum of the numbers is "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">first</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">second</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="interface">Interface<a class="headerlink" href="#interface" title="Permanent link">¶</a></h4>
+<details class="note" open="open">
+<summary>Definitions</summary>
+<p><strong>Interface</strong>: A completely <strong>abstract class</strong>, meaning all method bodies are empty (i.e. not implemented). Interfaces define behavior (i.e. actions, verbs, methods) that are required from a class without implementing those behaviors (i.e. methods). </p>
+</details>
+<p>Below are the important things to remember about Interfaces:</p>
+<ul>
+<li>They’re defined the same way that regular Java classes are, but <strong>public interface …</strong> is used instead of <strong>public class …</strong></li>
+<li>An Interface Is a Contract of behavior (i.e. methods)<ul>
+<li>Interfaces define behavior through <strong>method</strong> names and their <strong>return values</strong> (AKA method signatures). </li>
+</ul>
 </li>
-<li>
-<p>We can invoke the superclass methods. </p>
+<li>Interfaces are <strong>always abstract and public</strong>, so access modifers are sometimes ommitted. </li>
+<li>Interface <strong>attributes/fields</strong> are by default <strong>public, static and final</strong></li>
+<li>An interface cannot contain a <strong>constructor</strong> because <strong>it cannot be used to create objects</strong></li>
+<li>Interfaces must be implemented (<strong>kinda like inherited</strong>), but uses <strong>implements</strong> instead of <strong>extends</strong>. <ul>
+<li>On implementation of an interface, you must <strong>override</strong> all of its methods.</li>
+<li>You can implement <strong>multiple</strong> interfaces in one class.</li>
+</ul>
 </li>
-<li>
-<p>We can invoke the superclass constructor. </p>
-</li>
-</ol>
-<p>Example for Super Keyword in Java: 
-class Superclass 
-{ 
- int i =20; 
-void display() 
-{ 
- System.out.println(“Superclass display method”); 
- } 
-} 
-class Subclass extends Superclass 
-{ 
- int i = 100; 
- void display() 
- { 
- super.display(); 
- System.out.println(“Subclass display method”); 
- System.out.println(“ i value =”+i); 
- System.out.println(“superclass i value =”+super.i); 
- } 
-} 
-class SuperUse
-{ 
- public static void main(String args[]) 
-{ 
- Subclass obj = new Subclass(); 
- obj.display(); 
-} 
-}
-Protected member in Inheritance
-A class’s private members are inaccessible from outside the class. The private members are only directly accessible to methods of that class. However, as was previously said, it could occasionally be required for a subclass to have access to a superclass’s private member. Anybody can access a private member if you make it public. In order to block direct access to a member of a superclass outside the class while yet allowing it to be used in a subclass, you must designate that member protected.</p>
-<p>This brings us to the end of the blog on Inheritance in Java. Hope this helps you to up-skill your Java skills. Also, if you are preparing for Interviews, check out these OOPS Interview questions to ace them like a pro. Also, now you can enrol in the free OOPs in Java Course as well.</p>
-<h3 id="encapsulation">Encapsulation<a class="headerlink" href="#encapsulation" title="Permanent link">¶</a></h3>
+</ul>
+<object data="images/interface_uml.svg" height="600" width="650"> </object>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Example Interface Declaration</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Readable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">read</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Example Interface Implementation</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TextMessage</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Readable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sender</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">content</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">TextMessage</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">content</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">sender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sender</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">content</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getSender</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">sender</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">read</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">content</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Another Example Interface Implementation</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ebook</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Readable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pages</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pageNumber</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Ebook</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pages</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">pages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pages</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">pageNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">pages</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">pages</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">read</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">pages</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">pageNumber</span><span class="p">);</span>
+<span class="w">        </span><span class="n">nextPage</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">page</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">nextPage</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">pageNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">pageNumber</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">pageNumber</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">pages</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">pageNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="polymorphism">Polymorphism<a class="headerlink" href="#polymorphism" title="Permanent link">¶</a></h3>
-<p><a href="https://www.mygreatlearning.com/blog/polymorphism-in-java/">Reference</a></p>
-<p>Polymorphism in Java with Examples – 2023
-By Great Learning Team Published on Jan 12, 2023 241209
-Polymorphism is the ability of an object to take on different forms. In Java, polymorphism refers to the ability of a class to provide different implementations of a method, depending on the type of object that is passed to the method.</p>
-<p>To put it simply, polymorphism in Java allows us to perform the same action in many different ways. Any Java object that can pass more than one IS-A test is polymorphic in Java. Therefore, all the Java objects are polymorphic as it has passed the IS-A test for their own type and for the class Object.</p>
-<p>This article also talks about two types of polymorphism in Java: compile time polymorphism and runtime polymorphism, Java polymorphism examples, method overloading, method overriding, why to use polymorphism in java, java programming, and many more.</p>
-<p>What is Polymorphism in Java?
-Polymorphism in Java is the task that performs a single action in different ways.</p>
-<p>So, languages that do not support polymorphism are not ‘Object-Oriented Languages’, but ‘Object-Based Languages’. Ada, for instance, is one such language. Since Java supports polymorphism, it is an Object-Oriented Language.</p>
-<p>Polymorphism occurs when there is inheritance, i.e., many classes are related to each other.</p>
-<p>Inheritance is a powerful feature in Java. Java Inheritance lets one class acquire the properties and attributes of another class. Polymorphism in Java allows us to use these inherited properties to perform different tasks. Thus, allowing us to achieve the same action in many different ways.</p>
-<p>What is Polymorphism?
-The derivation of the word Polymorphism is from two different Greek words- poly and morphs. “Poly” means numerous, and “Morphs” means forms. So, polymorphism means innumerable forms. Polymorphism, therefore, is one of the most significant features of Object-Oriented Programming.</p>
-<p>Must Learn Core Java Topics
-Java Algorithms Java Data Structures OOPs In Java JDBC In Java Java Basic Programs Java
-Real-Life Examples of Polymorphism
-An individual can have different relationships with different people. A woman can be a mother, a daughter, a sister, and a friend, all at the same time, i.e. she performs other behaviors in different situations.</p>
-<p>The human body has different organs. Every organ has a different function to perform; the heart is responsible for blood flow, the lungs for breathing, the brain for cognitive activity, and the kidneys for excretion. So we have a standard method function that performs differently depending upon the organ of the body. </p>
-<p>Polymorphism in Java Example
-A superclass named “Shapes” has a method called “area()”. Subclasses of “Shapes” can be “Triangle”, “circle”, “Rectangle”, etc. Each subclass has its way of calculating area. Using Inheritance and Polymorphism means, the subclasses can use the “area()” method to find the area’s formula for that shape.</p>
-<p>class Shapes {
-  public void area() {
-    System.out.println(“The formula for area of “);
-  }
-}
-class Triangle extends Shapes {
-  public void area() {
-    System.out.println(“Triangle is ½ * base * height “);
-  }
-}
-class Circle extends Shapes {
-  public void area() {
-    System.out.println(“Circle is 3.14 * radius * radius “);
-  }
-}
-class Main {
-  public static void main(String[] args) {
-    Shapes myShape = new Shapes();  // Create a Shapes object
-    Shapes myTriangle = new Triangle();  // Create a Triangle object
-    Shapes myCircle = new Circle();  // Create a Circle object
-    myShape.area();
-    myTriangle.area();
-    myShape.area();
-    myCircle.area();
-  }
-}
-Output:</p>
-<p>The formula for the area of the Triangle is ½ * base * height
-The formula for the area of the Circle is 3.14 * radius * radius</p>
-<p>class Shape {
-    public void draw() {
-        System.out.println(“Drawing a shape”);
-    }
-}</p>
-<p>class Circle extends Shape {
-    @Override
-    public void draw() {
-        System.out.println(“Drawing a circle”);
-    }
-}</p>
-<p>class Square extends Shape {
-    @Override
-    public void draw() {
-        System.out.println(“Drawing a square”);
-    }
-}</p>
-<p>class Main {
-    public static void main(String[] args) {
-        Shape s1 = new Circle();
-        Shape s2 = new Square();</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    s1.draw(); // Output: "Drawing a circle"
-    s2.draw(); // Output: "Drawing a square"
-}
-</code></pre></div></td></tr></table></div>
-<p>}
-In this example, we have a base class Shape with a single method draw() that prints “Drawing a shape” to the console. We then create two subclasses, Circle and Square, that override the draw() method to print “Drawing a circle” and “Drawing a square” respectively.</p>
-<p>In the main method, we create two instances of the Shape class, s1 and s2, which are actually instances of the Circle and Square subclasses. When we call the draw() method on these objects, the correct implementation is called based on the actual type of the object, this is run-time polymorphism. The program will output: “Drawing a circle” and “Drawing a square”</p>
-<p>In this example, the draw() method is overridden in the subclasses, and this allows for the program to determine which method to use at runtime. This is known as runtime polymorphism or dynamic polymorphism, Because at runtime the JVM determines the actual type of the object and calls the corresponding method.</p>
-<p>Also Read: OOPs concepts in Java</p>
-<p>Types of Polymorphism
-You can perform Polymorphism in Java via two different methods:</p>
-<p>Method Overloading
-Method Overriding
-What is Method Overloading in Java?
-Method overloading is the process that can create multiple methods of the same name in the same class, and all the methods work in different ways. Method overloading occurs when there is more than one method of the same name in the class.</p>
-<p>Example of Method Overloading in Java
-class Shapes {
-  public void area() {
-    System.out.println(“Find area “);
-  }
-public void area(int r) {
-    System.out.println(“Circle area = “+3.14<em>r</em>r);
-  }</p>
-<p>public void area(double b, double h) {
-    System.out.println(“Triangle area=”+0.5<em>b</em>h);
-  }
-public void area(int l, int b) {
-    System.out.println(“Rectangle area=”+l*b);
-  }</p>
-<p>}</p>
-<p>class Main {
-  public static void main(String[] args) {
-    Shapes myShape = new Shapes();  // Create a Shapes object</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>myShape.area();
-myShape.area(5);
-myShape.area(6.0,1.2);
-myShape.area(6,2);
-</code></pre></div></td></tr></table></div>
-<p>}
-}
-Output:</p>
-<p>Find area
-Circle area = 78.5
-Triangle area=3.60
-Rectangle area=12</p>
-<p>What is Method Overriding in Java?
-Method overriding is the process when the subclass or a child class has the same method as declared in the parent class.</p>
-<p>Example of Method Overriding in Java
-class Vehicle{<br/>
-  //defining a method<br/>
-  void run(){System.out.println(“Vehicle is moving”);}<br/>
-}<br/>
-//Creating a child class<br/>
-class Car2 extends Vehicle{<br/>
-  //defining the same method as in the parent class<br/>
-  void run(){System.out.println(“car is running safely”);}  </p>
-<p>public static void main(String args[]){<br/>
-  Car2 obj = new Car2();//creating object<br/>
-  obj.run();//calling method<br/>
-  }<br/>
-}<br/>
-Output:</p>
-<p>Car is running safely
-Also, Polymorphism in Java can be classified into two types, i.e:</p>
-<p>Static/Compile-Time Polymorphism
-Dynamic/Runtime Polymorphism
-What is Compile-Time Polymorphism in Java?
-Compile Time Polymorphism In Java is also known as Static Polymorphism. Furthermore, the call to the method is resolved at compile-time. Compile-Time polymorphism is achieved through Method Overloading. This type of polymorphism can also be achieved through Operator Overloading. However, Java does not support Operator Overloading.</p>
-<p>Method Overloading is when a class has multiple methods with the same name, but the number, types, and order of parameters and the return type of the methods are different. Java allows the user freedom to use the same name for various functions as long as it can distinguish between them by the type and number of parameters. Check out some of the important questions on run time polymorphism in java interview questions.</p>
-<p>Example of Compile-Time Polymorphism in Java
-We will do addition in Java and understand the concept of compile time polymorphism using subtract() </p>
-<p>package staticPolymorphism; 
-public class Addition 
-{ 
-void sum(int a, int b) 
-{ 
-int c = a+b; 
-System.out.println(“ Addition of two numbers :” +c); } 
-void sum(int a, int b, int e) 
-{ 
-int c = a+b+e; 
-System.out.println(“ Addition of three numbers :” +c); } 
-public static void main(String[] args) 
-{ 
-Addition obj = new Addition(); 
-obj.sum ( 30,90); 
-obj.sum(45, 80, 22); 
-} 
-}
-The output of the program will be: </p>
-<p>Sum of two numbers: 120 </p>
-<p>Sum of three numbers: 147 </p>
-<p>In this program, the sum() method overloads with two types via different parameters. </p>
-<p>This is the basic concept of compile-time polymorphism in java where we can perform various operations by using multiple methods having the same name.</p>
-<p>What is Runtime Polymorphism in Java?
-Runtime polymorphism in Java is also popularly known as Dynamic Binding or Dynamic Method Dispatch. In this process, the call to an overridden method is resolved dynamically at runtime rather than at compile-time. You can achieve Runtime polymorphism via Method Overriding.</p>
-<p>Method Overriding is done when a child or a subclass has a method with the same name, parameters, and return type as the parent or the superclass; then that function overrides the function in the superclass. In simpler terms, if the subclass provides its definition to a method already present in the superclass; then that function in the base class is said to be overridden.</p>
-<p>Also, it should be noted that runtime polymorphism can only be achieved through functions and not data members. </p>
-<p>Overriding is done by using a reference variable of the superclass. The method to be called is determined based on the object which is being referred to by the reference variable. This is also known as Upcasting.</p>
-<p>Upcasting takes place when the Parent class’s reference variable refers to the object of the child class. For example:</p>
-<p>class A{} 
-class B extends A{}<br/>
-A a=new B(); //upcasting
-Examples of Runtime Polymorphism in Java
-Example 1:</p>
-<p>In this example, we are creating one superclass Animal and three subclasses, Herbivores, Carnivores, and Omnivores. Subclasses extend the superclass and override its eat() method. We will call the eat() method by the reference variable of Parent class, i.e. Animal class. As it refers to the base class object and the base class method overrides the superclass method; the base class method is invoked at runtime. As Java Virtual Machine or the JVM and not the compiler determines method invocation, it is, therefore, runtime polymorphism.</p>
-<p>class Animal{<br/>
-  void eat(){
-System.out.println(“Animals Eat”);
-}<br/>
-}<br/>
-class herbivores extends Animal{<br/>
-  void eat(){
-System.out.println(“Herbivores Eat Plants”);
-} 
-  }
-class omnivores extends Animal{<br/>
-  void eat(){
-System.out.println(“Omnivores Eat Plants and meat”);
-} 
-  }
-class carnivores extends Animal{<br/>
-  void eat(){
-System.out.println(“Carnivores Eat meat”);
-} 
-  }
-class main{
-  public static void main(String args[]){ 
-    Animal A = new Animal();
-    Animal h = new herbivores(); //upcasting<br/>
-    Animal o = new omnivores(); //upcasting<br/>
-    Animal c = new carnivores(); //upcasting<br/>
-    A.eat();
-    h.eat();
-    o.eat();<br/>
-    c.eat();  </p>
-<p>}<br/>
-}<br/>
-Output:</p>
-<p>Animals eat
-Herbivores Eat Plants
-Omnivores Eat Plants and meat
-Carnivores eat meat</p>
-<p>Example 2:</p>
-<p>In this example, we are creating one superclass Hillstations and three subclasses Manali, Mussoorie, Gulmarg. Subclasses extend the superclass and override its location() and famousfor() method. We will call the location() and famousfor() method by the Parent class’, i.e. Hillstations class. As it refers to the base class object and the base class method overrides the superclass method; the base class method is invoked at runtime. Also, as Java Virtual Machine or the JVM and not the compiler determines method invocation, it is runtime polymorphism.</p>
-<p>class Hillstations{<br/>
-  void location(){
-System.out.println(“Location is:”);
-}<br/>
-void famousfor(){
-System.out.println(“Famous for:”);
-}  </p>
-<p>}<br/>
-class Manali extends Hillstations {<br/>
-  void location(){
-System.out.println(“Manali is in Himachal Pradesh”);
-}<br/>
-void famousfor(){
-System.out.println(“It is Famous for Hadimba Temple and adventure sports”);
-}<br/>
-  }
-class Mussoorie extends Hillstations {<br/>
-  void location(){
-System.out.println(“Mussoorie is in Uttarakhand”);
-}<br/>
-void famousfor(){
-System.out.println(“It is Famous for education institutions”);
-}<br/>
-  }
-class Gulmarg extends Hillstations {<br/>
-  void location(){
-System.out.println(“Gulmarg is in J&amp;K”);
-}<br/>
-void famousfor(){
-System.out.println(“It is Famous for skiing”);
-}<br/>
-  }
-class main{
-  public static void main(String args[]){ 
-    Hillstations A = new Hillstations();
-    Hillstations M = new Manali();</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Hillstations Mu = new Mussoorie();
+<details class="note" open="open">
+<summary>Definitions</summary>
+<p><strong>Polymorphism</strong>: The concept that <strong>many related classes</strong> can perform a <strong>single action</strong> in <strong>many different ways</strong>.</p>
+<p>Regardless of the type of the variable, the method that is executed is always chosen based on the actual type of the object. Objects are polymorphic, which means that they can be used via many different variable types (i.e. Dog -&gt; Animal -&gt; Object). The executed method always relates to the actual type of the object. This phenomenon is called polymorphism.</p>
+</details>
+<p>Below are the important things to remember about Polymorphism:</p>
+<ul>
+<li>Polymorphism arises through inheritance when multiple related classes share common actions/methods, but those methods do different things. </li>
+<li>It is useful for code reuse of existing class methods and attributes.</li>
+<li>Objects/instances can be represented through all of its <strong>actual</strong> types.</li>
+</ul>
+<object data="images/polymorphism_uml_01.svg" height="600" width="650"> </object>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">animalSound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The animal makes a sound"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-Hillstations G = new Gulmarg();
+<span class="kd">class</span> <span class="nc">Pig</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">animalSound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The pig says: wee wee"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-A.location();
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">animalSound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The dog says: bow wow"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Animal, Dog, and Pig are all treated the same</span>
+<span class="w">        </span><span class="n">Animal</span><span class="o">[]</span><span class="w"> </span><span class="n">animals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="n">Animal</span><span class="p">(),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pig</span><span class="p">(),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">()};</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="n">animal</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">animals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// But animalSound performs a different action</span>
+<span class="w">            </span><span class="n">animal</span><span class="p">.</span><span class="na">animalSound</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>A.famousfor();</p>
-<p>M.location();
-M.famousfor();</p>
-<p>Mu.location();
-Mu.famousfor();</p>
-<p>G.location();
-G.famousfor();
-  }<br/>
-}<br/>
-Output:</p>
-<p>Location is:
-Famous for:
-Manali is in Himachal Pradesh
-It is Famous for Hadimba Temple and adventure sports
-Mussoorie is in Uttarakhand
-It is Famous for education institutions
-Gulmarg is in J&amp;K
-It is Famous for skiing</p>
-<p>Example of run-time polymorphism in java
-We will create two classes Car and Innova, Innova class will extend the car class and will override its run() method.</p>
-<p>class Car 
-{ 
-void run() 
-{ 
-System.out.println(“ running”); 
-} 
-}
-class innova extends Car 
-{ 
-void run(); 
-{ 
-System.out.println(“ running fast at 120km”); 
-} 
-public static void main(String args[]) 
-{ 
-Car c = new innova(); 
-c.run(); 
-} 
-} 
-The output of the following program will be; </p>
-<p>Running fast at 120 km. </p>
-<p>Another example for run-time polymorphism in Java</p>
-<p>Now, let us check if we can achieve runtime polymorphism via data members. </p>
-<p>class car 
-{ 
-int speedlimit = 125; 
-} 
-class innova extends car 
-{ 
-int speedlimit = 135; 
-public static void main(String args[]) 
-{ 
-car obj = new innova(); 
-System.out.println(obj.speedlimit);
-}
-The output of the following program will be : </p>
-<p>125 </p>
-<p>This clearly implies we can’t achieve Runtime polymorphism via data members. In short, a method is overridden, not the data members.</p>
-<p>Runtime polymorphism with multilevel inheritance
-class grandfather 
-{ 
-void swim() 
-{ 
-System.out.println(“ Swimming”); 
-} 
-} 
-class father extends grandfather 
-{ 
-void swim() 
-{ 
-System.out.println(“ Swimming in river”); 
-} 
-} 
-class son extends father 
-{ 
-void swim() 
-{ 
-System.out.println(“ Swimming in pool”);
-} 
-public static void main(String args[]) 
-{ 
-grandfather f1,f2,f3; 
-f1 =new grandfather(); 
-f2 = new father(); 
-f3 = new son(); 
-f1.swim(); 
-f2.swim(); 
-f3.swim(): 
-} 
-} 
-The output of the following program will be: </p>
-<p>Swimming, Swimming in river, Swimming in pool</p>
-<p>Another runtime polymorphism with multilevel inheritance example</p>
-<p>class soundAnimal 
-{ 
-public void Sound() 
-{ 
-System.out.println(“Different sounds of animal”); }
-} 
-class buffalo extends soundAnimal 
-{ 
-public void Sound() 
-{ 
-System.out.println(“The buffalo sound- gho,gho”); } 
-} 
-class snake extends soundAnimal 
-{ 
-public void Sound() 
-{ 
-System.out.println(“The snake sound- his,his”); } 
-} 
-class tiger extends soundAnimal
-{ 
-public void Sound() 
-{ 
-System.out.println(“The tiger sounds- roooo, rooo”); } 
-} 
-public class Animal Main 
-{ 
-public static void main(String[] args) 
-{ 
-soundAnimal Animal = new soundAnimal(); soundAnimal buffalo = new buffalo(); 
-soundAnimal snake = new snake(); 
-soundAnimal tiger = new tiger(); 
-Animal.Sound(); 
-buffalo.Sound();
-snake.Sound(); 
-tiger.Sound(); 
-} 
-} 
-The output of the following program will be; </p>
-<p>The buffalo sound- gho,gho </p>
-<p>The snake sound- his,his </p>
-<p>The tiger sound- roooo,roooo </p>
-<p>We hope you got an idea about runtime and compile-time polymorphism.</p>
-<p>Polymorphic Subtypes
-Subtype basically means that a subtype can serve as another type’s subtype, sounds a bit complicated? </p>
-<p>Let’s understand this with the help of an example:</p>
-<p>Assuming we have to draw some arbitrary shapes, we can introduce a class named ‘shape’ with a draw() method. By overriding draw() with other subclasses such as circle, square, rectangle, trapezium, etc we will introduce an array of type ‘shape’ whose elements store references will refer to ‘shape’ subclass references. Next time, we will call draw(), all shapes instances draw () method will be called.</p>
-<p>This Subtype polymorphism generally relies on upcasting and late binding. A casting where you cast up the inheritance hierarchy from subtype to a supertype is termed upcasting.</p>
-<p>To call non-final instance methods we use late binding. In short, a compiler should not perform any argument checks, type checks, method calls, etc, and leave everything on the runtime. </p>
-<p>What is Polymorphism in Programming?
-Polymorphism in programming is defined usage of a single symbol to represent multiple different types.</p>
-<p>What is Polymorphism Variables?
-A polymorphic variable is defined as a variable that can hold values of different types during the course of execution.</p>
-<p>Why use Polymorphism in Java?
-Polymorphism in Java makes it possible to write a method that can correctly process lots of different types of functionalities that have the same name. We can also gain consistency in our code by using polymorphism.</p>
-<p>Advantages of Polymorphism in Java
-It provides reusability to the code. The classes that are written, tested and implemented can be reused multiple times. Furthermore, it saves a lot of time for the coder. Also, the one can change the code without affecting the original code.
-A single variable can be used to store multiple data values. The value of a variable you inherit from the superclass into the subclass can be changed without changing that variable’s value in the superclass; or any other subclasses.
-With lesser lines of code, it becomes easier for the programmer to debug the code.
-Characteristics of Polymorphism
-Polymorphism has many other characteristics other than Method Overloading and Method Overriding. They include:</p>
-<p>Coercion
-Internal Operator Overloading
-Polymorphic Variables or Parameters
-1. Coercion
-Coercion deals with implicitly converting one type of object into a new object of a different kind. Also, this is done automatically to prevent type errors in the code. </p>
-<p>Programming languages such as C, java, etc support the conversion of value from one data type to another data type. Data type conversions are of two types, i.e., implicit and explicit. </p>
-<p>Implicit type conversion is automatically done in the program and this type of conversion is also termed coercion. </p>
-<p>For example, if an operand is an integer and another one is in float, the compiler implicitly converts the integer into float value to avoid type error.</p>
-<p>Example:</p>
-<p>class coercion {</p>
-<p>public static void main(String[] args) {
-    Double area = 3.14<em>5</em>7;
-System.out.println(area);
-String s = “happy”;
-int x=5;
-String word = s+x;
-System.out.println(word);</p>
-<p>}
-}
-Output:</p>
-<p>109.9
-happy5</p>
+<h4 id="example-of-polymorphism-actual-type-dictates-action">Example of Polymorphism: Actual Type Dictates Action<a class="headerlink" href="#example-of-polymorphism-actual-type-dictates-action" title="Permanent link">¶</a></h4>
+<object data="images/polymorphism_uml_02.svg" height="600" width="650"> </object>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span><span class="w"> </span><span class="n">points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">points</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">));</span>
+<span class="w">        </span><span class="n">points</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ColorPoint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">"green"</span><span class="p">));</span>
+<span class="w">        </span><span class="n">points</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ColorPoint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">"blue"</span><span class="p">));</span>
+<span class="w">        </span><span class="n">points</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point3D</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">));</span>
+<span class="w">        </span><span class="n">points</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Point</span><span class="w"> </span><span class="n">p</span><span class="p">:</span><span class="w"> </span><span class="n">points</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Point type in 2D coordinate system</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Point</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Point</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Distance between two points if you can only travel in the direction of the coordinate axes.</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">manhattanDistanceFromOrigin</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">location</span><span class="p">(){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">", "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">location</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">") distance "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">manhattanDistanceFromOrigin</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// ColorPoint is identical to Point, but also has color</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ColorPoint</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ColorPoint</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" color: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Point3D has no color but can be derived from a 2D Point</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Point3D</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Point3D</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">location</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">location</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">", "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Distance between two points if you can only travel in the direction of the coordinate axes.</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">manhattanDistanceFromOrigin</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">manhattanDistanceFromOrigin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">z</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="success" open="open">
+<summary>Walkthrough of Actual object Type Affecting Action (i.e. Polymorphism)</summary>
 <ol>
-<li>Internal Operator Overloading
-In Operator Overloading, an operator or symbol behaves in more ways than one depending upon the input context or the type of operands. It is a characteristic of static polymorphism. Although Java does not support user-defined operator overloading like C++, where the user can define how an operator works for different operands, there are few instances where Java internally overloads operators.</li>
+<li>A call of toString in the class Point3D does not exist, so the superclass is next to be examined.</li>
+<li>A call of toString in the superclass point is found, so the code inside the implementation of that method is executed<ul>
+<li>So the exact code to be executed is <code>return "("+this.location()+") distance "+this.manhattanDistanceFromOrigin();</code></li>
+<li>The method <code>location</code> is executed first</li>
+<li>Look for a definition of <code>location</code> in the class Point3D. It can be found, so its code is executed.</li>
+<li>This <code>location</code> calls the <code>location</code> of the superclass to calculate the result.</li>
+<li>Next we look for a definition of <code>manhattanDistanceFromOrigin</code> in the Point3D class. It’s found and its code is then executed.</li>
+<li>Again, the method calls the similarly named method of the superclass during its execution.</li>
+</ul>
+</li>
 </ol>
-<p>Operator overloading is the concept of using the operator as per your choice. Therefore, an operator symbol or method name can be used as a ‘user-defined’ type as per the requirements. </p>
-<p>For example, ‘+’ can be used to perform the addition of numbers (same data type) or for concatenation of two or more strings.</p>
-<p>In the case of +, can be used for addition and also for concatenation.</p>
-<p>For example:</p>
-<p>class coercion {</p>
-<p>public static void main(String[] args) {</p>
-<p>String s = “happy”;
-String s1 = “world”;
-int x=5;
-int y=10;</p>
-<p>System.out.println(s+s1);
-System.out.println(x+y);</p>
-<p>}
-}
-Output :</p>
-<p>happyworld
-15</p>
-<p>Similarly, operators like! &amp;, and | are also in the overload position for logical and bitwise operations. In both of these cases, the type of argument will decide how the operator will interpret.</p>
-<ol>
-<li>Polymorphic Variables or Parameters
-In Java, the object or instance variables represent the polymorphic variables. This is because any object variables of a class can have an IS-A relationship with their own classes and subclasses.</li>
-</ol>
-<p>The Polymorphic Variable is a variable that can hold values of different types during the time of execution.</p>
-<p>Parametric polymorphism specifies that while class declaration, a field name can associate with different types, and a method name can associate with different parameters and return types.</p>
-<p>For example:</p>
-<p>class Shape
-{
-public void display()
-{
-System.out.println(“A Shape.”);
-}
-}
-class Triangle extends Shape
-{
-public void display()
-{
-System.out.println(“I am a triangle.”);
-}
-}
-class Main{
-public static void main(String[] args)
-{
-Shape obj;
-obj = new Shape();
-obj.display();
-obj = new Triangle();
-obj.display();
-}
-}
-Output:</p>
-<p>A Shape.
-I am a triangle.</p>
-<p>Here, the obj object is a polymorphic variable. This is because the superclass’s same object refers to the parent class (Shape) and the child class (Triangle). </p>
-<p>Problems with Polymorphism 
-With lots of advantages, there are also a few disadvantages of polymorphism.</p>
-<p>Polymorphism is quite challenging while implementation.
-It tends to reduce the readability of the code.
-It raises some serious performance issues in real-time as well.
-Type Identification During Downcasting </p>
-<p>Downcasting is termed as casting to a child type or casting a common type to an individual type.</p>
-<p>So, we use downcasting whenever we need to access or understand the behaviour of the subtypes. </p>
-<p>Example, </p>
-<p>This is a hierarchical example </p>
-<p>Food&gt; Vegetable&gt; Ladyfinger, Tomato </p>
-<p>Here, tomato and ladyfinger are two subclasses. </p>
-<p>In downcasting, we narrow the type of objects, which means we are converting common type to individual type. </p>
-<p>Vegetable vegetable = new Tomato(); </p>
-<p>Tomato castedTomato = (Tomato) vegetable; </p>
-<p>Here we are casting common type to an individual type, superclass to subclass which is not possible directly in java.</p>
-<p>We explicitly tell the compiler what the runtime type of the object is.</p>
-<p>Fragile base class problem </p>
-<p>Fragile base class problem is nothing but a fundamental architectural problem. </p>
-<p>Sometimes the improper design of a parent class can lead a subclass of a superclass to use superclass in some unpredicted ways. </p>
-<p>The fragility of inheritance will lead to broken codes even when all the criteria is met. </p>
-<p>This architectural problem is termed as a fragile base class problem in object-oriented programming systems and language. </p>
-<p>Basically, the reason for the fragile base problem is that the developer of the base class has no idea of the subclass design. There is no solution yet for this problem. </p>
-<p>Conclusion
-We hope you must have got a basic idea of polymorphism in Java and how we use it as well as problems related to them. </p>
-<p>Hence, this brings us to the end of the blog on Polymorphism in Java. Furthermore, to learn more about programming and other related concepts, check out the courses on Great Learning Academy and PG Programs in Software Engineering.  </p>
-<p>Also, if you are preparing for Interviews, check out these Interview Questions for Java to ace it like a pro.</p>
+</details>
 </article>
 </div>
 </div>
