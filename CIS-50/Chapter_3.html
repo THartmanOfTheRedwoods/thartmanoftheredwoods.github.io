@@ -936,9 +936,11 @@
 <h3 id="handling-data-redundancy-in-rdm">Handling Data Redundancy in RDM<a class="headerlink" href="#handling-data-redundancy-in-rdm" title="Permanent link">¶</a></h3>
 <details class="note" open="open">
 <summary>Note</summary>
-<p>The real test of redundancy is not how many copies of a given attribute are stored, but whether the elimination of an attribute will eliminate information. Therefore, if you delete an attribute and the original information can still be generated through relational algebra, the inclusion of that attribute would be redundant. Given that view of redundancy, proper foreign keys are clearly not redundant in spite of their multiple occurrences in a table. However, even when you use this less restrictive view of redundancy, keep in mind that controlled redundancies are often designed as part of the system to ensure transaction speed and/or information requirements.
-* One such purposeful redundancy is product line price on an Invoice Line Item VS the product’s current price in a product table.
-* Another is the automatic generation of an invoice <strong>Line Number</strong>, which is redundant but allows for ordering line-items the same way everytime the invoice data is re-constructed.</p>
+<p>The real test of redundancy is not how many copies of a given attribute are stored, but whether the elimination of an attribute will eliminate information. Therefore, if you delete an attribute and the original information can still be generated through relational algebra, the inclusion of that attribute would be redundant. Given that view of redundancy, proper foreign keys are clearly not redundant in spite of their multiple occurrences in a table. However, even when you use this less restrictive view of redundancy, keep in mind that controlled redundancies are often designed as part of the system to ensure transaction speed and/or information requirements.</p>
+<ul>
+<li>One such purposeful redundancy is product line price on an Invoice Line Item VS the product’s current price in a product table.</li>
+<li>Another is the automatic generation of an invoice <strong>Line Number</strong>, which is redundant but allows for ordering line-items the same way everytime the invoice data is re-constructed.</li>
+</ul>
 </details>
 <h3 id="purpose-of-indexing">Purpose of Indexing<a class="headerlink" href="#purpose-of-indexing" title="Permanent link">¶</a></h3>
 <ul>
