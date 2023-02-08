@@ -7,11 +7,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="os_command_map.html" rel="prev"/>
-<link href="pandoc.html" rel="next"/>
+<link href="parallel.html" rel="prev"/>
+<link href="tesseract.html" rel="next"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
-<title>ImageMagick - THartmanOfTheRedwoods Wiki</title>
+<title>SSH - THartmanOfTheRedwoods Wiki</title>
 <link href="../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#how-to-batch-crop-images-with-imagemagick">
+<a class="md-skip" href="#helpful-ssh-commands">
           Skip to content
         </a>
 </div>
@@ -63,7 +63,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              ImageMagick
+              SSH
             
           </span>
 </div>
@@ -287,42 +287,10 @@
         Command Cheatsheet
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          ImageMagick
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="imagemagick.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="imagemagick.html">
         ImageMagick
       </a>
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Sub-Menu
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#how-to-batch-crop-images-with-imagemagick">
-    How to Batch Crop Images With Imagemagick
-  </a>
-<nav aria-label="How to Batch Crop Images With Imagemagick" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#crop-a-single-image">
-    Crop a Single Image
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#batch-crop">
-    Batch Crop
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="pandoc.html">
@@ -334,10 +302,37 @@
         Parallel
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="ssh.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          SSH
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="ssh.html">
         SSH
       </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#helpful-ssh-commands">
+    Helpful SSH Commands
+  </a>
+<nav aria-label="Helpful SSH Commands" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convert-ssh-key-into-openssh-classic-key">
+    Convert SSH Key into OpenSSH Classic Key
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="tesseract.html">
@@ -612,19 +607,14 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#how-to-batch-crop-images-with-imagemagick">
-    How to Batch Crop Images With Imagemagick
+<a class="md-nav__link" href="#helpful-ssh-commands">
+    Helpful SSH Commands
   </a>
-<nav aria-label="How to Batch Crop Images With Imagemagick" class="md-nav">
+<nav aria-label="Helpful SSH Commands" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#crop-a-single-image">
-    Crop a Single Image
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#batch-crop">
-    Batch Crop
+<a class="md-nav__link" href="#convert-ssh-key-into-openssh-classic-key">
+    Convert SSH Key into OpenSSH Classic Key
   </a>
 </li>
 </ul>
@@ -637,36 +627,12 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>ImageMagick</h1>
-<h3 id="how-to-batch-crop-images-with-imagemagick">How to Batch Crop Images With Imagemagick<a class="headerlink" href="#how-to-batch-crop-images-with-imagemagick" title="Permanent link">¶</a></h3>
-<h4 id="crop-a-single-image">Crop a Single Image<a class="headerlink" href="#crop-a-single-image" title="Permanent link">¶</a></h4>
+<h1>SSH</h1>
+<h2 id="helpful-ssh-commands">Helpful SSH Commands<a class="headerlink" href="#helpful-ssh-commands" title="Permanent link">¶</a></h2>
+<h3 id="convert-ssh-key-into-openssh-classic-key">Convert SSH Key into OpenSSH Classic Key<a class="headerlink" href="#convert-ssh-key-into-openssh-classic-key" title="Permanent link">¶</a></h3>
 <ul>
-<li>We’ll start by looking at how to crop a single image using Imagemagick.</li>
-<li>Open a command window in the folder containing the image(s) you want to crop.</li>
-<li>Then open one of the images in Gimp or Photoshop to determine the x_size, y_size, x_offset, and y_offset as depicted
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/imagemagick_crop.png"><img alt="ImageMagick Crop Layout" src="images/imagemagick_crop.png"/></a></li>
-<li>Finally use convert to test 1 image and confirm your crop settings<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>convert -crop x_sizexy_size+x_offset+y_offset inputfile outputfile
-
-convert -crop 1000x1000+38+278 Image.jpg CroppedImage.jpg
+<li>May need to do this for various legacy programs or API libraries like Java’s JSch.<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ssh-keygen -p -f &lt;privateKeyFile&gt; -m pem -P passphrase -N passphrase
 </code></pre></div></td></tr></table></div>
-</li>
-</ul>
-<h4 id="batch-crop">Batch Crop<a class="headerlink" href="#batch-crop" title="Permanent link">¶</a></h4>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>Now we could just loop over the images and crop, but we won’t thanks to Imagemagick’s batch processor <strong>mogrify</strong>. The command to crop a folder of images is very similar to cropping just 1.</p>
-</details>
-<ul>
-<li>First make a new folder called <strong>cropped</strong> to output cropped images to.</li>
-<li>
-<p>Next run the command as follows:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mogrify -crop 1000x1000+38+278 -path ./cropped *.jpg
-</code></pre></div></td></tr></table></div>
-</li>
-<li>
-<p>That’s it, you’ve batch cropped your images.</p>
 </li>
 </ul>
 </article>
