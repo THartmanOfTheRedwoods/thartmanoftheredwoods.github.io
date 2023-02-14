@@ -7,11 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="joins_ns.html" rel="prev"/>
-<link href="../CIS-18/week_1.html" rel="next"/>
+<link href="week_4.html" rel="prev"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
-<title>Entity Relationship Modeling - THartmanOfTheRedwoods Wiki</title>
+<title>Week 5 - Factory Design Pattern - THartmanOfTheRedwoods Wiki</title>
 <link href="../assets/stylesheets/main.f56500e0.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +36,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#entity-relationship-modeling">
+<a class="md-skip" href="#the-factory-design-pattern">
           Skip to content
         </a>
 </div>
@@ -63,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Entity Relationship Modeling
+              Week 5 - Factory Design Pattern
             
           </span>
 </div>
@@ -467,8 +466,8 @@
         Index
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" id="__nav_11_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" id="__nav_11_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11_2">
           CIS-50
           <span class="md-nav__icon md-icon"></span>
@@ -480,157 +479,35 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_1.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_1.html">
         Database Systems
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_2.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_2.html">
         Data Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_3.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_3.html">
         The Relational Database Model
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="joins_ns.html">
+<a class="md-nav__link" href="../CIS-50/joins_ns.html">
         Joins
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Entity Relationship Modeling
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="Chapter_4.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_4.html">
         Entity Relationship Modeling
       </a>
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Sub-Menu
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#entity-relationship-modeling">
-    Entity Relationship Modeling
-  </a>
-<nav aria-label="Entity Relationship Modeling" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#identify-er-components">
-    Identify ER Components
-  </a>
-<nav aria-label="Identify ER Components" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#erm-parts">
-    ERM Parts
-  </a>
-<nav aria-label="ERM Parts" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#entities-entity-referes-to-entity-set-and-not-individual-occurances-ie-in-erm-think-table-not-row">
-    Entities: Entity referes to Entity set and not individual occurances (i.e. in ERM think table not row)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#attributes-characteristics-of-entities">
-    Attributes: Characteristics of Entities
-  </a>
 </li>
 </ul>
 </nav>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#define-refine-and-incorporate-relationships-between-entities">
-    Define, Refine, and Incorporate Relationships Between Entities
-  </a>
-<nav aria-label="Define, Refine, and Incorporate Relationships Between Entities" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#connectivity--cardinality">
-    Connectivity &amp; Cardinality
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#existence-and-independence">
-    Existence and Independence
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#relationship-strength">
-    Relationship Strength
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#entity-strength">
-    Entity Strength
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#relationship-participation">
-    Relationship Participation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#relationship-degree">
-    Relationship Degree
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#recursive-relationships">
-    Recursive Relationships
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#developing-an-er-diagram">
-    Developing an ER Diagram
-  </a>
-<nav aria-label="Developing an ER Diagram" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iterative-process">
-    Iterative Process
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#db-design-tradeoffs-reconciling-conflicting-goals">
-    DB Design Tradeoffs, Reconciling Conflicting Goals
-  </a>
-<nav aria-label="DB Design Tradeoffs, Reconciling Conflicting Goals" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-3-things-always-to-consider">
-    The 3 things always to consider
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" id="__nav_11_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" id="__nav_11_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11_3">
           CIS-18
           <span class="md-nav__icon md-icon"></span>
@@ -642,49 +519,200 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_1.html">
+<a class="md-nav__link" href="week_1.html">
         Week 1 - Review
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/sprint.html">
+<a class="md-nav__link" href="sprint.html">
         Sprint Planning
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/user_story_intro.html">
+<a class="md-nav__link" href="user_story_intro.html">
         User Story Into
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/user_story_lesson.html">
+<a class="md-nav__link" href="user_story_lesson.html">
         User Story Lesson
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_2.html">
+<a class="md-nav__link" href="week_2.html">
         Week 2 - Fundamental OOP Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/oo_principles.html">
+<a class="md-nav__link" href="oo_principles.html">
         Key OO Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_3.html">
+<a class="md-nav__link" href="week_3.html">
         Week 3 - Observer Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_4.html">
+<a class="md-nav__link" href="week_4.html">
         Week 4 - Decorator Design Pattern
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_5.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Week 5 - Factory Design Pattern
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="week_5.html">
         Week 5 - Factory Design Pattern
       </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-factory-design-pattern">
+    The Factory Design Pattern
+  </a>
+<nav aria-label="The Factory Design Pattern" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classification">
+    Classification
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
+  </a>
+<nav aria-label="Pattern Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#factory-method">
+    Factory Method
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-factory">
+    Abstract Factory
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph">
+    Mermaid Graph
+  </a>
+<nav aria-label="Mermaid Graph" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#factory-method_1">
+    Factory Method
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-factory_1">
+    Abstract Factory
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml">
+    UML
+  </a>
+<nav aria-label="UML" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#factory-method_2">
+    Factory Method
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-factory_2">
+    Abstract Factory
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage">
+    Usage
+  </a>
+<nav aria-label="Usage" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#factory-method_3">
+    Factory Method
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-factory_3">
+    Abstract Factory
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-to-my-real-world-application">
+    Application to my Real World Application
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+    Main Take-Aways from the textbook
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-factory-pattern">
+    Main OO Principles of Factory Pattern
+  </a>
+<nav aria-label="Main OO Principles of Factory Pattern" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#factory-method_4">
+    Factory Method
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-factory_4">
+    Abstract Factory
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -707,31 +735,74 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#entity-relationship-modeling">
-    Entity Relationship Modeling
+<a class="md-nav__link" href="#the-factory-design-pattern">
+    The Factory Design Pattern
   </a>
-<nav aria-label="Entity Relationship Modeling" class="md-nav">
+<nav aria-label="The Factory Design Pattern" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#identify-er-components">
-    Identify ER Components
-  </a>
-<nav aria-label="Identify ER Components" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#erm-parts">
-    ERM Parts
-  </a>
-<nav aria-label="ERM Parts" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#entities-entity-referes-to-entity-set-and-not-individual-occurances-ie-in-erm-think-table-not-row">
-    Entities: Entity referes to Entity set and not individual occurances (i.e. in ERM think table not row)
+<a class="md-nav__link" href="#classification">
+    Classification
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#attributes-characteristics-of-entities">
-    Attributes: Characteristics of Entities
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
+  </a>
+<nav aria-label="Pattern Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#factory-method">
+    Factory Method
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-factory">
+    Abstract Factory
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph">
+    Mermaid Graph
+  </a>
+<nav aria-label="Mermaid Graph" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#factory-method_1">
+    Factory Method
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-factory_1">
+    Abstract Factory
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml">
+    UML
+  </a>
+<nav aria-label="UML" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#factory-method_2">
+    Factory Method
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-factory_2">
+    Abstract Factory
   </a>
 </li>
 </ul>
@@ -741,72 +812,58 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#define-refine-and-incorporate-relationships-between-entities">
-    Define, Refine, and Incorporate Relationships Between Entities
+<a class="md-nav__link" href="#usage">
+    Usage
   </a>
-<nav aria-label="Define, Refine, and Incorporate Relationships Between Entities" class="md-nav">
+<nav aria-label="Usage" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#connectivity--cardinality">
-    Connectivity &amp; Cardinality
+<a class="md-nav__link" href="#factory-method_3">
+    Factory Method
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#existence-and-independence">
-    Existence and Independence
+<a class="md-nav__link" href="#abstract-factory_3">
+    Abstract Factory
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#relationship-strength">
-    Relationship Strength
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#entity-strength">
-    Entity Strength
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#relationship-participation">
-    Relationship Participation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#relationship-degree">
-    Relationship Degree
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#recursive-relationships">
-    Recursive Relationships
+<a class="md-nav__link" href="#application-to-my-real-world-application">
+    Application to my Real World Application
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#developing-an-er-diagram">
-    Developing an ER Diagram
-  </a>
-<nav aria-label="Developing an ER Diagram" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iterative-process">
-    Iterative Process
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
   </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+    Main Take-Aways from the textbook
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#db-design-tradeoffs-reconciling-conflicting-goals">
-    DB Design Tradeoffs, Reconciling Conflicting Goals
+<a class="md-nav__link" href="#main-oo-principles-of-factory-pattern">
+    Main OO Principles of Factory Pattern
   </a>
-<nav aria-label="DB Design Tradeoffs, Reconciling Conflicting Goals" class="md-nav">
+<nav aria-label="Main OO Principles of Factory Pattern" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-3-things-always-to-consider">
-    The 3 things always to consider
+<a class="md-nav__link" href="#factory-method_4">
+    Factory Method
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-factory_4">
+    Abstract Factory
   </a>
 </li>
 </ul>
@@ -822,167 +879,194 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Entity Relationship Modeling</h1>
-<h2 id="entity-relationship-modeling">Entity Relationship Modeling<a class="headerlink" href="#entity-relationship-modeling" title="Permanent link">¶</a></h2>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>ERM is a <strong>Conceptual Model</strong> and is therefore  independent of Database type and can be used to model an organization’s data requirments. <strong>ER Models</strong> are used in logical design, but for the purposes of this class, the conceptural model will be directly related to ER Components.</p>
-</details>
-<h3 id="identify-er-components">Identify ER Components<a class="headerlink" href="#identify-er-components" title="Permanent link">¶</a></h3>
+<h1>Week 5 - Factory Design Pattern</h1>
+<h2 id="the-factory-design-pattern">The Factory Design Pattern<a class="headerlink" href="#the-factory-design-pattern" title="Permanent link">¶</a></h2>
+<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">¶</a></h3>
 <ul>
-<li>ERM forms basis of ERD (Conceptual End-User View)</li>
-<li>ERD comprises of: entities, attributes, and relationships and can take 3 forms:<ul>
-<li>Chen notation: Favors conceptual modeling.<ul>
-<li><a href="https://vertabelo.com/blog/chen-erd-notation/">Chen Notation</a></li>
+<li>Creational Design Pattern</li>
 </ul>
-</li>
-<li>Crow’s Foot notation: Favors implementation modeling.</li>
-<li>UML notation: Can be used for both conceptual or implementation modeling.</li>
-</ul>
-</li>
-</ul>
-<h4 id="erm-parts">ERM Parts<a class="headerlink" href="#erm-parts" title="Permanent link">¶</a></h4>
-<h5 id="entities-entity-referes-to-entity-set-and-not-individual-occurances-ie-in-erm-think-table-not-row">Entities: Entity referes to Entity set and not individual occurances (i.e. in ERM think table not row)<a class="headerlink" href="#entities-entity-referes-to-entity-set-and-not-individual-occurances-ie-in-erm-think-table-not-row" title="Permanent link">¶</a></h5>
+<h3 id="pattern-definition">Pattern Definition<a class="headerlink" href="#pattern-definition" title="Permanent link">¶</a></h3>
+<h4 id="factory-method">Factory Method<a class="headerlink" href="#factory-method" title="Permanent link">¶</a></h4>
 <ul>
-<li>In all 3 notations it is a <strong>rectangle</strong> usually with an <strong>UPPERCASE</strong> noun <strong>NAME</strong></li>
+<li>Define an interface for creating an object, but let sub-classes decide which class to instantiate. Factory Method lets a class defer instantiation to sub-classes.</li>
 </ul>
-<h5 id="attributes-characteristics-of-entities">Attributes: Characteristics of Entities<a class="headerlink" href="#attributes-characteristics-of-entities" title="Permanent link">¶</a></h5>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_01.png"><img alt="Notation Comparison" src="chap04_01.png"/></a></p>
+<h4 id="abstract-factory">Abstract Factory<a class="headerlink" href="#abstract-factory" title="Permanent link">¶</a></h4>
 <ul>
-<li>Chen’s notation: Ovals with UPPERCASE attribute name, connected via a line to entity rectangle </li>
-<li>UML and Crow’s Foot: In a separate box below the entity rectangle.</li>
-<li><strong>Required Attributes</strong>: Values are required</li>
-<li>Name/Label are usually <strong>BOLD</strong></li>
-<li><strong>Optional Attributes</strong>: can be left empty.</li>
-<li>Name/Label are normal</li>
-<li><strong>Domain Attributes</strong>: restricted range of values (GPA, gender, address, etc.)</li>
-<li><strong>Identifier Attributes</strong>: These are synonymous with Primary keys<ul>
-<li>Underlined in most notations.</li>
-<li><strong>Composite Identifier</strong>: More than 1 attribute makes up the Primary Key<ul>
-<li>Usually just multiple underlined attributes.</li>
+<li>Provide an interface for creating families of related or dependent objects without specifying their concrete classes.</li>
 </ul>
-</li>
-</ul>
-</li>
-<li><strong>Composite Attributes</strong>: An attribute that can be sub-divided (e.g. Address)</li>
-<li>Chen notation is attribute bubbles stemmed from main attribute bubble.</li>
-<li>UML and Crow’s Foot usually decompose these into individual <strong>simple attributes</strong>, but how that is done is left to the designer.</li>
-<li><strong>Single Valued Attribute</strong>: Attributes with just a single value (Part No., SSN, etc.)<ul>
-<li>Could still be a Composite Attribute</li>
-</ul>
-</li>
-<li><strong>Multivalued Attribute</strong>: Attributes that can have multiple values (Car: Top, Body, Trim Color, etc.)<ul>
-<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_02.png"><img alt="Multivalued Attribute Notation" src="chap04_02.png"/></a></li>
-<li>Implementing in ERD:<ul>
-<li>Method 1: Ceate new attributes for each value type (i.e. CAR_TOPCOLOR, CAR_BODYCOLOR, CAR_TRIMCOLOR), but this is <strong>only OK if</strong>:<ul>
-<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_03.png"><img alt="Multivalued Attribute implementation method 1" src="chap04_03.png"/></a></li>
-<li>Every instance will have the same number of values for the multivalued attribute</li>
-<li>No instance will ever have more values</li>
-</ul>
-</li>
-<li>Method 2: Create a new <strong>Entity</strong> with a 1:M relationship back to the <strong>Entity</strong> the <strong>Multivalued</strong> attribute was attached to.<ul>
-<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_04.png"><img alt="Multivalued Attribute implementation method 2" src="chap04_04.png"/></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Derived Attributes</strong>: Attributes derived from other attributes (e.g. Age from DoB).<ul>
-<li>Chen Notation: Dashed line</li>
-<li>UML/Crow’s Foot Notation: None</li>
-<li>Storing these in the DB depend on Application constraints and computational complexity.</li>
-<li>Most modern RDBMs’ include features to support calculated attributes.</li>
-<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_05.png"><img alt="Derived Attribute Comparison" src="chap04_05.png"/></a></li>
-</ul>
-</li>
-</ul>
-<h3 id="define-refine-and-incorporate-relationships-between-entities">Define, Refine, and Incorporate Relationships Between Entities<a class="headerlink" href="#define-refine-and-incorporate-relationships-between-entities" title="Permanent link">¶</a></h3>
+<h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
+<h4 id="mermaid-graph">Mermaid Graph<a class="headerlink" href="#mermaid-graph" title="Permanent link">¶</a></h4>
+<h5 id="factory-method_1">Factory Method<a class="headerlink" href="#factory-method_1" title="Permanent link">¶</a></h5>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">Product</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ConcreteProduct</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">Creator</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ConcreteCreator</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">extends</span>
+<span class="w">    </span><span class="n">ConcreteCreator</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">ConcreteProduct</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Product</span><span class="p">{</span>
+<span class="w">      </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+    <span class="err">}</span>
+    <span class="nc">class</span><span class="w"> </span><span class="n">ConcreteProduct</span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span><span class="w">    </span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Creator</span><span class="p">{</span>
+<span class="w">      </span><span class="o">&lt;&lt;</span><span class="kd">abstract</span><span class="o">&gt;&gt;</span>
+<span class="w">      </span><span class="o">+</span><span class="n">factoryMethod</span><span class="p">():</span><span class="w"> </span><span class="n">Product</span>
+<span class="w">      </span><span class="o">+</span><span class="n">otherOperations</span><span class="p">():</span><span class="w"> </span><span class="kt">void</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteCreator</span><span class="p">{</span>
+<span class="w">      </span><span class="o">+</span><span class="n">factoryMethod</span><span class="p">():</span><span class="w"> </span><span class="n">ConcreteProduct</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="abstract-factory_1">Abstract Factory<a class="headerlink" href="#abstract-factory_1" title="Permanent link">¶</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">AbstractProductA</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ConcreteProductA1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">AbstractProductA</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ConcreteProductA2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">AbstractProductB</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ConcreteProductB1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">AbstractProductB</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ConcreteProductB2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">AbstractFactory</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ConcreteFactory1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">AbstractFactory</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ConcreteFactory2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">AbstractFactory</span>
+<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">AbstractProductA</span>
+<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">AbstractProductB</span>
+<span class="w">    </span><span class="n">ConcreteFactory1</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">ConcreteProductA1</span>
+<span class="w">    </span><span class="n">ConcreteFactory1</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">ConcreteProductB1</span>
+<span class="w">    </span><span class="n">ConcreteFactory2</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">ConcreteProductA2</span>
+<span class="w">    </span><span class="n">ConcreteFactory3</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">ConcreteProductB2</span><span class="w">    </span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">AbstractProductA</span><span class="p">{</span>
+<span class="w">      </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+    <span class="err">}</span>
+    <span class="nc">class</span><span class="w"> </span><span class="n">ConcreteProductA1</span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteProductA2</span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">AbstractProductB</span><span class="p">{</span>
+<span class="w">      </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+    <span class="err">}</span>
+    <span class="nc">class</span><span class="w"> </span><span class="n">ConcreteProductB1</span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteProductB2</span><span class="p">{</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w">    </span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">AbstractFactory</span><span class="p">{</span>
+<span class="w">      </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+      <span class="err">+</span><span class="nc">createProductA</span><span class="p">():</span><span class="w"> </span><span class="n">AbstractProductA</span>
+<span class="w">      </span><span class="o">+</span><span class="n">createProductB</span><span class="p">():</span><span class="w"> </span><span class="n">AbstractProductB</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteFactory1</span><span class="p">{</span>
+<span class="w">      </span><span class="o">+</span><span class="n">createProductA</span><span class="p">():</span><span class="w"> </span><span class="n">ConcreteProductA1</span>
+<span class="w">      </span><span class="o">+</span><span class="n">createProductB</span><span class="p">():</span><span class="w"> </span><span class="n">ConcreteProductB1</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteFactory2</span><span class="p">{</span>
+<span class="w">      </span><span class="o">+</span><span class="n">createProductA</span><span class="p">():</span><span class="w"> </span><span class="n">ConcreteProductA2</span>
+<span class="w">      </span><span class="o">+</span><span class="n">createProductB</span><span class="p">():</span><span class="w"> </span><span class="n">ConcreteProductB2</span>
+<span class="w">    </span><span class="p">}</span><span class="w">    </span>
+</code></pre></div></td></tr></table></div>
+<h4 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h4>
+<h5 id="factory-method_2">Factory Method<a class="headerlink" href="#factory-method_2" title="Permanent link">¶</a></h5>
+<object data="images/factorymethod_uml.svg" height="800" width="700"> </object>
+<h5 id="abstract-factory_2">Abstract Factory<a class="headerlink" href="#abstract-factory_2" title="Permanent link">¶</a></h5>
+<object data="images/abstractfactory_uml.svg" height="500" width="700"> </object>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h3>
+<h4 id="factory-method_3">Factory Method<a class="headerlink" href="#factory-method_3" title="Permanent link">¶</a></h4>
 <ul>
-<li>Active or Passiver VERB association between 2 or more entities (AKA participants).</li>
+<li>The factory method design pattern is used when we have a superclass with multiple sub-classes and based on input, we need to return one of the sub-class. This pattern takes out the responsibility of the instantiation of a class from the client program to the factory class.</li>
+<li>Super class in factory design pattern can be an <strong>interface</strong>, <strong>abstract class</strong> or a <strong>normal java class</strong></li>
 </ul>
-<h4 id="connectivity--cardinality">Connectivity &amp; Cardinality<a class="headerlink" href="#connectivity--cardinality" title="Permanent link">¶</a></h4>
+<h4 id="abstract-factory_3">Abstract Factory<a class="headerlink" href="#abstract-factory_3" title="Permanent link">¶</a></h4>
 <ul>
-<li>Relationships are always <strong>bi-directional connectivity</strong>, so when deciding on relationship classification ask yourself how the entities are connected going in both directions (e.g. Person -&gt; Dept and Dept -&gt; Person).</li>
-<li>Relationship <strong>connectivity</strong> can have minimum and maximum limits dubbed <strong>cardinality</strong></li>
-<li><strong>Cardinality</strong> is usually indicated in parenthesis like: (min, max), and are established by business rules.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_06.png"><img alt="Connectivity and Cardinality" src="chap04_06.png"/></a><ul>
-<li>Cardinality is enforced either at the application level or by databadse triggers</li>
+<li>Similar to the Factory Method pattern, BUT the Abstract Factory pattern, gets rid of the factory method’s switch/if-else block and uses a class for each product sub-class. Then an Abstract Factory class that will return the sub-class based on the input factory class. </li>
 </ul>
-</li>
-</ul>
-<h4 id="existence-and-independence">Existence and Independence<a class="headerlink" href="#existence-and-independence" title="Permanent link">¶</a></h4>
+<h4 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">¶</a></h4>
 <ul>
-<li>An entity that can’t exist without a dependent entity is <strong>existence-dependent</strong> entity (e.g. Dependent and Employee)</li>
-<li>An entity that can exist on its own, even though relationships exist are <strong>existence independent</strong> entities (e.g. Parts and Vendor, since a part might not have a Vendor).</li>
+<li>Nearly all frameworks that allow you to do things like swap out the database, cache, or other backend being used for data storage and retrieval. Spring, laravel, etc.</li>
 </ul>
-<h4 id="relationship-strength">Relationship Strength<a class="headerlink" href="#relationship-strength" title="Permanent link">¶</a></h4>
+<h4 id="application-to-my-real-world-application">Application to my Real World Application<a class="headerlink" href="#application-to-my-real-world-application" title="Permanent link">¶</a></h4>
 <ul>
-<li>Weak/Strong relationships are new to ERM and therefore not part of the conceptual Chen notation.</li>
-<li>A <strong>Weak or Non-Identifying relationship</strong> is one where the primary key of the related entity <strong>does NOT</strong> contain the primary key from the other related entity.<ul>
-<li>The typical 1:M relationship where the primary key from the <strong>1</strong> side becomes a foreign key on the <strong>M</strong> side is a <strong>weak relationship</strong>.</li>
-<li>A Dashed connecting line in a Crow’s Foot diagram indicates a weak relationship.</li>
-<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_07.png"><img alt="Crow's Foot Weak Relationship" src="chap04_07.png"/></a></li>
+<li>Use a factory method pattern to build different processors for my pipelines depending on user input. Maybe I want a stateless pipeline, or maybe I want a stateful pipeline. Maybe I’d like a pipeline that gets interrupted if an error occurs (Interruptable pipeline).</li>
 </ul>
-</li>
-<li>A <strong>Strong or Identifying relationship</strong> is one where the primary key of the related entity <strong>IS</strong> in the primary key of the other related entity.<ul>
-<li>A Solid connecting line in a Crow’s Foot diagram indicates a strong relationship.</li>
-<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_08.png"><img alt="Crow's Foot Weak Relationship" src="chap04_08.png"/></a></li>
-</ul>
-</li>
-<li>The DB Designer must consider transactions, efficiency, and information requirements to decide the type of strength relationship to use.</li>
-</ul>
-<h4 id="entity-strength">Entity Strength<a class="headerlink" href="#entity-strength" title="Permanent link">¶</a></h4>
+<h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Strong/Regular Entity</strong> simple need to satisfy <strong>existence independence</strong></li>
-<li>A <strong>Weak Entity</strong> must be <strong>existence-dependent</strong> and have a <strong>Strong relationship</strong><ul>
-<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_09.png"><img alt="Weak Entity in Chen and Crow's Foot notation" src="chap04_09.png"/></a></li>
+<li><a href="factory_method_java.html">Factory Method Design Pattern</a></li>
+<li><a href="abstract_factory_java.html">Abstract Factory Design Pattern</a></li>
 </ul>
-</li>
-</ul>
-<h4 id="relationship-participation">Relationship Participation<a class="headerlink" href="#relationship-participation" title="Permanent link">¶</a></h4>
+<h3 id="main-take-aways-from-the-textbook">Main Take-Aways from the textbook<a class="headerlink" href="#main-take-aways-from-the-textbook" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Optional Participation</strong>: A row on the <strong>:M</strong> optional side of the relationship doesn’t have to exist.<ul>
-<li>Designated with an <strong>O</strong> indicating <strong>optional</strong> participation in a Crow’s Foot diagram.</li>
-<li>Cardinality minimum has to be <strong>0</strong></li>
+<li>All factory patterns promote loose coupling by reducing the dependency of your application on concrete classes.</li>
+<li>The intent of Factory Method is to allow a class to defer instantiation to its subclasses.</li>
+<li>The intent of Abstract Factory is to create families of related objects without having to depend on their concrete classes.</li>
+<li>Factories are a powerful technique for coding to abstractions, not concrete classes.</li>
+<li>The Dependency Inversion Principle guides us to avoid dependencies on concrete types and to strive for abstractions.</li>
 </ul>
-</li>
-<li><strong>Mandatory Participation</strong>: A row on the <strong>:M</strong> side MUST exist.<ul>
-<li>Cardinality minimum has to be at least <strong>1</strong></li>
-</ul>
-</li>
-</ul>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>The <strong>relationship strength</strong> depends on how the <strong>PK</strong> of the related entity is formulated, while the <strong>relationship participation</strong> depends on how the <strong>business rule</strong> is written.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_10.png"><img alt="Crow's Foot notation symbol cheatsheet" src="chap04_10.png"/></a></p>
-<p>Below is a great connectivity example showing how Class is optional to Professors (i.e. professors may do research only), while every Class has to have 1 and only 1 Professor.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_11.png"><img alt="Crow's Foot notation symbol cheatsheet" src="chap04_11.png"/></a></p>
-</details>
-<h4 id="relationship-degree">Relationship Degree<a class="headerlink" href="#relationship-degree" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_12.png"><img alt="Unary, binary, and Ternary Degree Relationships" src="chap04_12.png"/></a></p>
-<h4 id="recursive-relationships">Recursive Relationships<a class="headerlink" href="#recursive-relationships" title="Permanent link">¶</a></h4>
+<h3 id="main-oo-principles-of-factory-pattern">Main OO Principles of Factory Pattern<a class="headerlink" href="#main-oo-principles-of-factory-pattern" title="Permanent link">¶</a></h3>
+<h4 id="factory-method_4">Factory Method<a class="headerlink" href="#factory-method_4" title="Permanent link">¶</a></h4>
 <ul>
-<li>Method 1: Unary, add an attribute column that matches PK of table (e.g. Employee has a Manager). This is a 1:1 relationship where each entry will only have a single manager.</li>
-<li>Method 2: Binary, add a table with a 1:M relactionship where the <strong>:M</strong> side gets the PK from the <strong>1:</strong> side. This allows for 1:M recursive relationships (e.g. PARTS composed of PARTS)</li>
+<li><a href="oo_principles.html#encapsulate-what-varies">Encapsulates Object Creation</a></li>
+<li>Removes the instantiation of actual implementation classes from client code.</li>
+<li>Provides an approach to <a href="oo_principles.html#program-to-interfaces-not-implementations">code for interface rather than implementation</a>.</li>
+<li>Makes our code more robust with <a href="oo_principles.html#strive-for-loosely-coupled-designs-between-objects-that-interact">loose coupling</a>. Thus easier to extend classes.</li>
+<li>Provides abstraction between implementation and client classes through <strong>inheritance</strong>.</li>
 </ul>
-<h3 id="developing-an-er-diagram">Developing an ER Diagram<a class="headerlink" href="#developing-an-er-diagram" title="Permanent link">¶</a></h3>
-<h4 id="iterative-process">Iterative Process<a class="headerlink" href="#iterative-process" title="Permanent link">¶</a></h4>
+<h4 id="abstract-factory_4">Abstract Factory<a class="headerlink" href="#abstract-factory_4" title="Permanent link">¶</a></h4>
 <ul>
-<li>Create a detailed narrative of the organization’s description of operations.</li>
-<li>Identify the business rules based on the description of operations.</li>
-<li>Identify the main entities and relationships from the business rules.</li>
-<li>Develop the initial ERD.</li>
-<li>Identify the attributes and primary keys that adequately describe the entities.</li>
-<li>Revise and review the ERD.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap04_13.png"><img alt="Tiny College ERD" src="chap04_13.png"/></a></li>
-</ul>
-<h3 id="db-design-tradeoffs-reconciling-conflicting-goals">DB Design Tradeoffs, Reconciling Conflicting Goals<a class="headerlink" href="#db-design-tradeoffs-reconciling-conflicting-goals" title="Permanent link">¶</a></h3>
-<h4 id="the-3-things-always-to-consider">The 3 things always to consider<a class="headerlink" href="#the-3-things-always-to-consider" title="Permanent link">¶</a></h4>
-<ul>
-<li>Design standards: Normalization, reduce nulls</li>
-<li>Processing speed: performance, security, shared access, and data integrity</li>
-<li>Information requirements</li>
+<li>Is robust and avoids conditional logic of Factory Method pattern via <a href="oo_principles.html#favor-composition-over-inheritance">composition</a> (object creation is implemented in exposed methods of factory interface).</li>
+<li><a href="oo_principles.html#encapsulate-what-varies">Encapsulates Object Creation</a></li>
+<li><a href="oo_principles.html#dependency-inversion-principle">Decouples clients from concrete classes</a></li>
+<li>Provides an approach to <a href="oo_principles.html#program-to-interfaces-not-implementations">code for interface rather than implementation</a>.</li>
+<li>Makes our code more robust with <a href="oo_principles.html#strive-for-loosely-coupled-designs-between-objects-that-interact">loose coupling</a></li>
+<li>AKA the <strong>factory of factories</strong> and can be easily extended to accommodate more products.</li>
 </ul>
 </article>
 </div>
