@@ -7,9 +7,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
+<link href="Chapter_6.html" rel="prev"/>
+<link href="../CIS-18/week_1.html" rel="next"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Structured Query Language (SQL) - THartmanOfTheRedwoods Wiki</title>
+<title>Structured Query Language - THartmanOfTheRedwoods Wiki</title>
 <link href="../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -61,7 +63,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Structured Query Language (SQL)
+              Structured Query Language
             
           </span>
 </div>
@@ -166,7 +168,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../archive.html">
+<a class="md-tabs__link md-tabs__link--active" href="../archive.html">
         Class Notes
       </a>
 </li>
@@ -448,13 +450,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
           Class Notes
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_11">
 <span class="md-nav__icon md-icon"></span>
           Class Notes
@@ -465,13 +467,13 @@
         Index
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_11_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
           CIS-50
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_11_2_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_11_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_11_2">
 <span class="md-nav__icon md-icon"></span>
           CIS-50
@@ -506,6 +508,239 @@
 <a class="md-nav__link" href="Chapter_6.html">
         Normalization
       </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Structured Query Language
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="Chapter_7.html">
+        Structured Query Language
+      </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structured-query-language-sql">
+    Structured Query Language (SQL)
+  </a>
+<nav aria-label="Structured Query Language (SQL)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#criteria-for-an-ideal-db-language-which-sql-is">
+    Criteria for an ideal DB Language, which SQL is!
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#categories-of-sql">
+    Categories of SQL
+  </a>
+<nav aria-label="Categories of SQL" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#queries-and-operations">
+    Queries and Operations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intro-to-data-types">
+    Intro to Data Types
+  </a>
+<nav aria-label="Intro to Data Types" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-fundamental-types-of-data">
+    3 Fundamental Types of Data
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#retrieval-select-query">
+    Retrieval (SELECT Query)
+  </a>
+<nav aria-label="Retrieval (SELECT Query)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-terms">
+    Basic Terms
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-structure">
+    Basic Structure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+    Examples
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#other-notes">
+    Other Notes
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joining">
+    Joining
+  </a>
+<nav aria-label="Joining" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-terms_1">
+    Basic Terms
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-structure_1">
+    Basic Structure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_1">
+    Examples
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sort-searchrestriction-criteria">
+    Sort, Search/Restriction Criteria
+  </a>
+<nav aria-label="Sort, Search/Restriction Criteria" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-terms_2">
+    Basic Terms
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-structure_2">
+    Basic Structure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_2">
+    Examples
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aggregation">
+    Aggregation
+  </a>
+<nav aria-label="Aggregation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-terms_3">
+    Basic Terms
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-structure_3">
+    Basic Structure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_3">
+    Examples
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#subqueries-and-preprocessing">
+    Subqueries and Preprocessing
+  </a>
+<nav aria-label="Subqueries and Preprocessing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-characteristics">
+    Basic Characteristics
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-terms_4">
+    Basic Terms
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-structure_4">
+    Basic Structure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_4">
+    Examples
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-manipulation-functions">
+    Data Manipulation Functions
+  </a>
+<nav aria-label="Data Manipulation Functions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-function-types">
+    Common Function Types
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relational-set-operators">
+    Relational Set Operators
+  </a>
+<nav aria-label="Relational Set Operators" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-terms_5">
+    Basic Terms
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-structure_5">
+    Basic Structure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_5">
+    Examples
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-query-principles">
+    Key Query Principles
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -809,7 +1044,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Structured Query Language (SQL)</h1>
+<h1>Structured Query Language</h1>
 <h2 id="structured-query-language-sql">Structured Query Language (SQL)<a class="headerlink" href="#structured-query-language-sql" title="Permanent link">¶</a></h2>
 <h3 id="criteria-for-an-ideal-db-language-which-sql-is">Criteria for an <strong>ideal</strong> DB Language, which SQL is!<a class="headerlink" href="#criteria-for-an-ideal-db-language-which-sql-is" title="Permanent link">¶</a></h3>
 <ul>
