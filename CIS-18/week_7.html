@@ -7,17 +7,18 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="assets/images/favicon.ico" rel="icon"/>
+<link href="week_5.html" rel="prev"/>
+<link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>MacOS Overview - THartmanOfTheRedwoods Wiki</title>
-<link href="assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
-<link href="assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Week 7 - Singleton Design Pattern - THartmanOfTheRedwoods Wiki</title>
+<link href="../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
-<link href="css/mode.css" rel="stylesheet"/>
-<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../css/mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -28,14 +29,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="red" data-md-color-primary="red" data-md-color-scheme="slate" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#macos-overview">
+<a class="md-skip" href="#the-singelton-design-pattern">
           Skip to content
         </a>
 </div>
@@ -45,8 +46,8 @@
 </div>
 <header class="md-header md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="assets/images/simple_sign_logo_64.png"/>
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -61,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              MacOS Overview
+              Week 7 - Singleton Design Pattern
             
           </span>
 </div>
@@ -116,57 +117,57 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="index.html">
+<a class="md-tabs__link" href="../index.html">
       Home
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="git/gitflow.html">
+<a class="md-tabs__link" href="../git/gitflow.html">
         Git
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="java/format_specifiers.html">
+<a class="md-tabs__link" href="../java/format_specifiers.html">
         Java
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="markdown-cheat-sheet.html">
+<a class="md-tabs__link" href="../markdown-cheat-sheet.html">
       Markdown
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="tomcat/install.html">
+<a class="md-tabs__link" href="../tomcat/install.html">
         Tomcat
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="tux/os_command_map.html">
+<a class="md-tabs__link" href="../tux/os_command_map.html">
         Tux
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="vim/cheat-sheet.html">
+<a class="md-tabs__link" href="../vim/cheat-sheet.html">
         Vim
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="virtualbox/win11install.html">
+<a class="md-tabs__link" href="../virtualbox/win11install.html">
         VirtualBox
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="windows/os_command_map.html">
+<a class="md-tabs__link" href="../windows/os_command_map.html">
         Windows
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="hardware/cables.html">
+<a class="md-tabs__link" href="../hardware/cables.html">
         Hardware
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="archive.html">
+<a class="md-tabs__link md-tabs__link--active" href="../archive.html">
         Class Notes
       </a>
 </li>
@@ -182,14 +183,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="assets/images/simple_sign_logo_64.png"/>
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
 </a>
     THartmanOfTheRedwoods Wiki
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="index.html">
+<a class="md-nav__link" href="../index.html">
         Home
       </a>
 </li>
@@ -206,7 +207,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="git/gitflow.html">
+<a class="md-nav__link" href="../git/gitflow.html">
         Workflows
       </a>
 </li>
@@ -226,17 +227,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="java/format_specifiers.html">
+<a class="md-nav__link" href="../java/format_specifiers.html">
         Format Specifiers
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="java/operators.html">
+<a class="md-nav__link" href="../java/operators.html">
         Operators
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="java/associativity.html">
+<a class="md-nav__link" href="../java/associativity.html">
         Operator Prcedence &amp; Associativity
       </a>
 </li>
@@ -244,7 +245,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="markdown-cheat-sheet.html">
+<a class="md-nav__link" href="../markdown-cheat-sheet.html">
         Markdown
       </a>
 </li>
@@ -261,7 +262,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="tomcat/install.html">
+<a class="md-nav__link" href="../tomcat/install.html">
         Install
       </a>
 </li>
@@ -281,32 +282,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/os_command_map.html">
+<a class="md-nav__link" href="../tux/os_command_map.html">
         Command Cheatsheet
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/imagemagick.html">
+<a class="md-nav__link" href="../tux/imagemagick.html">
         ImageMagick
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/pandoc.html">
+<a class="md-nav__link" href="../tux/pandoc.html">
         Pandoc
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/parallel.html">
+<a class="md-nav__link" href="../tux/parallel.html">
         Parallel
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/ssh.html">
+<a class="md-nav__link" href="../tux/ssh.html">
         SSH
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/tesseract.html">
+<a class="md-nav__link" href="../tux/tesseract.html">
         Tesseract
       </a>
 </li>
@@ -326,7 +327,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="vim/cheat-sheet.html">
+<a class="md-nav__link" href="../vim/cheat-sheet.html">
         Cheatsheet
       </a>
 </li>
@@ -346,7 +347,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="virtualbox/win11install.html">
+<a class="md-nav__link" href="../virtualbox/win11install.html">
         Install
       </a>
 </li>
@@ -366,7 +367,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/os_command_map.html">
+<a class="md-nav__link" href="../windows/os_command_map.html">
         Command Cheatsheet
       </a>
 </li>
@@ -383,42 +384,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/arp.html">
+<a class="md-nav__link" href="../windows/network/arp.html">
         Arp
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/nbtstat.html">
+<a class="md-nav__link" href="../windows/network/nbtstat.html">
         Nbtstat
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/netstat.html">
+<a class="md-nav__link" href="../windows/network/netstat.html">
         Netstat
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/ping.html">
+<a class="md-nav__link" href="../windows/network/ping.html">
         Ping
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/ipconfig.html">
+<a class="md-nav__link" href="../windows/network/ipconfig.html">
         Ipconfig
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/net.html">
+<a class="md-nav__link" href="../windows/network/net.html">
         Net
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/nslookup.html">
+<a class="md-nav__link" href="../windows/network/nslookup.html">
         Nslookup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/tracert.html">
+<a class="md-nav__link" href="../windows/network/tracert.html">
         Tracert
       </a>
 </li>
@@ -441,27 +442,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="hardware/cables.html">
+<a class="md-nav__link" href="../hardware/cables.html">
         Cables
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
           Class Notes
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_11">
 <span class="md-nav__icon md-icon"></span>
           Class Notes
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="archive.html">
+<a class="md-nav__link" href="../archive.html">
         Index
       </a>
 </li>
@@ -478,104 +479,226 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_1.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_1.html">
         Database Systems
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_2.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_2.html">
         Data Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_3.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_3.html">
         The Relational Database Model
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/joins_ns.html">
+<a class="md-nav__link" href="../CIS-50/joins_ns.html">
         Joins
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_4.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_4.html">
         Entity Relationship Modeling
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_6.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_6.html">
         Normalization
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_7.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_7.html">
         Structured Query Language
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_11_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
           CIS-18
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_11_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_11_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_11_3">
 <span class="md-nav__icon md-icon"></span>
           CIS-18
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_1.html">
+<a class="md-nav__link" href="week_1.html">
         Week 1 - Review
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/sprint.html">
+<a class="md-nav__link" href="sprint.html">
         Sprint Planning
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/user_story_intro.html">
+<a class="md-nav__link" href="user_story_intro.html">
         User Story Into
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/user_story_lesson.html">
+<a class="md-nav__link" href="user_story_lesson.html">
         User Story Lesson
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_2.html">
+<a class="md-nav__link" href="week_2.html">
         Week 2 - Fundamental OOP Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/oo_principles.html">
+<a class="md-nav__link" href="oo_principles.html">
         Key OO Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_3.html">
+<a class="md-nav__link" href="week_3.html">
         Week 3 - Observer Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_4.html">
+<a class="md-nav__link" href="week_4.html">
         Week 4 - Decorator Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_5.html">
+<a class="md-nav__link" href="week_5.html">
         Week 5 - Factory Design Pattern
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_7.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Week 7 - Singleton Design Pattern
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="week_7.html">
         Week 7 - Singleton Design Pattern
       </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-singelton-design-pattern">
+    The Singelton Design Pattern
+  </a>
+<nav aria-label="The Singelton Design Pattern" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classification">
+    Classification
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
+  </a>
+<nav aria-label="Pattern Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-to-all-singleton-implmentations">
+    Common to all Singleton Implmentations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph">
+    Mermaid Graph
+  </a>
+<nav aria-label="Mermaid Graph" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lazy-initialization-singleton">
+    Lazy Initialization Singleton
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bill-pugh-singleton">
+    Bill Pugh Singleton
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml">
+    UML
+  </a>
+<nav aria-label="UML" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#singleton">
+    Singleton
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bill-pugh-singleton_1">
+    Bill Pugh Singleton
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage">
+    Usage
+  </a>
+<nav aria-label="Usage" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-to-my-real-world-application">
+    Application to my Real World Application
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+    Main Take-Aways from the textbook
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-factory-pattern">
+    Main OO Principles of Factory Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -598,59 +721,109 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#macos-overview">
-    MacOS Overview
+<a class="md-nav__link" href="#the-singelton-design-pattern">
+    The Singelton Design Pattern
   </a>
-<nav aria-label="MacOS Overview" class="md-nav">
+<nav aria-label="The Singelton Design Pattern" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mission-control">
-    Mission Control
+<a class="md-nav__link" href="#classification">
+    Classification
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#launchpad">
-    Launchpad
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
+  </a>
+<nav aria-label="Pattern Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-to-all-singleton-implmentations">
+    Common to all Singleton Implmentations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph">
+    Mermaid Graph
+  </a>
+<nav aria-label="Mermaid Graph" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lazy-initialization-singleton">
+    Lazy Initialization Singleton
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bill-pugh-singleton">
+    Bill Pugh Singleton
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mac-desktop">
-    Mac Desktop
+<a class="md-nav__link" href="#uml">
+    UML
+  </a>
+<nav aria-label="UML" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#singleton">
+    Singleton
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#finder">
-    Finder
+<a class="md-nav__link" href="#bill-pugh-singleton_1">
+    Bill Pugh Singleton
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage">
+    Usage
+  </a>
+<nav aria-label="Usage" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#apple-menu">
-    Apple Menu
+<a class="md-nav__link" href="#application-to-my-real-world-application">
+    Application to my Real World Application
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#spotlight">
-    Spotlight
+<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+    Main Take-Aways from the textbook
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#keychain">
-    KeyChain
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#screen-sharing">
-    Screen Sharing
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#remote-disc">
-    Remote Disc
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#terminal">
-    Terminal
+<a class="md-nav__link" href="#main-oo-principles-of-factory-pattern">
+    Main OO Principles of Factory Pattern
   </a>
 </li>
 </ul>
@@ -663,72 +836,93 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>MacOS Overview</h1>
-<h2 id="macos-overview">MacOS Overview<a class="headerlink" href="#macos-overview" title="Permanent link">¶</a></h2>
-<h3 id="mission-control">Mission Control<a class="headerlink" href="#mission-control" title="Permanent link">¶</a></h3>
+<h1>Week 7 - Singleton Design Pattern</h1>
+<h2 id="the-singelton-design-pattern">The Singelton Design Pattern<a class="headerlink" href="#the-singelton-design-pattern" title="Permanent link">¶</a></h2>
+<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">¶</a></h3>
 <ul>
-<li>Shows all Open Winodows + Allows for Multiple Desktops<ul>
-<li>Drag Items Onto new Desktop to Add</li>
-<li>Arrow between them with Control + Left or Right Arrows</li>
+<li>Creational Design Pattern</li>
 </ul>
-</li>
-<li>4 Finger Gesture UP / DOWN to close</li>
-<li>Arrow &gt; 3 Window Button</li>
-</ul>
-<h3 id="launchpad">Launchpad<a class="headerlink" href="#launchpad" title="Permanent link">¶</a></h3>
+<h3 id="pattern-definition">Pattern Definition<a class="headerlink" href="#pattern-definition" title="Permanent link">¶</a></h3>
 <ul>
-<li>Easy access to installed apps</li>
-<li>5 Finter Gesture IN / OUT to close</li>
-<li>Arrow &gt; 6 Window Button</li>
+<li>Ensure a class only has one instance, and provide a global point of access to it.</li>
 </ul>
-<h3 id="mac-desktop">Mac Desktop<a class="headerlink" href="#mac-desktop" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/MacDesktop.png"><img alt="Mac Desktop" src="images/MacDesktop.png"/></a></p>
-<h3 id="finder">Finder<a class="headerlink" href="#finder" title="Permanent link">¶</a></h3>
+<h4 id="common-to-all-singleton-implmentations">Common to all Singleton Implmentations<a class="headerlink" href="#common-to-all-singleton-implmentations" title="Permanent link">¶</a></h4>
 <ul>
-<li>Finder menu bar’s <strong>Go</strong> feature can access shares</li>
-<li>Access to files and folders<ul>
-<li>Applications are the mac binary programs we can run</li>
-<li>Utilities support a Mac with things like terminal or disk access.</li>
-<li>Locations are storage locations including remote/shared locations</li>
-<li>Tags can be used to <strong>tag</strong> important files</li>
+<li>Private constructor to restrict instantiation of the class from other classes.</li>
+<li>Private static variable of the same class that is the only instance of the class.</li>
+<li>Public static method that returns the instance of the class, this is the global access point for the outer world to get the instance of the singleton class.</li>
 </ul>
-</li>
-</ul>
-<h3 id="apple-menu">Apple Menu<a class="headerlink" href="#apple-menu" title="Permanent link">¶</a></h3>
+<h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
+<h4 id="mermaid-graph">Mermaid Graph<a class="headerlink" href="#mermaid-graph" title="Permanent link">¶</a></h4>
+<h5 id="lazy-initialization-singleton">Lazy Initialization Singleton<a class="headerlink" href="#lazy-initialization-singleton" title="Permanent link">¶</a></h5>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Singleton</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">-</span><span class="n">Singleton</span><span class="w"> </span><span class="n">uniqueInstance$</span>
+<span class="w">        </span><span class="o">-</span><span class="n">Singleton</span><span class="p">()</span>
+<span class="w">        </span><span class="o">+</span><span class="n">getInstance</span><span class="p">()</span><span class="n">$</span><span class="p">:</span><span class="w"> </span><span class="n">Singleton</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="bill-pugh-singleton">Bill Pugh Singleton<a class="headerlink" href="#bill-pugh-singleton" title="Permanent link">¶</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">Singleton</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">SingletonHelper</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Contains</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Singleton</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">-</span><span class="kd">class</span> <span class="nc">SingletonHelper$</span>
+<span class="w">        </span><span class="o">-</span><span class="n">Singleton</span><span class="p">()</span>
+<span class="w">        </span><span class="o">+</span><span class="n">getInstance</span><span class="p">()</span><span class="n">$</span><span class="p">:</span><span class="w"> </span><span class="n">Singleton</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">SingletonHelper</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">-</span><span class="n">Singleton</span><span class="w"> </span><span class="n">INSTANCE$</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h4>
+<h5 id="singleton">Singleton<a class="headerlink" href="#singleton" title="Permanent link">¶</a></h5>
+<object data="images/singleton_uml.svg" height="400" width="400"> </object>
+<h5 id="bill-pugh-singleton_1">Bill Pugh Singleton<a class="headerlink" href="#bill-pugh-singleton_1" title="Permanent link">¶</a></h5>
+<object data="images/singleton_bill_pugh_uml.svg" height="700" width="700"> </object>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h3>
 <ul>
-<li>Access to System Information, Preferences, App Store, recent items, Force Quit options<ul>
-<li>Preferences: System wide settings and features<ul>
-<li>Track Pad</li>
-<li>iCloud </li>
-<li>Time Machine</li>
-<li>Users &amp; Groups</li>
-<li>Sharing like Screen Sharing or Remote Login</li>
-<li>Network Settings</li>
-<li>Spotlight (Search Utility)</li>
+<li>The singleton pattern is used anywhere you need One-and-Only-One copy of an object. Interacting with files, databases, logging, caching, and or system drivers are all areas where singleton objects are necessary to control access to a single object.</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="spotlight">Spotlight<a class="headerlink" href="#spotlight" title="Permanent link">¶</a></h3>
+<h4 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">¶</a></h4>
 <ul>
-<li>Command + SpaceBar</li>
+<li>Database and File System Connections</li>
+<li>Serializing logging.</li>
+<li>Singular access to device drivers</li>
+<li>Singular access to cache store/retrieval</li>
+<li>Thread Pools</li>
 </ul>
-<h3 id="keychain">KeyChain<a class="headerlink" href="#keychain" title="Permanent link">¶</a></h3>
+<h4 id="application-to-my-real-world-application">Application to my Real World Application<a class="headerlink" href="#application-to-my-real-world-application" title="Permanent link">¶</a></h4>
 <ul>
-<li>MacOS Password Manager found under Utilities</li>
+<li>I have a DAOStage class that implements Stage and contains a Singleton for various database connections. The Singleton class is called Database and its getInstance method returns a concrete Database connection from its Nested class that uses a Factory Method to decide the database type to connect to, and sets the Singleton object to it at runtime.</li>
 </ul>
-<h3 id="screen-sharing">Screen Sharing<a class="headerlink" href="#screen-sharing" title="Permanent link">¶</a></h3>
+<h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">¶</a></h3>
 <ul>
-<li>System Preferences &gt; Sharing</li>
+<li><a href="singleton_java.html">Singleton Design Pattern</a></li>
 </ul>
-<h3 id="remote-disc">Remote Disc<a class="headerlink" href="#remote-disc" title="Permanent link">¶</a></h3>
+<h3 id="main-take-aways-from-the-textbook">Main Take-Aways from the textbook<a class="headerlink" href="#main-take-aways-from-the-textbook" title="Permanent link">¶</a></h3>
 <ul>
-<li>Allows access to Optical drive via the network.</li>
+<li>Examine your performance and resource constraints and carefully choose an appropriate Singleton implementation for multithreaded applications (and we should consider all applications multithreaded!).</li>
+<li>Beware of the double- checked locking implementation; it isn’t thread safe in versions before Java 5.</li>
+<li>Be careful if you are using multiple class loaders; this could defeat the Singleton implementation and result in multiple instances.</li>
+<li>You can use Java’s enums to simplify your Singleton implementation.</li>
 </ul>
-<h3 id="terminal">Terminal<a class="headerlink" href="#terminal" title="Permanent link">¶</a></h3>
+<h3 id="main-oo-principles-of-factory-pattern">Main OO Principles of Factory Pattern<a class="headerlink" href="#main-oo-principles-of-factory-pattern" title="Permanent link">¶</a></h3>
 <ul>
-<li>Super User Command Line Control</li>
+<li>None this week! The Singleton stands alone!</li>
 </ul>
 </article>
 </div>
@@ -767,7 +961,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": ".", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
-<script src="assets/javascripts/bundle.2a6f1dda.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+<script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
