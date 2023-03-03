@@ -8,7 +8,7 @@
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
 <link href="Chapter_6.html" rel="prev"/>
-<link href="../CIS-18/week_1.html" rel="next"/>
+<link href="cheatsheets.html" rel="next"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
 <title>Structured Query Language - THartmanOfTheRedwoods Wiki</title>
@@ -742,6 +742,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="cheatsheets.html">
+        SQL Cheatsheets
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1120,7 +1125,7 @@
 <ul>
 <li>Data Manipulation Language (DML): Manipulates data<ul>
 <li>INSERT, SELECT, UPDATE, DELETE
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap07_01.png"><img alt="Data Manipulation Language" src="chap07_01.png"/></a></li>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap07_01.png"><img alt="Data Manipulation Language" src="images/chap07_01.png"/></a></li>
 </ul>
 </li>
 <li>Data Definition Language (DDL): Creates or alters schema and structure<ul>
@@ -1130,12 +1135,12 @@
 <li>Transaction Control Language (TCL): Manages multiple DML commands from Bus. Rules in <strong>transactions</strong>.<ul>
 <li>A <strong>transaction</strong> is a logical unit of work of set of DML commands.</li>
 <li>COMMIT, ROLLBACK, SAVEPOINT
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap07_02.png"><img alt="Data Definition &amp; Transaction Control Language" src="chap07_02.png"/></a></li>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap07_02.png"><img alt="Data Definition &amp; Transaction Control Language" src="images/chap07_02.png"/></a></li>
 </ul>
 </li>
 <li>Data Control Language (DCL): Access Control, security and permissions.<ul>
 <li>GRANT, REVOKE
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap07_03.png"><img alt="Data Control Language" src="chap07_03.png"/></a></li>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap07_03.png"><img alt="Data Control Language" src="images/chap07_03.png"/></a></li>
 </ul>
 </li>
 </ul>
@@ -1210,7 +1215,7 @@ SELECT DISTINCT V_CODE FROM PRODUCT;
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap07_04.png"><img alt="SQL Arithmetic Operators" src="chap07_04.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap07_04.png"><img alt="SQL Arithmetic Operators" src="images/chap07_04.png"/></a></p>
 <h3 id="joining">Joining<a class="headerlink" href="#joining" title="Permanent link">¶</a></h3>
 <h4 id="basic-terms_1">Basic Terms<a class="headerlink" href="#basic-terms_1" title="Permanent link">¶</a></h4>
 <ul>
@@ -1305,7 +1310,7 @@ SELECT E.EMP_NUM, E.EMP_LNAME, E.EMP_MGR, M.EMP_LNAME FROM EMP E JOIN EMP M ON E
 </ul>
 </li>
 <li>WHERE: Adds conditional restrictions to SELECT or search criteria allowing limits to rows in query results.<ul>
-<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap07_05.png"><img alt="Comparison Operators in Where clause" src="chap07_05.png"/></a><ul>
+<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap07_05.png"><img alt="Comparison Operators in Where clause" src="images/chap07_05.png"/></a><ul>
 <li>Comparison Operators can be used on <strong>character</strong> data to compare alphebetically left-to-right.</li>
 <li>Numbers or Dates stored incorrectly as character data can produce anomalies when comparison operators are used.</li>
 </ul>
@@ -1424,7 +1429,7 @@ SELECT P_CODE, P_DESCRIPT, V_CODE FROM PRODUCT WHERE V_CODE IS NULL;
 <li>Most aggregate functions take a <strong>single attribue</strong> as a parameter.</li>
 <li>Aggregate functions generally take <strong>entire collection</strong> of rows from an <strong>attribute</strong> and reduce it to a <strong>single rowed result</strong>.</li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="chap07_06.png"><img alt="Aggregate Functions" src="chap07_06.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap07_06.png"><img alt="Aggregate Functions" src="images/chap07_06.png"/></a></p>
 <h4 id="basic-terms_3">Basic Terms<a class="headerlink" href="#basic-terms_3" title="Permanent link">¶</a></h4>
 <ul>
 <li>COUNT typically doesn’t count NULLs, so you’ll want COUNT(*) if you want a row count.</li>
