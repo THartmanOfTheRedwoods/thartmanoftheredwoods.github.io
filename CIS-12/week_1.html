@@ -7,17 +7,19 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="assets/images/favicon.ico" rel="icon"/>
+<link href="../CIS-18/week_7.html" rel="prev"/>
+<link href="week_2.html" rel="next"/>
+<link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Variables and Operators - THartmanOfTheRedwoods Wiki</title>
-<link href="assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
-<link href="assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Week 1 - Introduction to Programming - THartmanOfTheRedwoods Wiki</title>
+<link href="../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
-<link href="css/mode.css" rel="stylesheet"/>
-<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../css/mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -28,14 +30,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="red" data-md-color-primary="red" data-md-color-scheme="slate" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#variables-and-operators">
+<a class="md-skip" href="#introduction-to-java">
           Skip to content
         </a>
 </div>
@@ -45,8 +47,8 @@
 </div>
 <header class="md-header md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="assets/images/simple_sign_logo_64.png"/>
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -61,7 +63,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Variables and Operators
+              Week 1 - Introduction to Programming
             
           </span>
 </div>
@@ -116,57 +118,57 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="index.html">
+<a class="md-tabs__link" href="../index.html">
       Home
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="git/gitflow.html">
+<a class="md-tabs__link" href="../git/gitflow.html">
         Git
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="java/format_specifiers.html">
+<a class="md-tabs__link" href="../java/format_specifiers.html">
         Java
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="markdown-cheat-sheet.html">
+<a class="md-tabs__link" href="../markdown-cheat-sheet.html">
       Markdown
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="tomcat/install.html">
+<a class="md-tabs__link" href="../tomcat/install.html">
         Tomcat
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="tux/os_command_map.html">
+<a class="md-tabs__link" href="../tux/os_command_map.html">
         Tux
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="vim/cheat-sheet.html">
+<a class="md-tabs__link" href="../vim/cheat-sheet.html">
         Vim
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="virtualbox/win11install.html">
+<a class="md-tabs__link" href="../virtualbox/win11install.html">
         VirtualBox
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="windows/os_command_map.html">
+<a class="md-tabs__link" href="../windows/os_command_map.html">
         Windows
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="hardware/cables.html">
+<a class="md-tabs__link" href="../hardware/cables.html">
         Hardware
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="archive.html">
+<a class="md-tabs__link md-tabs__link--active" href="../archive.html">
         Class Notes
       </a>
 </li>
@@ -182,14 +184,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="assets/images/simple_sign_logo_64.png"/>
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
 </a>
     THartmanOfTheRedwoods Wiki
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="index.html">
+<a class="md-nav__link" href="../index.html">
         Home
       </a>
 </li>
@@ -206,7 +208,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="git/gitflow.html">
+<a class="md-nav__link" href="../git/gitflow.html">
         Workflows
       </a>
 </li>
@@ -226,17 +228,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="java/format_specifiers.html">
+<a class="md-nav__link" href="../java/format_specifiers.html">
         Format Specifiers
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="java/operators.html">
+<a class="md-nav__link" href="../java/operators.html">
         Operators
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="java/associativity.html">
+<a class="md-nav__link" href="../java/associativity.html">
         Operator Prcedence &amp; Associativity
       </a>
 </li>
@@ -244,7 +246,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="markdown-cheat-sheet.html">
+<a class="md-nav__link" href="../markdown-cheat-sheet.html">
         Markdown
       </a>
 </li>
@@ -261,7 +263,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="tomcat/install.html">
+<a class="md-nav__link" href="../tomcat/install.html">
         Install
       </a>
 </li>
@@ -281,32 +283,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/os_command_map.html">
+<a class="md-nav__link" href="../tux/os_command_map.html">
         Command Cheatsheet
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/imagemagick.html">
+<a class="md-nav__link" href="../tux/imagemagick.html">
         ImageMagick
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/pandoc.html">
+<a class="md-nav__link" href="../tux/pandoc.html">
         Pandoc
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/parallel.html">
+<a class="md-nav__link" href="../tux/parallel.html">
         Parallel
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/ssh.html">
+<a class="md-nav__link" href="../tux/ssh.html">
         SSH
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/tesseract.html">
+<a class="md-nav__link" href="../tux/tesseract.html">
         Tesseract
       </a>
 </li>
@@ -326,7 +328,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="vim/cheat-sheet.html">
+<a class="md-nav__link" href="../vim/cheat-sheet.html">
         Cheatsheet
       </a>
 </li>
@@ -346,7 +348,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="virtualbox/win11install.html">
+<a class="md-nav__link" href="../virtualbox/win11install.html">
         Install
       </a>
 </li>
@@ -366,7 +368,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/os_command_map.html">
+<a class="md-nav__link" href="../windows/os_command_map.html">
         Command Cheatsheet
       </a>
 </li>
@@ -383,42 +385,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/arp.html">
+<a class="md-nav__link" href="../windows/network/arp.html">
         Arp
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/nbtstat.html">
+<a class="md-nav__link" href="../windows/network/nbtstat.html">
         Nbtstat
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/netstat.html">
+<a class="md-nav__link" href="../windows/network/netstat.html">
         Netstat
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/ping.html">
+<a class="md-nav__link" href="../windows/network/ping.html">
         Ping
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/ipconfig.html">
+<a class="md-nav__link" href="../windows/network/ipconfig.html">
         Ipconfig
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/net.html">
+<a class="md-nav__link" href="../windows/network/net.html">
         Net
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/nslookup.html">
+<a class="md-nav__link" href="../windows/network/nslookup.html">
         Nslookup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/tracert.html">
+<a class="md-nav__link" href="../windows/network/tracert.html">
         Tracert
       </a>
 </li>
@@ -441,27 +443,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="hardware/cables.html">
+<a class="md-nav__link" href="../hardware/cables.html">
         Cables
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
           Class Notes
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_11">
 <span class="md-nav__icon md-icon"></span>
           Class Notes
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="archive.html">
+<a class="md-nav__link" href="../archive.html">
         Index
       </a>
 </li>
@@ -478,37 +480,37 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_1.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_1.html">
         Database Systems
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_2.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_2.html">
         Data Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_3.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_3.html">
         The Relational Database Model
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/joins_ns.html">
+<a class="md-nav__link" href="../CIS-50/joins_ns.html">
         Joins
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_4.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_4.html">
         Entity Relationship Modeling
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_6.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_6.html">
         Normalization
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_7.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_7.html">
         Structured Query Language
       </a>
 </li>
@@ -528,53 +530,155 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_1.html">
+<a class="md-nav__link" href="../CIS-18/week_1.html">
         Week 1 - Review
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/sprint.html">
+<a class="md-nav__link" href="../CIS-18/sprint.html">
         Sprint Planning
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/user_story_intro.html">
+<a class="md-nav__link" href="../CIS-18/user_story_intro.html">
         User Story Into
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/user_story_lesson.html">
+<a class="md-nav__link" href="../CIS-18/user_story_lesson.html">
         User Story Lesson
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_2.html">
+<a class="md-nav__link" href="../CIS-18/week_2.html">
         Week 2 - Fundamental OOP Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/oo_principles.html">
+<a class="md-nav__link" href="../CIS-18/oo_principles.html">
         Key OO Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_3.html">
+<a class="md-nav__link" href="../CIS-18/week_3.html">
         Week 3 - Observer Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_4.html">
+<a class="md-nav__link" href="../CIS-18/week_4.html">
         Week 4 - Decorator Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_5.html">
+<a class="md-nav__link" href="../CIS-18/week_5.html">
         Week 5 - Factory Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_7.html">
+<a class="md-nav__link" href="../CIS-18/week_7.html">
         Week 7 - Singleton Design Pattern
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_11_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+          CIS-12
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_11_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_4">
+<span class="md-nav__icon md-icon"></span>
+          CIS-12
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Week 1 - Introduction to Programming
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="week_1.html">
+        Week 1 - Introduction to Programming
+      </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction-to-java">
+    Introduction to Java
+  </a>
+<nav aria-label="Introduction to Java" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-programming">
+    What is Programming
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-computer-science">
+    What is Computer Science
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming-languages">
+    Programming Languages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#description-of-helloworld">
+    Description of HelloWorld
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-bit-about-git">
+    A Bit About Git
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learning">
+    Learning!
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_2.html">
+        Week 2 - Variables and Operators
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_4.html">
+        Week 4 - Methods
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_6.html">
+        Week 6 - Conditions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_7.html">
+        Week 7 - Methods Take 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_10.html">
+        Week 10 - Arrays
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_12.html">
+        Week 12 - Objects
       </a>
 </li>
 </ul>
@@ -598,53 +702,43 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#variables-and-operators">
-    Variables and Operators
+<a class="md-nav__link" href="#introduction-to-java">
+    Introduction to Java
   </a>
-<nav aria-label="Variables and Operators" class="md-nav">
+<nav aria-label="Introduction to Java" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#declaring-variables">
-    Declaring Variables
+<a class="md-nav__link" href="#what-is-programming">
+    What is Programming
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#assignment---initialize-a-variable">
-    Assignment - Initialize a Variable
+<a class="md-nav__link" href="#what-is-computer-science">
+    What is Computer Science
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#state---forget-diagrams---use-intellij-debug">
-    State - Forget diagrams - Use IntelliJ debug
+<a class="md-nav__link" href="#programming-languages">
+    Programming Languages
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#arithmetic-operators">
-    Arithmetic Operators
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#operations-with-floating-point">
-    Operations with Floating Point
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#operators-for-strings">
-    Operators for Strings
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#errors">
-    Errors
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#talk-about-assignment">
-    Talk About Assignment!
+<a class="md-nav__link" href="#description-of-helloworld">
+    Description of HelloWorld
   </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-bit-about-git">
+    A Bit About Git
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learning">
+    Learning!
+  </a>
 </li>
 </ul>
 </nav>
@@ -653,117 +747,163 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Variables and Operators</h1>
-<h2 id="variables-and-operators">Variables and Operators<a class="headerlink" href="#variables-and-operators" title="Permanent link">¶</a></h2>
-<h3 id="declaring-variables">Declaring Variables<a class="headerlink" href="#declaring-variables" title="Permanent link">¶</a></h3>
+<h1>Week 1 - Introduction to Programming</h1>
+<h2 id="introduction-to-java">Introduction to Java<a class="headerlink" href="#introduction-to-java" title="Permanent link">¶</a></h2>
+<h3 id="what-is-programming">What is Programming<a class="headerlink" href="#what-is-programming" title="Permanent link">¶</a></h3>
 <ul>
-<li>
-<p>Allocate Storage Location of that Data-Type</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>String aString;
-int anInt;
-double a64BitFloat;
-float a32BitFloat;
-char aCharacter;
-</code></pre></div></td></tr></table></div>
+<li>Set of instructions organized into an steps to solve a problem (Algorithm)<ul>
+<li>Computation, text manipulation, searching, graphics</li>
+</ul>
 </li>
-<li>
-<p>Note the capital letter in String</p>
+<li>Every language<ul>
+<li>Input, output, math, decisions (conditional), repetition (while, for, do…while loops)</li>
+</ul>
+</li>
+</ul>
+<h3 id="what-is-computer-science">What is Computer Science<a class="headerlink" href="#what-is-computer-science" title="Permanent link">¶</a></h3>
 <ul>
-<li>A string is <strong>Special Object</strong> in Java</li>
-<li>OK, so why don’t we have to create strings like we create other objects i.e. <code>String aString = new String("aString");</code>?<ul>
-<li>Java founders determined Strings were <strong>so common</strong>, Strings needed to be treated differently (i.e. reference the same literal string even if assigned to 2 different variables.</li>
-<li>Consider the following blocks of code:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>String a = "Next iteration";
-String b = "Next iteration";
-System.out.println("What will this be?" +  ((a == b) ? "True" : "False") ); // ? are they the same ?
+<li>Study of and discovery of algorithms (or creating the steps to solve a problem)<ul>
+<li>Reduce computational expense</li>
+<li>Novel ways to solve a problem</li>
+</ul>
+</li>
+<li>Program (Algorithm) errors are called Bugs</li>
+</ul>
+<h3 id="programming-languages">Programming Languages<a class="headerlink" href="#programming-languages" title="Permanent link">¶</a></h3>
+<ul>
+<li>Low Level Language: machine code like the RISC vs CISC assembly language battle<ul>
+<li>RISC = 1 instruction / cycle VERSUS CISC = Many Instructions / several cycles</li>
+<li>Complex Instruction Set Computer<ul>
+<li>CISC 80x86 is what Intel uses</li>
+</ul>
+</li>
+<li>Reduced Instruction Set Computer<ul>
+<li>RISC is what many ARM processors use</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>High Level Languages<ul>
+<li>Easier to understand, formatting human readable
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>; ----------------------------------------------------------------------------------------
+; Writes "Hello, World" to the console using only system calls. Runs on 64-bit Linux only.
+; To assemble and run:
+;
+;     nasm -felf64 hello.asm &amp;&amp; ld hello.o &amp;&amp; ./a.out
+; ----------------------------------------------------------------------------------------
 
-for (int i = 0; i &lt; 10; i++) {
-  System.out.println("Next iteration"); // If the literal String weren't a reference, this would instantiate the string every single loop.
+          global    _start
+
+          section   .text
+_start:   mov       rax, 1                  ; system call for write
+          mov       rdi, 1                  ; file handle 1 is stdout
+          mov       rsi, message            ; address of string to output
+          mov       rdx, 13                 ; number of bytes
+          syscall                           ; invoke operating system to do the write
+          mov       rax, 60                 ; system call for exit
+          xor       rdi, rdi                ; exit code 0
+          syscall                           ; invoke operating system to exit
+
+          section   .data
+message:  db        "Hello, World", 10      ; note the newline at the end
+</code></pre></div></td></tr></table></div>
+VERSUS
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>/**
+Writes "Hello, World" to the console.
+
+javac HelloWorld.java  # compiled to byte-code.
+java HelloWorld        # Looks for and executes main.
+*/
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); 
+    }
 }
 </code></pre></div></td></tr></table></div></li>
-<li>Thus, Strings are <strong>interned</strong> to:<ul>
-<li>Lower memory requirements.</li>
-<li>Make comparisons faster.</li>
+<li>Less cumbersome to debug</li>
+<li>Portable</li>
 </ul>
 </li>
-<li>BUT WAIT, if strings are shared/cached <strong>references</strong>, wouldn’t changing the string for variable <strong>a</strong> also change it for <strong>b</strong>?<ul>
-<li>Yes, but that’s why the designers also made literal strings <strong>immutable</strong>. String methods that modify a string will return new string, not the original literal.</li>
-<li>This is also why you should not compare strings with <strong><mark><strong> but </strong>a.equals(b)<strong> because </strong></mark></strong> compares the reference while the other compares the string.</li>
+<li>Types of High Level Languages</li>
+<li>Note on Compiling - In layman’s speak, a program that converts a program in one programming language into another program in another programming language.</li>
+<li>Compiled to machine code AOT (Ahead of Time): C, C++<ul>
+<li>Must be compiled to the target architecture (80x86, ARMv8, etc.)</li>
+</ul>
+</li>
+<li>Compile to byte-code, then Interpreted JIT (Just in Time): Java<ul>
+<li>Portable to any system with bytcode interpreter (JVM)</li>
+</ul>
+</li>
+<li>Interpreted: Scripting Languages<ul>
+<li>Extremely Portable</li>
+<li>Slower due to fewer runtime optimizations and fully just in time compiling</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Declare variables of the same type on 1 line!</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>int a, b, c = 5; // This is OK!
-</code></pre></div></td></tr></table></div>
-</li>
-<li>
-<p>Variables names must be unique (within its scope), and not a <strong>reserved word</strong> like static, private, public, final, class, etc.</p>
-</li>
-<li>
-<p>Variables are case sensitive</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>int firstName = 1;
-int FirstName = 2;
-</code></pre></div></td></tr></table></div>
-</li>
-<li>
-<p>Camel Case is Java’s preferred naming convention.</p>
-</li>
-</ul>
-<h3 id="assignment---initialize-a-variable">Assignment - Initialize a Variable<a class="headerlink" href="#assignment---initialize-a-variable" title="Permanent link">¶</a></h3>
+<h3 id="description-of-helloworld">Description of HelloWorld<a class="headerlink" href="#description-of-helloworld" title="Permanent link">¶</a></h3>
 <ul>
-<li>Stores/Updates variable value, but you must assign the right data-type.<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>String a = "123";
-String a = 123; // Error: wrong type.
-</code></pre></div></td></tr></table></div>
-</li>
-</ul>
-<h3 id="state---forget-diagrams---use-intellij-debug">State - Forget diagrams - Use IntelliJ debug<a class="headerlink" href="#state---forget-diagrams---use-intellij-debug" title="Permanent link">¶</a></h3>
-<ul>
-<li>Why waste your time, use the state diagrams that already exist in your IDE ;-)</li>
-</ul>
-<h3 id="arithmetic-operators">Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permanent link">¶</a></h3>
-<ul>
-<li>Symbols for doing Math</li>
-<li>See <a href="java/operators.html#arithmetic-operators">Arithmetic Operators</a> </li>
-<li>Type aware, int division is int only result! (i.e. 59/60 == 0)</li>
-</ul>
-<h3 id="operations-with-floating-point">Operations with Floating Point<a class="headerlink" href="#operations-with-floating-point" title="Permanent link">¶</a></h3>
-<ul>
-<li>Fractional numbers, with fractional precision, <strong>BUT NOT PERFECT!</strong>, which leads to rounding errors.<ul>
-<li>Irrational numbers can’t be represented.</li>
-<li>Nor can repeating fractions.</li>
+<li>class: template used to create objects<ul>
+<li>Defines object data types.</li>
+<li>Contains methods to get/set/modify the object.</li>
 </ul>
 </li>
-<li>1 or more <strong>double</strong> numbers will cause operators to use floating point calculations.</li>
-<li>If you’re equation depends on fractional precision use doubles to avoid 59/60 error, or convert to whole numbers like $$$ libraries do.</li>
-<li>Java will implicitly convert integer assignment to a double, however.</li>
+<li>class == category</li>
+<li>object == item in that category</li>
+<li>static: A static method belongs to the class rather than instances. This also goes for static variables.</li>
+<li>void: It Returns NOTHING - We believe in nothing, Lebowski. Nothing. == VOID</li>
+<li>public: Modifier that makes the method (variable, etc.) accessible OUTSIDE the class</li>
 </ul>
-<h3 id="operators-for-strings">Operators for Strings<a class="headerlink" href="#operators-for-strings" title="Permanent link">¶</a></h3>
+<h2 id="a-bit-about-git">A Bit About Git<a class="headerlink" href="#a-bit-about-git" title="Permanent link">¶</a></h2>
+<p><a href="/git/gitflow.html">Git Flow</a>
+* Will demo full git turn in process at the end of class.</p>
+<h2 id="learning">Learning!<a class="headerlink" href="#learning" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>+</strong> concatenates, enough said.</li>
+<li>Learn by doing - code, code, code, all day long</li>
+<li>Learn tools that are relevant - IntelliJ, Git</li>
+<li>Learn Languages where the <strong>jobs</strong> are - Python, Java, Web-Technologies (React, Next.js, Vue.js, GraphQL)</li>
+<li>Ask for help! Be agile, Pair Program, run a personal (OR TEAM) scrum.<ul>
+<li>Questions to ask in Team/Personal scrum every day:<ul>
+<li>What did you do yesterday?</li>
+<li>What will you do today?</li>
+<li>What’s getting in your way?</li>
+<li>Something fun I learned!</li>
 </ul>
-<h3 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">¶</a></h3>
-<ul>
-<li>Compile Errors - Syntax errors, Keywords as variable names, etc. causes Parser to barf.</li>
-<li>Runtime Errors - Errors that cause exceptions only when the program is run i.e. FileNotFoundException</li>
-<li>Logic Error - Compiles and runs without errors, but the output is invalid. <code>double percent = 59 / 60;</code></li>
+</li>
 </ul>
-<h3 id="talk-about-assignment">Talk About Assignment!<a class="headerlink" href="#talk-about-assignment" title="Permanent link">¶</a></h3>
+</li>
+</ul>
 </article>
 </div>
 </div>
@@ -801,7 +941,7 @@ String a = 123; // Error: wrong type.
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": ".", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
-<script src="assets/javascripts/bundle.2a6f1dda.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+<script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

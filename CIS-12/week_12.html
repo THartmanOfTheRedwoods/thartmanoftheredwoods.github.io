@@ -7,17 +7,18 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="assets/images/favicon.ico" rel="icon"/>
+<link href="week_10.html" rel="prev"/>
+<link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Methods Take 2 - THartmanOfTheRedwoods Wiki</title>
-<link href="assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
-<link href="assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Week 12 - Objects - THartmanOfTheRedwoods Wiki</title>
+<link href="../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
-<link href="css/mode.css" rel="stylesheet"/>
-<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../css/mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -28,14 +29,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="red" data-md-color-primary="red" data-md-color-scheme="slate" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#methods-take-2">
+<a class="md-skip" href="#object-oriented-programming">
           Skip to content
         </a>
 </div>
@@ -45,8 +46,8 @@
 </div>
 <header class="md-header md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="assets/images/simple_sign_logo_64.png"/>
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -61,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Methods Take 2
+              Week 12 - Objects
             
           </span>
 </div>
@@ -116,57 +117,57 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="index.html">
+<a class="md-tabs__link" href="../index.html">
       Home
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="git/gitflow.html">
+<a class="md-tabs__link" href="../git/gitflow.html">
         Git
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="java/format_specifiers.html">
+<a class="md-tabs__link" href="../java/format_specifiers.html">
         Java
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="markdown-cheat-sheet.html">
+<a class="md-tabs__link" href="../markdown-cheat-sheet.html">
       Markdown
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="tomcat/install.html">
+<a class="md-tabs__link" href="../tomcat/install.html">
         Tomcat
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="tux/os_command_map.html">
+<a class="md-tabs__link" href="../tux/os_command_map.html">
         Tux
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="vim/cheat-sheet.html">
+<a class="md-tabs__link" href="../vim/cheat-sheet.html">
         Vim
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="virtualbox/win11install.html">
+<a class="md-tabs__link" href="../virtualbox/win11install.html">
         VirtualBox
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="windows/os_command_map.html">
+<a class="md-tabs__link" href="../windows/os_command_map.html">
         Windows
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="hardware/cables.html">
+<a class="md-tabs__link" href="../hardware/cables.html">
         Hardware
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="archive.html">
+<a class="md-tabs__link md-tabs__link--active" href="../archive.html">
         Class Notes
       </a>
 </li>
@@ -182,14 +183,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="assets/images/simple_sign_logo_64.png"/>
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
 </a>
     THartmanOfTheRedwoods Wiki
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="index.html">
+<a class="md-nav__link" href="../index.html">
         Home
       </a>
 </li>
@@ -206,7 +207,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="git/gitflow.html">
+<a class="md-nav__link" href="../git/gitflow.html">
         Workflows
       </a>
 </li>
@@ -226,17 +227,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="java/format_specifiers.html">
+<a class="md-nav__link" href="../java/format_specifiers.html">
         Format Specifiers
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="java/operators.html">
+<a class="md-nav__link" href="../java/operators.html">
         Operators
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="java/associativity.html">
+<a class="md-nav__link" href="../java/associativity.html">
         Operator Prcedence &amp; Associativity
       </a>
 </li>
@@ -244,7 +245,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="markdown-cheat-sheet.html">
+<a class="md-nav__link" href="../markdown-cheat-sheet.html">
         Markdown
       </a>
 </li>
@@ -261,7 +262,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="tomcat/install.html">
+<a class="md-nav__link" href="../tomcat/install.html">
         Install
       </a>
 </li>
@@ -281,32 +282,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/os_command_map.html">
+<a class="md-nav__link" href="../tux/os_command_map.html">
         Command Cheatsheet
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/imagemagick.html">
+<a class="md-nav__link" href="../tux/imagemagick.html">
         ImageMagick
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/pandoc.html">
+<a class="md-nav__link" href="../tux/pandoc.html">
         Pandoc
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/parallel.html">
+<a class="md-nav__link" href="../tux/parallel.html">
         Parallel
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/ssh.html">
+<a class="md-nav__link" href="../tux/ssh.html">
         SSH
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tux/tesseract.html">
+<a class="md-nav__link" href="../tux/tesseract.html">
         Tesseract
       </a>
 </li>
@@ -326,7 +327,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="vim/cheat-sheet.html">
+<a class="md-nav__link" href="../vim/cheat-sheet.html">
         Cheatsheet
       </a>
 </li>
@@ -346,7 +347,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="virtualbox/win11install.html">
+<a class="md-nav__link" href="../virtualbox/win11install.html">
         Install
       </a>
 </li>
@@ -366,7 +367,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/os_command_map.html">
+<a class="md-nav__link" href="../windows/os_command_map.html">
         Command Cheatsheet
       </a>
 </li>
@@ -383,42 +384,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/arp.html">
+<a class="md-nav__link" href="../windows/network/arp.html">
         Arp
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/nbtstat.html">
+<a class="md-nav__link" href="../windows/network/nbtstat.html">
         Nbtstat
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/netstat.html">
+<a class="md-nav__link" href="../windows/network/netstat.html">
         Netstat
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/ping.html">
+<a class="md-nav__link" href="../windows/network/ping.html">
         Ping
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/ipconfig.html">
+<a class="md-nav__link" href="../windows/network/ipconfig.html">
         Ipconfig
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/net.html">
+<a class="md-nav__link" href="../windows/network/net.html">
         Net
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/nslookup.html">
+<a class="md-nav__link" href="../windows/network/nslookup.html">
         Nslookup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="windows/network/tracert.html">
+<a class="md-nav__link" href="../windows/network/tracert.html">
         Tracert
       </a>
 </li>
@@ -441,27 +442,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="hardware/cables.html">
+<a class="md-nav__link" href="../hardware/cables.html">
         Cables
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
           Class Notes
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_11">
 <span class="md-nav__icon md-icon"></span>
           Class Notes
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="archive.html">
+<a class="md-nav__link" href="../archive.html">
         Index
       </a>
 </li>
@@ -478,37 +479,37 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_1.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_1.html">
         Database Systems
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_2.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_2.html">
         Data Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_3.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_3.html">
         The Relational Database Model
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/joins_ns.html">
+<a class="md-nav__link" href="../CIS-50/joins_ns.html">
         Joins
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_4.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_4.html">
         Entity Relationship Modeling
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_6.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_6.html">
         Normalization
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-50/Chapter_7.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_7.html">
         Structured Query Language
       </a>
 </li>
@@ -528,54 +529,141 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_1.html">
+<a class="md-nav__link" href="../CIS-18/week_1.html">
         Week 1 - Review
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/sprint.html">
+<a class="md-nav__link" href="../CIS-18/sprint.html">
         Sprint Planning
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/user_story_intro.html">
+<a class="md-nav__link" href="../CIS-18/user_story_intro.html">
         User Story Into
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/user_story_lesson.html">
+<a class="md-nav__link" href="../CIS-18/user_story_lesson.html">
         User Story Lesson
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_2.html">
+<a class="md-nav__link" href="../CIS-18/week_2.html">
         Week 2 - Fundamental OOP Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/oo_principles.html">
+<a class="md-nav__link" href="../CIS-18/oo_principles.html">
         Key OO Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_3.html">
+<a class="md-nav__link" href="../CIS-18/week_3.html">
         Week 3 - Observer Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_4.html">
+<a class="md-nav__link" href="../CIS-18/week_4.html">
         Week 4 - Decorator Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_5.html">
+<a class="md-nav__link" href="../CIS-18/week_5.html">
         Week 5 - Factory Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="CIS-18/week_7.html">
+<a class="md-nav__link" href="../CIS-18/week_7.html">
         Week 7 - Singleton Design Pattern
       </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_11_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+          CIS-12
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_11_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_4">
+<span class="md-nav__icon md-icon"></span>
+          CIS-12
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_1.html">
+        Week 1 - Introduction to Programming
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_2.html">
+        Week 2 - Variables and Operators
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_4.html">
+        Week 4 - Methods
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_6.html">
+        Week 6 - Conditions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_7.html">
+        Week 7 - Methods Take 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_10.html">
+        Week 10 - Arrays
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Week 12 - Objects
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="week_12.html">
+        Week 12 - Objects
+      </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-oriented-programming">
+    Object Oriented Programming
+  </a>
+<nav aria-label="Object Oriented Programming" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#we-can-make-models-and-patterns-that-help-us-solve-problems">
+    We Can Make Models, and Patterns, that Help Us Solve Problems
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#favor-composition-over-inheritence">
+    Favor Composition over Inheritence
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#walk-through-lab-code">
+    Walk Through Lab Code
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -598,39 +686,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#methods-take-2">
-    Methods Take 2
+<a class="md-nav__link" href="#object-oriented-programming">
+    Object Oriented Programming
   </a>
-<nav aria-label="Methods Take 2" class="md-nav">
+<nav aria-label="Object Oriented Programming" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#why-we-create-methods">
-    Why We Create Methods
+<a class="md-nav__link" href="#we-can-make-models-and-patterns-that-help-us-solve-problems">
+    We Can Make Models, and Patterns, that Help Us Solve Problems
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#review-method-signature--static-vs-public">
-    Review Method Signature / Static VS Public
+<a class="md-nav__link" href="#favor-composition-over-inheritence">
+    Favor Composition over Inheritence
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#method-parameters">
-    Method Parameters
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#return-types">
-    Return Types
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#scope">
-    Scope
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#overloading-methods">
-    Overloading Methods
+<a class="md-nav__link" href="#walk-through-lab-code">
+    Walk Through Lab Code
   </a>
 </li>
 </ul>
@@ -643,95 +716,78 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Methods Take 2</h1>
-<h2 id="methods-take-2">Methods Take 2<a class="headerlink" href="#methods-take-2" title="Permanent link">¶</a></h2>
-<h3 id="why-we-create-methods">Why We Create Methods<a class="headerlink" href="#why-we-create-methods" title="Permanent link">¶</a></h3>
+<h1>Week 12 - Objects</h1>
+<h2 id="object-oriented-programming">Object Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permanent link">¶</a></h2>
 <ul>
-<li>Methods directly related to the <strong>ACTIONS</strong> performed on our <strong>OBJECTS</strong><ul>
-<li>Object: car</li>
-<li>Method: turn</li>
+<li>It’s Just the Beginning, but WHY???</li>
 </ul>
-</li>
-<li>Methods allow us to re-use code.<ul>
-<li>e.g. Scanner let’s us get input of different Data Types (int, double, String), without us having to re-write the data-type conversions or the code to read from stdin</li>
-</ul>
-</li>
-<li>Methods encapsulate complex algorithms so we can ignore the details and just trust the method to do its job.<ul>
-<li>e.g Math.toRadians, Math.pow, Math.toDegrees: we trust these to do what they say even though we may not know how to implememnt them ourselves.</li>
-</ul>
-</li>
-<li>Methods allow us to break up bigger problems into smaller, more understandable units. <strong>functional decomposition</strong><ul>
-<li>Think about our car action of turn. We could implment it all in 1 method that says:<ul>
-<li>Driver places hands on wheels</li>
-<li>Drive turns steering wheel 25 degrees to the left</li>
-<li>Hydraulic assist system in rack and pinion mechanism takes rotational motion energy and converts it into linear motion energy</li>
-<li>Linear motion energy is transfered to the wheels</li>
-<li>wheels turn at an angle proportional to that of the 25 degree turn of the steering wheel</li>
-</ul>
-</li>
-<li>OOORRR, we could acknowledge that each one of these statements is housed within its own Objects (Driver, Steering Wheel, Rack and Pinion, Wheels), and we could divide the actions into methods in each of those classes allowing us to functionally decompose the process of turning.<ul>
-<li>Driver: movesHands(Position p)
-          rotatesWheel(SteeringWheel s, Force f, Direction v)</li>
-<li>SteeringWheel: rotate(Direction rl, Degree d)</li>
+<h3 id="we-can-make-models-and-patterns-that-help-us-solve-problems">We Can Make Models, <strong>and Patterns</strong>, that Help Us Solve Problems<a class="headerlink" href="#we-can-make-models-and-patterns-that-help-us-solve-problems" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/room.png"><img alt="UML Model of a Room" src="images/room.png"/></a></p>
+<h3 id="favor-composition-over-inheritence">Favor Composition over Inheritence<a class="headerlink" href="#favor-composition-over-inheritence" title="Permanent link">¶</a></h3>
+<ul>
+<li>Wait, what’s <strong>Inheritance</strong>?
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/feline.png"><img alt="Inheritance in a Nutshell" src="images/feline.png"/></a></li>
+<li>OK, that makes sense, but what is <strong>Composition</strong>?
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/composition.webp"><img alt="Composition in a Nutshell" src="images/composition.webp"/></a><ul>
+<li>But how can I favor composition?<ul>
+<li>One way is <strong>Interfaces</strong></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h3 id="review-method-signature--static-vs-public">Review Method Signature / Static VS Public<a class="headerlink" href="#review-method-signature--static-vs-public" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="sep14_lesson.html#signature">Method Signature</a></li>
-<li><a href="sep14_lesson.html#why">Criteria for Static</a>)</li>
-</ul>
-<h3 id="method-parameters">Method Parameters<a class="headerlink" href="#method-parameters" title="Permanent link">¶</a></h3>
-<ul>
-<li>Information passed to methods</li>
-</ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>public void rotateWheel(Direction rl, Degrees d) {
-    ....
-}
-</code></pre></div></td></tr></table></div>
-<ul>
-<li>Comes between the open and close parenthesis</li>
-<li>Multiple parameters are separated by commas</li>
-<li>Can be basic types, objects, or arrays (think list) of these things</li>
-</ul>
-<h3 id="return-types">Return Types<a class="headerlink" href="#return-types" title="Permanent link">¶</a></h3>
-<ul>
-<li>How we get data back out of our methods.</li>
-</ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>public Position rotateWheel(Direction rl, Degrees d) {
-    ....
-    return new Position(x, y, z);
-}
-</code></pre></div></td></tr></table></div>
-<ul>
-<li>Must return the same datatype noted in the <strong>return type</strong> of the <strong>method signature</strong></li>
-<li>Return type can be basic types, objects, or arrays of these things</li>
-<li>You can return <strong>null</strong></li>
-</ul>
-<h3 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">¶</a></h3>
-<ul>
-<li>Class scope<ul>
-<li>Variables and methods in the class scope will persist as long as the class and or objects of that class persist</li>
-<li>The can be masked by <strong>Method scoped</strong> variables.</li>
-</ul>
-</li>
-<li>Method scope<ul>
-<li>Once you return from a method, any variables locally declared in that method disappear.</li>
-</ul>
-</li>
-</ul>
-<h3 id="overloading-methods">Overloading Methods<a class="headerlink" href="#overloading-methods" title="Permanent link">¶</a></h3>
-<ul>
-<li>We saw this last week with constructors</li>
-<li><a href="https://www.w3schools.com/java/java_methods_overloading.asp">Overloading by w3schools</a></li>
-</ul>
+<h3 id="walk-through-lab-code">Walk Through Lab Code<a class="headerlink" href="#walk-through-lab-code" title="Permanent link">¶</a></h3>
+<p><a href="https://github.com/THartmanOfTheRedwoods/Java-Lab-010">Lab 10</a></p>
+<div class="mermaid">classDiagram
+class WeatherStation
+WeatherStation : -URL url
+WeatherStation : -List~Display~ displays
+WeatherStation : -Gson gson
+WeatherStation : -float temperature
+WeatherStation : -float humidity
+WeatherStation : -float pressure
+WeatherStation : +WeatherStation()
+WeatherStation : +registerDisplay(display)
+WeatherStation : +removeDisplay(display)
+WeatherStation : +notifyDisplays()
+WeatherStation : +getTemperature() float
+WeatherStation : +getHumidity() float
+WeatherStation : +getPressure() float
+WeatherStation : +measure()
+class I_Display
+I_Display : update()
+I_Display : display()
+class CurrentConditions
+CurrentConditions: -WeatherStation ws
+CurrentConditions : -float temperature
+CurrentConditions : -float humidity
+CurrentConditions : +CurrentConditions(weatherstation)
+CurrentConditions : update()
+CurrentConditions : display()
+class StatisticsDisplay
+StatisticsDisplay: -WeatherStation ws
+StatisticsDisplay : -float temperatureMin
+StatisticsDisplay : -float temperatureMax
+StatisticsDisplay : -float temperatureTotal
+StatisticsDisplay : -int numReadings
+StatisticsDisplay : +StatisticsDisplay(weatherstation)
+StatisticsDisplay : update()
+StatisticsDisplay : display()
+class ForecastDisplay
+ForecastDisplay: -WeatherStation ws
+ForecastDisplay : -float currentPressure
+ForecastDisplay : -float lastPressure
+ForecastDisplay : +ForecastDisplay(weatherstation)
+ForecastDisplay : update()
+ForecastDisplay : display()
+I_Display &lt;|.. CurrentConditions 
+I_Display &lt;|.. StatisticsDisplay
+I_Display &lt;|.. ForecastDisplay
+WeatherStation --* CurrentConditions
+WeatherStation --* StatisticsDisplay
+WeatherStation --* ForecastDisplay
+I_Display --* WeatherStation
+</div>
 </article>
 </div>
 </div>
@@ -769,7 +825,9 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": ".", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
-<script src="assets/javascripts/bundle.2a6f1dda.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+<script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+<script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+<script src="https://unpkg.com/mermaid@9.2.1/dist/mermaid.min.js"></script><script>mermaid.initialize({
+    theme: (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'
+});</script><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
