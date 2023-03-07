@@ -7,11 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="week_5.html" rel="prev"/>
-<link href="week_8.html" rel="next"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Week 7 - Singleton Design Pattern - THartmanOfTheRedwoods Wiki</title>
+<title>Examples of Command Design Pattern - THartmanOfTheRedwoods Wiki</title>
 <link href="../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#the-singelton-design-pattern">
+<a class="md-skip" href="#examples-of-command-design-pattern">
           Skip to content
         </a>
 </div>
@@ -63,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Week 7 - Singleton Design Pattern
+              Examples of Command Design Pattern
             
           </span>
 </div>
@@ -168,7 +166,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../archive.html">
+<a class="md-tabs__link" href="../archive.html">
         Class Notes
       </a>
 </li>
@@ -450,13 +448,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
           Class Notes
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_11">
 <span class="md-nav__icon md-icon"></span>
           Class Notes
@@ -527,13 +525,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_11_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_11_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
           CIS-18
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_11_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_11_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_11_3">
 <span class="md-nav__icon md-icon"></span>
           CIS-18
@@ -584,132 +582,10 @@
         Week 5 - Factory Design Pattern
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Week 7 - Singleton Design Pattern
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="week_7.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_7.html">
         Week 7 - Singleton Design Pattern
       </a>
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Sub-Menu
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-singelton-design-pattern">
-    The Singelton Design Pattern
-  </a>
-<nav aria-label="The Singelton Design Pattern" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#classification">
-    Classification
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pattern-definition">
-    Pattern Definition
-  </a>
-<nav aria-label="Pattern Definition" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#common-to-all-singleton-implmentations">
-    Common to all Singleton Implmentations
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#representations">
-    Representations
-  </a>
-<nav aria-label="Representations" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph">
-    Mermaid Graph
-  </a>
-<nav aria-label="Mermaid Graph" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lazy-initialization-singleton">
-    Lazy Initialization Singleton
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bill-pugh-singleton">
-    Bill Pugh Singleton
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uml">
-    UML
-  </a>
-<nav aria-label="UML" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#singleton">
-    Singleton
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bill-pugh-singleton_1">
-    Bill Pugh Singleton
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#usage">
-    Usage
-  </a>
-<nav aria-label="Usage" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#real-world-usages">
-    Real World Usages
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#application-to-my-real-world-application">
-    Application to my Real World Application
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#java-code-example">
-    Java Code Example
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
-    Main Take-Aways from the textbook
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-oo-principles-of-factory-pattern">
-    Main OO Principles of Factory Pattern
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="week_8.html">
@@ -787,109 +663,34 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-singelton-design-pattern">
-    The Singelton Design Pattern
+<a class="md-nav__link" href="#examples-of-command-design-pattern">
+    Examples of Command Design Pattern
   </a>
-<nav aria-label="The Singelton Design Pattern" class="md-nav">
+<nav aria-label="Examples of Command Design Pattern" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#classification">
-    Classification
+<a class="md-nav__link" href="#command-pattern-receivers">
+    Command Pattern Receivers
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pattern-definition">
-    Pattern Definition
-  </a>
-<nav aria-label="Pattern Definition" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#common-to-all-singleton-implmentations">
-    Common to all Singleton Implmentations
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#representations">
-    Representations
-  </a>
-<nav aria-label="Representations" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph">
-    Mermaid Graph
-  </a>
-<nav aria-label="Mermaid Graph" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lazy-initialization-singleton">
-    Lazy Initialization Singleton
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bill-pugh-singleton">
-    Bill Pugh Singleton
+<a class="md-nav__link" href="#command-pattern-interface-and-concrete-implementations">
+    Command Pattern Interface and Concrete Implementations
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#uml">
-    UML
-  </a>
-<nav aria-label="UML" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#singleton">
-    Singleton
+<a class="md-nav__link" href="#command-pattern-invoker">
+    Command Pattern Invoker
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#bill-pugh-singleton_1">
-    Bill Pugh Singleton
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#usage">
-    Usage
-  </a>
-<nav aria-label="Usage" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#real-world-usages">
-    Real World Usages
+<a class="md-nav__link" href="#util-to-determine-proper-os-factory-method-anyone">
+    Util to Determine Proper OS (Factory Method Anyone!?!)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#application-to-my-real-world-application">
-    Application to my Real World Application
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#java-code-example">
-    Java Code Example
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
-    Main Take-Aways from the textbook
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-oo-principles-of-factory-pattern">
-    Main OO Principles of Factory Pattern
+<a class="md-nav__link" href="#client-for-command-design-pattern">
+    Client for Command Design Pattern
   </a>
 </li>
 </ul>
@@ -902,38 +703,25 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Week 7 - Singleton Design Pattern</h1>
-<h2 id="the-singelton-design-pattern">The Singelton Design Pattern<a class="headerlink" href="#the-singelton-design-pattern" title="Permanent link">¶</a></h2>
-<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">¶</a></h3>
-<ul>
-<li>Creational Design Pattern</li>
-</ul>
-<h3 id="pattern-definition">Pattern Definition<a class="headerlink" href="#pattern-definition" title="Permanent link">¶</a></h3>
-<ul>
-<li>Ensure a class only has one instance, and provide a global point of access to it.</li>
-</ul>
-<h4 id="common-to-all-singleton-implmentations">Common to all Singleton Implmentations<a class="headerlink" href="#common-to-all-singleton-implmentations" title="Permanent link">¶</a></h4>
-<ul>
-<li>Private constructor to restrict instantiation of the class from other classes.</li>
-<li>Private static variable of the same class that is the only instance of the class.</li>
-<li>Public static method that returns the instance of the class, this is the global access point for the outer world to get the instance of the singleton class.</li>
-</ul>
-<h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
-<h4 id="mermaid-graph">Mermaid Graph<a class="headerlink" href="#mermaid-graph" title="Permanent link">¶</a></h4>
-<h5 id="lazy-initialization-singleton">Lazy Initialization Singleton<a class="headerlink" href="#lazy-initialization-singleton" title="Permanent link">¶</a></h5>
+<h1>Examples of Command Design Pattern</h1>
+<h2 id="examples-of-command-design-pattern">Examples of Command Design Pattern<a class="headerlink" href="#examples-of-command-design-pattern" title="Permanent link">¶</a></h2>
+<h3 id="command-pattern-receivers">Command Pattern Receivers<a class="headerlink" href="#command-pattern-receivers" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">Singleton</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="o">-</span><span class="n">Singleton</span><span class="w"> </span><span class="n">uniqueInstance$</span>
-<span class="w">        </span><span class="o">-</span><span class="n">Singleton</span><span class="p">()</span>
-<span class="w">        </span><span class="o">+</span><span class="n">getInstance</span><span class="p">()</span><span class="n">$</span><span class="p">:</span><span class="w"> </span><span class="n">Singleton</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.command</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">FileSystemReceiver</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">openFile</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">writeFile</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">closeFile</span><span class="p">();</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="bill-pugh-singleton">Bill Pugh Singleton<a class="headerlink" href="#bill-pugh-singleton" title="Permanent link">¶</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -943,53 +731,299 @@
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
-<span class="w">    </span><span class="n">Singleton</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">SingletonHelper</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Contains</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">Singleton</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="o">-</span><span class="kd">class</span> <span class="nc">SingletonHelper$</span>
-<span class="w">        </span><span class="o">-</span><span class="n">Singleton</span><span class="p">()</span>
-<span class="w">        </span><span class="o">+</span><span class="n">getInstance</span><span class="p">()</span><span class="n">$</span><span class="p">:</span><span class="w"> </span><span class="n">Singleton</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.command</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UnixFileSystemReceiver</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">FileSystemReceiver</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">openFile</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Opening file in unix OS"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">SingletonHelper</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="o">-</span><span class="n">Singleton</span><span class="w"> </span><span class="n">INSTANCE$</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">writeFile</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Writing file in unix OS"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">closeFile</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Closing file in unix OS"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h4>
-<h5 id="singleton">Singleton<a class="headerlink" href="#singleton" title="Permanent link">¶</a></h5>
-<object data="images/singleton_uml.svg" height="400" width="400"> </object>
-<h5 id="bill-pugh-singleton_1">Bill Pugh Singleton<a class="headerlink" href="#bill-pugh-singleton_1" title="Permanent link">¶</a></h5>
-<object data="images/singleton_bill_pugh_uml.svg" height="700" width="700"> </object>
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h3>
-<ul>
-<li>The singleton pattern is used anywhere you need One-and-Only-One copy of an object. Interacting with files, databases, logging, caching, and or system drivers are all areas where singleton objects are necessary to control access to a single object.</li>
-</ul>
-<h4 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">¶</a></h4>
-<ul>
-<li>Database and File System Connections</li>
-<li>Serializing logging.</li>
-<li>Singular access to device drivers</li>
-<li>Singular access to cache store/retrieval</li>
-<li>Thread Pools</li>
-</ul>
-<h4 id="application-to-my-real-world-application">Application to my Real World Application<a class="headerlink" href="#application-to-my-real-world-application" title="Permanent link">¶</a></h4>
-<ul>
-<li>I have a DAOStage class that implements Stage and contains a Singleton for various database connections. The Singleton class is called Database and its getInstance method returns a concrete Database connection from its Nested class that uses a Factory Method to decide the database type to connect to, and sets the Singleton object to it at runtime.</li>
-</ul>
-<h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="singleton_java.html">Singleton Design Pattern</a></li>
-</ul>
-<h3 id="main-take-aways-from-the-textbook">Main Take-Aways from the textbook<a class="headerlink" href="#main-take-aways-from-the-textbook" title="Permanent link">¶</a></h3>
-<ul>
-<li>Examine your performance and resource constraints and carefully choose an appropriate Singleton implementation for multithreaded applications (and we should consider all applications multithreaded!).</li>
-<li>Beware of the double- checked locking implementation; it isn’t thread safe in versions before Java 5.</li>
-<li>Be careful if you are using multiple class loaders; this could defeat the Singleton implementation and result in multiple instances.</li>
-<li>You can use Java’s enums to simplify your Singleton implementation.</li>
-</ul>
-<h3 id="main-oo-principles-of-factory-pattern">Main OO Principles of Factory Pattern<a class="headerlink" href="#main-oo-principles-of-factory-pattern" title="Permanent link">¶</a></h3>
-<ul>
-<li>None this week! The Singleton stands alone!</li>
-</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.command</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">WindowsFileSystemReceiver</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">FileSystemReceiver</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">openFile</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Opening file in Windows OS"</span><span class="p">);</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">writeFile</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Writing file in Windows OS"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">closeFile</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Closing file in Windows OS"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="command-pattern-interface-and-concrete-implementations">Command Pattern Interface and Concrete Implementations<a class="headerlink" href="#command-pattern-interface-and-concrete-implementations" title="Permanent link">¶</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.command</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Command</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.command</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OpenFileCommand</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Command</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">FileSystemReceiver</span><span class="w"> </span><span class="n">fileSystem</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">OpenFileCommand</span><span class="p">(</span><span class="n">FileSystemReceiver</span><span class="w"> </span><span class="n">fs</span><span class="p">){</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">fileSystem</span><span class="o">=</span><span class="n">fs</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//open command is forwarding request to openFile method</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">fileSystem</span><span class="p">.</span><span class="na">openFile</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.command</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CloseFileCommand</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Command</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">FileSystemReceiver</span><span class="w"> </span><span class="n">fileSystem</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">CloseFileCommand</span><span class="p">(</span><span class="n">FileSystemReceiver</span><span class="w"> </span><span class="n">fs</span><span class="p">){</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">fileSystem</span><span class="o">=</span><span class="n">fs</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">fileSystem</span><span class="p">.</span><span class="na">closeFile</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.command</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">WriteFileCommand</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Command</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">FileSystemReceiver</span><span class="w"> </span><span class="n">fileSystem</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">WriteFileCommand</span><span class="p">(</span><span class="n">FileSystemReceiver</span><span class="w"> </span><span class="n">fs</span><span class="p">){</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">fileSystem</span><span class="o">=</span><span class="n">fs</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">fileSystem</span><span class="p">.</span><span class="na">writeFile</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="command-pattern-invoker">Command Pattern Invoker<a class="headerlink" href="#command-pattern-invoker" title="Permanent link">¶</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.command</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FileInvoker</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Command</span><span class="w"> </span><span class="n">command</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">FileInvoker</span><span class="p">(</span><span class="n">Command</span><span class="w"> </span><span class="n">c</span><span class="p">){</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">command</span><span class="o">=</span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">(){</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">command</span><span class="p">.</span><span class="na">execute</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="util-to-determine-proper-os-factory-method-anyone">Util to Determine Proper OS (Factory Method Anyone!?!)<a class="headerlink" href="#util-to-determine-proper-os-factory-method-anyone" title="Permanent link">¶</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.command</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FileSystemReceiverUtil</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">FileSystemReceiver</span><span class="w"> </span><span class="nf">getUnderlyingFileSystem</span><span class="p">(){</span>
+<span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">osName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">"os.name"</span><span class="p">);</span>
+<span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Underlying OS is:"</span><span class="o">+</span><span class="n">osName</span><span class="p">);</span>
+<span class="w">         </span><span class="k">if</span><span class="p">(</span><span class="n">osName</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"Windows"</span><span class="p">)){</span>
+<span class="w">             </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WindowsFileSystemReceiver</span><span class="p">();</span>
+<span class="w">         </span><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="w">             </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UnixFileSystemReceiver</span><span class="p">();</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="client-for-command-design-pattern">Client for Command Design Pattern<a class="headerlink" href="#client-for-command-design-pattern" title="Permanent link">¶</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.command</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FileSystemClient</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Creating the receiver object</span>
+<span class="w">        </span><span class="n">FileSystemReceiver</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileSystemReceiverUtil</span><span class="p">.</span><span class="na">getUnderlyingFileSystem</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">//creating command and associating with receiver</span>
+<span class="w">        </span><span class="n">OpenFileCommand</span><span class="w"> </span><span class="n">openFileCommand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OpenFileCommand</span><span class="p">(</span><span class="n">fs</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">//Creating invoker and associating with Command</span>
+<span class="w">        </span><span class="n">FileInvoker</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInvoker</span><span class="p">(</span><span class="n">openFileCommand</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">//perform action on invoker object</span>
+<span class="w">        </span><span class="n">file</span><span class="p">.</span><span class="na">execute</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">WriteFileCommand</span><span class="w"> </span><span class="n">writeFileCommand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WriteFileCommand</span><span class="p">(</span><span class="n">fs</span><span class="p">);</span>
+<span class="w">        </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInvoker</span><span class="p">(</span><span class="n">writeFileCommand</span><span class="p">);</span>
+<span class="w">        </span><span class="n">file</span><span class="p">.</span><span class="na">execute</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">CloseFileCommand</span><span class="w"> </span><span class="n">closeFileCommand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CloseFileCommand</span><span class="p">(</span><span class="n">fs</span><span class="p">);</span>
+<span class="w">        </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInvoker</span><span class="p">(</span><span class="n">closeFileCommand</span><span class="p">);</span>
+<span class="w">        </span><span class="n">file</span><span class="p">.</span><span class="na">execute</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 </article>
 </div>
 </div>

@@ -7,17 +7,19 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="../../assets/images/favicon.ico" rel="icon"/>
+<link href="week_7.html" rel="prev"/>
+<link href="../CIS-12/week_1.html" rel="next"/>
+<link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>React Notes - THartmanOfTheRedwoods Wiki</title>
-<link href="../../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Week 8 - Command Design Pattern - THartmanOfTheRedwoods Wiki</title>
+<link href="../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
-<link href="../../css/mode.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../css/mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -28,14 +30,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="red" data-md-color-primary="red" data-md-color-scheme="slate" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#react-notes">
+<a class="md-skip" href="#the-command-design-pattern">
           Skip to content
         </a>
 </div>
@@ -45,8 +47,8 @@
 </div>
 <header class="md-header md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="../../index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="../../assets/images/simple_sign_logo_64.png"/>
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -61,7 +63,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              React Notes
+              Week 8 - Command Design Pattern
             
           </span>
 </div>
@@ -116,57 +118,57 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../index.html">
+<a class="md-tabs__link" href="../index.html">
       Home
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../git/gitflow.html">
+<a class="md-tabs__link" href="../git/gitflow.html">
         Git
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../java/format_specifiers.html">
+<a class="md-tabs__link" href="../java/format_specifiers.html">
         Java
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../markdown-cheat-sheet.html">
+<a class="md-tabs__link" href="../markdown-cheat-sheet.html">
       Markdown
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../tomcat/install.html">
+<a class="md-tabs__link" href="../tomcat/install.html">
         Tomcat
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../tux/os_command_map.html">
+<a class="md-tabs__link" href="../tux/os_command_map.html">
         Tux
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../vim/cheat-sheet.html">
+<a class="md-tabs__link" href="../vim/cheat-sheet.html">
         Vim
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../virtualbox/win11install.html">
+<a class="md-tabs__link" href="../virtualbox/win11install.html">
         VirtualBox
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../windows/os_command_map.html">
+<a class="md-tabs__link" href="../windows/os_command_map.html">
         Windows
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../hardware/cables.html">
+<a class="md-tabs__link" href="../hardware/cables.html">
         Hardware
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../archive.html">
+<a class="md-tabs__link md-tabs__link--active" href="../archive.html">
         Class Notes
       </a>
 </li>
@@ -182,14 +184,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../../index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="../../assets/images/simple_sign_logo_64.png"/>
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
 </a>
     THartmanOfTheRedwoods Wiki
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../index.html">
+<a class="md-nav__link" href="../index.html">
         Home
       </a>
 </li>
@@ -206,7 +208,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../git/gitflow.html">
+<a class="md-nav__link" href="../git/gitflow.html">
         Workflows
       </a>
 </li>
@@ -226,17 +228,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../java/format_specifiers.html">
+<a class="md-nav__link" href="../java/format_specifiers.html">
         Format Specifiers
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../java/operators.html">
+<a class="md-nav__link" href="../java/operators.html">
         Operators
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../java/associativity.html">
+<a class="md-nav__link" href="../java/associativity.html">
         Operator Prcedence &amp; Associativity
       </a>
 </li>
@@ -244,7 +246,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../markdown-cheat-sheet.html">
+<a class="md-nav__link" href="../markdown-cheat-sheet.html">
         Markdown
       </a>
 </li>
@@ -261,7 +263,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tomcat/install.html">
+<a class="md-nav__link" href="../tomcat/install.html">
         Install
       </a>
 </li>
@@ -281,32 +283,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tux/os_command_map.html">
+<a class="md-nav__link" href="../tux/os_command_map.html">
         Command Cheatsheet
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tux/imagemagick.html">
+<a class="md-nav__link" href="../tux/imagemagick.html">
         ImageMagick
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tux/pandoc.html">
+<a class="md-nav__link" href="../tux/pandoc.html">
         Pandoc
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tux/parallel.html">
+<a class="md-nav__link" href="../tux/parallel.html">
         Parallel
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tux/ssh.html">
+<a class="md-nav__link" href="../tux/ssh.html">
         SSH
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tux/tesseract.html">
+<a class="md-nav__link" href="../tux/tesseract.html">
         Tesseract
       </a>
 </li>
@@ -326,7 +328,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../vim/cheat-sheet.html">
+<a class="md-nav__link" href="../vim/cheat-sheet.html">
         Cheatsheet
       </a>
 </li>
@@ -346,7 +348,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../virtualbox/win11install.html">
+<a class="md-nav__link" href="../virtualbox/win11install.html">
         Install
       </a>
 </li>
@@ -366,7 +368,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows/os_command_map.html">
+<a class="md-nav__link" href="../windows/os_command_map.html">
         Command Cheatsheet
       </a>
 </li>
@@ -383,42 +385,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows/network/arp.html">
+<a class="md-nav__link" href="../windows/network/arp.html">
         Arp
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows/network/nbtstat.html">
+<a class="md-nav__link" href="../windows/network/nbtstat.html">
         Nbtstat
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows/network/netstat.html">
+<a class="md-nav__link" href="../windows/network/netstat.html">
         Netstat
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows/network/ping.html">
+<a class="md-nav__link" href="../windows/network/ping.html">
         Ping
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows/network/ipconfig.html">
+<a class="md-nav__link" href="../windows/network/ipconfig.html">
         Ipconfig
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows/network/net.html">
+<a class="md-nav__link" href="../windows/network/net.html">
         Net
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows/network/nslookup.html">
+<a class="md-nav__link" href="../windows/network/nslookup.html">
         Nslookup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows/network/tracert.html">
+<a class="md-nav__link" href="../windows/network/tracert.html">
         Tracert
       </a>
 </li>
@@ -441,27 +443,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../hardware/cables.html">
+<a class="md-nav__link" href="../hardware/cables.html">
         Cables
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
           Class Notes
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_11">
 <span class="md-nav__icon md-icon"></span>
           Class Notes
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../archive.html">
+<a class="md-nav__link" href="../archive.html">
         Index
       </a>
 </li>
@@ -478,119 +480,208 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-50/Chapter_1.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_1.html">
         Database Systems
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-50/Chapter_2.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_2.html">
         Data Models
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-50/Chapter_3.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_3.html">
         The Relational Database Model
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-50/joins_ns.html">
+<a class="md-nav__link" href="../CIS-50/joins_ns.html">
         Joins
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-50/Chapter_4.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_4.html">
         Entity Relationship Modeling
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-50/Chapter_6.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_6.html">
         Normalization
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-50/Chapter_7.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_7.html">
         Structured Query Language
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-50/cheatsheets.html">
+<a class="md-nav__link" href="../CIS-50/cheatsheets.html">
         SQL Cheatsheets
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-50/Chapter_5.html">
+<a class="md-nav__link" href="../CIS-50/Chapter_5.html">
         Advanced Data Modeling
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_11_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
           CIS-18
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_11_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_11_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_11_3">
 <span class="md-nav__icon md-icon"></span>
           CIS-18
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-18/week_1.html">
+<a class="md-nav__link" href="week_1.html">
         Week 1 - Review
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-18/sprint.html">
+<a class="md-nav__link" href="sprint.html">
         Sprint Planning
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-18/user_story_intro.html">
+<a class="md-nav__link" href="user_story_intro.html">
         User Story Into
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-18/user_story_lesson.html">
+<a class="md-nav__link" href="user_story_lesson.html">
         User Story Lesson
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-18/week_2.html">
+<a class="md-nav__link" href="week_2.html">
         Week 2 - Fundamental OOP Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-18/oo_principles.html">
+<a class="md-nav__link" href="oo_principles.html">
         Key OO Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-18/week_3.html">
+<a class="md-nav__link" href="week_3.html">
         Week 3 - Observer Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-18/week_4.html">
+<a class="md-nav__link" href="week_4.html">
         Week 4 - Decorator Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-18/week_5.html">
+<a class="md-nav__link" href="week_5.html">
         Week 5 - Factory Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-18/week_7.html">
+<a class="md-nav__link" href="week_7.html">
         Week 7 - Singleton Design Pattern
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-18/week_8.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Week 8 - Command Design Pattern
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="week_8.html">
         Week 8 - Command Design Pattern
       </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-command-design-pattern">
+    The Command Design Pattern
+  </a>
+<nav aria-label="The Command Design Pattern" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classification">
+    Classification
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph">
+    Mermaid Graph
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml">
+    UML
+  </a>
+<nav aria-label="UML" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#singleton">
+    Singleton
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage-notes">
+    Usage Notes
+  </a>
+<nav aria-label="Usage Notes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+    Main Take-Aways from the textbook
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-factory-pattern">
+    Main OO Principles of Factory Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -608,37 +699,37 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-12/week_1.html">
+<a class="md-nav__link" href="../CIS-12/week_1.html">
         Week 1 - Introduction to Programming
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-12/week_2.html">
+<a class="md-nav__link" href="../CIS-12/week_2.html">
         Week 2 - Variables and Operators
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-12/week_4.html">
+<a class="md-nav__link" href="../CIS-12/week_4.html">
         Week 4 - Methods
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-12/week_6.html">
+<a class="md-nav__link" href="../CIS-12/week_6.html">
         Week 6 - Conditions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-12/week_7.html">
+<a class="md-nav__link" href="../CIS-12/week_7.html">
         Week 7 - Methods Take 2
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-12/week_10.html">
+<a class="md-nav__link" href="../CIS-12/week_10.html">
         Week 10 - Arrays
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CIS-12/week_12.html">
+<a class="md-nav__link" href="../CIS-12/week_12.html">
         Week 12 - Objects
       </a>
 </li>
@@ -663,39 +754,76 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#react-notes">
-    React Notes
+<a class="md-nav__link" href="#the-command-design-pattern">
+    The Command Design Pattern
   </a>
-<nav aria-label="React Notes" class="md-nav">
+<nav aria-label="The Command Design Pattern" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#core-principle">
-    Core Principle
+<a class="md-nav__link" href="#classification">
+    Classification
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#stop-unnecessary-decoupling">
-    Stop Unnecessary Decoupling
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#building-blocks-philosophy">
-    Building Blocks Philosophy
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph">
+    Mermaid Graph
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#elements">
-    Elements
+<a class="md-nav__link" href="#uml">
+    UML
+  </a>
+<nav aria-label="UML" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#singleton">
+    Singleton
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage-notes">
+    Usage Notes
+  </a>
+<nav aria-label="Usage Notes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#javascript-fatigue">
-    Javascript Fatigue
+<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+    Main Take-Aways from the textbook
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#basics-of-create-react-app">
-    Basics of Create React App
+<a class="md-nav__link" href="#main-oo-principles-of-factory-pattern">
+    Main OO Principles of Factory Pattern
   </a>
 </li>
 </ul>
@@ -708,85 +836,118 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>React Notes</h1>
-<h2 id="react-notes">React Notes<a class="headerlink" href="#react-notes" title="Permanent link">¶</a></h2>
-<h3 id="core-principle">Core Principle<a class="headerlink" href="#core-principle" title="Permanent link">¶</a></h3>
+<h1>Week 8 - Command Design Pattern</h1>
+<h2 id="the-command-design-pattern">The Command Design Pattern<a class="headerlink" href="#the-command-design-pattern" title="Permanent link">¶</a></h2>
+<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">¶</a></h3>
 <ul>
-<li>Declaritive NOT Imperative<ul>
-<li>Code declares what it wants, not the steps on how to achieve what it wants.</li>
+<li>Behavioral Design Pattern</li>
 </ul>
-</li>
-</ul>
-<h3 id="stop-unnecessary-decoupling">Stop Unnecessary Decoupling<a class="headerlink" href="#stop-unnecessary-decoupling" title="Permanent link">¶</a></h3>
+<h3 id="pattern-definition">Pattern Definition<a class="headerlink" href="#pattern-definition" title="Permanent link">¶</a></h3>
 <ul>
-<li>React wants to combine javascript, styling, and component structure</li>
-<li>The paradigm of separation of concerns is really separation of technology js/css/dom</li>
-<li>A component should contain everything necessary to make is function.</li>
+<li><strong>Hard Definition</strong>: Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.</li>
+<li><strong>Easy Definition</strong>: Implements loose coupling in a request response model.</li>
 </ul>
-<h3 id="building-blocks-philosophy">Building Blocks Philosophy<a class="headerlink" href="#building-blocks-philosophy" title="Permanent link">¶</a></h3>
-<ul>
-<li>For simple apps start simple with just <strong>react.js</strong> core.<ul>
-<li>Default javascript createElement is satisfactory for simple element creation.</li>
-</ul>
-</li>
-<li>As complexity increases, add transpiler for <strong>JSX</strong><ul>
-<li>transpiler converts JSX into Javascript the browser/native app can understand.</li>
-</ul>
-</li>
-<li>Only when you need navigation should you add a <strong>router</strong></li>
-<li>Only when we need complex operations should you introduce a <strong>package manager</strong> for <strong>external dependencies</strong><ul>
-<li>This will happen when you need to call API endpoints.</li>
-</ul>
-</li>
-<li><strong>Modules</strong>, i.e. file organization, should only come once the project looks cluttered.</li>
-</ul>
-<h3 id="elements">Elements<a class="headerlink" href="#elements" title="Permanent link">¶</a></h3>
-<ul>
-<li>createClass, Component, or stateless functions are all components.</li>
-<li>Elements are returned by components.</li>
-<li>Elements control the UI flow by recursively passing properties down nested elements and requesting results until it has a full DOM tree.<ul>
-<li>String Elements terminate as DOM Nodes</li>
-<li>Function Elements are call recursively to get nested DOM results.</li>
-</ul>
-</li>
-</ul>
-<h3 id="javascript-fatigue">Javascript Fatigue<a class="headerlink" href="#javascript-fatigue" title="Permanent link">¶</a></h3>
-<ul>
-<li>Javascript libraries come and go at a pace that incorporating them is extremely difficult.</li>
-<li>Balance betting on new tech and staying safe.</li>
-<li>Use the Facebook generated create-react-app<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>npm install -g create-react-app
-create-react-app hello-world
-cd hello-world
-npm start
+<h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
+<h4 id="mermaid-graph">Mermaid Graph<a class="headerlink" href="#mermaid-graph" title="Permanent link">¶</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">ConcreteCommand</span><span class="w"> </span><span class="o">&lt;|</span><span class="p">..</span><span class="w"> </span><span class="n">Command</span>
+<span class="w">    </span><span class="n">ConcreteCommand</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Receiver</span>
+<span class="w">    </span><span class="n">Invoker</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Command</span>
+<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Receiver</span>
+<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">ConcreteCommand</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Command</span><span class="p">{</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+        <span class="err">+</span><span class="nc">execute</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">void</span>
+<span class="w">        </span><span class="o">+</span><span class="n">undo</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteCommand</span><span class="p">{</span>
+<span class="w">        </span><span class="o">-</span><span class="n">Receiver</span><span class="w"> </span><span class="n">receiver</span>
+<span class="w">        </span><span class="o">+</span><span class="n">ConcreteCommand</span><span class="p">(</span><span class="n">Receiver</span><span class="w"> </span><span class="n">receiver</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">execute</span><span class="p">():</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="s">"reciever.action()"</span>
+<span class="w">        </span><span class="o">+</span><span class="n">undo</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Receiver</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">action</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Invoker</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">-</span><span class="n">Command</span><span class="w"> </span><span class="n">command</span>
+<span class="w">        </span><span class="o">+</span><span class="n">Invoker</span><span class="p">(</span><span class="n">Command</span><span class="w"> </span><span class="n">command</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">setCommand</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Client</span><span class="p">{</span>
+<span class="w">        </span><span class="o">-</span><span class="n">Receiver</span><span class="w"> </span><span class="n">r</span>
+<span class="w">        </span><span class="o">-</span><span class="n">Command</span><span class="w"> </span><span class="n">concreteCommand</span>
+<span class="w">        </span><span class="o">-</span><span class="n">Invoker</span><span class="w"> </span><span class="n">i</span>
+<span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</li>
-</ul>
-<h3 id="basics-of-create-react-app">Basics of Create React App<a class="headerlink" href="#basics-of-create-react-app" title="Permanent link">¶</a></h3>
+<h4 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h4>
+<h5 id="singleton">Singleton<a class="headerlink" href="#singleton" title="Permanent link">¶</a></h5>
+<object data="images/command_uml.svg" height="700" width="700"> </object>
+<h3 id="usage-notes">Usage Notes<a class="headerlink" href="#usage-notes" title="Permanent link">¶</a></h3>
 <ul>
-<li>
-<p>Starts the development server.</p>
-<p>npm start</p>
-</li>
-<li>
-<p>Bundles the app into static files for production.</p>
-<p>npm run build</p>
-</li>
-<li>
-<p>Starts the test runner.</p>
-<p>npm test</p>
-</li>
-<li>
-<p>Removes this tool and copies build dependencies, configuration files and scripts into the app directory.</p>
-</li>
+<li>Command is the core of command design pattern that defines the contract for implementation.</li>
+<li>Receiver implementation is separate from command implementation.</li>
+<li>Command implementation classes chose the method to invoke on receiver object, for every method in receiver there will be a command implementation. It works as a bridge between receiver and action methods.</li>
+<li>Invoker class just forward the request from client to the command object.</li>
+<li>Client is responsible to instantiate appropriate command and receiver implementation and then associate them together.</li>
+<li>Client is also responsible for instantiating invoker object and associating command object with it and execute the action method.</li>
+<li>Command design pattern is easily extendible, we can add new action methods in receivers and create new Command implementations without changing the client code.</li>
+<li>The drawback with Command design pattern is that the code gets huge and confusing with high number of action methods and because of so many associations.</li>
 </ul>
-<details class="warning" open="open">
-<summary>Warning</summary>
-<p>If you do this, you can’t go back!</p>
-<p>npm run eject</p>
-</details>
+<h4 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">¶</a></h4>
+<ul>
+<li>Runnable Interface</li>
+<li>JavaFX ActionEvent</li>
+</ul>
+<h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="command_java.html">Command Design Pattern</a></li>
+</ul>
+<h3 id="main-take-aways-from-the-textbook">Main Take-Aways from the textbook<a class="headerlink" href="#main-take-aways-from-the-textbook" title="Permanent link">¶</a></h3>
+<ul>
+<li>The Command Pattern decouples an object making a request from the one that knows how to perform it.</li>
+<li>A Command object is at the center of this decoupling and encapsulates a receiver with an action (or set of actions).</li>
+<li>An invoker makes a request of a Command object by calling its execute() method, which invokes those actions on the receiver.</li>
+<li>Invokers can be parameterized with Commands, even dynamically at runtime.</li>
+<li>Commands may support undo by implementing an undo() method that restores the object to its previous state before the execute() method was last called.</li>
+<li>MacroCommands are a simple extension of the Command Pattern that allow multiple commands to be invoked. Likewise, MacroCommands can easily support undo().</li>
+<li>In practice, it’s not uncommon for “smart” Command objects to implement the request themselves rather than delegating to a receiver.</li>
+<li>Commands may also be used to implement logging and transactional systems.</li>
+</ul>
+<h3 id="main-oo-principles-of-factory-pattern">Main OO Principles of Factory Pattern<a class="headerlink" href="#main-oo-principles-of-factory-pattern" title="Permanent link">¶</a></h3>
+<ul>
+<li>Loosely coupled: The reciever is decoupled from the Invoker.</li>
+<li>Encapsulate what varies: The Reciever encapsulates the knowledge of the command and the Command encapsulates the reciever.</li>
+</ul>
 </article>
 </div>
 </div>
@@ -824,7 +985,7 @@ npm start
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
-<script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+<script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
