@@ -7,11 +7,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="format_specifiers.html" rel="prev"/>
-<link href="associativity.html" rel="next"/>
+<link href="week_8.html" rel="prev"/>
+<link href="../CIS-12/week_1.html" rel="next"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Operators - THartmanOfTheRedwoods Wiki</title>
+<title>Week 9 - Adapter &amp; Facade Design Patterns - THartmanOfTheRedwoods Wiki</title>
 <link href="../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#java-operators">
+<a class="md-skip" href="#the-command-design-pattern">
           Skip to content
         </a>
 </div>
@@ -63,7 +63,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Operators
+              Week 9 - Adapter &amp; Facade Design Patterns
             
           </span>
 </div>
@@ -133,7 +133,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="format_specifiers.html">
+<a class="md-tabs__link" href="../java/format_specifiers.html">
         Java
       </a>
 </li>
@@ -173,7 +173,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../archive.html">
+<a class="md-tabs__link md-tabs__link--active" href="../archive.html">
         Class Notes
       </a>
 </li>
@@ -240,72 +240,30 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Java
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
           Java
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="format_specifiers.html">
+<a class="md-nav__link" href="../java/format_specifiers.html">
         Format Specifiers
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Operators
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="operators.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/operators.html">
         Operators
       </a>
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Sub-Menu
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#java-operators">
-    Java Operators
-  </a>
-<nav aria-label="Java Operators" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#arithmetic-operators">
-    Arithmetic Operators
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#assignment-operators">
-    Assignment Operators
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#comparison-operators">
-    Comparison Operators
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#logical-operators">
-    Logical Operators
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="associativity.html">
+<a class="md-nav__link" href="../java/associativity.html">
         Operator Prcedence &amp; Associativity
       </a>
 </li>
@@ -517,13 +475,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_12" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_12" type="checkbox"/>
 <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
           Class Notes
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_12_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_12_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_12">
 <span class="md-nav__icon md-icon"></span>
           Class Notes
@@ -594,77 +552,196 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_12_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_12_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
           CIS-18
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_12_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_12_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_12_3">
 <span class="md-nav__icon md-icon"></span>
           CIS-18
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_1.html">
+<a class="md-nav__link" href="week_1.html">
         Week 1 - Review
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/sprint.html">
+<a class="md-nav__link" href="sprint.html">
         Sprint Planning
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/user_story_intro.html">
+<a class="md-nav__link" href="user_story_intro.html">
         User Story Into
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/user_story_lesson.html">
+<a class="md-nav__link" href="user_story_lesson.html">
         User Story Lesson
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_2.html">
+<a class="md-nav__link" href="week_2.html">
         Week 2 - Fundamental OOP Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/oo_principles.html">
+<a class="md-nav__link" href="oo_principles.html">
         Key OO Principles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_3.html">
+<a class="md-nav__link" href="week_3.html">
         Week 3 - Observer Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_4.html">
+<a class="md-nav__link" href="week_4.html">
         Week 4 - Decorator Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_5.html">
+<a class="md-nav__link" href="week_5.html">
         Week 5 - Factory Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_7.html">
+<a class="md-nav__link" href="week_7.html">
         Week 7 - Singleton Design Pattern
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_8.html">
+<a class="md-nav__link" href="week_8.html">
         Week 8 - Command Design Pattern
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_9.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Week 9 - Adapter &amp; Facade Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="week_9.html">
         Week 9 - Adapter &amp; Facade Design Patterns
       </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-command-design-pattern">
+    The Command Design Pattern
+  </a>
+<nav aria-label="The Command Design Pattern" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classification">
+    Classification
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
+  </a>
+<nav aria-label="Pattern Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adapter-design-pattern">
+    Adapter Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#facade-design-pattern">
+    Facade Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph---object-adapter">
+    Mermaid Graph - Object Adapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph---class-adapter">
+    Mermaid Graph - Class Adapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph---facade">
+    Mermaid Graph - Facade
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml">
+    UML
+  </a>
+<nav aria-label="UML" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-adapter">
+    Object Adapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#class-adapter">
+    Class Adapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#facade">
+    Facade
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+    Main Take-Aways from the textbook
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-adapter-pattern">
+    Main OO Principles of Adapter Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-facade-pattern">
+    Main OO Principles of Facade Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -737,29 +814,106 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#java-operators">
-    Java Operators
+<a class="md-nav__link" href="#the-command-design-pattern">
+    The Command Design Pattern
   </a>
-<nav aria-label="Java Operators" class="md-nav">
+<nav aria-label="The Command Design Pattern" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#arithmetic-operators">
-    Arithmetic Operators
+<a class="md-nav__link" href="#classification">
+    Classification
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#assignment-operators">
-    Assignment Operators
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
+  </a>
+<nav aria-label="Pattern Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adapter-design-pattern">
+    Adapter Design Pattern
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#comparison-operators">
-    Comparison Operators
+<a class="md-nav__link" href="#facade-design-pattern">
+    Facade Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph---object-adapter">
+    Mermaid Graph - Object Adapter
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#logical-operators">
-    Logical Operators
+<a class="md-nav__link" href="#mermaid-graph---class-adapter">
+    Mermaid Graph - Class Adapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph---facade">
+    Mermaid Graph - Facade
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml">
+    UML
+  </a>
+<nav aria-label="UML" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-adapter">
+    Object Adapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#class-adapter">
+    Class Adapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#facade">
+    Facade
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+    Main Take-Aways from the textbook
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-adapter-pattern">
+    Main OO Principles of Adapter Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-facade-pattern">
+    Main OO Principles of Facade Pattern
   </a>
 </li>
 </ul>
@@ -772,203 +926,172 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Operators</h1>
-<h2 id="java-operators">Java Operators<a class="headerlink" href="#java-operators" title="Permanent link">¶</a></h2>
-<h3 id="arithmetic-operators">Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>Operator</th>
-<th>Name</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>+</td>
-<td>Addition</td>
-<td>Adds together two values</td>
-<td>x + y</td>
-</tr>
-<tr>
-<td>-</td>
-<td>Subtraction</td>
-<td>Subtracts one value from another</td>
-<td>x - y</td>
-</tr>
-<tr>
-<td>*</td>
-<td>Multiplication</td>
-<td>Multiplies two values</td>
-<td>x * y</td>
-</tr>
-<tr>
-<td>/</td>
-<td>Division</td>
-<td>Divides one value by another</td>
-<td>x / y</td>
-</tr>
-<tr>
-<td>%</td>
-<td>Modulus</td>
-<td>Returns the division remainder</td>
-<td>x % y</td>
-</tr>
-<tr>
-<td>++</td>
-<td>Increment</td>
-<td>Increases the value of a variable by 1</td>
-<td>++x</td>
-</tr>
-<tr>
-<td>–</td>
-<td>Decrement</td>
-<td>Decreases the value of a variable by 1</td>
-<td>–x</td>
-</tr>
-</tbody>
-</table>
-<h3 id="assignment-operators">Assignment Operators<a class="headerlink" href="#assignment-operators" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>Operator</th>
-<th>Example</th>
-<th>Same As</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>=</td>
-<td>x = 5</td>
-<td>x = 5</td>
-</tr>
-<tr>
-<td>+=</td>
-<td>x += 3</td>
-<td>x = x + 3</td>
-</tr>
-<tr>
-<td>-=</td>
-<td>x -= 3</td>
-<td>x = x - 3</td>
-</tr>
-<tr>
-<td>*=</td>
-<td>x *= 3</td>
-<td>x = x * 3</td>
-</tr>
-<tr>
-<td>/=</td>
-<td>x /= 3</td>
-<td>x = x / 3</td>
-</tr>
-<tr>
-<td>%=</td>
-<td>x %= 3</td>
-<td>x = x % 3</td>
-</tr>
-<tr>
-<td>&amp;=</td>
-<td>x &amp;= 3</td>
-<td>x = x &amp; 3</td>
-</tr>
-<tr>
-<td></td>
-<td>=</td>
-<td>x</td>
-</tr>
-<tr>
-<td>^=</td>
-<td>x ^= 3</td>
-<td>x = x ^ 3</td>
-</tr>
-<tr>
-<td>&gt;&gt;=</td>
-<td>x &gt;&gt;= 3</td>
-<td>x = x &gt;&gt; 3</td>
-</tr>
-<tr>
-<td>&lt;&lt;=</td>
-<td>x &lt;&lt;= 3</td>
-<td>x = x &lt;&lt; 3</td>
-</tr>
-</tbody>
-</table>
-<h3 id="comparison-operators">Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>Operator</th>
-<th>Name</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>==</td>
-<td>Equal to</td>
-<td>x == y</td>
-</tr>
-<tr>
-<td>!=</td>
-<td>Not equal</td>
-<td>x != y</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>Greater than</td>
-<td>x &gt; y</td>
-</tr>
-<tr>
-<td>&lt;</td>
-<td>Less than</td>
-<td>x &lt; y</td>
-</tr>
-<tr>
-<td>&gt;=</td>
-<td>Greater than or equal to</td>
-<td>x &gt;= y</td>
-</tr>
-<tr>
-<td>&lt;=</td>
-<td>Less than or equal to</td>
-<td>x &lt;= y</td>
-</tr>
-</tbody>
-</table>
-<h3 id="logical-operators">Logical Operators<a class="headerlink" href="#logical-operators" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>Operator</th>
-<th>Name</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&amp;&amp;</td>
-<td>Logical and</td>
-<td>Returns true if both statements are true</td>
-<td>x &lt; 5 &amp;&amp;  x &lt; 10</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>Logical or</td>
-</tr>
-<tr>
-<td>!</td>
-<td>Logical not</td>
-<td>Reverse the result, returns false if the result is true</td>
-<td>!(x &lt; 5 &amp;&amp; x &lt; 10)</td>
-</tr>
-</tbody>
-</table>
+<h1>Week 9 - Adapter &amp; Facade Design Patterns</h1>
+<h2 id="the-command-design-pattern">The Command Design Pattern<a class="headerlink" href="#the-command-design-pattern" title="Permanent link">¶</a></h2>
+<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">¶</a></h3>
+<ul>
+<li>Structural Design Pattern</li>
+</ul>
+<h3 id="pattern-definition">Pattern Definition<a class="headerlink" href="#pattern-definition" title="Permanent link">¶</a></h3>
+<h4 id="adapter-design-pattern">Adapter Design Pattern<a class="headerlink" href="#adapter-design-pattern" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Hard Definition</strong>: Converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.</li>
+<li><strong>Easy Definition</strong>: Allow two unrelated interfaces work together.</li>
+</ul>
+<h4 id="facade-design-pattern">Facade Design Pattern<a class="headerlink" href="#facade-design-pattern" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Hard Definition</strong>: Provide a unified interface to a set of interfaces in a subsystem. Facade Pattern defines a higher-level interface that makes the subsystem easier to use.</li>
+<li><strong>Easy Definition</strong>: A facade “wraps” a set of objects to simplify interacting with them.</li>
+</ul>
+<h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
+<h4 id="mermaid-graph---object-adapter">Mermaid Graph - Object Adapter<a class="headerlink" href="#mermaid-graph---object-adapter" title="Permanent link">¶</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Target</span>
+<span class="w">    </span><span class="n">Target</span><span class="w"> </span><span class="o">&lt;|</span><span class="p">..</span><span class="w"> </span><span class="n">Adapter</span>
+<span class="w">    </span><span class="n">Adaptee</span><span class="w"> </span><span class="o">--*</span><span class="w"> </span><span class="n">Adapter</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Client</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Target</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+        <span class="err">+</span><span class="nc">request</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Adapter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">request</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Adaptee</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">specificRequest</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="mermaid-graph---class-adapter">Mermaid Graph - Class Adapter<a class="headerlink" href="#mermaid-graph---class-adapter" title="Permanent link">¶</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Target</span>
+<span class="w">    </span><span class="n">Target</span><span class="w"> </span><span class="o">&lt;|</span><span class="p">..</span><span class="w"> </span><span class="n">Adapter</span>
+<span class="w">    </span><span class="n">Adaptee</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Adapter</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Client</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Target</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+        <span class="err">+</span><span class="nc">request</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Adapter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">request</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Adaptee</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">specificRequest</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="mermaid-graph---facade">Mermaid Graph - Facade<a class="headerlink" href="#mermaid-graph---facade" title="Permanent link">¶</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Facade</span>
+<span class="w">    </span><span class="n">Facade</span><span class="w"> </span><span class="o">*--</span><span class="w"> </span><span class="n">ComplexSubClass1</span>
+<span class="w">    </span><span class="n">Facade</span><span class="w"> </span><span class="o">*--</span><span class="w"> </span><span class="n">ComplexSubClass2</span>
+<span class="w">    </span><span class="n">Facade</span><span class="w"> </span><span class="o">*--</span><span class="w"> </span><span class="n">ComplexSubClass3</span>
+<span class="w">    </span><span class="n">ComplexSubClass1</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">ComplexSubClass2</span>
+<span class="w">    </span><span class="n">ComplexSubClass1</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">ComplexSubClass3</span>
+<span class="w">    </span><span class="n">ComplexSubClass2</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">ComplexSubClass3</span>
+<span class="w">    </span><span class="n">ComplexSubClass3</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">ComplexSubClass1</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Client</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Facade</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">SimplerActions</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ComplexSubClass1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ComplexSubClass2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ComplexSubClass3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span><span class="w">   </span>
+</code></pre></div></td></tr></table></div>
+<h4 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h4>
+<h5 id="object-adapter">Object Adapter<a class="headerlink" href="#object-adapter" title="Permanent link">¶</a></h5>
+<object data="images/adapter_object_uml.svg" height="700" width="700"> </object>
+<h5 id="class-adapter">Class Adapter<a class="headerlink" href="#class-adapter" title="Permanent link">¶</a></h5>
+<object data="images/adapter_class_uml.svg" height="700" width="700"> </object>
+<h5 id="facade">Facade<a class="headerlink" href="#facade" title="Permanent link">¶</a></h5>
+<object data="images/facade_uml.svg" height="700" width="700"> </object>
+<h3 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">¶</a></h3>
+<ul>
+<li>Converting Enumerators to Iterators and vice-versa.</li>
+<li>java.io classes InputStreamReader and OutputStreamWriter adapts an InputStream into a Reader and adapts an OutputStream into a Writer</li>
+<li>java.util classes such as array with methods like <strong>asList</strong> converts an Array into a List.</li>
+</ul>
+<h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="adapter_java.html">Class/Object Adapter Design Pattern</a></li>
+<li><a href="facade_java.html">Facade Design Pattern</a></li>
+</ul>
+<h3 id="main-take-aways-from-the-textbook">Main Take-Aways from the textbook<a class="headerlink" href="#main-take-aways-from-the-textbook" title="Permanent link">¶</a></h3>
+<ul>
+<li>When you need to use an existing class and its interface is not the one you need, use an adapter.</li>
+<li>When you need to simplify and unify a large interface or complex set of interfaces, use a facade.</li>
+<li>An adapter changes an interface into one a client expects.</li>
+<li>A facade decouples a client from a complex subsystem.</li>
+<li>Implementing an adapter may require little work or a great deal of work depending on the size and complexity of the target interface.</li>
+<li>Implementing a facade requires that we compose the facade with its subsystem and use delegation to perform the work of the facade.</li>
+<li>There are two forms of the Adapter Pattern: object and class adapters.</li>
+<li>You can implement more than one facade for a subsystem.</li>
+<li>An adapter wraps an object to change its interface, a decorator wraps an object to add new behaviors and responsibilities, and a facade “wraps” a set of objects to simplify.</li>
+</ul>
+<h3 id="main-oo-principles-of-adapter-pattern">Main OO Principles of Adapter Pattern<a class="headerlink" href="#main-oo-principles-of-adapter-pattern" title="Permanent link">¶</a></h3>
+<p><a href="oo_principles.html#favor-composition-over-inheritance">Favors composition over inheritance</a>: Object Adapters are preferred!</p>
+<h3 id="main-oo-principles-of-facade-pattern">Main OO Principles of Facade Pattern<a class="headerlink" href="#main-oo-principles-of-facade-pattern" title="Permanent link">¶</a></h3>
+<p><a href="oo_principles.html#principle-of-least-knowledge">Principle of Least Knowledge</a>: Talk only to your immediate friends.
+<a href="oo_principles.html#strive-for-loosely-coupled-designs-between-objects-that-interact">Loosely Coupled</a>: Facade decouples clients from comlexities of sub-systems.</p>
 </article>
 </div>
 </div>
