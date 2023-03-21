@@ -716,6 +716,20 @@
 <a class="md-nav__link" href="#real-world-usages">
     Real World Usages
   </a>
+<nav aria-label="Real World Usages" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adapter">
+    Adapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#facade_1">
+    Facade
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#java-code-example">
@@ -895,6 +909,20 @@
 <a class="md-nav__link" href="#real-world-usages">
     Real World Usages
   </a>
+<nav aria-label="Real World Usages" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adapter">
+    Adapter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#facade_1">
+    Facade
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#java-code-example">
@@ -1065,10 +1093,15 @@
 <h5 id="facade">Facade<a class="headerlink" href="#facade" title="Permanent link">¶</a></h5>
 <object data="images/facade_uml.svg" height="700" width="700"> </object>
 <h3 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">¶</a></h3>
+<h4 id="adapter">Adapter<a class="headerlink" href="#adapter" title="Permanent link">¶</a></h4>
 <ul>
 <li>Converting Enumerators to Iterators and vice-versa.</li>
 <li>java.io classes InputStreamReader and OutputStreamWriter adapts an InputStream into a Reader and adapts an OutputStream into a Writer</li>
 <li>java.util classes such as array with methods like <strong>asList</strong> converts an Array into a List.</li>
+</ul>
+<h4 id="facade_1">Facade<a class="headerlink" href="#facade_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>JDBC Driver Manager</li>
 </ul>
 <h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">¶</a></h3>
 <ul>
@@ -1086,12 +1119,14 @@
 <li>There are two forms of the Adapter Pattern: object and class adapters.</li>
 <li>You can implement more than one facade for a subsystem.</li>
 <li>An adapter wraps an object to change its interface, a decorator wraps an object to add new behaviors and responsibilities, and a facade “wraps” a set of objects to simplify.</li>
+<li>Facade design pattern can be applied at any point of development, usually when the number of interfaces grow and system gets complex.</li>
+<li>Facade design pattern should be applied for similar kind of interfaces, its purpose is to provide a single interface rather than multiple interfaces that does the similar kind of jobs.</li>
 </ul>
 <h3 id="main-oo-principles-of-adapter-pattern">Main OO Principles of Adapter Pattern<a class="headerlink" href="#main-oo-principles-of-adapter-pattern" title="Permanent link">¶</a></h3>
 <p><a href="oo_principles.html#favor-composition-over-inheritance">Favors composition over inheritance</a>: Object Adapters are preferred!</p>
 <h3 id="main-oo-principles-of-facade-pattern">Main OO Principles of Facade Pattern<a class="headerlink" href="#main-oo-principles-of-facade-pattern" title="Permanent link">¶</a></h3>
 <p><a href="oo_principles.html#principle-of-least-knowledge">Principle of Least Knowledge</a>: Talk only to your immediate friends.
-<a href="oo_principles.html#strive-for-loosely-coupled-designs-between-objects-that-interact">Loosely Coupled</a>: Facade decouples clients from comlexities of sub-systems.</p>
+<a href="oo_principles.html#strive-for-loosely-coupled-designs-between-objects-that-interact">Loosely Coupled</a>: Facade decouples clients from comlexities of sub-systems. Subsystem interfaces are not aware of Facade.</p>
 </article>
 </div>
 </div>
