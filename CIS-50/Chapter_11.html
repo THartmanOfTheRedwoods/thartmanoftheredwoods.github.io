@@ -7,11 +7,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="Chapter_3.html" rel="prev"/>
-<link href="Chapter_4.html" rel="next"/>
+<link href="Chapter_9.html" rel="prev"/>
+<link href="../CIS-18/week_1.html" rel="next"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Joins - THartmanOfTheRedwoods Wiki</title>
+<title>Database Performance Tuning and Query Optimization - THartmanOfTheRedwoods Wiki</title>
 <link href="../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#graphical-representation-of-joins">
+<a class="md-skip" href="#database-performance-tuning-and-query-optimization">
           Skip to content
         </a>
 </div>
@@ -63,7 +63,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Joins
+              Database Performance Tuning and Query Optimization
             
           </span>
 </div>
@@ -529,67 +529,10 @@
         The Relational Database Model
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Joins
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="joins_ns.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="joins_ns.html">
         Joins
       </a>
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Sub-Menu
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#graphical-representation-of-joins">
-    Graphical Representation of Joins
-  </a>
-<nav aria-label="Graphical Representation of Joins" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#inner-join">
-    Inner Join
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#left-join">
-    Left Join
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#right-join">
-    Right Join
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#full-outer-join">
-    Full Outer Join
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#left-anti-join">
-    Left Anti-Join
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#right-anti-join">
-    Right Anti-Join
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cross-join">
-    Cross Join
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="Chapter_4.html">
@@ -621,10 +564,207 @@
         Database Design
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_11.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Database Performance Tuning and Query Optimization
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="Chapter_11.html">
         Database Performance Tuning and Query Optimization
       </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#database-performance-tuning-and-query-optimization">
+    Database Performance Tuning and Query Optimization
+  </a>
+<nav aria-label="Database Performance Tuning and Query Optimization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-tuning-concepts">
+    Performance Tuning Concepts
+  </a>
+<nav aria-label="Performance Tuning Concepts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-tuning-client-and-server">
+    Performance Tuning Client and Server
+  </a>
+<nav aria-label="Performance Tuning Client and Server" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client-side">
+    Client Side
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#server-side">
+    Server Side
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dbms-architecture">
+    DBMS Architecture
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#database-query-optimization-modes">
+    Database Query Optimization Modes
+  </a>
+<nav aria-label="Database Query Optimization Modes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-principles-of-query-optimization">
+    2 Principles of Query Optimization
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classification-of-query-optimization-algorithmsmodes">
+    Classification of Query Optimization Algorithms/Modes
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#database-statistics">
+    Database Statistics
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#query-processing">
+    Query Processing
+  </a>
+<nav aria-label="Query Processing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-phases-of-query-processing">
+    3 Phases of Query Processing
+  </a>
+<nav aria-label="3 Phases of Query Processing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql-parsing-phase">
+    SQL Parsing Phase
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql-execution-phase">
+    SQL Execution Phase
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql-fetching-phase">
+    SQL Fetching Phase
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#query-processing-bottlenecks">
+    Query Processing Bottlenecks
+  </a>
+<nav aria-label="Query Processing Bottlenecks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typical-bottlenecks-and-performance-recommendations">
+    Typical Bottlenecks and Performance Recommendations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#indexes-and-query-optimization">
+    Indexes and Query Optimization
+  </a>
+<nav aria-label="Indexes and Query Optimization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#index-data-structures">
+    Index Data Structures
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optimizer-choices">
+    Optimizer Choices
+  </a>
+<nav aria-label="Optimizer Choices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optimizer-algorithms">
+    Optimizer Algorithms
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optimizer-hints">
+    Optimizer Hints
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql-performance-tuning">
+    SQL Performance Tuning
+  </a>
+<nav aria-label="SQL Performance Tuning" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#index-selectivity">
+    Index Selectivity
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conditional-expressions">
+    Conditional Expressions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#query-formulation">
+    Query Formulation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dbms-performance-tuning">
+    DBMS Performance Tuning
+  </a>
+<nav aria-label="DBMS Performance Tuning" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#server-side-tuning">
+    Server Side Tuning
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -777,45 +917,185 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#graphical-representation-of-joins">
-    Graphical Representation of Joins
+<a class="md-nav__link" href="#database-performance-tuning-and-query-optimization">
+    Database Performance Tuning and Query Optimization
   </a>
-<nav aria-label="Graphical Representation of Joins" class="md-nav">
+<nav aria-label="Database Performance Tuning and Query Optimization" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#inner-join">
-    Inner Join
+<a class="md-nav__link" href="#performance-tuning-concepts">
+    Performance Tuning Concepts
+  </a>
+<nav aria-label="Performance Tuning Concepts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-tuning-client-and-server">
+    Performance Tuning Client and Server
+  </a>
+<nav aria-label="Performance Tuning Client and Server" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client-side">
+    Client Side
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#left-join">
-    Left Join
+<a class="md-nav__link" href="#server-side">
+    Server Side
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dbms-architecture">
+    DBMS Architecture
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#right-join">
-    Right Join
+<a class="md-nav__link" href="#database-query-optimization-modes">
+    Database Query Optimization Modes
+  </a>
+<nav aria-label="Database Query Optimization Modes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-principles-of-query-optimization">
+    2 Principles of Query Optimization
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#full-outer-join">
-    Full Outer Join
+<a class="md-nav__link" href="#classification-of-query-optimization-algorithmsmodes">
+    Classification of Query Optimization Algorithms/Modes
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#database-statistics">
+    Database Statistics
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#query-processing">
+    Query Processing
+  </a>
+<nav aria-label="Query Processing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-phases-of-query-processing">
+    3 Phases of Query Processing
+  </a>
+<nav aria-label="3 Phases of Query Processing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql-parsing-phase">
+    SQL Parsing Phase
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#left-anti-join">
-    Left Anti-Join
+<a class="md-nav__link" href="#sql-execution-phase">
+    SQL Execution Phase
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#right-anti-join">
-    Right Anti-Join
+<a class="md-nav__link" href="#sql-fetching-phase">
+    SQL Fetching Phase
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#query-processing-bottlenecks">
+    Query Processing Bottlenecks
+  </a>
+<nav aria-label="Query Processing Bottlenecks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typical-bottlenecks-and-performance-recommendations">
+    Typical Bottlenecks and Performance Recommendations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#indexes-and-query-optimization">
+    Indexes and Query Optimization
+  </a>
+<nav aria-label="Indexes and Query Optimization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#index-data-structures">
+    Index Data Structures
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optimizer-choices">
+    Optimizer Choices
+  </a>
+<nav aria-label="Optimizer Choices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optimizer-algorithms">
+    Optimizer Algorithms
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cross-join">
-    Cross Join
+<a class="md-nav__link" href="#optimizer-hints">
+    Optimizer Hints
   </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql-performance-tuning">
+    SQL Performance Tuning
+  </a>
+<nav aria-label="SQL Performance Tuning" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#index-selectivity">
+    Index Selectivity
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conditional-expressions">
+    Conditional Expressions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#query-formulation">
+    Query Formulation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dbms-performance-tuning">
+    DBMS Performance Tuning
+  </a>
+<nav aria-label="DBMS Performance Tuning" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#server-side-tuning">
+    Server Side Tuning
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -827,26 +1107,294 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Joins</h1>
-<h2 id="graphical-representation-of-joins">Graphical Representation of Joins<a class="headerlink" href="#graphical-representation-of-joins" title="Permanent link">¶</a></h2>
+<h1>Database Performance Tuning and Query Optimization</h1>
+<h2 id="database-performance-tuning-and-query-optimization">Database Performance Tuning and Query Optimization<a class="headerlink" href="#database-performance-tuning-and-query-optimization" title="Permanent link">¶</a></h2>
+<h3 id="performance-tuning-concepts">Performance Tuning Concepts<a class="headerlink" href="#performance-tuning-concepts" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>database performance tuning:</strong> A set of activities and procedures designed to reduce the response time of a database system that is, to ensure that an end user query is processed by the DBMS in the minimum amount of time.</li>
+</ul>
+<h4 id="performance-tuning-client-and-server">Performance Tuning Client and Server<a class="headerlink" href="#performance-tuning-client-and-server" title="Permanent link">¶</a></h4>
+<ul>
+<li>Most performance tuning focuses on minimizing I/O operations.</li>
+</ul>
+<h5 id="client-side">Client Side<a class="headerlink" href="#client-side" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>SQL Performance Tuning:</strong> Generate optimal SQL queries to get the correct answer in least amount of time using the minimum server resources.</li>
+</ul>
+<h5 id="server-side">Server Side<a class="headerlink" href="#server-side" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>DBMS Performance Tuning:</strong> Address client requests as quickly as possible while optimizing compute resources.</li>
+</ul>
+<h4 id="dbms-architecture">DBMS Architecture<a class="headerlink" href="#dbms-architecture" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Data Files:</strong> One of, generally, several files in a DBMS that stores a databases data: rows, tables, indexes, etc.</li>
+<li><strong>Extent:</strong> Predefined data-file expansion increment.</li>
+<li><strong>Table Space/File Group:</strong> Logically grouped data files. Common table spaces are: System (i.e. data-dictionary), user data, indexes, temporary (sorts &amp; grouping).</li>
+<li><strong>data cache/buffer cache:</strong> Reserved memory area caching sys-catalog, indexes, and read/write data.</li>
+<li><strong>SQL cache/Procedure cache:</strong> Reserved memory area storing processed recent SQL queries, stored procedures, triggers, and functions.</li>
+<li><strong>I/O Request:</strong> Reads/Writes data from data-cache to physical device in blocks of powers of 2.
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap11_002.png"><img alt="Basic RDBMS Architecture" src="images/chap11_002.png"/></a></li>
+<li>Listener: Handles processing of client requests.</li>
+<li>User: User process per client.</li>
+<li>Scheduler: Organizes concurrent requests.</li>
+<li>Optimizer: Analyzes SQL and optimizes data access.</li>
+</ul>
+<h4 id="database-query-optimization-modes">Database Query Optimization Modes<a class="headerlink" href="#database-query-optimization-modes" title="Permanent link">¶</a></h4>
+<h5 id="2-principles-of-query-optimization">2 Principles of Query Optimization<a class="headerlink" href="#2-principles-of-query-optimization" title="Permanent link">¶</a></h5>
+<ul>
+<li>Optimum execution order for fastest exec time</li>
+<li>Optimum site selection to minimize I/O and communication time.</li>
+</ul>
+<h5 id="classification-of-query-optimization-algorithmsmodes">Classification of Query Optimization Algorithms/Modes<a class="headerlink" href="#classification-of-query-optimization-algorithmsmodes" title="Permanent link">¶</a></h5>
+<ul>
+<li>Classification by Order:<ul>
+<li><strong>Automatic Query Optimization:</strong> DBMS finds most efficient access path (favored, but at the expense of CPU usage).</li>
+<li><strong>Manual query Optimization:</strong> End user finds most efficient access path</li>
+</ul>
+</li>
+<li>Classification by Timing of Optimizations<ul>
+<li><strong>Static Query Optimization:</strong> Access path is predetermined at compile time (i.e. in code like C#)</li>
+<li><strong>Dynamic Query Optimization:</strong> Access path is determined at run-time using most up-to-data info about the RDBMS.</li>
+</ul>
+</li>
+<li>Classification by Info Type<ul>
+<li><strong>Statistically Based Query Optimization:</strong> Statistically info about database is used to determine access path.<ul>
+<li><strong>Dynamic Statistical Generation Mode:</strong> DBMS automatically updates database access and statistics.</li>
+<li><strong>Manual Statistical Generation Mode:</strong> DBA must periodically run a routine to generate data access statistics.</li>
+</ul>
+</li>
+<li><strong>Rule-Based Query Optimization:</strong> Preset rules by DBA or End-User dictate access path.</li>
+</ul>
+</li>
+</ul>
+<h4 id="database-statistics">Database Statistics<a class="headerlink" href="#database-statistics" title="Permanent link">¶</a></h4>
+<ul>
+<li>Include statistics on: # CPUs, CPU Speed, Temp Space Avail., # rows, # disk blocks used, Max/Avg row length, # Cols/Row, 
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap11_003.png"><img alt="Sample Database Statistics" src="images/chap11_003.png"/></a></li>
+<li>Provides a snapshot of DB characteristics.</li>
+<li>Can be gathered manually or automatically (ANALYZE command gathers stats)<ul>
+<li>Oracle: ANALYZE <table|index> object_name COMPUTE STATISTICS;</table|index></li>
+<li>MySQL: ANALYZE TABLE <table>;</table></li>
+<li>DB2: RUNSTATS</li>
+<li>SQL Server: UPDATE STATISTICS <table|view> [<index>]</index></table|view></li>
+</ul>
+</li>
+</ul>
+<h3 id="query-processing">Query Processing<a class="headerlink" href="#query-processing" title="Permanent link">¶</a></h3>
+<h4 id="3-phases-of-query-processing">3 Phases of Query Processing<a class="headerlink" href="#3-phases-of-query-processing" title="Permanent link">¶</a></h4>
+<ol>
+<li>Parsing: Parses SQL and chooses most efficient execution plan.</li>
+<li>Execution: Executes query based on chosen plan.</li>
+<li>Fetching: Fetches data and returns result set.</li>
+</ol>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap11_004.png"><img alt="Query Processing" src="images/chap11_004.png"/></a></p>
 <details class="note" open="open">
 <summary>Note</summary>
-<p>I find these diagrams a much more approachable way of picturing and imagining the joins referenced in CIS-50 Chapter 3. Hopefully you agree!</p>
+<p>Processing DDL (Create, etc.) is different then processing DML (SELECT, INSERT, UPDATE, DELETE as DML deals with user data while DDL changes the schema/system catalog.</p>
 </details>
-<h3 id="inner-join">Inner Join<a class="headerlink" href="#inner-join" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/joins/inner_join_ns.png"><img alt="Inner Join" src="images/joins/inner_join_ns.png"/></a></p>
-<h3 id="left-join">Left Join<a class="headerlink" href="#left-join" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/joins/left_join_ns.png"><img alt="Left Join" src="images/joins/left_join_ns.png"/></a></p>
-<h3 id="right-join">Right Join<a class="headerlink" href="#right-join" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/joins/right_join_ns.png"><img alt="Right Join" src="images/joins/right_join_ns.png"/></a></p>
-<h3 id="full-outer-join">Full Outer Join<a class="headerlink" href="#full-outer-join" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/joins/full_outer_join_ns.png"><img alt="Full Outer Join" src="images/joins/full_outer_join_ns.png"/></a></p>
-<h3 id="left-anti-join">Left Anti-Join<a class="headerlink" href="#left-anti-join" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/joins/left_anti_join_ns.png"><img alt="Left Anti-Join" src="images/joins/left_anti_join_ns.png"/></a></p>
-<h3 id="right-anti-join">Right Anti-Join<a class="headerlink" href="#right-anti-join" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/joins/right_anti_join_ns.png"><img alt="Right Anti-Join" src="images/joins/right_anti_join_ns.png"/></a></p>
-<h3 id="cross-join">Cross Join<a class="headerlink" href="#cross-join" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/joins/cross_join_ns.png"><img alt="Cross Join" src="images/joins/cross_join_ns.png"/></a></p>
+<h5 id="sql-parsing-phase">SQL Parsing Phase<a class="headerlink" href="#sql-parsing-phase" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>Query Optimizer:</strong> DBMS process that parses query and optimizes data access path.<ul>
+<li>Steps of Query Optimizer:<ul>
+<li>Validate SQL syntax</li>
+<li>Validate SQL against Data Dictionary for table/column objects</li>
+<li>Validate User Access Rights via Data Dictionary</li>
+<li>Break SQL into atomic parts.</li>
+<li>Optimize SQL to equivalent faster query</li>
+<li>Prepare SQL for execution with efficient access plan</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Access/Execution Plan:</strong> Compilation time plan that determines how an application query will access the database at run-time<ul>
+<li>If the Access Plan exists in SQL Cache, DBMS will re-use plan to save time.</li>
+<li>If not in cache, optimizer will:<ul>
+<li>Evaluate plans and pick indexes for optimal join operations</li>
+<li>Places the chosen plan into the SQL Cache</li>
+</ul>
+</li>
+<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap11_005.png"><img alt="Sample DBMS Access Plan" src="images/chap11_005.png"/></a></li>
+</ul>
+</li>
+</ul>
+<h5 id="sql-execution-phase">SQL Execution Phase<a class="headerlink" href="#sql-execution-phase" title="Permanent link">¶</a></h5>
+<ul>
+<li>All I/O operations in Execution Plan are executed, and proper locks are acquired for data access.</li>
+<li>Resulting data is stored in the DBMS data cache<ul>
+<li>Rows matching conditions, order bys, grouping are completed</li>
+</ul>
+</li>
+<li>Transaction commands are completed during SQL Parsing Phase and SQL Execution Phase.</li>
+</ul>
+<h5 id="sql-fetching-phase">SQL Fetching Phase<a class="headerlink" href="#sql-fetching-phase" title="Permanent link">¶</a></h5>
+<ul>
+<li>Facilitates migrating data from server cache to client cache.</li>
+<li>Temporary table space may be used to allow clients to fetch data in batches.</li>
+</ul>
+<h4 id="query-processing-bottlenecks">Query Processing Bottlenecks<a class="headerlink" href="#query-processing-bottlenecks" title="Permanent link">¶</a></h4>
+<ul>
+<li>The more complex a query, the higher chance of a <strong>query processing bottleneck</strong></li>
+<li>The more complex a system and the tighter coupled components, the higher chance of a <strong>component bottleneck</strong></li>
+</ul>
+<h5 id="typical-bottlenecks-and-performance-recommendations">Typical Bottlenecks and Performance Recommendations<a class="headerlink" href="#typical-bottlenecks-and-performance-recommendations" title="Permanent link">¶</a></h5>
+<ol>
+<li>CPU: Match CPU to workload<ul>
+<li>High CPU utilization could mean a mismatch between CPU and workload</li>
+<li>Could also mean not enough of another component like RAM (swapping?).</li>
+</ul>
+</li>
+<li>RAM: SQL Cache, Data Cache, DBMS processes, and OS compete for RAM, so it should be right-sized dependent on system and database purpose.</li>
+<li>Hard Disks: Slow disks can bottleneck performance, so match HD Speed and I/O transfer rates to desired workload performance.<ul>
+<li>Faster Disks, such as SSDs, can offset some of the RAM bottlenecks via <strong>Virtual Memory</strong></li>
+</ul>
+</li>
+<li>Network: Network congestion (i.e. network demand exceeds capacity) can cause bottlenecks.<ul>
+<li>Use QoS to grant application priority.</li>
+<li>Limit the number of clients on the network.</li>
+<li>Limit the network to just qualified applications.</li>
+</ul>
+</li>
+<li>Application Code: Poorly designed DBs and Poorly designed code often cause bottlenecks.<ul>
+<li>Write applications that Lazy load data</li>
+<li>Optimize or eliminate AdHoc Queries</li>
+<li>Apply code optimization techniques.</li>
+<li>Redesign poorly architected databases</li>
+</ul>
+</li>
+</ol>
+<h3 id="indexes-and-query-optimization">Indexes and Query Optimization<a class="headerlink" href="#indexes-and-query-optimization" title="Permanent link">¶</a></h3>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>The purpose of indexes is to speed up access to specific rows in large tables. So why not index everything? First, indexes also consume space, so space constraints can limit index usage. Further, indexing every column can harm the query optimizer performance by forcing it to analyze more index options while building its query plan. Third, low <strong>Data Sparsity,</strong> which refers to the range of values in a column, can make indexes moot since they contain a relatively small number of keys to a large subset of rows. High <strong>Data Sparsity</strong> columns, on the other hand, are ideal candidates for indexes.</p>
+</details>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap11_006.png"><img alt="Example Index Illustration" src="images/chap11_006.png"/></a></p>
+<h4 id="index-data-structures">Index Data Structures<a class="headerlink" href="#index-data-structures" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Hash Index:</strong> Simple and fast lookups via a <strong>key</strong> that is <strong>hashed</strong> into a value that points to matching database rows. Great for indexes hitting equality conditions.</li>
+<li><strong>B-tree Index:</strong> Auto-balancing data-structure, where the leaf nodes contain pointers to the data rows. Most common index, and is great for high sparsity data.</li>
+<li><strong>Bitmap Index:</strong> Index suited best for low sparsity data, and is represented by BIT Arrays, where each BIT represents if the row pointed to meets a condition. Very low space usage.</li>
+</ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap11_007.png"><img alt="B-Tree and Bitmap Index Comparison" src="images/chap11_007.png"/></a></p>
+<h3 id="optimizer-choices">Optimizer Choices<a class="headerlink" href="#optimizer-choices" title="Permanent link">¶</a></h3>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>SQL Parsing is performed by a query optimizer and decides which indexes to use, the order of table joins, how to perform those joins, and more.</p>
+</details>
+<h4 id="optimizer-algorithms">Optimizer Algorithms<a class="headerlink" href="#optimizer-algorithms" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Rule-based Optimizer:</strong> Decides how to execute a query by assigning fixed costs via preset rules (e.g. costs are based off of <strong>full-table-scans</strong>, PK/Index matches, etc.)</li>
+<li><strong>Cost-based Optimizer:</strong> Decides query execution through algorithmic analysis of statistics about various DB objects (e.g. num-rows, num-columns, I/O speed, RAM, etc.)</li>
+</ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap11_008.png"><img alt="Cost-based Optimizer Example" src="images/chap11_008.png"/></a></p>
+<h4 id="optimizer-hints">Optimizer Hints<a class="headerlink" href="#optimizer-hints" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Optimizer Hints:</strong> Are special instructions end-users can add to SQL queries to alter how the query optimizer decides to execute a query.</li>
+</ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap11_009.png"><img alt="Optimizer Hints" src="images/chap11_009.png"/></a></p>
+<h3 id="sql-performance-tuning">SQL Performance Tuning<a class="headerlink" href="#sql-performance-tuning" title="Permanent link">¶</a></h3>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Most current RDBMS already do a solid job of query optimization, but its still a good idea to help it out and limit the server-side processing. With that said, most techniques are RDBMS specific.</p>
+</details>
+<h4 id="index-selectivity">Index Selectivity<a class="headerlink" href="#index-selectivity" title="Permanent link">¶</a></h4>
+<ul>
+<li>Using indexes is the #1 step in performance optimization.</li>
+<li>Most useful for culling a small subset of rows from a large table.</li>
+<li>Too many indexes slow down INSERT, UPDATE, and DELETE operations.</li>
+<li>So when are they used?<ol>
+<li>When an <strong>Indexed</strong> column appears alone in <strong>WHERE</strong> or <strong>HAVING</strong> clause.</li>
+<li>When an <strong>Indexed</strong> column appears alone in <strong>GROUP BY</strong> or <strong>ORDER BY</strong> clause.</li>
+<li>When a <strong>MAX/MIN</strong> function wraps and <strong>Indexed</strong> column.</li>
+<li>When an <strong>Indexed</strong> column has <strong>high data sparsity</strong></li>
+</ol>
+</li>
+<li>So how do we increase the likelihood of index use (i.e. HIGH <strong>Index Selectivity</strong>)<ol>
+<li>Create indexes for each single attribute commonly used in a WHERE, HAVING, GROUP BY, or ORDER BY clause.</li>
+<li>Avoid indexes on <strong>small tables</strong> or tables with <strong>low data sparsity</strong>.</li>
+<li>Always declare PK and FK to coerce <strong>join</strong> operations to use <strong>Indexes</strong></li>
+<li>Create indexes on non-PK/FK columns commonly used in <strong>joins</strong></li>
+<li>When the RDBMS supports it (Oracle, SQL Server, DB2) use <strong>function-based indexes</strong> (i.e. indexes on derived types or types with functions in them) that are commonly used in reports.</li>
+</ol>
+</li>
+</ul>
+<h4 id="conditional-expressions">Conditional Expressions<a class="headerlink" href="#conditional-expressions" title="Permanent link">¶</a></h4>
+<ul>
+<li>Typically in the WHERE or HAVING clauses.</li>
+<li>So how can we format conditional expressions to help the query optimizer?<ol>
+<li>Use simple columns or literals as operands in a conditional expression.</li>
+<li>Numeric field comparisons are faster than character, date, and NULL comparisons.</li>
+<li>Equality comparisons are generally faster than inequality comparisons.</li>
+<li>Whenever possible, transform conditional expressions to use literals (i.e. remove/simplify Math or derived parts of query if possible)</li>
+<li>When using multiple conditional expressions, write the “=” conditions first.</li>
+<li>Short Circuit Logic Conditions:<ul>
+<li>If you use multiple AND conditions, write the condition most likely to be false first.</li>
+<li>When using multiple OR conditions, put the condition most likely to be true first.</li>
+</ul>
+</li>
+<li>Whenever possible, try to avoid the use of the NOT logical operator.</li>
+</ol>
+</li>
+</ul>
+<h3 id="query-formulation">Query Formulation<a class="headerlink" href="#query-formulation" title="Permanent link">¶</a></h3>
+<ul>
+<li>Step to Formulate our Queries<ol>
+<li>Identify columns and computations required<ul>
+<li>Simple expressions?</li>
+<li>Aggregate functions?</li>
+<li>Granularity? (i.e. should you use sub-queries and or views)</li>
+</ul>
+</li>
+<li>Identify Source Tables</li>
+<li>Determine PK/FK or other attribute table joins.</li>
+<li>Determine criteria<ul>
+<li>Simple WHERE?</li>
+<li>Compared to a list of values? (i.e. IN is needed)</li>
+<li>Nested comparisons?</li>
+<li>Grouped Data?</li>
+</ul>
+</li>
+<li>Determine order</li>
+</ol>
+</li>
+</ul>
+<h3 id="dbms-performance-tuning">DBMS Performance Tuning<a class="headerlink" href="#dbms-performance-tuning" title="Permanent link">¶</a></h3>
+<h4 id="server-side-tuning">Server Side Tuning<a class="headerlink" href="#server-side-tuning" title="Permanent link">¶</a></h4>
+<p>(See above for what’s stored in each Cache)</p>
+<ul>
+<li>Size the data cache appropriately</li>
+<li>Size the SQL Cache appropriately</li>
+<li>Size the sort/ordering cache</li>
+<li>Decide which Optimizer mode is best suited Rule or Cost.</li>
+<li>Store as much of DB in primary memory as possible to minimize I/O<ul>
+<li>Some DBs are fully <strong>In-Memory Databases</strong></li>
+</ul>
+</li>
+<li>Use I/O Accelerators<ul>
+<li>SSD drives</li>
+<li>RAID sets (Redundant Array of Independent Disks)</li>
+<li>Minimize Disk Contention<ul>
+<li>Put <strong>Sys-Tables</strong> on own volume</li>
+<li>Balance performance and usability by splitting up <strong>User Data Table Spaces</strong><ul>
+<li>Put high-usage tables on own volume.</li>
+</ul>
+</li>
+<li>Create unique <strong>Index Table Space</strong> per application or user group.<ul>
+<li>Put on own volumes if possible</li>
+</ul>
+</li>
+<li>Create unique <strong>Temporary Table Space</strong> per application or user group.<ul>
+<li>Put on own volumes if possible</li>
+</ul>
+</li>
+<li>Use Oracle <strong>Index-organized tables</strong> or SQL Server <strong>Clustered Index Tables</strong> to help organize table spaces.</li>
+<li>Use <strong>Table Partitioning</strong> by attribute if available.</li>
+</ul>
+</li>
+<li>Denormalize, but only when appropriate.</li>
+<li>Store derived columns in tables when appropriate.</li>
+</ul>
+</li>
+</ul>
 </article>
 </div>
 </div>
