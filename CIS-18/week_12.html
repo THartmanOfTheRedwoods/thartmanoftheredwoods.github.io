@@ -7,11 +7,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="oo_principles.html" rel="prev"/>
-<link href="week_4.html" rel="next"/>
+<link href="week_10.html" rel="prev"/>
+<link href="../CIS-12/week_1.html" rel="next"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Week 3 - Observer Design Pattern - THartmanOfTheRedwoods Wiki</title>
+<title>Week 12 - Iterator and Composite Design Patterns - THartmanOfTheRedwoods Wiki</title>
 <link href="../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#the-observer-design-pattern">
+<a class="md-skip" href="#the-iterator--composite-design-pattern">
           Skip to content
         </a>
 </div>
@@ -63,7 +63,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Week 3 - Observer Design Pattern
+              Week 12 - Iterator and Composite Design Patterns
             
           </span>
 </div>
@@ -614,95 +614,10 @@
         Key OO Principles
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Week 3 - Observer Design Pattern
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="week_3.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_3.html">
         Week 3 - Observer Design Pattern
       </a>
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Sub-Menu
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-observer-design-pattern">
-    The Observer Design Pattern
-  </a>
-<nav aria-label="The Observer Design Pattern" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#classification">
-    Classification
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pattern-definition">
-    Pattern Definition
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#representations">
-    Representations
-  </a>
-<nav aria-label="Representations" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph">
-    Mermaid Graph
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uml">
-    UML
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#usage">
-    Usage
-  </a>
-<nav aria-label="Usage" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#real-world-usages">
-    Real World Usages
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#application-to-my-real-world-application">
-    Application to my Real World Application
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#java-code-example">
-    Java Code Example
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
-    Main Take-Aways from the textbook
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-oo-principles-of-observer-pattern">
-    Main OO Principles of Observer Pattern
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="week_4.html">
@@ -734,10 +649,161 @@
         Week 10 - Template Method Design Pattern
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_12.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Week 12 - Iterator and Composite Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="week_12.html">
         Week 12 - Iterator and Composite Design Patterns
       </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-iterator--composite-design-pattern">
+    The Iterator &amp; Composite Design Pattern
+  </a>
+<nav aria-label="The Iterator &amp; Composite Design Pattern" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classification">
+    Classification
+  </a>
+<nav aria-label="Classification" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iterator-design-pattern">
+    Iterator Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-design-pattern">
+    Composite Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
+  </a>
+<nav aria-label="Pattern Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iterator-design-pattern_1">
+    Iterator Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-design-pattern_1">
+    Composite Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph-iterator-design-pattern">
+    Mermaid Graph Iterator Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph-composite-design-pattern">
+    Mermaid Graph Composite Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml-iterator-design-pattern">
+    UML Iterator Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml-composite-design-pattern">
+    UML Composite Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
+  </a>
+<nav aria-label="Real World Usages" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iterator">
+    Iterator
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite">
+    Composite
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+    Main Take-Aways from the textbook
+  </a>
+<nav aria-label="Main Take-Aways from the textbook" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iterator-design-pattern_2">
+    Iterator Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-design-pattern_2">
+    Composite Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-iterator--composite-pattern">
+    Main OO Principles of Iterator &amp; Composite Pattern
+  </a>
+<nav aria-label="Main OO Principles of Iterator &amp; Composite Pattern" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iterator-design-pattern_3">
+    Iterator Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-design-pattern_3">
+    Composite Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -810,20 +876,48 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-observer-design-pattern">
-    The Observer Design Pattern
+<a class="md-nav__link" href="#the-iterator--composite-design-pattern">
+    The Iterator &amp; Composite Design Pattern
   </a>
-<nav aria-label="The Observer Design Pattern" class="md-nav">
+<nav aria-label="The Iterator &amp; Composite Design Pattern" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#classification">
     Classification
   </a>
+<nav aria-label="Classification" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iterator-design-pattern">
+    Iterator Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-design-pattern">
+    Composite Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#pattern-definition">
     Pattern Definition
   </a>
+<nav aria-label="Pattern Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iterator-design-pattern_1">
+    Iterator Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-design-pattern_1">
+    Composite Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#representations">
@@ -832,36 +926,46 @@
 <nav aria-label="Representations" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph">
-    Mermaid Graph
+<a class="md-nav__link" href="#mermaid-graph-iterator-design-pattern">
+    Mermaid Graph Iterator Design Pattern
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#uml">
-    UML
+<a class="md-nav__link" href="#mermaid-graph-composite-design-pattern">
+    Mermaid Graph Composite Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml-iterator-design-pattern">
+    UML Iterator Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml-composite-design-pattern">
+    UML Composite Design Pattern
   </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#usage">
-    Usage
-  </a>
-<nav aria-label="Usage" class="md-nav">
-<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#real-world-usages">
     Real World Usages
   </a>
-</li>
+<nav aria-label="Real World Usages" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#application-to-my-real-world-application">
-    Application to my Real World Application
+<a class="md-nav__link" href="#iterator">
+    Iterator
   </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite">
+    Composite
+  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#java-code-example">
@@ -872,11 +976,39 @@
 <a class="md-nav__link" href="#main-take-aways-from-the-textbook">
     Main Take-Aways from the textbook
   </a>
+<nav aria-label="Main Take-Aways from the textbook" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iterator-design-pattern_2">
+    Iterator Design Pattern
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#main-oo-principles-of-observer-pattern">
-    Main OO Principles of Observer Pattern
+<a class="md-nav__link" href="#composite-design-pattern_2">
+    Composite Design Pattern
   </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-iterator--composite-pattern">
+    Main OO Principles of Iterator &amp; Composite Pattern
+  </a>
+<nav aria-label="Main OO Principles of Iterator &amp; Composite Pattern" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iterator-design-pattern_3">
+    Iterator Design Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-design-pattern_3">
+    Composite Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -888,19 +1020,30 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Week 3 - Observer Design Pattern</h1>
-<h2 id="the-observer-design-pattern">The Observer Design Pattern<a class="headerlink" href="#the-observer-design-pattern" title="Permanent link">¶</a></h2>
+<h1>Week 12 - Iterator and Composite Design Patterns</h1>
+<h2 id="the-iterator--composite-design-pattern">The Iterator &amp; Composite Design Pattern<a class="headerlink" href="#the-iterator--composite-design-pattern" title="Permanent link">¶</a></h2>
 <h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">¶</a></h3>
+<h4 id="iterator-design-pattern">Iterator Design Pattern<a class="headerlink" href="#iterator-design-pattern" title="Permanent link">¶</a></h4>
 <ul>
 <li>Behavioral Design Pattern</li>
 </ul>
-<h3 id="pattern-definition">Pattern Definition<a class="headerlink" href="#pattern-definition" title="Permanent link">¶</a></h3>
+<h4 id="composite-design-pattern">Composite Design Pattern<a class="headerlink" href="#composite-design-pattern" title="Permanent link">¶</a></h4>
 <ul>
-<li>Define a one-to-many dependency between object so that when one object changes state, all its dependents are notified and updated automatically.</li>
-<li>In the observer pattern, the objects that watch on the state of another object are called Observers and the object that is being watched is called the Subject.</li>
+<li>Structural Design Pattern</li>
+</ul>
+<h3 id="pattern-definition">Pattern Definition<a class="headerlink" href="#pattern-definition" title="Permanent link">¶</a></h3>
+<h4 id="iterator-design-pattern_1">Iterator Design Pattern<a class="headerlink" href="#iterator-design-pattern_1" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Hard Definition</strong>: Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.</li>
+<li><strong>Easy Definition</strong>: Traverses elements of a collection and removes that responsibility from the collection itself.</li>
+</ul>
+<h4 id="composite-design-pattern_1">Composite Design Pattern<a class="headerlink" href="#composite-design-pattern_1" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Hard Definition</strong>: Compose object into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.</li>
+<li><strong>Easy Definition</strong>: Represents data relationships in an upside-down tree (i.e. part-whole hierarchy)</li>
 </ul>
 <h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
-<h4 id="mermaid-graph">Mermaid Graph<a class="headerlink" href="#mermaid-graph" title="Permanent link">¶</a></h4>
+<h4 id="mermaid-graph-iterator-design-pattern">Mermaid Graph Iterator Design Pattern<a class="headerlink" href="#mermaid-graph-iterator-design-pattern" title="Permanent link">¶</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -925,90 +1068,133 @@
 <span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
-<span class="w">    </span><span class="n">Subject</span><span class="w"> </span><span class="o">&lt;|</span><span class="p">..</span><span class="w"> </span><span class="n">ConcreteSubject</span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
-<span class="w">    </span><span class="n">Observer</span><span class="w"> </span><span class="o">&lt;|</span><span class="p">..</span><span class="w"> </span><span class="n">ConcreteObserver</span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
-<span class="w">    </span><span class="n">ConcreteSubject</span><span class="w"> </span><span class="s">"0"</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="s">"*"</span><span class="w"> </span><span class="n">Observer</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Association</span>
-<span class="w">    </span><span class="n">ConcreteObserver</span><span class="w"> </span><span class="s">"0"</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="s">"*"</span><span class="w"> </span><span class="n">Subject</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Association</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">Observer</span><span class="p">{</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">Iterator</span><span class="w"> </span><span class="o">&lt;--</span><span class="w"> </span><span class="n">Client</span>
+<span class="w">    </span><span class="n">Iterator</span><span class="w"> </span><span class="o">&lt;|</span><span class="p">..</span><span class="w"> </span><span class="n">ConcreteIterator</span>
+<span class="w">    </span><span class="n">Aggregate</span><span class="w"> </span><span class="o">&lt;--</span><span class="w"> </span><span class="n">Client</span>
+<span class="w">    </span><span class="n">Aggregate</span><span class="w"> </span><span class="o">&lt;|</span><span class="p">..</span><span class="w"> </span><span class="n">ConcreteAggregate</span>
+<span class="w">    </span><span class="n">ConcreteIterator</span><span class="w"> </span><span class="o">&lt;--</span><span class="w"> </span><span class="n">ConcreteAggregate</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Client</span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Iterator</span><span class="p">{</span>
 <span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
-        <span class="err">+</span><span class="nc">update</span><span class="p">():</span><span class="w"> </span><span class="kt">void</span>
-<span class="w">        </span><span class="o">+</span><span class="n">setSubject</span><span class="p">(</span><span class="n">Subject</span><span class="p">):</span><span class="w"> </span><span class="kt">void</span>
+        <span class="err">+</span><span class="nc">hasNext</span><span class="p">()</span>
+<span class="w">        </span><span class="o">+</span><span class="n">next</span><span class="p">()</span>
+<span class="w">        </span><span class="o">+</span><span class="n">remove</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteObserver</span><span class="p">{</span>
-<span class="w">        </span><span class="o">+</span><span class="n">update</span><span class="p">():</span><span class="w"> </span><span class="kt">void</span>
-<span class="w">        </span><span class="o">+</span><span class="n">setSubject</span><span class="p">(</span><span class="n">Subject</span><span class="p">):</span><span class="w"> </span><span class="kt">void</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteIterator</span><span class="p">{</span>
+<span class="w">      </span><span class="o">+</span><span class="n">bool</span><span class="w"> </span><span class="n">is_wild</span>
+<span class="w">      </span><span class="o">+</span><span class="n">run</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">Subject</span><span class="p">{</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Aggregate</span><span class="p">{</span>
 <span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
-        <span class="err">+</span><span class="nc">registerObserver</span><span class="p">(</span><span class="n">Observer</span><span class="p">):</span><span class="kt">void</span>
-<span class="w">        </span><span class="o">+</span><span class="n">unregisterObserver</span><span class="p">(</span><span class="n">Observer</span><span class="p">):</span><span class="kt">void</span>
-<span class="w">        </span><span class="o">+</span><span class="n">notifyObservers</span><span class="p">():</span><span class="kt">void</span>
-<span class="w">        </span><span class="o">+</span><span class="n">getState</span><span class="p">():</span><span class="n">Object</span>
-<span class="w">        </span><span class="o">+</span><span class="n">setState</span><span class="p">(</span><span class="n">Object</span><span class="p">):</span><span class="kt">void</span>
+        <span class="err">+</span><span class="nc">createIterator</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteSubject</span><span class="p">{</span>
-<span class="w">        </span><span class="o">+</span><span class="n">registerObserver</span><span class="p">(</span><span class="n">Observer</span><span class="p">):</span><span class="kt">void</span>
-<span class="w">        </span><span class="o">+</span><span class="n">unregisterObserver</span><span class="p">(</span><span class="n">Observer</span><span class="p">):</span><span class="kt">void</span>
-<span class="w">        </span><span class="o">+</span><span class="n">notifyObservers</span><span class="p">():</span><span class="kt">void</span>
-<span class="w">        </span><span class="o">+</span><span class="n">getState</span><span class="p">():</span><span class="n">Object</span>
-<span class="w">        </span><span class="o">+</span><span class="n">setState</span><span class="p">(</span><span class="n">Object</span><span class="p">):</span><span class="kt">void</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteAggregate</span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">createIterator</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h4>
-<object data="images/observer_uml.svg" height="800" width="700"> </object>
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h3>
+<h4 id="mermaid-graph-composite-design-pattern">Mermaid Graph Composite Design Pattern<a class="headerlink" href="#mermaid-graph-composite-design-pattern" title="Permanent link">¶</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">Component</span><span class="w"> </span><span class="o">&lt;--</span><span class="w"> </span><span class="n">Client</span>
+<span class="w">    </span><span class="n">Component</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Leaf</span>
+<span class="w">    </span><span class="n">Component</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Composite</span>
+<span class="w">    </span><span class="n">Composite</span><span class="w"> </span><span class="o">*--</span><span class="w"> </span><span class="n">Component</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Client</span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Component</span><span class="p">{</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">abstract</span><span class="o">&gt;&gt;</span>
+<span class="w">        </span><span class="o">+</span><span class="n">operation</span><span class="p">()</span>
+<span class="w">        </span><span class="o">+</span><span class="n">add</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">remove</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">getChild</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Leaf</span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">operation</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Composite</span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">operation</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">"for(Component c : children) c.operation"</span>
+<span class="w">        </span><span class="o">+</span><span class="n">add</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">remove</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">getChild</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="uml-iterator-design-pattern">UML Iterator Design Pattern<a class="headerlink" href="#uml-iterator-design-pattern" title="Permanent link">¶</a></h4>
+<object data="images/iterator_uml.svg" height="700" width="700"> </object>
+<h4 id="uml-composite-design-pattern">UML Composite Design Pattern<a class="headerlink" href="#uml-composite-design-pattern" title="Permanent link">¶</a></h4>
+<object data="images/composite_uml.svg" height="700" width="700"> </object>
+<h3 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">¶</a></h3>
+<h4 id="iterator">Iterator<a class="headerlink" href="#iterator" title="Permanent link">¶</a></h4>
 <ul>
-<li>Useful when you are interested in the state of an object and want to get notified whenever there is any change.</li>
+<li>Of course the Java Collections framework!!!</li>
+<li>Scanner class!!! &lt;- WHAT!?! Wow, that makes sense!</li>
 </ul>
-<h4 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">¶</a></h4>
+<h3 id="composite">Composite<a class="headerlink" href="#composite" title="Permanent link">¶</a></h3>
 <ul>
-<li>Model-View-Controller (MVC) frameworks use Observer: Model is the Subject and Views are Observers that can register to get notified of any change to the model. </li>
-<li>Java Message Service (JMS) uses Observer+Mediator: To allow applications to subscribe and publish data to other applications.</li>
-<li>Javascript Events use Observer: inputs as Subjects with functions as Listeners.</li>
-<li>Many GUI libraries including Swing and JavaFX use Observer: Components are the Subject allowing add/remove listeners, which are the Observers.</li>
+<li>Document Object Model! Yes, the DOM of most documents and browsers use this design pattern!<ul>
+<li>HTML Elements are the leaf components!</li>
+<li>Document is like a Composite component! </li>
 </ul>
-<h4 id="application-to-my-real-world-application">Application to my Real World Application<a class="headerlink" href="#application-to-my-real-world-application" title="Permanent link">¶</a></h4>
-<ul>
-<li>Application: ETL Pipeline</li>
-<li>Pattern Application: Observe the progress if the Payload through the Stages of a Pipeline</li>
-<li>Breakdown: Subject is the Pipeline that will notify Progress observers at the begining or ending of each stage. Progress observers will be notified of the input or output at each stage and be able to: Report statistical progress, Trigger other pipelines with observed output at a particular stage, thus allowing for threaded Pipeline runs.</li>
+</li>
 </ul>
 <h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">¶</a></h3>
-<p><a href="observer_java.html">Observer Design Pattern</a></p>
+<ul>
+<li><a href="iterator_java.html">Iterator Design Pattern</a></li>
+<li><a href="composite_java.html">Composite Design Pattern</a></li>
+</ul>
 <h3 id="main-take-aways-from-the-textbook">Main Take-Aways from the textbook<a class="headerlink" href="#main-take-aways-from-the-textbook" title="Permanent link">¶</a></h3>
+<h4 id="iterator-design-pattern_2">Iterator Design Pattern<a class="headerlink" href="#iterator-design-pattern_2" title="Permanent link">¶</a></h4>
 <ul>
-<li>The Observer Pattern defines a one-to-many relationship between objects.</li>
-<li>Subjects update Observers using a common interface.</li>
-<li>Observers of any concrete type can participate in the pattern as long as they implement the Observer interface.</li>
-<li>Observers are <strong>loosely coupled</strong> in that the <strong>Subject knows nothing about them</strong>, other than that they implement the Observer interface.</li>
-<li>You can push or pull data from the Subject when using the pattern (pull is considered more “correct”).</li>
-<li>The Observer Pattern is related to the Publish/Subscribe Pattern, which is for more complex situations with multiple Subjects and/or multiple message types.</li>
-<li>The Observer Pattern is a commonly used pattern, and we’ll see it again when we learn about Model-View-Controller.</li>
+<li>An Iterator allows access to an aggregate’s elements without exposing its internal structure.</li>
+<li>An Iterator takes the job of iterating over an aggregate and encapsulates it in another object.</li>
+<li>When using an Iterator, we relieve the aggregate of the responsibility of supporting operations for traversing its data.</li>
+<li>An Iterator provides a common interface for traversing the items of an aggregate, allowing you to use <strong><a href="week_2.html#polymorphism">polymorphism</a></strong> when writing code that makes use of the items of the aggregate.</li>
+<li>The Iterable interface provides a means of getting an iterator and enables Java’s enhanced for loop. <strong>Java Collections</strong> inherit from <strong>Iterable</strong> and most Java data-structures implement the <strong>Collection interface</strong></li>
 </ul>
-<h3 id="main-oo-principles-of-observer-pattern">Main OO Principles of Observer Pattern<a class="headerlink" href="#main-oo-principles-of-observer-pattern" title="Permanent link">¶</a></h3>
+<h4 id="composite-design-pattern_2">Composite Design Pattern<a class="headerlink" href="#composite-design-pattern_2" title="Permanent link">¶</a></h4>
 <ul>
-<li><a href="oo_principles.html#strive-for-loosely-coupled-designs-between-objects-that-interact">Strive for loosely coupled designs</a><ul>
-<li>Subject knows very little about observers relying on its data.</li>
+<li>We should strive to assign only one responsibility to each class.</li>
+<li>The Composite Pattern allows clients to treat composites and individual objects uniformly.</li>
+<li>A Component is any object in a Composite structure. Components may be other composites or leaves.</li>
+<li>There are many design trade-offs in implementing Composite. You need to balance transparency and safety with your needs.</li>
 </ul>
-</li>
-<li><a href="oo_principles.html#encapsulate-what-varies">Encapsulate what Varies</a><ul>
-<li>The state of the Subject and number/type of Observers vary, and both are encapsulated in separate classes.</li>
-<li>We can add Observers dependent on the Subject without having to change the subject.</li>
+<h3 id="main-oo-principles-of-iterator--composite-pattern">Main OO Principles of Iterator &amp; Composite Pattern<a class="headerlink" href="#main-oo-principles-of-iterator--composite-pattern" title="Permanent link">¶</a></h3>
+<h4 id="iterator-design-pattern_3">Iterator Design Pattern<a class="headerlink" href="#iterator-design-pattern_3" title="Permanent link">¶</a></h4>
+<ul>
+<li><a href="oo_principles.html#program-to-interfaces-not-implementations">Programs to the Interface, not the implementation.</a> Client only needs to know that it has a Collection and can get an Iterator.</li>
+<li><a href="oo_principles.html#encapsulate-what-varies">Encapsulates what varies</a> by encapsulating the iteration itself.</li>
+<li><a href="oo_principles.html#strive-for-loosely-coupled-designs-between-objects-that-interact">Loosely Coupled design</a> since it decouples the client from the implementation of the collection.</li>
+<li><a href="oo_principles.html#single-responsibility">Single Responsibility</a>. The collection has only one reason to change because it doesn’t have to support iteration internally, it just manages the collection.</li>
+<li><a href="week_2.html#polymorphism">Polymorphism</a>! Client iterates over different collections as if they are the same even though the underlying iteration implementations are significantly different.</li>
+<li><a href="oo_principles.html#open-closed-principle">Open Closed Principle</a> because the iterator allows the Collection code to be closed to modification, but open to adding iteration.</li>
 </ul>
-</li>
-<li><a href="oo_principles.html#program-to-interfaces-not-implementations">Program to an Interface not an Implementation</a><ul>
-<li>Both Subject and Observer use interfaces allowing both to keep generic references in our concrete implementations. This lends to loose coupling.</li>
-</ul>
-</li>
-<li><a href="oo_principles.html#favor-composition-over-inheritance">Favor composition over inheritance</a><ul>
-<li>The Subject maintains a <strong>List<observers></observers></strong>, which is composition, and the Observers maintain a reference to the Subject, which is also composition. No inheritance hierarchy exists.</li>
-</ul>
-</li>
+<h4 id="composite-design-pattern_3">Composite Design Pattern<a class="headerlink" href="#composite-design-pattern_3" title="Permanent link">¶</a></h4>
+<ul>
+<li><a href="oo_principles.html#strive-for-loosely-coupled-designs-between-objects-that-interact">Loosely Coupled design</a> since it decouples the client from both the leaf and composite structure and provides a uniform way to traverse and access both.</li>
+<li><a href="oo_principles.html#program-to-interfaces-not-implementations">Programs to the Interface, not the implementation.</a> Both the Leaf and Composite structures inherit or implement the common abstract class or interface.</li>
+<li><a href="oo_principles.html#favor-composition-over-inheritance">Favors Composition Over Inheritance</a> because the <strong>Composite</strong> is literally composed of other <strong>Components</strong> to accomplish the uniform treatment of hierarchy elements.</li>
 </ul>
 </article>
 </div>
