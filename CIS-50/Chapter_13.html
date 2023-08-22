@@ -1,1136 +1,3191 @@
 
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional.">
+      
+      
+        <meta name="author" content="Trevor Hartman">
+      
+      
+      
+        <link rel="prev" href="Chapter_11.html">
+      
+      
+        <link rel="next" href="Chapter_14.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
+    
+    
+      
+        <title>Business Intelligence and Data Warehouses - THartmanOfTheRedwoods Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
 
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
-<meta content="Trevor Hartman" name="author"/>
-<link href="Chapter_11.html" rel="prev"/>
-<link href="Chapter_14.html" rel="next"/>
-<link href="../assets/images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Business Intelligence and Data Warehouses - THartmanOfTheRedwoods Wiki</title>
-<link href="../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
-<link href="../css/mode.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-            html.glightbox-open { overflow: initial; height: 100%; }
-            .gslide-title { margin-top: 0px; user-select: text; }
-            .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: white; }
-            
-                .gscrollbar-fixer { padding-right: 15px; }
-                .gdesc-inner { font-size: 0.75rem; }
-                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="red" data-md-color-primary="red" data-md-color-scheme="slate" dir="ltr">
-<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#business-intelligence-and-data-warehouses">
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/mode.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#business-intelligence-and-data-warehouses" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
-<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
-</div>
-<header class="md-header md-header--lifted" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             THartmanOfTheRedwoods Wiki
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Business Intelligence and Data Warehouses
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="red" data-md-color-media="" data-md-color-primary="red" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
-</label>
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
-</label>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
 </form>
-<label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-</label>
-<div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="__search"></label>
-<div class="md-search__inner" role="search">
-<form class="md-search__form" name="search">
-<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
-<label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</label>
-<nav aria-label="Search" class="md-search__options">
-<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
-</a>
-<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
-</button>
-</nav>
-<div class="md-search__suggest" data-md-component="search-suggest"></div>
-</form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../android/getapk.html" class="md-tabs__link">
+          
+  
+    
+  
+  Android
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../git/gitflow.html" class="md-tabs__link">
+          
+  
+    
+  
+  Git
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../java/format_specifiers.html" class="md-tabs__link">
+          
+  
+    
+  
+  Java
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../markdown-cheat-sheet.html" class="md-tabs__link">
+        
+  
+    
+  
+  Markdown
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tomcat/install.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tomcat
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tux/os_command_map.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../vim/cheat-sheet.html" class="md-tabs__link">
+          
+  
+    
+  
+  Vim
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../virtualbox/win11install.html" class="md-tabs__link">
+          
+  
+    
+  
+  VirtualBox
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../windows/os_command_map.html" class="md-tabs__link">
+          
+  
+    
+  
+  Windows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../hardware/cables.html" class="md-tabs__link">
+          
+  
+    
+  
+  Hardware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../archive.html" class="md-tabs__link">
+          
+  
+    
+  
+  Class Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../index.html">
-      Home
-    </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../android/getapk.html">
-        Android
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../git/gitflow.html">
-        Git
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../java/format_specifiers.html">
-        Java
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../markdown-cheat-sheet.html">
-      Markdown
-    </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../tomcat/install.html">
-        Tomcat
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../tux/os_command_map.html">
-        Tux
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../vim/cheat-sheet.html">
-        Vim
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../virtualbox/win11install.html">
-        VirtualBox
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../windows/os_command_map.html">
-        Windows
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../hardware/cables.html">
-        Hardware
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../archive.html">
-        Class Notes
-      </a>
-</li>
-</ul>
-</div>
-</nav>
+    
+  
 </header>
-<div class="md-container" data-md-component="container">
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
-</a>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
+
+    </a>
     THartmanOfTheRedwoods Wiki
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../index.html">
-        Home
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          Android
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Android
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Android
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android/getapk.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    APK Extract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/gitflow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/format_specifiers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Format Specifiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/loop_usage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loop Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/operators.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/associativity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operator Precedence &amp; Associativity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown-cheat-sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tomcat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tomcat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tomcat/install.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Tux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/os_command_map.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command Cheat-sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/imagemagick.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImageMagick
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/pandoc.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pandoc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/parallel.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/ssh.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/tesseract.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tesseract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vim
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Vim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vim/cheat-sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheatsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VirtualBox
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            VirtualBox
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtualbox/win11install.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Windows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/os_command_map.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command Cheat-sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Network
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Network
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/arp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/nbtstat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nbtstat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/netstat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Netstat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/ping.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/ipconfig.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ipconfig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/net.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Net
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/nslookup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nslookup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/tracert.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tracert
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hardware
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/cables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Class Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Class Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fun.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fun
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3" checked>
+        
+          <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CIS-50
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12_3">
+            <span class="md-nav__icon md-icon"></span>
+            CIS-50
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Relational Database Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="joins_ns.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Joins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entity Relationship Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_5.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Data Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_6.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Normalization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_7.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Structured Query Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cheatsheets.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL Cheat-sheets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_11.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Performance Tuning and Query Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Business Intelligence and Data Warehouses
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
-          Android
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../android/getapk.html">
-        APK Extract
+      
+      <a href="Chapter_13.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Business Intelligence and Data Warehouses
+  </span>
+  
+
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          Git
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
-          Git
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../git/gitflow.html">
-        Workflows
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          Java
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-          Java
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java/format_specifiers.html">
-        Format Specifiers
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java/loop_usage.html">
-        Loop Usage
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java/operators.html">
-        Operators
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java/associativity.html">
-        Operator Precedence &amp; Associativity
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../markdown-cheat-sheet.html">
-        Markdown
-      </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-          Tomcat
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
-          Tomcat
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tomcat/install.html">
-        Install
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-          Tux
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_7">
-<span class="md-nav__icon md-icon"></span>
-          Tux
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/os_command_map.html">
-        Command Cheat-sheet
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/imagemagick.html">
-        ImageMagick
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/pandoc.html">
-        Pandoc
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/parallel.html">
-        Parallel
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/ssh.html">
-        SSH
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/tesseract.html">
-        Tesseract
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-          Vim
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_8">
-<span class="md-nav__icon md-icon"></span>
-          Vim
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../vim/cheat-sheet.html">
-        Cheatsheet
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-          VirtualBox
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_9">
-<span class="md-nav__icon md-icon"></span>
-          VirtualBox
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../virtualbox/win11install.html">
-        Install
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-          Windows
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_10_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_10">
-<span class="md-nav__icon md-icon"></span>
-          Windows
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/os_command_map.html">
-        Command Cheat-sheet
-      </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_10_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
-          Network
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_10_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_10_2">
-<span class="md-nav__icon md-icon"></span>
-          Network
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/arp.html">
-        Arp
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/nbtstat.html">
-        Nbtstat
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/netstat.html">
-        Netstat
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/ping.html">
-        Ping
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/ipconfig.html">
-        Ipconfig
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/net.html">
-        Net
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/nslookup.html">
-        Nslookup
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/tracert.html">
-        Tracert
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
-          Hardware
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_11">
-<span class="md-nav__icon md-icon"></span>
-          Hardware
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../hardware/cables.html">
-        Cables
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
-          Class Notes
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_12_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_12">
-<span class="md-nav__icon md-icon"></span>
-          Class Notes
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../archive.html">
-        Index
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../fun.html">
-        Fun
-      </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_12_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
-          CIS-50
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_12_3_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_12_3">
-<span class="md-nav__icon md-icon"></span>
-          CIS-50
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_1.html">
-        Database Systems
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_2.html">
-        Data Models
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_3.html">
-        The Relational Database Model
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="joins_ns.html">
-        Joins
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_4.html">
-        Entity Relationship Modeling
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_5.html">
-        Advanced Data Modeling
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_6.html">
-        Normalization
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_7.html">
-        Structured Query Language
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="cheatsheets.html">
-        SQL Cheat-sheets
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_9.html">
-        Database Design
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_11.html">
-        Database Performance Tuning and Query Optimization
-      </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Business Intelligence and Data Warehouses
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="Chapter_13.html">
-        Business Intelligence and Data Warehouses
-      </a>
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
       Sub-Menu
     </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#business-intelligence-and-data-warehouses">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#business-intelligence-and-data-warehouses" class="md-nav__link">
     Business Intelligence and Data Warehouses
   </a>
-<nav aria-label="Business Intelligence and Data Warehouses" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#objectives">
+  
+    <nav class="md-nav" aria-label="Business Intelligence and Data Warehouses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
     Objectives
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#need-for-data-analysis">
+        
+          <li class="md-nav__item">
+  <a href="#need-for-data-analysis" class="md-nav__link">
     Need for Data Analysis
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#business-intelligence">
+        
+          <li class="md-nav__item">
+  <a href="#business-intelligence" class="md-nav__link">
     Business Intelligence
   </a>
-<nav aria-label="Business Intelligence" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bi-architecture">
+  
+    <nav class="md-nav" aria-label="Business Intelligence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bi-architecture" class="md-nav__link">
     BI Architecture
   </a>
-<nav aria-label="BI Architecture" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#practices-to-manage-data">
+  
+    <nav class="md-nav" aria-label="BI Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practices-to-manage-data" class="md-nav__link">
     Practices to Manage Data
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bi-benefits">
+        
+          <li class="md-nav__item">
+  <a href="#bi-benefits" class="md-nav__link">
     BI Benefits
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bi-evolution">
+        
+          <li class="md-nav__item">
+  <a href="#bi-evolution" class="md-nav__link">
     BI Evolution
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bi-technology-trends">
+        
+          <li class="md-nav__item">
+  <a href="#bi-technology-trends" class="md-nav__link">
     BI Technology Trends
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#decision-support-data-vs-operational-data">
+        
+          <li class="md-nav__item">
+  <a href="#decision-support-data-vs-operational-data" class="md-nav__link">
     Decision Support Data VS Operational Data
   </a>
-<nav aria-label="Decision Support Data VS Operational Data" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dss-db-requirements">
+  
+    <nav class="md-nav" aria-label="Decision Support Data VS Operational Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dss-db-requirements" class="md-nav__link">
     DSS DB Requirements
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#data-warehouse">
+        
+          <li class="md-nav__item">
+  <a href="#data-warehouse" class="md-nav__link">
     Data Warehouse
   </a>
-<nav aria-label="Data Warehouse" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#12-data-warehouse-rules">
+  
+    <nav class="md-nav" aria-label="Data Warehouse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12-data-warehouse-rules" class="md-nav__link">
     12 Data Warehouse Rules
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#data-mart">
+        
+          <li class="md-nav__item">
+  <a href="#data-mart" class="md-nav__link">
     Data Mart
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#star-schemas">
+        
+          <li class="md-nav__item">
+  <a href="#star-schemas" class="md-nav__link">
     Star Schemas
   </a>
-<nav aria-label="Star Schemas" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#basic-star-schema-components">
+  
+    <nav class="md-nav" aria-label="Star Schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-star-schema-components" class="md-nav__link">
     Basic Star Schema Components
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#star-schema-representation">
+        
+          <li class="md-nav__item">
+  <a href="#star-schema-representation" class="md-nav__link">
     Star Schema Representation
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fact-and-dimension-tables">
+        
+          <li class="md-nav__item">
+  <a href="#fact-and-dimension-tables" class="md-nav__link">
     Fact and Dimension Tables
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#performance-improving-techniques-for-the-star-schema">
+        
+          <li class="md-nav__item">
+  <a href="#performance-improving-techniques-for-the-star-schema" class="md-nav__link">
     Performance Improving Techniques for the Star Schema
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#online-analytical-processing-olap">
+        
+          <li class="md-nav__item">
+  <a href="#online-analytical-processing-olap" class="md-nav__link">
     Online Analytical Processing (OLAP)
   </a>
-<nav aria-label="Online Analytical Processing (OLAP)" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#multidimensional-data-analysis-techniques">
+  
+    <nav class="md-nav" aria-label="Online Analytical Processing (OLAP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multidimensional-data-analysis-techniques" class="md-nav__link">
     Multidimensional Data Analysis Techniques
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#advanced-database-support">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-database-support" class="md-nav__link">
     Advanced Database Support
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#easy-to-use-end-user-interface">
+        
+          <li class="md-nav__item">
+  <a href="#easy-to-use-end-user-interface" class="md-nav__link">
     Easy-to-Use End-User Interface
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#relational-olap">
+        
+          <li class="md-nav__item">
+  <a href="#relational-olap" class="md-nav__link">
     Relational OLAP
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#multidimensional-olap">
+        
+          <li class="md-nav__item">
+  <a href="#multidimensional-olap" class="md-nav__link">
     Multidimensional OLAP
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#comparison-of-rolap-vs-molap">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-of-rolap-vs-molap" class="md-nav__link">
     Comparison of ROLAP vs MOLAP
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#data-analytics">
+        
+          <li class="md-nav__item">
+  <a href="#data-analytics" class="md-nav__link">
     Data Analytics
   </a>
-<nav aria-label="Data Analytics" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sql-analytic-functions">
+  
+    <nav class="md-nav" aria-label="Data Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-analytic-functions" class="md-nav__link">
     SQL Analytic Functions
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#data-visualization">
+        
+          <li class="md-nav__item">
+  <a href="#data-visualization" class="md-nav__link">
     Data Visualization
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_14.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Big Data and NoSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_15.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Connectivity and Web Technologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_4" >
+        
+          <label class="md-nav__link" for="__nav_12_4" id="__nav_12_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CIS-18
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_4">
+            <span class="md-nav__icon md-icon"></span>
+            CIS-18
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 1 - Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/sprint.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/user_story_intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Story Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/user_story_lesson.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Story Lesson
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 2 - Fundamental OOP Principles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/oo_principles.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Key OO Principles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 3 - Observer Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 4 - Decorator Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_5.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 5 - Factory Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_7.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 7 - Singleton Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_8.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 8 - Command Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 9 - Adapter & Facade Design Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 10 - Template Method Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_12.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 12 - Iterator and Composite Design Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_13.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 13 - State Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_14.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 14 - Proxy Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_15.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 15 - Compound Design Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_5" >
+        
+          <label class="md-nav__link" for="__nav_12_5" id="__nav_12_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CIS-12
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_5">
+            <span class="md-nav__icon md-icon"></span>
+            CIS-12
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 1 - Introduction to Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_1_lecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 1L - Lecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 2 - Variables and Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 4 - Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_6.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 6 - Conditions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_7.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 7 - Methods Take 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 10 - Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_12.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 12 - Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_14.html">
-        Big Data and NoSQL
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Chapter_15.html">
-        Database Connectivity and Web Technologies
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_12_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_12_4" id="__nav_12_4_label" tabindex="0">
-          CIS-18
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_12_4_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_12_4">
-<span class="md-nav__icon md-icon"></span>
-          CIS-18
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_1.html">
-        Week 1 - Review
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/sprint.html">
-        Sprint Planning
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/user_story_intro.html">
-        User Story Intro
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/user_story_lesson.html">
-        User Story Lesson
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_2.html">
-        Week 2 - Fundamental OOP Principles
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/oo_principles.html">
-        Key OO Principles
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_3.html">
-        Week 3 - Observer Design Pattern
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_4.html">
-        Week 4 - Decorator Design Pattern
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_5.html">
-        Week 5 - Factory Design Pattern
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_7.html">
-        Week 7 - Singleton Design Pattern
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_8.html">
-        Week 8 - Command Design Pattern
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_9.html">
-        Week 9 - Adapter &amp; Facade Design Patterns
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_10.html">
-        Week 10 - Template Method Design Pattern
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_12.html">
-        Week 12 - Iterator and Composite Design Patterns
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_13.html">
-        Week 13 - State Design Pattern
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_14.html">
-        Week 14 - Proxy Design Pattern
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-18/week_15.html">
-        Week 15 - Compound Design Patterns
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_12_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_12_5" id="__nav_12_5_label" tabindex="0">
-          CIS-12
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_12_5_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_12_5">
-<span class="md-nav__icon md-icon"></span>
-          CIS-12
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_1.html">
-        Week 1 - Introduction to Programming
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_2.html">
-        Week 2 - Variables and Operators
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_4.html">
-        Week 4 - Methods
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_6.html">
-        Week 6 - Conditions
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_7.html">
-        Week 7 - Methods Take 2
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_10.html">
-        Week 10 - Arrays
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_12.html">
-        Week 12 - Objects
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
       Sub-Menu
     </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#business-intelligence-and-data-warehouses">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#business-intelligence-and-data-warehouses" class="md-nav__link">
     Business Intelligence and Data Warehouses
   </a>
-<nav aria-label="Business Intelligence and Data Warehouses" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#objectives">
+  
+    <nav class="md-nav" aria-label="Business Intelligence and Data Warehouses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
     Objectives
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#need-for-data-analysis">
+        
+          <li class="md-nav__item">
+  <a href="#need-for-data-analysis" class="md-nav__link">
     Need for Data Analysis
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#business-intelligence">
+        
+          <li class="md-nav__item">
+  <a href="#business-intelligence" class="md-nav__link">
     Business Intelligence
   </a>
-<nav aria-label="Business Intelligence" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bi-architecture">
+  
+    <nav class="md-nav" aria-label="Business Intelligence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bi-architecture" class="md-nav__link">
     BI Architecture
   </a>
-<nav aria-label="BI Architecture" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#practices-to-manage-data">
+  
+    <nav class="md-nav" aria-label="BI Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practices-to-manage-data" class="md-nav__link">
     Practices to Manage Data
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bi-benefits">
+        
+          <li class="md-nav__item">
+  <a href="#bi-benefits" class="md-nav__link">
     BI Benefits
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bi-evolution">
+        
+          <li class="md-nav__item">
+  <a href="#bi-evolution" class="md-nav__link">
     BI Evolution
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bi-technology-trends">
+        
+          <li class="md-nav__item">
+  <a href="#bi-technology-trends" class="md-nav__link">
     BI Technology Trends
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#decision-support-data-vs-operational-data">
+        
+          <li class="md-nav__item">
+  <a href="#decision-support-data-vs-operational-data" class="md-nav__link">
     Decision Support Data VS Operational Data
   </a>
-<nav aria-label="Decision Support Data VS Operational Data" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dss-db-requirements">
+  
+    <nav class="md-nav" aria-label="Decision Support Data VS Operational Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dss-db-requirements" class="md-nav__link">
     DSS DB Requirements
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#data-warehouse">
+        
+          <li class="md-nav__item">
+  <a href="#data-warehouse" class="md-nav__link">
     Data Warehouse
   </a>
-<nav aria-label="Data Warehouse" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#12-data-warehouse-rules">
+  
+    <nav class="md-nav" aria-label="Data Warehouse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12-data-warehouse-rules" class="md-nav__link">
     12 Data Warehouse Rules
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#data-mart">
+        
+          <li class="md-nav__item">
+  <a href="#data-mart" class="md-nav__link">
     Data Mart
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#star-schemas">
+        
+          <li class="md-nav__item">
+  <a href="#star-schemas" class="md-nav__link">
     Star Schemas
   </a>
-<nav aria-label="Star Schemas" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#basic-star-schema-components">
+  
+    <nav class="md-nav" aria-label="Star Schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-star-schema-components" class="md-nav__link">
     Basic Star Schema Components
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#star-schema-representation">
+        
+          <li class="md-nav__item">
+  <a href="#star-schema-representation" class="md-nav__link">
     Star Schema Representation
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fact-and-dimension-tables">
+        
+          <li class="md-nav__item">
+  <a href="#fact-and-dimension-tables" class="md-nav__link">
     Fact and Dimension Tables
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#performance-improving-techniques-for-the-star-schema">
+        
+          <li class="md-nav__item">
+  <a href="#performance-improving-techniques-for-the-star-schema" class="md-nav__link">
     Performance Improving Techniques for the Star Schema
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#online-analytical-processing-olap">
+        
+          <li class="md-nav__item">
+  <a href="#online-analytical-processing-olap" class="md-nav__link">
     Online Analytical Processing (OLAP)
   </a>
-<nav aria-label="Online Analytical Processing (OLAP)" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#multidimensional-data-analysis-techniques">
+  
+    <nav class="md-nav" aria-label="Online Analytical Processing (OLAP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multidimensional-data-analysis-techniques" class="md-nav__link">
     Multidimensional Data Analysis Techniques
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#advanced-database-support">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-database-support" class="md-nav__link">
     Advanced Database Support
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#easy-to-use-end-user-interface">
+        
+          <li class="md-nav__item">
+  <a href="#easy-to-use-end-user-interface" class="md-nav__link">
     Easy-to-Use End-User Interface
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#relational-olap">
+        
+          <li class="md-nav__item">
+  <a href="#relational-olap" class="md-nav__link">
     Relational OLAP
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#multidimensional-olap">
+        
+          <li class="md-nav__item">
+  <a href="#multidimensional-olap" class="md-nav__link">
     Multidimensional OLAP
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#comparison-of-rolap-vs-molap">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-of-rolap-vs-molap" class="md-nav__link">
     Comparison of ROLAP vs MOLAP
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#data-analytics">
+        
+          <li class="md-nav__item">
+  <a href="#data-analytics" class="md-nav__link">
     Data Analytics
   </a>
-<nav aria-label="Data Analytics" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sql-analytic-functions">
+  
+    <nav class="md-nav" aria-label="Data Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-analytic-functions" class="md-nav__link">
     SQL Analytic Functions
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#data-visualization">
+        
+          <li class="md-nav__item">
+  <a href="#data-visualization" class="md-nav__link">
     Data Visualization
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-</ul>
+      
+    </ul>
+  
 </nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>Business Intelligence and Data Warehouses</h1>
-<h2 id="business-intelligence-and-data-warehouses">Business Intelligence and Data Warehouses<a class="headerlink" href="#business-intelligence-and-data-warehouses" title="Permanent link">¶</a></h2>
-<h3 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">¶</a></h3>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Business Intelligence and Data Warehouses</h1>
+
+<h2 id="business-intelligence-and-data-warehouses">Business Intelligence and Data Warehouses<a class="headerlink" href="#business-intelligence-and-data-warehouses" title="Permanent link">&para;</a></h2>
+<h3 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Describe the role of business intelligence in providing comprehensive business decision support</li>
 <li>Describe the architecture, reporting styles, evolution, and benefits of business intelligence</li>
@@ -1142,7 +3197,7 @@
 <li>Explain how SQL analytic functions are used to support data analytics</li>
 <li>Define data visualization and explain how it supports business intelligence</li>
 </ul>
-<h3 id="need-for-data-analysis">Need for Data Analysis<a class="headerlink" href="#need-for-data-analysis" title="Permanent link">¶</a></h3>
+<h3 id="need-for-data-analysis">Need for Data Analysis<a class="headerlink" href="#need-for-data-analysis" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Organizations tend to grow and prosper as they gain a better understanding of their environment<ul>
 <li>Evaluate through tracking daily transactions and analyzing company data</li>
@@ -1157,7 +3212,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="business-intelligence">Business Intelligence<a class="headerlink" href="#business-intelligence" title="Permanent link">¶</a></h3>
+<h3 id="business-intelligence">Business Intelligence<a class="headerlink" href="#business-intelligence" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Comprehensive, cohesive, integrated set of tools and processes<ul>
 <li>Captures, collects, integrates, stores, and analyzes data</li>
@@ -1184,8 +3239,8 @@
 </ul>
 </li>
 </ul>
-<h4 id="bi-architecture">BI Architecture<a class="headerlink" href="#bi-architecture" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap13_001.png"><img alt="Business Intelligence Architecture" src="images/chap13_001.png"/></a></p>
+<h4 id="bi-architecture">BI Architecture<a class="headerlink" href="#bi-architecture" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" href="images/chap13_001.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Business Intelligence Architecture" src="images/chap13_001.png" /></a></p>
 <ul>
 <li><strong>ETL tools</strong>: Data extraction, transformation, and loading (ETL ) tools collect, filter, integrate, and aggregate internal and external data to be saved into a data store optimized for decision support.</li>
 <li><strong>Data store</strong>: The data store is optimized for decision support and is generally represented by a data warehouse or a data mart. The data is stored in structures that are optimized for data analysis and query speed.</li>
@@ -1194,7 +3249,7 @@
 <li><strong>Data monitoring and alerting</strong>: This component allows real-time monitoring of business activities. The BI system will present concise information in a single integrated view. This integrated view could include specific metrics about the system performance or activities, such as number of orders placed in the last four hours, number of customer complaints by product by month, and total revenue by region. Alerts can be placed on a given metric; once the value of a metric goes below or above a certain baseline, the system will perform a given action, such as emailing shop floor managers, presenting visual alerts, or starting an application.</li>
 <li><strong>Data analytics</strong>: This component performs data analysis and data-mining tasks using the data in the data store. This tool advises the user as to which data analysis tool to select and how to build a reliable business data model. Business models are generated by special algorithms that identify and enhance the understanding of business situations and problems.</li>
 </ul>
-<h5 id="practices-to-manage-data">Practices to Manage Data<a class="headerlink" href="#practices-to-manage-data" title="Permanent link">¶</a></h5>
+<h5 id="practices-to-manage-data">Practices to Manage Data<a class="headerlink" href="#practices-to-manage-data" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>Master data management (MDM)</strong>: collection of concepts, techniques, and processes for identification, definition, and management of data elements</li>
 <li><strong>Governance</strong>: method of government for controlling business health and for consistent decision making</li>
@@ -1212,7 +3267,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="bi-benefits">BI Benefits<a class="headerlink" href="#bi-benefits" title="Permanent link">¶</a></h4>
+<h4 id="bi-benefits">BI Benefits<a class="headerlink" href="#bi-benefits" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Improved decision making is the main goal of BI, but BI provides other benefits<ul>
 <li>Integrating architecture</li>
@@ -1226,8 +3281,8 @@
 </ul>
 </li>
 </ul>
-<h4 id="bi-evolution">BI Evolution<a class="headerlink" href="#bi-evolution" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap13_002.png"><img alt="Business Intelligence Evolution" src="images/chap13_002.png"/></a></p>
+<h4 id="bi-evolution">BI Evolution<a class="headerlink" href="#bi-evolution" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" href="images/chap13_002.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Business Intelligence Evolution" src="images/chap13_002.png" /></a></p>
 <ul>
 <li>Decision support system (DSS) is an arrangement of computerized tools used to assist managerial decision making<ul>
 <li>Typically has a much narrower focus and reach than a BI solution</li>
@@ -1238,7 +3293,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="bi-technology-trends">BI Technology Trends<a class="headerlink" href="#bi-technology-trends" title="Permanent link">¶</a></h4>
+<h4 id="bi-technology-trends">BI Technology Trends<a class="headerlink" href="#bi-technology-trends" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Several technological advances are driving the growth of business intelligence technologies<ul>
 <li>Data storage improvements</li>
@@ -1249,7 +3304,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="decision-support-data-vs-operational-data">Decision Support Data VS Operational Data<a class="headerlink" href="#decision-support-data-vs-operational-data" title="Permanent link">¶</a></h3>
+<h3 id="decision-support-data-vs-operational-data">Decision Support Data VS Operational Data<a class="headerlink" href="#decision-support-data-vs-operational-data" title="Permanent link">&para;</a></h3>
 <details class="note" open="open">
 <summary>Note</summary>
 <p>Although BI is used at the strategic and tactical managerial levels within organizations, its effectiveness depends on the quality of data gathered at the operational level
@@ -1268,9 +3323,9 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap13_003.png"><img alt="Transform Operational Data into Decision Support Data" src="images/chap13_003.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap13_004.png"><img alt="Contrasting Operational Data and Decision Support Data" src="images/chap13_004.png"/></a></p>
-<h4 id="dss-db-requirements">DSS DB Requirements<a class="headerlink" href="#dss-db-requirements" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" href="images/chap13_003.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Transform Operational Data into Decision Support Data" src="images/chap13_003.png" /></a></p>
+<p><a class="glightbox" href="images/chap13_004.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Contrasting Operational Data and Decision Support Data" src="images/chap13_004.png" /></a></p>
+<h4 id="dss-db-requirements">DSS DB Requirements<a class="headerlink" href="#dss-db-requirements" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Database schema<ul>
 <li>Must support complex, non-normalized data representations</li>
@@ -1291,12 +3346,12 @@
 </ul>
 </li>
 </ul>
-<h3 id="data-warehouse">Data Warehouse<a class="headerlink" href="#data-warehouse" title="Permanent link">¶</a></h3>
+<h3 id="data-warehouse">Data Warehouse<a class="headerlink" href="#data-warehouse" title="Permanent link">&para;</a></h3>
 <details class="note" open="open">
 <summary>Note</summary>
-<p>Collection of data that provides support for decision making within a component framework that is: Integrated, subject-oriented, time-variant, and nonvolatile.  <a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap13_005.png"><img alt="ETL Process" src="images/chap13_005.png"/></a></p>
+<p>Collection of data that provides support for decision making within a component framework that is: Integrated, subject-oriented, time-variant, and nonvolatile.  <a class="glightbox" href="images/chap13_005.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ETL Process" src="images/chap13_005.png" /></a></p>
 </details>
-<h4 id="12-data-warehouse-rules">12 Data Warehouse Rules<a class="headerlink" href="#12-data-warehouse-rules" title="Permanent link">¶</a></h4>
+<h4 id="12-data-warehouse-rules">12 Data Warehouse Rules<a class="headerlink" href="#12-data-warehouse-rules" title="Permanent link">&para;</a></h4>
 <ol>
 <li>The data warehouse and operational environments are separated.</li>
 <li>The data warehouse data is integrated.</li>
@@ -1311,7 +3366,7 @@
 <li>The data warehouse’s metadata is a critical component of this environment. The metadata identifies and defines all data elements. The metadata provides the source, transformation, integration, storage, usage, relationships, and history of each data element.</li>
 <li>The data warehouse contains a chargeback mechanism for resource usage that enforces optimal use of the data by end users.</li>
 </ol>
-<h4 id="data-mart">Data Mart<a class="headerlink" href="#data-mart" title="Permanent link">¶</a></h4>
+<h4 id="data-mart">Data Mart<a class="headerlink" href="#data-mart" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Small, single-subject <strong>data warehouse subset</strong><ul>
 <li>Provides decision support to a small group of people</li>
@@ -1320,11 +3375,11 @@
 <li>Benefits over data warehouses<ul>
 <li>Lower cost and shorter implementation time </li>
 <li>Technologically advanced</li>
-<li>Inevitable “people issues”</li>
+<li>Inevitable &ldquo;people issues&rdquo;</li>
 </ul>
 </li>
 </ul>
-<h4 id="star-schemas">Star Schemas<a class="headerlink" href="#star-schemas" title="Permanent link">¶</a></h4>
+<h4 id="star-schemas">Star Schemas<a class="headerlink" href="#star-schemas" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Data modeling technique that:<ul>
 <li><strong>Maps multidimensional decision support data into a relational database</strong></li>
@@ -1333,7 +3388,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="basic-star-schema-components">Basic Star Schema Components<a class="headerlink" href="#basic-star-schema-components" title="Permanent link">¶</a></h5>
+<h5 id="basic-star-schema-components">Basic Star Schema Components<a class="headerlink" href="#basic-star-schema-components" title="Permanent link">&para;</a></h5>
 <ul>
 <li>Facts: numeric values that represent a specific business aspect<ul>
 <li>Dimensions: qualifying characteristics that provide additional perspectives to a given fact</li>
@@ -1348,23 +3403,23 @@
 </ul>
 </li>
 </ul>
-<h5 id="star-schema-representation">Star Schema Representation<a class="headerlink" href="#star-schema-representation" title="Permanent link">¶</a></h5>
+<h5 id="star-schema-representation">Star Schema Representation<a class="headerlink" href="#star-schema-representation" title="Permanent link">&para;</a></h5>
 <ul>
 <li>Facts and dimensions represented by physical tables in data warehouse database</li>
 <li>Many-to-one (M:1) relationship between fact table and each dimension table</li>
 </ul>
-<h5 id="fact-and-dimension-tables">Fact and Dimension Tables<a class="headerlink" href="#fact-and-dimension-tables" title="Permanent link">¶</a></h5>
+<h5 id="fact-and-dimension-tables">Fact and Dimension Tables<a class="headerlink" href="#fact-and-dimension-tables" title="Permanent link">&para;</a></h5>
 <ul>
 <li>Related by foreign keys</li>
 <li>Subject to primary and foreign key constraints</li>
 <li>Primary key of a fact table <ul>
 <li>Composite primary key because the fact table is related to many dimension tables</li>
 <li>Always formed by combining the foreign keys pointing to the related dimension tables
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap13_006.png"><img alt="Data Warehouse Sales Star Schema Example" src="images/chap13_006.png"/></a></li>
+<a class="glightbox" href="images/chap13_006.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Data Warehouse Sales Star Schema Example" src="images/chap13_006.png" /></a></li>
 </ul>
 </li>
 </ul>
-<h5 id="performance-improving-techniques-for-the-star-schema">Performance Improving Techniques for the Star Schema<a class="headerlink" href="#performance-improving-techniques-for-the-star-schema" title="Permanent link">¶</a></h5>
+<h5 id="performance-improving-techniques-for-the-star-schema">Performance Improving Techniques for the Star Schema<a class="headerlink" href="#performance-improving-techniques-for-the-star-schema" title="Permanent link">&para;</a></h5>
 <ul>
 <li>Normalizing dimensional tables<ul>
 <li><strong>Snowflake schema</strong>: dimension tables can have their own dimension tables</li>
@@ -1385,7 +3440,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="online-analytical-processing-olap">Online Analytical Processing (OLAP)<a class="headerlink" href="#online-analytical-processing-olap" title="Permanent link">¶</a></h3>
+<h3 id="online-analytical-processing-olap">Online Analytical Processing (OLAP)<a class="headerlink" href="#online-analytical-processing-olap" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Online analytical processing (OLAP) is a BI style whose systems share three main characteristics<ul>
 <li>Multidimensional data analysis techniques</li>
@@ -1394,8 +3449,8 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap13_007.png"><img alt="OLAP Architecture" src="images/chap13_007.png"/></a></p>
-<h4 id="multidimensional-data-analysis-techniques">Multidimensional Data Analysis Techniques<a class="headerlink" href="#multidimensional-data-analysis-techniques" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" href="images/chap13_007.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OLAP Architecture" src="images/chap13_007.png" /></a></p>
+<h4 id="multidimensional-data-analysis-techniques">Multidimensional Data Analysis Techniques<a class="headerlink" href="#multidimensional-data-analysis-techniques" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Data are processed and viewed as part of a multidimensional structure<ul>
 <li>Particularly attractive to business decision makers who tend to view business data as being related to other business data</li>
@@ -1409,7 +3464,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="advanced-database-support">Advanced Database Support<a class="headerlink" href="#advanced-database-support" title="Permanent link">¶</a></h4>
+<h4 id="advanced-database-support">Advanced Database Support<a class="headerlink" href="#advanced-database-support" title="Permanent link">&para;</a></h4>
 <ul>
 <li>OLAP tools must have the following features to deliver efficient decision support:<ul>
 <li>Access to many different kinds of DBMSs, flat files, and internal and external data sources</li>
@@ -1421,7 +3476,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="easy-to-use-end-user-interface">Easy-to-Use End-User Interface<a class="headerlink" href="#easy-to-use-end-user-interface" title="Permanent link">¶</a></h4>
+<h4 id="easy-to-use-end-user-interface">Easy-to-Use End-User Interface<a class="headerlink" href="#easy-to-use-end-user-interface" title="Permanent link">&para;</a></h4>
 <ul>
 <li>When proper implementation leads to simple navigation and accelerated decision making or data analysis<ul>
 <li>Advanced OLAP features are more useful when access is kept simple</li>
@@ -1429,7 +3484,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="relational-olap">Relational OLAP<a class="headerlink" href="#relational-olap" title="Permanent link">¶</a></h3>
+<h3 id="relational-olap">Relational OLAP<a class="headerlink" href="#relational-olap" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Relational online analytical processing (ROLAP)<ul>
 <li>Provides OLAP functionality using relational databases and familiar relational tools to store and analyze multidimensional data</li>
@@ -1442,7 +3497,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="multidimensional-olap">Multidimensional OLAP<a class="headerlink" href="#multidimensional-olap" title="Permanent link">¶</a></h3>
+<h3 id="multidimensional-olap">Multidimensional OLAP<a class="headerlink" href="#multidimensional-olap" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Extends OLAP functionality to multidimensional database management systems (MDBMSs)<ul>
 <li>MDBMS uses proprietary techniques store data in matrix like N-dimensional arrays</li>
@@ -1455,9 +3510,9 @@
 </li>
 <li>Sparsity: measures density of data held in the data cube</li>
 </ul>
-<h3 id="comparison-of-rolap-vs-molap">Comparison of ROLAP vs MOLAP<a class="headerlink" href="#comparison-of-rolap-vs-molap" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap13_009.png"><img alt="ROLAP vs MOLAP" src="images/chap13_009.png"/></a></p>
-<h3 id="data-analytics">Data Analytics<a class="headerlink" href="#data-analytics" title="Permanent link">¶</a></h3>
+<h3 id="comparison-of-rolap-vs-molap">Comparison of ROLAP vs MOLAP<a class="headerlink" href="#comparison-of-rolap-vs-molap" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="images/chap13_009.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ROLAP vs MOLAP" src="images/chap13_009.png" /></a></p>
+<h3 id="data-analytics">Data Analytics<a class="headerlink" href="#data-analytics" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Subset of business intelligence (BI) functionality that encompasses a wide range of mathematical, statistical, and modeling techniques with the purpose of extracting knowledge from data<ul>
 <li>Explanatory analytics: focuses on discovering and explaining data characteristics and relationships based on existing data</li>
@@ -1473,9 +3528,9 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap13_010.png"><img alt="Extracting Knowledge from Data" src="images/chap13_010.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="images/chap13_011.png"><img alt="Data Mining Process" src="images/chap13_011.png"/></a></p>
-<h4 id="sql-analytic-functions">SQL Analytic Functions<a class="headerlink" href="#sql-analytic-functions" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" href="images/chap13_010.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Extracting Knowledge from Data" src="images/chap13_010.png" /></a>
+<a class="glightbox" href="images/chap13_011.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Data Mining Process" src="images/chap13_011.png" /></a></p>
+<h4 id="sql-analytic-functions">SQL Analytic Functions<a class="headerlink" href="#sql-analytic-functions" title="Permanent link">&para;</a></h4>
 <ul>
 <li>The ROLLUP extension<ul>
 <li>Used with GROUP BY clause to generate aggregates by different dimensions</li>
@@ -1497,7 +3552,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="data-visualization">Data Visualization<a class="headerlink" href="#data-visualization" title="Permanent link">¶</a></h4>
+<h4 id="data-visualization">Data Visualization<a class="headerlink" href="#data-visualization" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Process of abstracting data to provide a visual data representation that enhances the user’s ability to comprehend the meaning of the data<ul>
 <li>Goal is to allow the user to quickly and efficiently see the data’s big picture by identifying trends, patterns, and relationships</li>
@@ -1530,44 +3585,80 @@
 </ul>
 </li>
 </ul>
-</article>
-</div>
-</div>
-</main>
-<!-- Footer -->
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <!-- Footer -->
 <footer class="md-footer">
-<!-- Further information -->
-<div class="md-footer-meta md-typeset">
-<div class="md-footer-meta__inner md-grid">
-<!-- Copyright and theme information -->
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and theme information -->
 <div class="md-copyright">
-<div class="md-copyright__highlight">
+  
+    <div class="md-copyright__highlight">
       ©2022 THartmanOfTheRedwoods Wiki, All rights reserved.
     </div>
   
   
     Made by
-    <a href="https://github.com/viable-hartman/" rel="noopener" target="_blank">
+    <a
+      href="https://github.com/viable-hartman/"
+      target="_blank" rel="noopener"
+    >
       Trevor Hartman
     </a>
+  
 </div>
-<!-- Social links -->
-<div class="md-social">
-<a class="md-social__link" href="https://github.com/THartmanOfTheRedwoods" rel="noopener" target="_blank" title="Github">
-<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-</a>
-<a class="md-social__link" href="mailto:trevor-hartman@redwoods.edu" rel="noopener" target="_blank" title="">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"></path></svg>
-</a>
+
+      <!-- Social links -->
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/THartmanOfTheRedwoods" target="_blank" rel="noopener" title="Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:trevor-hartman@redwoods.edu" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
+    </a>
+  
 </div>
-</div>
-</div>
+      
+    </div>
+  </div>
 </footer>
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
-<script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
