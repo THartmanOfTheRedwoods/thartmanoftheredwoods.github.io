@@ -2852,9 +2852,9 @@ me-south-1  13.34.78.160/27 13.34.78.160/27
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    | awk -F&#39;\t&#39; &#39;{gsub(&quot;/&quot;,&quot;-&quot;,$2);print(&quot;nmap -sT -T5 -Pn -p- -oG logs/&quot;$1&quot;_&quot;$2&quot;.gnmap &quot; $3)}&#39;
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><code>awk -F'\t'</code> splits the line by line input into 3 variables <strong>$1</strong> will equal region <strong>$2</strong> will equal the first ip_prefix, and <strong>$3</strong> will equal the second ip_prefix column</li>
+<li><code>awk -F'\t'</code> splits the line by line input into 3 variables <strong><span class="arithmatex">\(1** will equal region **\)</span>2</strong> will equal the first ip_prefix, and <strong>$3</strong> will equal the second ip_prefix column</li>
 <li><code>gsub("/","-",$2);</code> this replaces any subnet slashes in the first ip_prefix column with a <strong>-</strong></li>
-<li><code>print("nmap -sT -T5 -Pn -p- -oG logs/"$1"_"$2".gnmap " $3)</code> this prints out the <strong>nmap</strong> command but substitutes <strong>$1</strong> (i.e. the region) and <strong>$2</strong> (i.e. the gsub-ed ip_prefix) into the option building the log file. <strong>$3</strong> remains the unmodified ip_prefix to scan, so the full output will look something like below: <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<li><code>print("nmap -sT -T5 -Pn -p- -oG logs/"$1"_"$2".gnmap " $3)</code> this prints out the <strong>nmap</strong> command but substitutes <strong><span class="arithmatex">\(1** (i.e. the region) and **\)</span>2</strong> (i.e. the gsub-ed ip_prefix) into the option building the log file. <strong>$3</strong> remains the unmodified ip_prefix to scan, so the full output will look something like below: <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2956,6 +2956,12 @@ nmap -sT -T5 -Pn -p- -oG logs/me-south-1_13.34.78.160-27.gnmap 13.34.78.160/27
     
     
       <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+        <script src="../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

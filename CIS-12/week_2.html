@@ -2531,6 +2531,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#other-naming-conventions" class="md-nav__link">
+    Other Naming Conventions
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Naming Conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#excercise" class="md-nav__link">
+    Excercise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#assignment---initialize-a-variable" class="md-nav__link">
     Assignment - Initialize a Variable
   </a>
@@ -2538,8 +2558,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#state---forget-diagrams---use-intellij-debug" class="md-nav__link">
-    State - Forget diagrams - Use IntelliJ debug
+  <a href="#state---forget-diagrams-like-in-the-book---use-intellij-debug" class="md-nav__link">
+    State - Forget diagrams (like in the book) - Use IntelliJ debug
   </a>
   
 </li>
@@ -2569,6 +2589,26 @@
   <a href="#errors" class="md-nav__link">
     Errors
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-how-to-read-strings-integers-doubles-and-more" class="md-nav__link">
+    Show how to Read Strings, Integers, Doubles, and More
+  </a>
+  
+    <nav class="md-nav" aria-label="Show how to Read Strings, Integers, Doubles, and More">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    Exercise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2750,6 +2790,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#other-naming-conventions" class="md-nav__link">
+    Other Naming Conventions
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Naming Conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#excercise" class="md-nav__link">
+    Excercise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#assignment---initialize-a-variable" class="md-nav__link">
     Assignment - Initialize a Variable
   </a>
@@ -2757,8 +2817,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#state---forget-diagrams---use-intellij-debug" class="md-nav__link">
-    State - Forget diagrams - Use IntelliJ debug
+  <a href="#state---forget-diagrams-like-in-the-book---use-intellij-debug" class="md-nav__link">
+    State - Forget diagrams (like in the book) - Use IntelliJ debug
   </a>
   
 </li>
@@ -2788,6 +2848,26 @@
   <a href="#errors" class="md-nav__link">
     Errors
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-how-to-read-strings-integers-doubles-and-more" class="md-nav__link">
+    Show how to Read Strings, Integers, Doubles, and More
+  </a>
+  
+    <nav class="md-nav" aria-label="Show how to Read Strings, Integers, Doubles, and More">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    Exercise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2823,8 +2903,9 @@
 <h2 id="variables-and-operators">Variables and Operators<a class="headerlink" href="#variables-and-operators" title="Permanent link">&para;</a></h2>
 <h3 id="declaring-variables">Declaring Variables<a class="headerlink" href="#declaring-variables" title="Permanent link">&para;</a></h3>
 <ul>
+<li>Allocate Storage Location of that Data-Type</li>
 <li>
-<p>Allocate Storage Location of that Data-Type</p>
+<p>Type informs java of possible Values.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2864,7 +2945,7 @@ for (int i = 0; i &lt; 10; i++) {
 </li>
 <li>BUT WAIT, if strings are shared/cached <strong>references</strong>, wouldn&rsquo;t changing the string for variable <strong>a</strong> also change it for <strong>b</strong>?<ul>
 <li>Yes, but that&rsquo;s why the designers also made literal strings <strong>immutable</strong>. String methods that modify a string will return new string, not the original literal.</li>
-<li>This is also why you should not compare strings with <strong><mark><strong> but </strong>a.equals(b)<strong> because </strong></mark></strong> compares the reference while the other compares the string.</li>
+<li>This is also why you should not compare strings with <code>==</code> but <code>a.equals(b)</code> because <code>==</code> compares the reference while the other compares the string.</li>
 </ul>
 </li>
 </ul>
@@ -2877,30 +2958,83 @@ for (int i = 0; i &lt; 10; i++) {
 </code></pre></div></td></tr></table></div>
 </li>
 <li>
-<p>Variables names must be unique (within its scope), and not a <strong>reserved word</strong> like static, private, public, final, class, etc.</p>
+<p>Variables names must be unique (within its scope), and not a <strong>reserved keyword</strong> like static, private, public, final, class, etc.</p>
 </li>
-<li>
-<p>Variables are case sensitive</p>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>public class Example {
+    public static void main(String[] args) {
+        double pi = 3.14;
+        double pi = 3.141592653;  // Nope, Nope, Nope!
+
+        System.out.println(&quot;The value of pi is: &quot; + pi);
+    }
+}
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Variables are case sensitive</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>int firstName = 1;
 int FirstName = 2;
 </code></pre></div></td></tr></table></div>
-</li>
-<li>
-<p>Camel Case is Java&rsquo;s preferred naming convention.</p>
-</li>
+<ul>
+<li>Camel Case is Java&rsquo;s preferred naming convention.</li>
 </ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>int firstName;
+</code></pre></div></td></tr></table></div>
+<h3 id="other-naming-conventions">Other Naming Conventions<a class="headerlink" href="#other-naming-conventions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Variable names cannot contain certain special symbols, such as exclamation marks (!).</li>
+<li>Spaces are not allowed.</li>
+<li>Numbers can be used within a variable name as long as the name does not begin with a number.</li>
+<li>A variable&rsquo;s name cannot already be in use.</li>
+</ul>
+<h4 id="excercise">Excercise<a class="headerlink" href="#excercise" title="Permanent link">&para;</a></h4>
+<ul>
+<li>What is wrong with these variable names?</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bad Variables</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">last</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">month</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
+<span class="mf">1d</span><span class="n">ay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1952</span>
+<span class="n">beware</span><span class="o">!</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1910</span>
+<span class="mi">1920</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="assignment---initialize-a-variable">Assignment - Initialize a Variable<a class="headerlink" href="#assignment---initialize-a-variable" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Stores/Updates variable value, but you must assign the right data-type.<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<li>Stores/Updates variable value, but you must assign the right data-type.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>String a = &quot;123&quot;;
 String a = 123; // Error: wrong type.
 </code></pre></div></td></tr></table></div>
-</li>
+<ul>
+<li>You only have to define the variable type when declaring it, any assignment after must leave off the type.<ul>
+<li>The variable type persists.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>int value = 10;
+value = 4;
+</code></pre></div></td></tr></table></div></li>
 </ul>
-<h3 id="state---forget-diagrams---use-intellij-debug">State - Forget diagrams - Use IntelliJ debug<a class="headerlink" href="#state---forget-diagrams---use-intellij-debug" title="Permanent link">&para;</a></h3>
+</li>
+<li>Variables of different type(s) can be assinged as long as there is no loss in precision.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>double fpNum = 42.5;
+fpNum = 42;
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="state---forget-diagrams-like-in-the-book---use-intellij-debug">State - Forget diagrams (like in the book) - Use IntelliJ debug<a class="headerlink" href="#state---forget-diagrams-like-in-the-book---use-intellij-debug" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Why waste your time, use the state diagrams that already exist in your IDE ;-)</li>
+<li>Breakpoints &amp; variable analysis is the modern way to debug variables.</li>
 </ul>
 <h3 id="arithmetic-operators">Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2913,6 +3047,7 @@ String a = 123; // Error: wrong type.
 <li>Fractional numbers, with fractional precision, <strong>BUT NOT PERFECT!</strong>, which leads to rounding errors.<ul>
 <li>Irrational numbers can&rsquo;t be represented.</li>
 <li>Nor can repeating fractions.</li>
+<li><a href="../java/rounding_errors.html">Rounding Errors Explained</a></li>
 </ul>
 </li>
 <li>1 or more <strong>double</strong> numbers will cause operators to use floating point calculations.</li>
@@ -2921,7 +3056,39 @@ String a = 123; // Error: wrong type.
 </ul>
 <h3 id="operators-for-strings">Operators for Strings<a class="headerlink" href="#operators-for-strings" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>+</strong> concatenates, enough said.</li>
+<li><strong>+</strong> concatenates<ul>
+<li>Many variables can be joined to a string using the + operator:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Variable/String Concatenation</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;contains text&quot;</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">wholeNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">floatingPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.141592653</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">trueOrFalse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Text variable: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">text</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Integer variable: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">wholeNumber</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Floating-point variable: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">floatingPoint</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Boolean: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">trueOrFalse</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">StdOut</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Text<span class="w"> </span>variable:<span class="w"> </span>contains<span class="w"> </span>text
+Integer<span class="w"> </span>variable:<span class="w"> </span><span class="m">123</span>
+Floating-point<span class="w"> </span>variable:<span class="w"> </span><span class="m">3</span>.141592653
+Booolean:<span class="w"> </span><span class="nb">true</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>.equals("compares");</code> compares!</li>
 </ul>
 <h3 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2929,6 +3096,151 @@ String a = 123; // Error: wrong type.
 <li>Runtime Errors - Errors that cause exceptions only when the program is run i.e. FileNotFoundException</li>
 <li>Logic Error - Compiles and runs without errors, but the output is invalid. <code>double percent = 59 / 60;</code></li>
 </ul>
+<h3 id="show-how-to-read-strings-integers-doubles-and-more">Show how to Read Strings, Integers, Doubles, and More<a class="headerlink" href="#show-how-to-read-strings-integers-doubles-and-more" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Read an String</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Program</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Write text and press enter &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You wrote &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">text</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Read an Integer</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Program</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Write a value &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">().</span><span class="na">trim</span><span class="p">());</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You wrote &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Read a Double</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Program</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Write a value &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">().</span><span class="na">trim</span><span class="p">());</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You wrote &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Write a program that asks the user for an integer value. The program should then add 1 to the value provided by the user, and print that new value. </li>
+<li>Write a program that asks the user for a floating-point number using the variable type Double. The program then prints the user&rsquo;s input value.</li>
+<li>Make the following code ouput:</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">StdOut</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Summary:
+<span class="w">    </span>Chicken:<span class="w"> </span><span class="m">4</span>
+<span class="w">    </span>Bacon:<span class="w"> </span><span class="m">5</span>.600000
+<span class="w">    </span>Tractor:<span class="w"> </span>John<span class="w"> </span>Deer!
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Replace variables</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">chicken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">bacon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.5</span><span class="p">;</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">tractor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;None!&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">summary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;&quot;</span>
+
+<span class="s">                Summary:</span>
+<span class="s">                    Chicken: %d</span>
+<span class="s">                    Bacon: %f</span>
+<span class="s">                    Tractor: %s</span>
+<span class="s">                &quot;&quot;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Chicken: %d%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">chicken</span><span class="p">);</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">nextLine</span><span class="p">().</span><span class="na">trim</span><span class="p">();</span>
+<span class="w">            </span><span class="n">chicken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">chicken</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Bacon: %f%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">bacon</span><span class="p">);</span>
+<span class="w">            </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">nextLine</span><span class="p">().</span><span class="na">trim</span><span class="p">();</span>
+<span class="w">            </span><span class="n">bacon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">bacon</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Tractor: %s%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tractor</span><span class="p">);</span>
+<span class="w">            </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">nextLine</span><span class="p">().</span><span class="na">trim</span><span class="p">();</span>
+<span class="w">            </span><span class="n">tractor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">tractor</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">input</span><span class="p">;</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span><span class="w"> </span><span class="n">chicken</span><span class="p">,</span><span class="w"> </span><span class="n">bacon</span><span class="p">,</span><span class="w"> </span><span class="n">tractor</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">nfe</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error parsing number.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="talk-about-assignment">Talk About Assignment!<a class="headerlink" href="#talk-about-assignment" title="Permanent link">&para;</a></h3>
 
 
@@ -3003,6 +3315,12 @@ String a = 123; // Error: wrong type.
     
     
       <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+        <script src="../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
