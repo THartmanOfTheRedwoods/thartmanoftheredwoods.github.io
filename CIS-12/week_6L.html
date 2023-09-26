@@ -1,0 +1,2317 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
+<meta content="Trevor Hartman" name="author"/>
+<link href="week_4.html" rel="prev"/>
+<link href="week_7.html" rel="next"/>
+<link href="../assets/images/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.5.2, mkdocs-material-9.2.0" name="generator"/>
+<title>Week 6 - Conditions - THartmanOfTheRedwoods Wiki</title>
+<link href="../assets/stylesheets/main.0e669242.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.85d0ee34.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
+<link href="../css/mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="red" data-md-color-primary="red" data-md-color-scheme="slate" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#java-conditions">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            THartmanOfTheRedwoods Wiki
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Week 6 - Conditions
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="red" data-md-color-media="" data-md-color-primary="red" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../index.html">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../android/getapk.html">
+          
+  
+    
+  
+  Android
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../git/gitflow.html">
+          
+  
+    
+  
+  Git
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../java/annotations.html">
+          
+  
+    
+  
+  Java
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../markdown-cheat-sheet.html">
+        
+  
+    
+  
+  Markdown
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../tomcat/install.html">
+          
+  
+    
+  
+  Tomcat
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../tux/os_command_map.html">
+          
+  
+    
+  
+  Tux
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../vim/cheat-sheet.html">
+          
+  
+    
+  
+  Vim
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../virtualbox/win11install.html">
+          
+  
+    
+  
+  VirtualBox
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../windows/os_command_map.html">
+          
+  
+    
+  
+  Windows
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../hardware/cables.html">
+          
+  
+    
+  
+  Hardware
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../archive.html">
+          
+  
+    
+  
+  Class Notes
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
+<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
+</a>
+    THartmanOfTheRedwoods Wiki
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../index.html">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Android
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Android
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../android/getapk.html">
+<span class="md-ellipsis">
+    APK Extract
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Git
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git/gitflow.html">
+<span class="md-ellipsis">
+    Workflows
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Java
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/annotations.html">
+<span class="md-ellipsis">
+    Annotations
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/format_specifiers.html">
+<span class="md-ellipsis">
+    Format Specifiers
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/loop_usage.html">
+<span class="md-ellipsis">
+    Loop Usage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/operators.html">
+<span class="md-ellipsis">
+    Operators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/associativity.html">
+<span class="md-ellipsis">
+    Operator Precedence &amp; Associativity
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../markdown-cheat-sheet.html">
+<span class="md-ellipsis">
+    Markdown
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Tomcat
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Tomcat
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tomcat/install.html">
+<span class="md-ellipsis">
+    Install
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Tux
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Tux
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/os_command_map.html">
+<span class="md-ellipsis">
+    Command Cheat-sheet
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/imagemagick.html">
+<span class="md-ellipsis">
+    ImageMagick
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/pandoc.html">
+<span class="md-ellipsis">
+    Pandoc
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/parallel.html">
+<span class="md-ellipsis">
+    Parallel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/ssh.html">
+<span class="md-ellipsis">
+    SSH
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tux/tesseract.html">
+<span class="md-ellipsis">
+    Tesseract
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Vim
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Vim
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vim/cheat-sheet.html">
+<span class="md-ellipsis">
+    Cheatsheet
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    VirtualBox
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            VirtualBox
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../virtualbox/win11install.html">
+<span class="md-ellipsis">
+    Install
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+<span class="md-ellipsis">
+    Windows
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_10_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+            Windows
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/os_command_map.html">
+<span class="md-ellipsis">
+    Command Cheat-sheet
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_10_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Network
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_10_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_10_2">
+<span class="md-nav__icon md-icon"></span>
+            Network
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/arp.html">
+<span class="md-ellipsis">
+    Arp
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/nbtstat.html">
+<span class="md-ellipsis">
+    Nbtstat
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/netstat.html">
+<span class="md-ellipsis">
+    Netstat
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/ping.html">
+<span class="md-ellipsis">
+    Ping
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/ipconfig.html">
+<span class="md-ellipsis">
+    Ipconfig
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/net.html">
+<span class="md-ellipsis">
+    Net
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/nslookup.html">
+<span class="md-ellipsis">
+    Nslookup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows/network/tracert.html">
+<span class="md-ellipsis">
+    Tracert
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+<span class="md-ellipsis">
+    Hardware
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware/cables.html">
+<span class="md-ellipsis">
+    Cables
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+<span class="md-ellipsis">
+    Class Notes
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_12_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+            Class Notes
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archive.html">
+<span class="md-ellipsis">
+    Index
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fun.html">
+<span class="md-ellipsis">
+    Fun
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_12_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
+<span class="md-ellipsis">
+    CIS-50
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_12_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_12_3">
+<span class="md-nav__icon md-icon"></span>
+            CIS-50
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_1.html">
+<span class="md-ellipsis">
+    Database Systems
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_2.html">
+<span class="md-ellipsis">
+    Data Models
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_3.html">
+<span class="md-ellipsis">
+    The Relational Database Model
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/joins_ns.html">
+<span class="md-ellipsis">
+    Joins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_4.html">
+<span class="md-ellipsis">
+    Entity Relationship Modeling
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_5.html">
+<span class="md-ellipsis">
+    Advanced Data Modeling
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_6.html">
+<span class="md-ellipsis">
+    Normalization
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_7.html">
+<span class="md-ellipsis">
+    Structured Query Language
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/cheatsheets.html">
+<span class="md-ellipsis">
+    SQL Cheat-sheets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_9.html">
+<span class="md-ellipsis">
+    Database Design
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_11.html">
+<span class="md-ellipsis">
+    Database Performance Tuning and Query Optimization
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_13.html">
+<span class="md-ellipsis">
+    Business Intelligence and Data Warehouses
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_14.html">
+<span class="md-ellipsis">
+    Big Data and NoSQL
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_15.html">
+<span class="md-ellipsis">
+    Database Connectivity and Web Technologies
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_12_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12_4" id="__nav_12_4_label" tabindex="0">
+<span class="md-ellipsis">
+    CIS-18
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_12_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_12_4">
+<span class="md-nav__icon md-icon"></span>
+            CIS-18
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_1.html">
+<span class="md-ellipsis">
+    Week 1 - Review
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/sprint.html">
+<span class="md-ellipsis">
+    Sprint Planning
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/user_story_intro.html">
+<span class="md-ellipsis">
+    User Story Intro
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/user_story_lesson.html">
+<span class="md-ellipsis">
+    User Story Lesson
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_2.html">
+<span class="md-ellipsis">
+    Week 2 - Fundamental OOP Principles
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/oo_principles.html">
+<span class="md-ellipsis">
+    Key OO Principles
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_3.html">
+<span class="md-ellipsis">
+    Week 3 - Observer Design Pattern
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_4.html">
+<span class="md-ellipsis">
+    Week 4 - Decorator Design Pattern
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_5.html">
+<span class="md-ellipsis">
+    Week 5 - Factory Design Pattern
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_7.html">
+<span class="md-ellipsis">
+    Week 7 - Singleton Design Pattern
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_8.html">
+<span class="md-ellipsis">
+    Week 8 - Command Design Pattern
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_9.html">
+<span class="md-ellipsis">
+    Week 9 - Adapter &amp; Facade Design Patterns
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_10.html">
+<span class="md-ellipsis">
+    Week 10 - Template Method Design Pattern
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_12.html">
+<span class="md-ellipsis">
+    Week 12 - Iterator and Composite Design Patterns
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_13.html">
+<span class="md-ellipsis">
+    Week 13 - State Design Pattern
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_14.html">
+<span class="md-ellipsis">
+    Week 14 - Proxy Design Pattern
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-18/week_15.html">
+<span class="md-ellipsis">
+    Week 15 - Compound Design Patterns
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_12_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12_5" id="__nav_12_5_label" tabindex="0">
+<span class="md-ellipsis">
+    CIS-12
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_12_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_12_5">
+<span class="md-nav__icon md-icon"></span>
+            CIS-12
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_1.html">
+<span class="md-ellipsis">
+    Week 1 - Introduction to Programming
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_1_lecture.html">
+<span class="md-ellipsis">
+    Week 1L - Lecture
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_2.html">
+<span class="md-ellipsis">
+    Week 2 - Variables and Operators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_3.html">
+<span class="md-ellipsis">
+    Week 3 - Program Structure &amp; More on Reading Input
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_4.html">
+<span class="md-ellipsis">
+    Week 4 - Methods
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Week 6 - Conditions
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="week_6L.html">
+<span class="md-ellipsis">
+    Week 6 - Conditions
+  </span>
+</a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-conditions">
+    Java Conditions
+  </a>
+<nav aria-label="Java Conditions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learning-objectives">
+    Learning Objectives
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understand-the-concept-of-conditionals">
+    Understand the Concept of Conditionals
+  </a>
+<nav aria-label="Understand the Concept of Conditionals" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-are-conditionals">
+    What Are Conditionals?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-do-we-use-conditionals">
+    Why Do We Use Conditionals?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-do-conditionals-work">
+    How Do Conditionals Work?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-life-analogy">
+    Real-Life Analogy:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction-to-boolean-values">
+    Introduction to Boolean Values
+  </a>
+<nav aria-label="Introduction to Boolean Values" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-basics">
+    The Basics:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-life-examples">
+    Real-Life Examples:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-boolean-data-type">
+    The boolean Data Type:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relate-boolean-data-type-to-conditions">
+    Relate boolean Data Type to Conditions:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logical-thinking">
+    Logical Thinking:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boolean-operators">
+    Boolean Operators:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#practice">
+    Practice:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#visual-aids">
+    Visual Aids:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-statements-in-java">
+    Basic Statements in Java
+  </a>
+<nav aria-label="Basic Statements in Java" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#if">
+    If
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#if-else">
+    If-Else
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#if-else-if-else">
+    If-Else If-Else
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nested-conditionals">
+    Nested Conditionals
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-switch-statements">
+    Java Switch Statements
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_7.html">
+<span class="md-ellipsis">
+    Week 7 - Methods Take 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_10.html">
+<span class="md-ellipsis">
+    Week 10 - Arrays
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_12.html">
+<span class="md-ellipsis">
+    Week 12 - Objects
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-conditions">
+    Java Conditions
+  </a>
+<nav aria-label="Java Conditions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learning-objectives">
+    Learning Objectives
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understand-the-concept-of-conditionals">
+    Understand the Concept of Conditionals
+  </a>
+<nav aria-label="Understand the Concept of Conditionals" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-are-conditionals">
+    What Are Conditionals?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-do-we-use-conditionals">
+    Why Do We Use Conditionals?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-do-conditionals-work">
+    How Do Conditionals Work?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-life-analogy">
+    Real-Life Analogy:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction-to-boolean-values">
+    Introduction to Boolean Values
+  </a>
+<nav aria-label="Introduction to Boolean Values" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-basics">
+    The Basics:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-life-examples">
+    Real-Life Examples:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-boolean-data-type">
+    The boolean Data Type:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relate-boolean-data-type-to-conditions">
+    Relate boolean Data Type to Conditions:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logical-thinking">
+    Logical Thinking:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boolean-operators">
+    Boolean Operators:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#practice">
+    Practice:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#visual-aids">
+    Visual Aids:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-statements-in-java">
+    Basic Statements in Java
+  </a>
+<nav aria-label="Basic Statements in Java" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#if">
+    If
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#if-else">
+    If-Else
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#if-else-if-else">
+    If-Else If-Else
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nested-conditionals">
+    Nested Conditionals
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-switch-statements">
+    Java Switch Statements
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Week 6 - Conditions</h1>
+<h2 id="java-conditions">Java Conditions<a class="headerlink" href="#java-conditions" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="week_6.html">A quick reference</a></li>
+</ul>
+<h3 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">¶</a></h3>
+<ol>
+<li>Understand the Concept of Conditionals: Ensure students understand the basic concept of conditionals, which allow a program to make decisions based on certain conditions.</li>
+<li>Introduction to Boolean Values: Introduce the boolean data type and explain how it represents true or false values, which are essential for conditionals.</li>
+<li>If Statements: Teach students how to use the if statement to execute a block of code when a specified condition is true.</li>
+<li>Else Statements: Explain how to use the else statement to execute a block of code when the if condition is false.</li>
+<li>Else-If Statements: Introduce the else if statement to handle multiple conditions and provide alternatives when the initial if condition is false.</li>
+<li>Nested Conditionals: Show how to nest conditional statements within each other to create more complex decision-making structures.</li>
+<li>Switch Statements: Teach students how to use the switch statement to select one of many code blocks to execute based on the value of a single expression.</li>
+<li>Logical Operators: Explain the logical operators (&amp;&amp;, ||, !) and how they can be used to combine and manipulate boolean expressions in conditionals.</li>
+<li>Comparative Operators: Introduce comparative operators (==, !=, &lt;, &lt;=, &gt;, &gt;=) and show how to use them to compare values in conditionals.</li>
+</ol>
+<h3 id="understand-the-concept-of-conditionals">Understand the Concept of Conditionals<a class="headerlink" href="#understand-the-concept-of-conditionals" title="Permanent link">¶</a></h3>
+<h4 id="what-are-conditionals">What Are Conditionals?<a class="headerlink" href="#what-are-conditionals" title="Permanent link">¶</a></h4>
+<p>Conditionals in programming are like decision-making tools for a computer. They allow the computer to make choices and take different actions based on specific conditions or criteria. Imagine it as a branching path in a story where the plot changes depending on the choices made.</p>
+<h4 id="why-do-we-use-conditionals">Why Do We Use Conditionals?<a class="headerlink" href="#why-do-we-use-conditionals" title="Permanent link">¶</a></h4>
+<p>We use conditionals to make our programs smart and responsive. Just like in real life, we often make decisions based on certain conditions. For example, if it’s raining, you might decide to take an umbrella with you. If it’s not raining, you might leave the umbrella at home. Similarly, conditionals help our programs make decisions and respond accordingly.</p>
+<h4 id="how-do-conditionals-work">How Do Conditionals Work?<a class="headerlink" href="#how-do-conditionals-work" title="Permanent link">¶</a></h4>
+<p>In programming, we use conditionals to check whether something is true or false. Think of it as asking a yes-or-no question. If the answer is “yes” (true), the program does one thing; if the answer is “no” (false), it does something else. Here’s a simple example in Java:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">itIsRaining</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">takeUmbrella</span><span class="p">();</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">leaveUmbrellaAtHome</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>In this code:</p>
+<ul>
+<li>We have a condition: itIsRaining.</li>
+<li>If itIsRaining is true, the program calls takeUmbrella().</li>
+<li>If itIsRaining is false, the program calls leaveUmbrellaAtHome().</li>
+</ul>
+<p>So, conditionals help our program adapt and make choices based on the situation, just like we do in everyday life.</p>
+<h4 id="real-life-analogy">Real-Life Analogy:<a class="headerlink" href="#real-life-analogy" title="Permanent link">¶</a></h4>
+<p>When the light is green, you go. When it’s red, you stop. Conditionals in programming work similarly by determining what the program should do based on specific conditions.</p>
+<h3 id="introduction-to-boolean-values">Introduction to Boolean Values<a class="headerlink" href="#introduction-to-boolean-values" title="Permanent link">¶</a></h3>
+<h4 id="the-basics">The Basics:<a class="headerlink" href="#the-basics" title="Permanent link">¶</a></h4>
+<p>In programming, we often need to work with conditions that can be either true or false. Boolean values are like the “yes” and “no” answers in programming.</p>
+<h4 id="real-life-examples">Real-Life Examples:<a class="headerlink" href="#real-life-examples" title="Permanent link">¶</a></h4>
+<p>These real-life examples illustrate the concept of true and false:</p>
+<ol>
+<li>Light Switch:</li>
+</ol>
+<p>True: When the light switch is in the “on” position, the light is on.
+False: When the light switch is in the “off” position, the light is off.</p>
+<ol>
+<li>Weather Conditions:</li>
+</ol>
+<p>True: If it’s raining outside, you need an umbrella.
+False: If it’s not raining, you don’t need an umbrella.</p>
+<ol>
+<li>Traffic Light:</li>
+</ol>
+<p>True: When the traffic light is green, it means you can go.
+False: When the traffic light is red, it means you must stop.</p>
+<ol>
+<li>Door Lock:</li>
+</ol>
+<p>True: If the door is locked, you cannot enter without a key.
+False: If the door is unlocked, you can enter without a key.</p>
+<ol>
+<li>Alarm Clock:</li>
+</ol>
+<p>True: When the alarm clock’s time matches the set alarm time, it rings to wake you up.
+False: When the alarm clock’s time doesn’t match the set alarm time, it remains silent.</p>
+<ol>
+<li>Weather Forecast:</li>
+</ol>
+<p>True: If the weather forecast predicts rain, you might carry an umbrella.
+False: If the forecast predicts clear skies, you won’t need an umbrella.</p>
+<ol>
+<li>Binary Code:</li>
+</ol>
+<p>True: In binary code (used in computers), “1” represents true or on, while “0” represents false or off.</p>
+<ol>
+<li>Password Authentication:</li>
+</ol>
+<p>True: Entering the correct password grants access to a secure account.
+False: Entering an incorrect password denies access.</p>
+<ol>
+<li>Game State:</li>
+</ol>
+<p>True: In a video game, if your character has low health points (HP), you may need to find health potions.
+False: If your character has full health, you don’t need to find health potions.</p>
+<ol>
+<li>Smartphone Screen:</li>
+</ol>
+<p>True: When you touch the smartphone screen, it responds to your touch.
+False: When you don’t touch the screen, it remains inactive.</p>
+<p>These real-life examples demonstrate situations where the concept of true (yes) and false (no) decisions is clear.</p>
+<h4 id="the-boolean-data-type">The boolean Data Type:<a class="headerlink" href="#the-boolean-data-type" title="Permanent link">¶</a></h4>
+<p>In Java, we use the boolean keyword to declare boolean variables.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">boolean</span><span class="w"> </span><span class="n">isSkyBlue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">isLightOn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="relate-boolean-data-type-to-conditions">Relate boolean Data Type to Conditions:<a class="headerlink" href="#relate-boolean-data-type-to-conditions" title="Permanent link">¶</a></h4>
+<p>Boolean values are often used in conditions to make decisions. For example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isSkyBlue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Do something when the sky is blue</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Do something else when the sky is not blue</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="logical-thinking">Logical Thinking:<a class="headerlink" href="#logical-thinking" title="Permanent link">¶</a></h4>
+<p>Ask questions like:</p>
+<ul>
+<li>If it’s sunny (true), should you bring sunglasses?</li>
+<li>If it’s not sunny (false), do you still need sunglasses?</li>
+</ul>
+<p>boolean values are about <strong>making choices</strong> based on conditions.</p>
+<h4 id="boolean-operators">Boolean Operators:<a class="headerlink" href="#boolean-operators" title="Permanent link">¶</a></h4>
+<ul>
+<li>&amp;&amp; (logical AND): Returns true only if both conditions are true.</li>
+<li>|| (logical OR): Returns true if at least one condition is true.</li>
+<li>! (logical NOT): Flips the boolean value (true becomes false, and vice versa).</li>
+<li>^ (XOR or Exclusive OR): Returns true if condition A or B is true, but NOT both A and B.</li>
+</ul>
+<h4 id="practice">Practice:<a class="headerlink" href="#practice" title="Permanent link">¶</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">boolean</span><span class="w"> </span><span class="n">isSunny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">isWarm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isSunny</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">isWarm</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// You might want to go to the beach</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Consider other plans</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="visual-aids">Visual Aids:<a class="headerlink" href="#visual-aids" title="Permanent link">¶</a></h4>
+<ul>
+<li>Basic if else</li>
+</ul>
+<div class="mermaid">graph LR
+A[Start] --&gt; B[Evaluate Condition]
+B --&gt;|Yes| C[Take an umbrella]
+B --&gt;|No| D[No need for an umbrella]
+C --&gt; E[End]
+D --&gt; E
+</div>
+<ul>
+<li>if, else if, else</li>
+</ul>
+<div class="mermaid">graph LR
+A[Start] --&gt; B[Evaluate Condition 1]
+B --&gt;|Yes| C[Take an umbrella]
+B --&gt;|No| D[Evaluate Condition 2]
+D --&gt;|Yes| E[Take a light jacket]
+D --&gt;|No| F[Leave the umbrella at home]
+E --&gt; G[End]
+C --&gt; G
+F --&gt; G
+</div>
+<h3 id="basic-statements-in-java">Basic Statements in Java<a class="headerlink" href="#basic-statements-in-java" title="Permanent link">¶</a></h3>
+<h4 id="if">If<a class="headerlink" href="#if" title="Permanent link">¶</a></h4>
+<ol>
+<li>Syntax of the “if” statement<ul>
+<li>Includes the keyword if, followed by a condition enclosed in parentheses, and a block of code enclosed in curly braces.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Code to execute if the condition is true</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+</li>
+<li>Boolean Expressions: The condition in an “if” statement must evaluate to a boolean expression, which can be either true or false.<ul>
+<li>The “if” statement executes the code block if the condition is true and skips it if the condition is false.</li>
+</ul>
+</li>
+<li>Decision-Making: “if” statements are used for decision-making in programming.<ul>
+<li>They allow the program to take different actions based on whether a specific condition is met.</li>
+</ul>
+</li>
+<li>Indentation: Proper code indentation within the “if” statement’s block improves code readability.</li>
+<li>Blocks of Code: Code to be executed when the condition is true should be enclosed within curly braces {}.<ul>
+<li>If there’s only a <strong>single statement</strong> to execute, the braces are <strong>optional</strong>, but it’s recommended to use them for clarity and maintainability.</li>
+</ul>
+</li>
+<li>Execution Flow: The program’s flow of execution is affected by the “if” statement.<ul>
+<li>If the condition is true, the code inside the “if” block is executed, and then the program continues with the next statement after the “if” statement.</li>
+<li>If the condition is false, the “if” block is skipped, and the program moves directly to the next statement.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You are eligible to vote."</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+</li>
+<li>Logical Operators: Logical operators can be used to create compound conditions in “if” statements.</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You are a young adult."</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"user123"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"securePass"</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">username</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"user123"</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">password</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"securePass"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Login successful."</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">boolean</span><span class="w"> </span><span class="n">isSunny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">isWeekend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isSunny</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">isWeekend</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Let's go for a picnic!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grade</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">grade</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You passed, but you didn't get an A."</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">totalAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">120.0</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">isMember</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">totalAmount</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">100.0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">totalAmount</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">200.0</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">isMember</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You are eligible for a discount."</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No discount available."</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="if-else">If-Else<a class="headerlink" href="#if-else" title="Permanent link">¶</a></h4>
+<ol>
+<li>Purpose of “if-else”: The “if-else” statement is used for decision-making in Java just like the basic if.<ul>
+<li>It allows the program to execute one block of code if a condition is true (the “if” part) and another block of code if the condition is false (the “else” part).</li>
+</ul>
+</li>
+<li>Basic Syntax:<ul>
+<li>NOTE the use of curly braces {} to enclose the code blocks.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Code to execute if the condition is true</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Code to execute if the condition is false</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+</li>
+<li>Conditions: Just like the basic if, the condition within the parentheses must be a boolean expression.<ul>
+<li>The code block under <strong>if</strong> is executed if the condition is true, and the code block under “else” is executed if the condition is false.</li>
+</ul>
+</li>
+<li>Exclusive Execution: In an “if-else” statement, <strong>ONLY</strong> one of the code blocks (either the “if” block or the “else” block) will be executed, depending on the condition’s outcome.</li>
+<li>Indentation: Proper code indentation is STILL important for readability and maintainability.<ul>
+<li>The code inside the “if” and “else” blocks should be indented consistently.</li>
+</ul>
+</li>
+<li>Examples:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You passed the exam."</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You failed the exam."</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">i</span>
+</code></pre></div></td></tr></table></div></li>
+</ol>
+<h4 id="if-else-if-else">If-Else If-Else<a class="headerlink" href="#if-else-if-else" title="Permanent link">¶</a></h4>
+<ol>
+<li>
+<p>These “else if” clauses allow for handling <strong>multiple conditions</strong> in a cascading manner. </p>
+</li>
+<li>
+<p>If-Else If are checked sequentially until ONLY one of them evaluates to true.</p>
+</li>
+<li>
+<p>Syntax:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Code for condition1 being true</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Code for condition2 being true</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Code if neither condition1 nor condition2 is true</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>Simple Example:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The number is greater than 10."</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The number is less than 10."</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The number is equal to 10."</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Default “else” Block: The “else” block is <strong>optional</strong>.<ul>
+<li>If it’s not present, and the “if” condition is false, the program simply moves to the code following the “if-else” statement.</li>
+</ul>
+</li>
+<li>Mutually Exclusive Conditions: The conditions in “if-else if-else” chains should be mutually exclusive.<ul>
+<li><strong>MEANING</strong> only one condition should be true at a time.</li>
+</ul>
+</li>
+<li>Advanced Examples<ul>
+<li>In this example, the “if-else” statements evaluate the score and assign a grade based on different score ranges.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'B'</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">70</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'C'</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'D'</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'F'</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Your grade is: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">grade</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+<li>This example checks the lengths of the sides to determine if a triangle is equilateral, isosceles, or scalene.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">side1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">side2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">side3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">triangleType</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">side1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">side2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">side2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">side3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">triangleType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Equilateral"</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">side1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">side2</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">side2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">side3</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">side1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">side3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">triangleType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Isosceles"</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">triangleType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Scalene"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The triangle is: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">triangleType</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+<li>This example calculates the ticket price based on age and student status, with different price tiers. 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">isStudent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">ticketPrice</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ticketPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ticketPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.0</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isStudent</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ticketPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.0</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ticketPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20.0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Ticket price: $"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ticketPrice</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+<li>This example calculates a discount for an online shopping cart based on membership status and order subtotal. 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">150.0</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">isMember</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">isPrimeMember</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">discount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isMember</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">discount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isPrimeMember</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">discount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.15</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">subtotal</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">100.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">discount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">discount</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Total amount after discount: $"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+</li>
+<li>
+<p>Ordering Conditions: If you have “if-else if” conditions out of order, the program will still compile and run without errors. However, the order of the conditions matters because the program will execute the first “if” or “else if” block whose condition evaluates to true, and then it will skip the rest of the “else if” and “else” blocks.</p>
+<ul>
+<li>Consider the following example and what would happen if x is 5.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"x is greater than 10"</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"x is greater than 5"</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"x is greater than 2"</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"x is something else"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
+<li>To correct bypassing the x &gt; 2 condition, you can correct the code like so:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"x is greater than 10"</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"x is greater than 2"</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"x is something else"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="nested-conditionals">Nested Conditionals<a class="headerlink" href="#nested-conditionals" title="Permanent link">¶</a></h3>
+<ol>
+<li>It’s possible to place one “if” statement inside another. This is called “nesting” or using nested “if” statements. <ul>
+<li>A real world example would be Russian nesting dolls (Matryoshka dolls) to help visualize the idea of one condition within another.
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="images/matryoshka_dolls.webp"><img alt="matryoshka_dolls" src="images/matryoshka_dolls.webp"/></a></li>
+</ul>
+</li>
+<li>Visual of Nesting Conditions:<ul>
+<li>We start with the “Start” node.</li>
+<li>We first check the season using the “Check Season” node.</li>
+<li>Depending on the season (Spring, Summer, Fall, or Winter), we follow different paths to check the weather conditions using the “Check Weather” nodes.</li>
+<li>Based on both the season and weather, we make clothing decisions, and the flowchart ultimately leads to the “End” node.
+<div class="mermaid">graph TD
+A[Start] --&gt; B[Check Season]
+B --&gt;|Spring| C[Check Weather]
+B --&gt;|Summer| D[Check Weather]
+B --&gt;|Fall| E[Check Weather]
+B --&gt;|Winter| F[Check Weather]
+C --&gt;|Sunny| G[Wear a T-shirt and shorts]
+C --&gt;|Rainy| H[Take an umbrella]
+D --&gt;|Sunny| I[Wear sunglasses and shorts]
+D --&gt;|Rainy| J[Wear a raincoat]
+E --&gt;|Sunny| K[Wear a light jacket]
+E --&gt;|Rainy| L[Take an umbrella]
+F --&gt;|Sunny| M[Wear a heavy coat]
+F --&gt;|Snowy| N[Wear a winter jacket]
+G --&gt;O[End]
+H --&gt;O
+I --&gt;O
+J --&gt;O
+K --&gt;O
+L --&gt;O
+M --&gt;O
+N --&gt;O
+</div></li>
+</ul>
+</li>
+<li>Consider this simple example in java that has a single level of nesting and checks weather conditions on a day of the week:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">dayOfWeek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Saturday"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">weather</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Sunny"</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dayOfWeek</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"Saturday"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">weather</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"Sunny"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Let's go to the beach!"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"It's not sunny, let's do something else."</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"It's not the weekend, so no beach today."</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Now let’s take a look at a more advanced example:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TextAdventureGame</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">choice</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Welcome to the Text Adventure Game!"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You are in a dark forest. You come to a fork in the road."</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Do you go left or right? (left/right): "</span><span class="p">);</span>
+<span class="w">        </span><span class="n">choice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">choice</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"left"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You encounter a friendly squirrel."</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Do you want to befriend it? (yes/no): "</span><span class="p">);</span>
+<span class="w">            </span><span class="n">choice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">choice</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"yes"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You and the squirrel become best friends!"</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You continue on your journey."</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You find a treasure chest!"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Do you open it? (yes/no): "</span><span class="p">);</span>
+<span class="w">            </span><span class="n">choice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">choice</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"yes"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Congratulations! You found a valuable treasure!"</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You decide to leave the treasure and explore further."</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Thanks for playing the Text Adventure Game!"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div><ul>
+<li>The program begins in a dark forest and presents the player with a choice to go left or right.</li>
+<li>Depending on the choice, the program follows different branches of the decision tree.</li>
+<li>If the player chooses to befriend the squirrel or open the treasure chest, it leads to different outcomes.</li>
+<li>The nested conditionals determine the course of the game based on the player’s choices.</li>
+</ul>
+</li>
+<li>Proper indention is even more important for readability and maintainability when dealing with nested conditions.</li>
+</ol>
+<details class="info" open="open">
+<summary>Nested Excercise</summary>
+<p>Problem: Vacation Planner</p>
+<p>You are tasked with creating a vacation planner program. The program should ask the user a series of questions to help them plan their vacation. The questions and conditions are as follows:</p>
+<ol>
+<li>Ask the user if they want a relaxing vacation or an adventurous vacation.<ul>
+<li>If they choose “relaxing,” ask if they prefer a beach destination or a spa retreat.<ul>
+<li>If they choose “beach,” recommend a tropical beach destination.</li>
+<li>If they choose “spa,” recommend a luxurious spa resort.</li>
+</ul>
+</li>
+<li>If they choose “adventurous,” ask if they prefer a mountain adventure or a city exploration.<ul>
+<li>If they choose “mountain,” recommend a hiking trip in the mountains.</li>
+<li>If they choose “city,” recommend a cultural city tour.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ask the user if they want to go on a solo trip or with family/friends.<ul>
+<li>If they choose “solo,” recommend a solo-friendly destination based on their previous choice.</li>
+<li>If they choose “with family/friends,” recommend a group-friendly destination based on their previous choice.</li>
+</ul>
+</li>
+<li>Ask the user if they have a budget constraint (yes/no).<ul>
+<li>If they answer “yes,” ask for their budget in dollars.<ul>
+<li>Recommend a destination that fits their budget and preferences.</li>
+</ul>
+</li>
+<li>If they answer “no,” recommend a destination based on their preferences.</li>
+</ul>
+</li>
+</ol>
+<p>Ensure that the program guides the user through the decision-making process, taking into account their choices at each step. The program should provide a final recommendation for their vacation destination based on their preferences.</p>
+<p>Challenge: Implement this vacation planner using nested if-else statements to handle the various combinations of choices and conditions. Make the program user-friendly and informative, providing clear recommendations at each step.</p>
+</details>
+<details class="-success">
+<summary>Answer</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">VacationPlanner</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Welcome to the Vacation Planner!"</span><span class="p">);</span>
+<span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Do you want a relaxing vacation or an adventurous vacation? (relaxing/adventurous): "</span><span class="p">);</span>
+<span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">vacationType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vacationType</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"relaxing"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Do you prefer a beach destination or a spa retreat? (beach/spa): "</span><span class="p">);</span>
+<span class="w">             </span><span class="n">String</span><span class="w"> </span><span class="n">relaxationChoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="w">             </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">relaxationChoice</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"beach"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"We recommend a tropical beach destination for a relaxing vacation."</span><span class="p">);</span>
+<span class="w">             </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">relaxationChoice</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"spa"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"We recommend a luxurious spa resort for a relaxing vacation."</span><span class="p">);</span>
+<span class="w">             </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Invalid choice."</span><span class="p">);</span>
+<span class="w">             </span><span class="p">}</span>
+<span class="w">         </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vacationType</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"adventurous"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Do you prefer a mountain adventure or a city exploration? (mountain/city): "</span><span class="p">);</span>
+<span class="w">             </span><span class="n">String</span><span class="w"> </span><span class="n">adventureChoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="w">             </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">adventureChoice</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"mountain"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"We recommend a hiking trip in the mountains for an adventurous vacation."</span><span class="p">);</span>
+<span class="w">             </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">adventureChoice</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"city"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"We recommend a cultural city tour for an adventurous vacation."</span><span class="p">);</span>
+<span class="w">             </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Invalid choice."</span><span class="p">);</span>
+<span class="w">             </span><span class="p">}</span>
+<span class="w">         </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Invalid choice."</span><span class="p">);</span>
+<span class="w">         </span><span class="p">}</span>
+
+<span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Do you want to go on a solo trip or with family/friends? (solo/with family or friends): "</span><span class="p">);</span>
+<span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">travelCompanions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">travelCompanions</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"solo"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"We recommend a solo-friendly destination based on your previous choice."</span><span class="p">);</span>
+<span class="w">         </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">travelCompanions</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"with family or friends"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"We recommend a group-friendly destination based on your previous choice."</span><span class="p">);</span>
+<span class="w">         </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Invalid choice."</span><span class="p">);</span>
+<span class="w">         </span><span class="p">}</span>
+
+<span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Do you have a budget constraint? (yes/no): "</span><span class="p">);</span>
+<span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">budgetConstraint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">budgetConstraint</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"yes"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter your budget in dollars: $"</span><span class="p">);</span>
+<span class="w">             </span><span class="kt">double</span><span class="w"> </span><span class="n">budget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+<span class="w">             </span><span class="c1">// You can implement budget-based recommendations here.</span>
+<span class="w">         </span><span class="p">}</span>
+
+<span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enjoy planning your vacation!"</span><span class="p">);</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="java-switch-statements">Java Switch Statements<a class="headerlink" href="#java-switch-statements" title="Permanent link">¶</a></h3>
+<ol>
+<li>Switch statements are control structures in Java that allow you to execute different blocks of code based on the value of an expression. They provide an alternative to long chains of if-else if-else statements, making your code more concise and readable.</li>
+<li>Syntax:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">value1</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">// Code to execute when expression matches value1</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">value2</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">// Code to execute when expression matches value2</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Additional cases...</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">// Code to execute when none of the cases match the expression</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Let’s see an example. We want to create a program that takes a number from 1 to 7 as input and prints the corresponding day of the week.</li>
+</ol>
+<details class="-info">
+<summary>Switch Excercise</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DayOfWeek</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter a number from 1 to 7: "</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sunday"</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Monday"</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Tuesday"</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Wednesday"</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Thursday"</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Friday"</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">7</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Saturday"</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">default</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Invalid input. Please enter a number from 1 to 7."</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<ul>
+<li>Now a new Monkey-Wrench, the enhanced switch statement.<ul>
+<li>Starting from Java 12, you can use enhanced switch statements that simplify the code further. Here’s the same example using an enhanced switch statement:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EnhancedDayOfWeek</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter a number from 1 to 7: "</span><span class="p">);</span>
+<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">dayOfWeek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">"Sunday"</span><span class="p">;</span>
+<span class="w">             </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">"Monday"</span><span class="p">;</span>
+<span class="w">             </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">"Tuesday"</span><span class="p">;</span>
+<span class="w">             </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">"Wednesday"</span><span class="p">;</span>
+<span class="w">             </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">"Thursday"</span><span class="p">;</span>
+<span class="w">             </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">"Friday"</span><span class="p">;</span>
+<span class="w">             </span><span class="k">case</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">"Saturday"</span><span class="p">;</span>
+<span class="w">             </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">"Invalid input. Please enter a number from 1 to 7."</span><span class="p">;</span>
+<span class="w">         </span><span class="p">};</span>
+
+<span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">dayOfWeek</span><span class="p">);</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Enhanced switch statements use the -&gt; arrow syntax and allow you to directly assign the result to a variable. This makes the code more concise and readable, especially when dealing with multiple cases.</li>
+</ul>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="md-footer">
+<!-- Further information -->
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<!-- Copyright and theme information -->
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      ©2022 THartmanOfTheRedwoods Wiki, All rights reserved.
+    </div>
+  
+  
+    Made by
+    <a href="https://github.com/viable-hartman/" rel="noopener" target="_blank">
+      Trevor Hartman
+    </a>
+</div>
+<!-- Social links -->
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/THartmanOfTheRedwoods" rel="noopener" target="_blank" title="Github">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:trevor-hartman@redwoods.edu" rel="noopener" target="_blank" title="">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+<script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+<script src="../js/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.1.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({
+    theme: (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'
+});</script><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../git/gitflow.html">
+      
+      
+        <link rel="next" href="format_specifiers.html">
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Iterator java - THartmanOfTheRedwoods Wiki</title>
+        <title>Annotations - THartmanOfTheRedwoods Wiki</title>
       
     
     
@@ -88,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#iterator-design-pattern" class="md-skip">
+        <a href="#pythons-decorators-vs-javas-annotations-same-thing" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Iterator java
+              Annotations
             
           </span>
         </div>
@@ -275,11 +279,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../java/annotations.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="annotations.html" class="md-tabs__link">
           
   
     
@@ -640,6 +646,8 @@
       
   
   
+    
+  
   
     
     
@@ -656,13 +664,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
@@ -675,7 +683,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Java
@@ -686,9 +694,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../java/annotations.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Annotations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="annotations.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -697,6 +723,93 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pythons-decorators-vs-javas-annotations-same-thing" class="md-nav__link">
+    Python’s decorators vs Java’s annotations, same thing?
+  </a>
+  
+    <nav class="md-nav" aria-label="Python’s decorators vs Java’s annotations, same thing?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-the-hell-are-those--signs-above-function-anyway" class="md-nav__link">
+    What the hell are those @ signs above function anyway?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decorators-in-python-how-they-work" class="md-nav__link">
+    Decorators in Python, how they work?
+  </a>
+  
+    <nav class="md-nav" aria-label="Decorators in Python, how they work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cached-decorator-for-functions" class="md-nav__link">
+    Cached decorator for functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations-in-java-are-they-decorators" class="md-nav__link">
+    Annotations in Java, are they decorators?
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations in Java, are they decorators?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-about-other-retention-policy" class="md-nav__link">
+    What about other retention policy?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -708,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java/format_specifiers.html" class="md-nav__link">
+      <a href="format_specifiers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -728,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java/loop_usage.html" class="md-nav__link">
+      <a href="loop_usage.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -748,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java/operators.html" class="md-nav__link">
+      <a href="operators.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -768,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java/associativity.html" class="md-nav__link">
+      <a href="associativity.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2044,7 +2157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_1.html" class="md-nav__link">
+      <a href="../CIS-18/week_1.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2064,7 +2177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sprint.html" class="md-nav__link">
+      <a href="../CIS-18/sprint.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2084,7 +2197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_story_intro.html" class="md-nav__link">
+      <a href="../CIS-18/user_story_intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2104,7 +2217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_story_lesson.html" class="md-nav__link">
+      <a href="../CIS-18/user_story_lesson.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2124,7 +2237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_2.html" class="md-nav__link">
+      <a href="../CIS-18/week_2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2144,7 +2257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="oo_principles.html" class="md-nav__link">
+      <a href="../CIS-18/oo_principles.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2164,7 +2277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_3.html" class="md-nav__link">
+      <a href="../CIS-18/week_3.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2184,7 +2297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_4.html" class="md-nav__link">
+      <a href="../CIS-18/week_4.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2204,7 +2317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_5.html" class="md-nav__link">
+      <a href="../CIS-18/week_5.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2224,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_7.html" class="md-nav__link">
+      <a href="../CIS-18/week_7.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2244,7 +2357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_8.html" class="md-nav__link">
+      <a href="../CIS-18/week_8.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2264,7 +2377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_9.html" class="md-nav__link">
+      <a href="../CIS-18/week_9.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2284,7 +2397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_10.html" class="md-nav__link">
+      <a href="../CIS-18/week_10.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2304,7 +2417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_12.html" class="md-nav__link">
+      <a href="../CIS-18/week_12.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2324,7 +2437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_13.html" class="md-nav__link">
+      <a href="../CIS-18/week_13.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2344,7 +2457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_14.html" class="md-nav__link">
+      <a href="../CIS-18/week_14.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2364,7 +2477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="week_15.html" class="md-nav__link">
+      <a href="../CIS-18/week_15.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2662,37 +2775,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#iterator-design-pattern" class="md-nav__link">
-    Iterator Design Pattern
+  <a href="#pythons-decorators-vs-javas-annotations-same-thing" class="md-nav__link">
+    Python’s decorators vs Java’s annotations, same thing?
   </a>
   
-    <nav class="md-nav" aria-label="Iterator Design Pattern">
+    <nav class="md-nav" aria-label="Python’s decorators vs Java’s annotations, same thing?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#client-code" class="md-nav__link">
-    Client Code
+  <a href="#what-the-hell-are-those--signs-above-function-anyway" class="md-nav__link">
+    What the hell are those @ signs above function anyway?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#iterator-interface" class="md-nav__link">
-    Iterator Interface
+  <a href="#decorators-in-python-how-they-work" class="md-nav__link">
+    Decorators in Python, how they work?
+  </a>
+  
+    <nav class="md-nav" aria-label="Decorators in Python, how they work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cached-decorator-for-functions" class="md-nav__link">
+    Cached decorator for functions
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#aggregate-interface" class="md-nav__link">
-    Aggregate Interface
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#concrete-aggregate" class="md-nav__link">
-    Concrete Aggregate
+  <a href="#annotations-in-java-are-they-decorators" class="md-nav__link">
+    Annotations in Java, are they decorators?
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations in Java, are they decorators?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-about-other-retention-policy" class="md-nav__link">
+    What about other retention policy?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
   </a>
   
 </li>
@@ -2717,158 +2856,40 @@
                   
 
 
-  <h1>Iterator java</h1>
+  <h1>Annotations</h1>
 
-<h2 id="iterator-design-pattern">Iterator Design Pattern<a class="headerlink" href="#iterator-design-pattern" title="Permanent link">&para;</a></h2>
-<h3 id="client-code">Client Code<a class="headerlink" href="#client-code" title="Permanent link">&para;</a></h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.iterator</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Client</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">ChannelCollection</span><span class="w"> </span><span class="n">channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">populateChannels</span><span class="p">();</span>
-<span class="w">        </span><span class="n">ChannelIterator</span><span class="w"> </span><span class="n">baseIterator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channels</span><span class="p">.</span><span class="na">iterator</span><span class="p">(</span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">ALL</span><span class="p">);</span>
-<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">baseIterator</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">Channel</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">baseIterator</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;******&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="c1">// Channel Type Iterator</span>
-<span class="w">        </span><span class="n">ChannelIterator</span><span class="w"> </span><span class="n">englishIterator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channels</span><span class="p">.</span><span class="na">iterator</span><span class="p">(</span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">ENGLISH</span><span class="p">);</span>
-<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">englishIterator</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">Channel</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">englishIterator</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">ChannelCollection</span><span class="w"> </span><span class="nf">populateChannels</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">ChannelCollection</span><span class="w"> </span><span class="n">channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChannelCollectionImpl</span><span class="p">();</span>
-<span class="w">        </span><span class="n">channels</span><span class="p">.</span><span class="na">addChannel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Channel</span><span class="p">(</span><span class="mf">98.5</span><span class="p">,</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">ENGLISH</span><span class="p">));</span>
-<span class="w">        </span><span class="n">channels</span><span class="p">.</span><span class="na">addChannel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Channel</span><span class="p">(</span><span class="mf">99.5</span><span class="p">,</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">HINDI</span><span class="p">));</span>
-<span class="w">        </span><span class="n">channels</span><span class="p">.</span><span class="na">addChannel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Channel</span><span class="p">(</span><span class="mf">100.5</span><span class="p">,</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">FRENCH</span><span class="p">));</span>
-<span class="w">        </span><span class="n">channels</span><span class="p">.</span><span class="na">addChannel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Channel</span><span class="p">(</span><span class="mf">101.5</span><span class="p">,</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">ENGLISH</span><span class="p">));</span>
-<span class="w">        </span><span class="n">channels</span><span class="p">.</span><span class="na">addChannel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Channel</span><span class="p">(</span><span class="mf">102.5</span><span class="p">,</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">HINDI</span><span class="p">));</span>
-<span class="w">        </span><span class="n">channels</span><span class="p">.</span><span class="na">addChannel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Channel</span><span class="p">(</span><span class="mf">103.5</span><span class="p">,</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">FRENCH</span><span class="p">));</span>
-<span class="w">        </span><span class="n">channels</span><span class="p">.</span><span class="na">addChannel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Channel</span><span class="p">(</span><span class="mf">104.5</span><span class="p">,</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">ENGLISH</span><span class="p">));</span>
-<span class="w">        </span><span class="n">channels</span><span class="p">.</span><span class="na">addChannel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Channel</span><span class="p">(</span><span class="mf">105.5</span><span class="p">,</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">HINDI</span><span class="p">));</span>
-<span class="w">        </span><span class="n">channels</span><span class="p">.</span><span class="na">addChannel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Channel</span><span class="p">(</span><span class="mf">106.5</span><span class="p">,</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">FRENCH</span><span class="p">));</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">channels</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.iterator</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">ENGLISH</span><span class="p">,</span><span class="w"> </span><span class="n">CHINESE</span><span class="p">,</span><span class="w"> </span><span class="n">FRENCH</span><span class="p">,</span><span class="w"> </span><span class="n">ALL</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.iterator</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Channel</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">frequency</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="w"> </span><span class="n">TYPE</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Channel</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">freq</span><span class="p">,</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="w"> </span><span class="n">type</span><span class="p">){</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">frequency</span><span class="o">=</span><span class="n">freq</span><span class="p">;</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">TYPE</span><span class="o">=</span><span class="n">type</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getFrequency</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">frequency</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="w"> </span><span class="nf">getTYPE</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">TYPE</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">(){</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Frequency=&quot;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">frequency</span><span class="o">+</span><span class="s">&quot;, Type=&quot;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">TYPE</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="iterator-interface">Iterator Interface<a class="headerlink" href="#iterator-interface" title="Permanent link">&para;</a></h3>
+<h2 id="pythons-decorators-vs-javas-annotations-same-thing">Python’s decorators vs Java’s annotations, same thing?<a class="headerlink" href="#pythons-decorators-vs-javas-annotations-same-thing" title="Permanent link">&para;</a></h2>
+<p>If you know Java and happened to work with Python, or the other way, you could see some @ symbols with names above the function in both languages. If you thought they’re similar, congratulations, you’ll be surprised by their behavior in the most unsuitable moment 😏</p>
+<h3 id="what-the-hell-are-those--signs-above-function-anyway">What the hell are those @ signs above function anyway?<a class="headerlink" href="#what-the-hell-are-those--signs-above-function-anyway" title="Permanent link">&para;</a></h3>
+<p>In Java, they called annotations. Annotation is, in simple words, metadata. You can pass data into the annotation, and, with some work, read this metadata. Here’s a small example of annotation usage from Spring framework(Class was omitted for simplicity):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.iterator</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ChannelIterator</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hasNext</span><span class="p">();</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Channel</span><span class="w"> </span><span class="nf">next</span><span class="p">();</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span>
+<span class="w">  </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GET</span><span class="p">)</span>
+<span class="nd">@ResponseBody</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getHelloMessage</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="aggregate-interface">Aggregate Interface<a class="headerlink" href="#aggregate-interface" title="Permanent link">&para;</a></h3>
+<p>You can see that ‘@RequestMapping’ used to specify that we want to execute this function when the client calls the GET method <code>/hello</code> endpoint.</p>
+<p>In Python, oppositely, they called decorators. Here’s an example from Flask application, as in Java’s example, our decorator will make so our function will serve <code>/hello</code> endpoint with GET method:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;hello&#39;</span>
+</code></pre></div></td></tr></table></div>
+<p>A decorator is a design pattern that allows a user to add new functionality to an existing object without modifying its structure.</p>
+<p>Ah okay, problem solved. So Java’s annotation just adds metadata, and Python’s decorators modify usage of the function.</p>
+<p>Thank you for reading this… wait for a second! So if Java’s annotation just adds metadata, how our method became endpoint server as in Python? In other words, how they both do the same thing?? Well, let’s start by implementing our own decorator in Python.</p>
+<h3 id="decorators-in-python-how-they-work">Decorators in Python, how they work?<a class="headerlink" href="#decorators-in-python-how-they-work" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2879,19 +2900,111 @@
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.iterator</span><span class="p">;</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_html</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">()</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;html&gt;</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">&lt;/html&gt;&#39;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ChannelCollection</span><span class="w"> </span><span class="p">{</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addChannel</span><span class="p">(</span><span class="n">Channel</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="nd">@as_html</span>
+<span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello&#39;</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">removeChannel</span><span class="p">(</span><span class="n">Channel</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ChannelIterator</span><span class="w"> </span><span class="nf">iterator</span><span class="p">(</span><span class="n">ChannelTypeEnum</span><span class="w"> </span><span class="n">type</span><span class="p">);</span>
-
-<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">say_hello</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="concrete-aggregate">Concrete Aggregate<a class="headerlink" href="#concrete-aggregate" title="Permanent link">&para;</a></h3>
+<p>Key takeaways from code above:</p>
+<ul>
+<li>Decorator is just a function that returns another function</li>
+<li>If applied with @ sign above the function, it’ll change it’s behavior as specified in <code>wrapper()</code> function</li>
+<li>They can change input or output of a wrapped function, or even don’t call it at all.</li>
+</ul>
+<p>What is going on in the code above? Firstly we create simple function <code>as_html(func)</code>. In this function we create another function called <code>wrapper()</code>, because in Python function is just another object that you can use. Inside <code>wrapper()</code> we will call this func object from <code>as_html(func)</code>, which, as you can think, another function. And so basically we return our <code>wrapper()</code> function. Take a cup of coffee and try to structure what’s going on in your head.</p>
+<p>So now, we annotate this function with @ above the <code>say_hello()</code>, and, as a result, you can see that when we call <code>say_hello()</code>, we get different result than ‘Hello’. We get ‘<html>Hello</html>’ because our <code>as_html(func)</code> wrapped our <code>say_hello()</code> function. So func is the <code>say_hello()</code> function itself. Maybe if I put it like <code>as_html(say_hello)</code> makes it clearer to you. Technically, you can re-write the previous example like this, and it still works the same way:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_html</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">()</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;html&gt;</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">&lt;/html&gt;&#39;</span>
+
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+
+<span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">as_html</span><span class="p">(</span><span class="n">say_hello</span><span class="p">)())</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="cached-decorator-for-functions">Cached decorator for functions<a class="headerlink" href="#cached-decorator-for-functions" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">cached_items</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">def</span> <span class="nf">cached</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">global</span> <span class="n">cached_item</span>
+        <span class="k">if</span> <span class="n">func</span><span class="o">.</span><span class="vm">__name__</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cached_items</span><span class="p">:</span>
+            <span class="n">cached_items</span><span class="p">[</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">cached_items</span><span class="p">[</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nd">@cached</span>
+<span class="k">def</span> <span class="nf">intensive_task</span><span class="p">():</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">10</span>
+
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">intensive_task</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- </span><span class="si">%.8f</span><span class="s2"> seconds first execution ---&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">))</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">intensive_task</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- </span><span class="si">%.8f</span><span class="s2"> seconds second execution ---&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<p>This is (kinda) more practical example, imagine that you have some function that should execute only once, and all other times return previous result. You can, of course, implement it within the function itself, but what if you’ll have 10 of them? 100? That’s a decorator’s work.</p>
+<p>So, in <code>wrapper(*args, **kwargs)</code> we check if we already contain this function name in the global cached_items dictionary. If not, we execute the function, if yes, we only return the value of dictionary for a key with the function name. After it, we wrap intensive_task() with our @cached decorator and execute function two times with benchmarking. Here’s what I get on my pc:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>python3<span class="w"> </span>decorators_example.py<span class="w"> </span>
+---<span class="w"> </span><span class="m">1</span>.00484562<span class="w"> </span>seconds<span class="w"> </span>first<span class="w"> </span>execution<span class="w"> </span>---
+---<span class="w"> </span><span class="m">0</span>.00000787<span class="w"> </span>seconds<span class="w"> </span>second<span class="w"> </span>execution<span class="w"> </span>---
+</code></pre></div></td></tr></table></div>
+<p>You can clearly see that second time execution time took under a 7E-06 second even though in our intensive_task() we execute sleep command. So the body of function was executed only once, as we can see by logic in <code>wrapper()</code></p>
+<p>Now you can call yourself a junior expert in decorators in Python. So what about Java?</p>
+<h3 id="annotations-in-java-are-they-decorators">Annotations in Java, are they decorators?<a class="headerlink" href="#annotations-in-java-are-they-decorators" title="Permanent link">&para;</a></h3>
+<p>When I first encountered annotations in Java, they were really astonishing to me. So later when I encountered anything with @ sign in other languages I said: “oh, that’s an annotation, I know that!”. Only now I realized how different those two things are.</p>
+<p>In Java, instead of writing the logic for “decorator” in annotation itself, this responsibility falls onto executor. So, technically speaking, annotations in Java doesn’t contain any logic at all*, only some data that can be put as a variable. So how it happens that we can do the same logic in Java as in Python? Fairly easy, we just inverse our code a little bit.(be ready for large piece of code due to Java ;)</p>
+<p>There can be annotation pre-processor like Lombok, but main idea is still the same. Unless defined(even if in pre-processing), annotations won’t do any changes to behavior. More discussion on it in responses of this post.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2932,88 +3045,65 @@
 <span class="normal">38</span>
 <span class="normal">39</span>
 <span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">edu.redwoods.iterator</span><span class="p">;</span>
+<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<span class="w">    </span><span class="nd">@Retention</span><span class="p">(</span><span class="n">RetentionPolicy</span><span class="p">.</span><span class="na">RUNTIME</span><span class="p">)</span>
+<span class="w">    </span><span class="nd">@interface</span><span class="w"> </span><span class="n">Cached</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// Nothing inside our annotation</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ChannelCollectionImpl</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ChannelCollection</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Channel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">channelsList</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ChannelCollectionImpl</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">channelsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addChannel</span><span class="p">(</span><span class="n">Channel</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">channelsList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">removeChannel</span><span class="p">(</span><span class="n">Channel</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">channelsList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ChannelIterator</span><span class="w"> </span><span class="nf">iterator</span><span class="p">(</span><span class="n">ChannelTypeEnum</span><span class="w"> </span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChannelIteratorImpl</span><span class="p">(</span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">channelsList</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ChannelIteratorImpl</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ChannelIterator</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">ChannelTypeEnum</span><span class="w"> </span><span class="n">type</span><span class="p">;</span>
-<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Channel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">channels</span><span class="p">;</span>
-<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
-
-<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">ChannelIteratorImpl</span><span class="p">(</span><span class="n">ChannelTypeEnum</span><span class="w"> </span><span class="n">ty</span><span class="p">,</span>
-<span class="w">                </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Channel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">channelsList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ty</span><span class="p">;</span>
-<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channelsList</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SomeObject</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nd">@Cached</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">intensiveTask</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">InterruptedException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Thread</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;expensive task result&quot;</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">        </span><span class="nd">@Override</span>
-<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hasNext</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">channels</span><span class="p">.</span><span class="na">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">Channel</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channels</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">);</span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">getTYPE</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">type</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">ChannelTypeEnum</span><span class="p">.</span><span class="na">ALL</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span>
-<span class="w">                    </span><span class="n">position</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SomeObjectExecutor</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">SomeObject</span><span class="w"> </span><span class="n">task</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">Method</span><span class="w"> </span><span class="n">intensiveTaskMethod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getDeclaredMethod</span><span class="p">(</span><span class="s">&quot;intensiveTask&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">intensiveTaskMethod</span><span class="p">.</span><span class="na">isAnnotationPresent</span><span class="p">(</span><span class="n">Cached</span><span class="p">.</span><span class="na">class</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getName</span><span class="p">();</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">cache</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">className</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">cache</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">className</span><span class="p">,</span><span class="w"> </span><span class="n">task</span><span class="p">.</span><span class="na">intensiveTask</span><span class="p">());</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">cache</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">className</span><span class="p">);</span>
 <span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">task</span><span class="p">.</span><span class="na">intensiveTask</span><span class="p">();</span>
 <span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">        </span><span class="nd">@Override</span>
-<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">Channel</span><span class="w"> </span><span class="nf">next</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">Channel</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channels</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">);</span>
-<span class="w">            </span><span class="n">position</span><span class="o">++</span><span class="p">;</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">SomeObjectExecutor</span><span class="w"> </span><span class="n">someObjectExecutor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SomeObjectExecutor</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">SomeObject</span><span class="w"> </span><span class="n">expensiveTaskObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SomeObject</span><span class="p">();</span>
+<span class="w">        </span><span class="n">someObjectExecutor</span><span class="p">.</span><span class="na">execute</span><span class="p">(</span><span class="n">expensiveTaskObject</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;First execution:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time</span><span class="p">));</span>
+<span class="w">        </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
+<span class="w">        </span><span class="n">someObjectExecutor</span><span class="p">.</span><span class="na">execute</span><span class="p">(</span><span class="n">expensiveTaskObject</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Second execution:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time</span><span class="p">));</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>Note the private nested class <strong>ChannelIteratorImpl</strong>. Could this be the Concrete Iterator?</p>
-</details>
+<p>So, what happened here? Here are a few points:</p>
+<ol>
+<li>The annotation doesn’t do anything at all. As the name says, it only annotates.</li>
+<li>Instead of wrapping functions, we check if it contains some annotation and execute it differently.</li>
+<li>We should have some “executor” object which will hold all the logic that could be in python’s decorator.</li>
+</ol>
+<p>So, first thing first, we created <code>@Cached</code> annotation, which is just empty, nothing special here except ‘@Retention(RetentionPolicy.RUNTIME)’. This thing says that we can access this annotation when the program is running. Next, we have our SomeObject, because in Java functions are not object, and we can’t pass them into other functions. In this object, we have <code>intensiveTask()</code>, which will sleep when executed. The next thing that we made is SomeObjectExecutor, which takes our <code>SomeObject</code> and executes its function via Object Reflection.</p>
+<p>To combine it all, we use main() method, where we create <code>SomeObjectExecutor</code> and <code>SomeObject</code> and then pass <code>SomeObject</code> two times with benchmarking, here’s my output:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>First<span class="w"> </span>execution:1012
+Second<span class="w"> </span>execution:0
+</code></pre></div></td></tr></table></div>
+<p>As expected, the First time we execute an object it takes 1 second, next time — almost 0, because the object was cached.</p>
+<h4 id="what-about-other-retention-policy">What about other retention policy?<a class="headerlink" href="#what-about-other-retention-policy" title="Permanent link">&para;</a></h4>
+<p>If you work with Java for a while, you can know such thing as aspect-oriented programming(AOP), AspectJ and similar tools. I even made an article about it a few years ago. So AspectJ kinda allows you to convert your annotations into decorators. But there’s still a small gap between the AOP and decorators, and you need to apply more efforts in Java with AOP then in Python. I may cover this topic of how pre-compilers work in the next article.</p>
+<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
+<p>If you read through the article up to this point, you can see that both approaches have their benefits and disadvantages. Because in Python functions are first-class citizens, it’s really easy to juggle with them and pass one function into another, etc. Java’s approach, on the other hand, gives you more control over what’s going on.</p>
 
 
 
