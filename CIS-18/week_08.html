@@ -7,11 +7,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="week_9.html" rel="prev"/>
-<link href="week_12.html" rel="next"/>
+<link href="week_7.html" rel="prev"/>
+<link href="week_8.html" rel="next"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.5.2, mkdocs-material-9.2.0" name="generator"/>
-<title>Week 10 - Template Method Design Pattern - THartmanOfTheRedwoods Wiki</title>
+<title>Week 8a - Pipeline Design Pattern - THartmanOfTheRedwoods Wiki</title>
 <link href="../assets/stylesheets/main.0e669242.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.85d0ee34.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#the-template-method-design-pattern">
+<a class="md-skip" href="#the-pipeline-design-pattern">
           Skip to content
         </a>
 </div>
@@ -63,7 +63,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Week 10 - Template Method Design Pattern
+              Week 8a - Pipeline Design Pattern
             
           </span>
 </div>
@@ -848,12 +848,127 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_08.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Week 8a - Pipeline Design Pattern
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="week_08.html">
 <span class="md-ellipsis">
     Week 8a - Pipeline Design Pattern
   </span>
 </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-pipeline-design-pattern">
+    The Pipeline Design Pattern
+  </a>
+<nav aria-label="The Pipeline Design Pattern" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classification">
+    Classification
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
+  </a>
+<nav aria-label="Pattern Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipeline-design-pattern">
+    Pipeline Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph---pipeline-pattern">
+    Mermaid Graph - Pipeline Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph---pipeline-pattern-with-builder-pattern">
+    Mermaid Graph - Pipeline Pattern with Builder Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml">
+    UML
+  </a>
+<nav aria-label="UML" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipeline-pattern">
+    Pipeline Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipeline-pattern-with-builder-pattern">
+    Pipeline Pattern with Builder Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
+  </a>
+<nav aria-label="Real World Usages" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipeline-pattern_1">
+    Pipeline Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ideas-for-use">
+    Ideas for Use
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-take-aways-from-me">
+    Main Take-Aways from ME
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-pipeline-pattern">
+    Main OO Principles of Pipeline Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="week_8.html">
@@ -869,85 +984,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Week 10 - Template Method Design Pattern
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="week_10.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="week_10.html">
 <span class="md-ellipsis">
     Week 10 - Template Method Design Pattern
   </span>
 </a>
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Sub-Menu
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-template-method-design-pattern">
-    The Template Method Design Pattern
-  </a>
-<nav aria-label="The Template Method Design Pattern" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#classification">
-    Classification
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pattern-definition">
-    Pattern Definition
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#representations">
-    Representations
-  </a>
-<nav aria-label="Representations" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph---template-method-pattern">
-    Mermaid Graph - Template Method Pattern
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uml">
-    UML
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#real-world-usages">
-    Real World Usages
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#java-code-example">
-    Java Code Example
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
-    Main Take-Aways from the textbook
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-oo-principles-of-template-method-pattern">
-    Main OO Principles of Template Method Pattern
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="week_12.html">
@@ -1078,10 +1120,10 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-template-method-design-pattern">
-    The Template Method Design Pattern
+<a class="md-nav__link" href="#the-pipeline-design-pattern">
+    The Pipeline Design Pattern
   </a>
-<nav aria-label="The Template Method Design Pattern" class="md-nav">
+<nav aria-label="The Pipeline Design Pattern" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#classification">
@@ -1092,6 +1134,15 @@
 <a class="md-nav__link" href="#pattern-definition">
     Pattern Definition
   </a>
+<nav aria-label="Pattern Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipeline-design-pattern">
+    Pipeline Design Pattern
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#representations">
@@ -1100,14 +1151,33 @@
 <nav aria-label="Representations" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph---template-method-pattern">
-    Mermaid Graph - Template Method Pattern
+<a class="md-nav__link" href="#mermaid-graph---pipeline-pattern">
+    Mermaid Graph - Pipeline Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph---pipeline-pattern-with-builder-pattern">
+    Mermaid Graph - Pipeline Pattern with Builder Pattern
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#uml">
     UML
   </a>
+<nav aria-label="UML" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipeline-pattern">
+    Pipeline Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipeline-pattern-with-builder-pattern">
+    Pipeline Pattern with Builder Pattern
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1116,6 +1186,20 @@
 <a class="md-nav__link" href="#real-world-usages">
     Real World Usages
   </a>
+<nav aria-label="Real World Usages" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipeline-pattern_1">
+    Pipeline Pattern
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ideas-for-use">
+    Ideas for Use
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#java-code-example">
@@ -1123,13 +1207,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
-    Main Take-Aways from the textbook
+<a class="md-nav__link" href="#main-take-aways-from-me">
+    Main Take-Aways from ME
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#main-oo-principles-of-template-method-pattern">
-    Main OO Principles of Template Method Pattern
+<a class="md-nav__link" href="#main-oo-principles-of-pipeline-pattern">
+    Main OO Principles of Pipeline Pattern
   </a>
 </li>
 </ul>
@@ -1142,19 +1226,20 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Week 10 - Template Method Design Pattern</h1>
-<h2 id="the-template-method-design-pattern">The Template Method Design Pattern<a class="headerlink" href="#the-template-method-design-pattern" title="Permanent link">¶</a></h2>
+<h1>Week 8a - Pipeline Design Pattern</h1>
+<h2 id="the-pipeline-design-pattern">The Pipeline Design Pattern<a class="headerlink" href="#the-pipeline-design-pattern" title="Permanent link">¶</a></h2>
 <h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">¶</a></h3>
 <ul>
-<li>Behavioral Design Pattern</li>
+<li>Structural Design Pattern: Patterns that ease the design by identifying a simple way to realize relationships among entities.</li>
 </ul>
 <h3 id="pattern-definition">Pattern Definition<a class="headerlink" href="#pattern-definition" title="Permanent link">¶</a></h3>
+<h4 id="pipeline-design-pattern">Pipeline Design Pattern<a class="headerlink" href="#pipeline-design-pattern" title="Permanent link">¶</a></h4>
 <ul>
-<li><strong>Hard Definition</strong>: Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.</li>
-<li><strong>Easy Definition</strong>: Abstract Super class controls the algorithm, but delegates unique parts of the algorithm to sub-classes.</li>
+<li><strong>Hard Definition</strong>: A linear, one-directional flow of payloads between a chain of processing elements arranged so that the output of each element is the input of the next.</li>
+<li><strong>Easy Definition</strong>: A chain of Stages where the output of each Stage is the input to the next modifying the payload object at each stage.</li>
 </ul>
 <h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
-<h4 id="mermaid-graph---template-method-pattern">Mermaid Graph - Template Method Pattern<a class="headerlink" href="#mermaid-graph---template-method-pattern" title="Permanent link">¶</a></h4>
+<h4 id="mermaid-graph---pipeline-pattern">Mermaid Graph - Pipeline Pattern<a class="headerlink" href="#mermaid-graph---pipeline-pattern" title="Permanent link">¶</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1181,76 +1266,273 @@
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
-<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">SuperClass</span>
-<span class="w">    </span><span class="n">SuperClass</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ConcreteSubClass1</span>
-<span class="w">    </span><span class="n">SuperClass</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ConcreteSubClass2</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">Client</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="o">-</span><span class="n">SuperClass</span><span class="w"> </span><span class="n">sc1</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">PipelineExClient</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">PipelineInterface</span>
+<span class="w">    </span><span class="n">StageInterface</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">PipelineInterface</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">extends</span>
+<span class="w">    </span><span class="n">PipelineInterface</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Pipeline</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">ProcessorInterface</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ProcessorType</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">StageInterface</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Stage1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">StageInterface</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Stage2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">StageInterface</span><span class="w"> </span><span class="o">--*</span><span class="w"> </span><span class="n">Pipeline</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Composition</span>
+<span class="w">    </span><span class="n">ProcessorInterface</span><span class="w"> </span><span class="o">--*</span><span class="w"> </span><span class="n">Pipeline</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Composition</span>
+<span class="w">    </span><span class="n">Pipeline</span><span class="w"> </span><span class="p">..</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Payload</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Dependency</span>
+<span class="w">    </span><span class="n">ProcessorType</span><span class="w"> </span><span class="p">..</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Payload</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Dependency</span>
+<span class="w">    </span><span class="n">Stage1</span><span class="w"> </span><span class="p">..</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Payload</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Dependency</span>
+<span class="w">    </span><span class="n">Stage2</span><span class="w"> </span><span class="p">..</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Payload</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Dependency</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">StageInterface</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+        <span class="err">+</span><span class="nc">apply</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="n">Payload</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">SuperClass</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">abstract</span><span class="o">&gt;&gt;</span>
-<span class="w">        </span><span class="o">+</span><span class="kd">final</span><span class="w"> </span><span class="nf">templateMethod</span><span class="p">()</span>
-<span class="w">        </span><span class="o">+</span><span class="n">primitiveOperation1</span><span class="p">()</span>
-<span class="w">        </span><span class="o">+</span><span class="n">primitiveOperation2</span><span class="p">()</span>
-<span class="w">        </span><span class="o">+</span><span class="n">subclassOperation1</span><span class="p">()</span><span class="o">*</span>
-<span class="w">        </span><span class="o">+</span><span class="n">subclassOperation2</span><span class="p">()</span><span class="o">*</span>
-<span class="w">        </span><span class="o">+</span><span class="n">hook1</span><span class="p">()</span>
-<span class="w">        </span><span class="o">+</span><span class="n">hook2</span><span class="p">()</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Stage1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">apply</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="n">Payload</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteSubClass1</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="o">+</span><span class="n">subclassOperation1</span><span class="p">()</span>
-<span class="w">        </span><span class="o">+</span><span class="n">subclassOperation2</span><span class="p">()</span>
-<span class="w">        </span><span class="o">+</span><span class="n">primitiveOperation2</span><span class="p">()</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Stage2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">apply</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">    </span><span class="p">}</span><span class="w">    </span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">PipelineInterface</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+        <span class="err">+</span><span class="nc">pipe</span><span class="p">(</span><span class="n">StageInterface</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="n">PipelineInterface</span>
+<span class="w">        </span><span class="o">+</span><span class="n">process</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Payload</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteSubClass2</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="o">+</span><span class="n">subclassOperation1</span><span class="p">()</span>
-<span class="w">        </span><span class="o">+</span><span class="n">subclassOperation2</span><span class="p">()</span>
-<span class="w">        </span><span class="o">+</span><span class="n">hook1</span><span class="p">()</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Pipeline</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">-</span><span class="n">List</span><span class="o">&lt;</span><span class="n">StageInterface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stages</span>
+<span class="w">        </span><span class="o">-</span><span class="n">ProcessorInterface</span><span class="w"> </span><span class="n">processor</span>
+<span class="w">        </span><span class="o">+</span><span class="n">Pipeline</span><span class="p">(</span><span class="n">ProcessorInterface</span><span class="w"> </span><span class="n">processor</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">StageInterface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stages</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">pipe</span><span class="p">(</span><span class="n">StageInterface</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="n">PipelineInterface</span>
+<span class="w">        </span><span class="o">+</span><span class="n">process</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">        </span><span class="o">+</span><span class="n">apply</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ProcessorInterface</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+        <span class="err">+</span><span class="nc">process</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">StageInterface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stages</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ProcessorType</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">process</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">StageInterface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stages</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Payload</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">Payload</span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">desiredType</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">getResult</span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">desiredType</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span>
+<span class="w">        </span><span class="o">+</span><span class="n">setResult</span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">desiredType</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">PipelineExClient</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="mermaid-graph---pipeline-pattern-with-builder-pattern">Mermaid Graph - Pipeline Pattern with Builder Pattern<a class="headerlink" href="#mermaid-graph---pipeline-pattern-with-builder-pattern" title="Permanent link">¶</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">PipelineExClient</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">PipelineInterface</span>
+<span class="w">    </span><span class="n">StageInterface</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">PipelineInterface</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">extends</span>
+<span class="w">    </span><span class="n">PipelineInterface</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Pipeline</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">ProcessorInterface</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">ProcessorType</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">StageInterface</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Stage1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">StageInterface</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Stage2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">StageInterface</span><span class="w"> </span><span class="o">--*</span><span class="w"> </span><span class="n">Pipeline</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Composition</span>
+<span class="w">    </span><span class="n">ProcessorInterface</span><span class="w"> </span><span class="o">--*</span><span class="w"> </span><span class="n">Pipeline</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Composition</span>
+<span class="w">    </span><span class="n">Pipeline</span><span class="w"> </span><span class="p">..</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Payload</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Dependency</span>
+<span class="w">    </span><span class="n">ProcessorType</span><span class="w"> </span><span class="p">..</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Payload</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Dependency</span>
+<span class="w">    </span><span class="n">Stage1</span><span class="w"> </span><span class="p">..</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Payload</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Dependency</span>
+<span class="w">    </span><span class="n">Stage2</span><span class="w"> </span><span class="p">..</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Payload</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Dependency</span>
+<span class="w">    </span><span class="n">PipelineBuilderInterface</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">PipelineBuilder</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">StageInterface</span><span class="w"> </span><span class="o">--*</span><span class="w"> </span><span class="n">PipelineBuilder</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Composition</span>
+<span class="w">    </span><span class="n">PipelineBuilder</span><span class="w"> </span><span class="p">..</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Pipeline</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">StageInterface</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+        <span class="err">+</span><span class="nc">apply</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Stage1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">apply</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Stage2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">apply</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">    </span><span class="p">}</span><span class="w">    </span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">PipelineInterface</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+        <span class="err">+</span><span class="nc">pipe</span><span class="p">(</span><span class="n">StageInterface</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="n">PipelineInterface</span>
+<span class="w">        </span><span class="o">+</span><span class="n">process</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Pipeline</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">-</span><span class="n">List</span><span class="o">&lt;</span><span class="n">StageInterface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stages</span>
+<span class="w">        </span><span class="o">-</span><span class="n">ProcessorInterface</span><span class="w"> </span><span class="n">processor</span>
+<span class="w">        </span><span class="o">+</span><span class="n">Pipeline</span><span class="p">(</span><span class="n">ProcessorInterface</span><span class="w"> </span><span class="n">processor</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">StageInterface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stages</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">pipe</span><span class="p">(</span><span class="n">StageInterface</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="n">PipelineInterface</span>
+<span class="w">        </span><span class="o">+</span><span class="n">process</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">        </span><span class="o">+</span><span class="n">apply</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ProcessorInterface</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+        <span class="err">+</span><span class="nc">process</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">StageInterface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stages</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ProcessorType</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">process</span><span class="p">(</span><span class="n">Payload</span><span class="w"> </span><span class="n">payload</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">StageInterface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stages</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Payload</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Payload</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">Payload</span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">desiredType</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">getResult</span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">desiredType</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span>
+<span class="w">        </span><span class="o">+</span><span class="n">setResult</span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">desiredType</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">PipelineExClient</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">PipelineBuilderInterface</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
+        <span class="err">+</span><span class="nc">add</span><span class="p">(</span><span class="n">StageInterface</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PipelineBuilderInterface</span>
+<span class="w">        </span><span class="o">+</span><span class="n">build</span><span class="p">(</span><span class="n">ProcessorInterface</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PipelineInterface</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">PipelineBuilder</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">add</span><span class="p">(</span><span class="n">StageInterface</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PipelineBuilderInterface</span>
+<span class="w">        </span><span class="o">+</span><span class="n">build</span><span class="p">(</span><span class="n">ProcessorInterface</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PipelineInterface</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h4>
-<object data="images/template_method_uml.svg" height="700" width="700"> </object>
+<h5 id="pipeline-pattern">Pipeline Pattern<a class="headerlink" href="#pipeline-pattern" title="Permanent link">¶</a></h5>
+<object data="images/pipeline_uml.svg" height="400" width="700"> </object>
+<h5 id="pipeline-pattern-with-builder-pattern">Pipeline Pattern with Builder Pattern<a class="headerlink" href="#pipeline-pattern-with-builder-pattern" title="Permanent link">¶</a></h5>
+<object data="images/pipeline_with_builder_uml.svg" height="400" width="700"> </object>
 <h3 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">¶</a></h3>
+<h4 id="pipeline-pattern_1">Pipeline Pattern<a class="headerlink" href="#pipeline-pattern_1" title="Permanent link">¶</a></h4>
 <ul>
-<li>Order processing algorithms: Consider a Brick-n-Mortar Store VS an Online Store<ul>
-<li>The basic order processing algorithm is: Select Items, Checkout, Pay, and Delivery, but how you select items, checkout, pay and deliver varies depending on the store type and its options.</li>
+<li>UNIX/Linux/Windows shells: Think command pipes!</li>
+<li>Data processing pipelines like Talend and SSIS</li>
+<li>Render farms for video processing.</li>
+<li>Map/Reduce is an fine-tuned application of this pattern.</li>
 </ul>
-</li>
-<li>All non-abstract methods of java.io.InputStream, java.io.OutputStream, java.io.Reader and java.io.Writer.</li>
-<li>All non-abstract methods of java.util.AbstractList, java.util.AbstractSet and java.util.AbstractMap.<ul>
-<li>Remember from the book, <strong>get</strong> and <strong>size</strong> are the abstract methods that need to be overridden for the template methods like <strong>contains</strong>.</li>
-</ul>
-</li>
+<h4 id="ideas-for-use">Ideas for Use<a class="headerlink" href="#ideas-for-use" title="Permanent link">¶</a></h4>
+<ul>
+<li>Making API requests and parsing the result (JSON, XML, etc).</li>
+<li>Conversion tools translating CSV | JSON | SQL Query, etc.</li>
+<li>MP3 channel | MIDI | Device channel</li>
+<li>Host Scan (Result) | Vulnerability Map | Pen Test</li>
+<li>DB Query | JSON | Message Q | API Job</li>
+<li>Port Scan Job | Parallel Scan | Aggregator</li>
 </ul>
 <h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="template_method_java.html">Template Method Design Pattern</a></li>
+<li><a href="https://github.com/THartmanOfTheRedwoods/PipelinePattern">The Pattern Implemented</a></li>
 </ul>
-<h3 id="main-take-aways-from-the-textbook">Main Take-Aways from the textbook<a class="headerlink" href="#main-take-aways-from-the-textbook" title="Permanent link">¶</a></h3>
+<h3 id="main-take-aways-from-me">Main Take-Aways from <strong>ME</strong><a class="headerlink" href="#main-take-aways-from-me" title="Permanent link">¶</a></h3>
 <ul>
-<li>A template method defines the steps of an algorithm, deferring to subclasses for the implementation of those steps.</li>
-<li>The Template Method Pattern gives us an important technique for code reuse.</li>
-<li>The template method’s abstract class may define concrete methods, abstract methods, and hooks.</li>
-<li>Abstract methods are implemented by subclasses.</li>
-<li>Hooks are methods that do nothing or default behavior in the abstract class, but may be overridden in the subclass.</li>
-<li>To prevent subclasses from changing the algorithm in the template method, declare the template method as final.</li>
-<li>The Hollywood Principle guides us to put decision making in high- level modules that can decide how and when to call low-level modules.</li>
-<li>You’ll see lots of uses of the Template Method Pattern in real-world code, but (as with any pattern) don’t expect it all to be designed “by the book.”</li>
-<li>The Strategy and Template Method Patterns both encapsulate algorithms, the first by composition and the other by inheritance.</li>
-<li>Factory Method is a specialization of Template Method.</li>
+<li>Think of the Pipeline Pattern like an assembly line that takes a payload object, modifies it, and passes it onto the next Stage.<ul>
+<li>The Payload object is the one primary constant in all Stages.</li>
+<li>The payload is passed to each Stage of the Pipeline process until it complete or errors.</li>
 </ul>
-<h3 id="main-oo-principles-of-template-method-pattern">Main OO Principles of Template Method Pattern<a class="headerlink" href="#main-oo-principles-of-template-method-pattern" title="Permanent link">¶</a></h3>
+</li>
+<li>Stages could also be called <strong>Filters</strong> in the wild.</li>
+<li>The Pipeline pattern increases readability.
+```java “Consider a bunch of this…”
+…
+if(order.getStatus().equals(“success”)) {
+    this.getVendorAdapter().sendOrder(order);
+}
+…
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>```java "Versus"
+PipelineInterface pipeline = new Pipeline()
+        .pipe(new CreateOrder())
+        .pipe(new ProcessPayment())
+        .pipe(new SendInvoice())
+        .pipe(new ExportOrder());
+pipeline.process(order);
+</code></pre></div></td></tr></table></div></li>
+<li>The Pipeline pattern increases testability</li>
+<li>The Pipeline patterns allow Pipeline Re-Use</li>
+<li>Handling Exceptions is trivial</li>
+<li>Single responsibility per stage makeing code re-use and modular code simpler.</li>
+<li>Adding a Builder Pattern allows for conditional Pipelines.</li>
+<li>Use this code when solving multi-stage problems.</li>
+</ul>
+<h3 id="main-oo-principles-of-pipeline-pattern">Main OO Principles of Pipeline Pattern<a class="headerlink" href="#main-oo-principles-of-pipeline-pattern" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="oo_principles.html#hollywood-principle">Hollywood Principle</a>: The Super-class calls the methods of its concrete subclasses. The Super-class decides the algorithm order, but the sub-classes decide how to fulfill the steps.</li>
-<li><a href="oo_principles.html#encapsulate-what-varies">Encapsulate what Varies</a>: Encapsulate overall algorithms in superclass and the varying part of the algorithm in sub-classes..</li>
-<li><a href="oo_principles.html#program-to-interfaces-not-implementations">Program to Interfaces not Implementations</a>: The super-class is an abstract class with abstract methods and hooks that need or can be implemented by its subclasses. Thus, the Super-class adheres to this principle and is used like an interface in the client.</li>
-<li><a href="oo_principles.html#open-closed-principle">Open Closed Principle</a>: HOOKS!!! They allow the sub-classes to modify the existing algorithm without changing the Super-class code.</li>
+<li><a href="oo_principles.html#single-responsibility">Single Responsibility</a>: Since each Stage does one and only one specific thing, this adheres to the rule of Single Responsibility in the strictest sense.</li>
+<li><a href="oo_principles.html#favor-composition-over-inheritance">Favors composition over inheritance</a>: The Pipeline is composed of its Stage list and Pipeline processor rather than inheriting from them.</li>
+<li><a href="oo_principles.html#program-to-interfaces-not-implementations">Program to interfaces not Implementations</a>: All of the concrete classes are dependent on implementing interfaces instead of inheritance. In addition, because the Pipeline class is also a StageInterface, built pipelines can be handed as Stages to other pipelines as re-usable pipelines.</li>
 </ul>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>Violates the principle of <strong>Favor Composition over Inheritance</strong>, but it does it for a good reason, to control the algorithm, and provide <strong>code reuse</strong>.</p>
-</details>
 </article>
 </div>
 </div>
