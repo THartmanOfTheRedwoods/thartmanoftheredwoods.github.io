@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#key-oo-principles" class="md-skip">
+        <a href="#key-oop-principles" class="md-skip">
           Skip to content
         </a>
       
@@ -2596,11 +2596,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-oo-principles" class="md-nav__link">
-    Key OO Principles
+  <a href="#key-oop-principles" class="md-nav__link">
+    Key OOP Principles
   </a>
   
-    <nav class="md-nav" aria-label="Key OO Principles">
+    <nav class="md-nav" aria-label="Key OOP Principles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3279,11 +3279,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-oo-principles" class="md-nav__link">
-    Key OO Principles
+  <a href="#key-oop-principles" class="md-nav__link">
+    Key OOP Principles
   </a>
   
-    <nav class="md-nav" aria-label="Key OO Principles">
+    <nav class="md-nav" aria-label="Key OOP Principles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3384,10 +3384,10 @@
 
   <h1>Key OO Principles</h1>
 
-<h2 id="key-oo-principles">Key OO Principles<a class="headerlink" href="#key-oo-principles" title="Permanent link">&para;</a></h2>
+<h2 id="key-oop-principles">Key OOP Principles<a class="headerlink" href="#key-oop-principles" title="Permanent link">&para;</a></h2>
 <h3 id="encapsulate-what-varies">Encapsulate what varies<a class="headerlink" href="#encapsulate-what-varies" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Definition: Identify the aspects of your applications that vary and separate them from what stays the same. If a component or module in your application is bound to change frequently, then it’s a good practice to separate this part of code from the stable ones so that later we can extend or alter the part that varies without affecting those that don’t vary.</li>
+<li>Definition: Identify the aspects of your applications that vary and separate them from what stays the same. If a component or module in your application is bound to change frequently, then it&rsquo;s a good practice to separate this part of code from the stable ones so that later we can extend or alter the part that varies without affecting those that don&rsquo;t vary.</li>
 <li>Example: In the code below, the pet type varies, and the pet sound is a detail/functionality that varies from pet to pet or even owner to owner as is the pet type itself. Hence we encapsulate the varying details into <strong>classes</strong> or <strong>methods</strong>, which allows changing code Block 1 into code Block 2, the speak method encapsulates the varying pet types and sounds:</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -3413,13 +3413,13 @@
 <h3 id="favor-composition-over-inheritance">Favor composition over inheritance<a class="headerlink" href="#favor-composition-over-inheritance" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Definition: Favor <strong>has-a</strong> relationships, <strong>Composition</strong>, over <strong>is-a</strong> relationships, <strong>Inheritance</strong>. Inheritance can make code more rigid and less extensible when overused, especially with Java&rsquo;s single inheritance. Class explosion due to needing to represent composite classes will arise unless composition is used instead (Composite and Builder patterns come to mind).</li>
-<li>Example: Consider shape classes like Square, Rectangle, Circle inheriting from a Shape class. If we want to mkae a new shape combining rectangle and square we&rsquo;d need a RectSquare or a SquareRect class using inheritance, but if we use composition instead, we could make a single CompositeShape class which would be composed of a list of other Shape.</li>
+<li>Example: Consider shape classes like Square, Rectangle, Circle inheriting from a Shape class. If we want to make a new shape combining rectangle and square we&rsquo;d need a RectSquare or a SquareRect class using inheritance, but if we use composition instead, we could make a single CompositeShape class which would be composed of a list of other Shape.</li>
 </ul>
 <h3 id="program-to-interfaces-not-implementations">Program to interfaces, not implementations<a class="headerlink" href="#program-to-interfaces-not-implementations" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Definition: Program to a super type like an interface or abstract class, not a concrete class.</li>
 <li>Example 1: Polymorphism, we rely on an interface to allow us to treat different objects that perform similar actions in the same way.</li>
-<li>Example 2: Assume a database accessor layer in your application which is used to perform CRUD operations on your DB. Let’s consider that we implement a Service class which calls the DatabaseClient class (However practically we should have a DataAccessor class between Service and DatabaseClient). The DatabaseClient is concrete class programmed to access postgres DB. The DatabaseClient is a heavy duty class with all helper methods required to access the DB. Assume that the client decides to switch to a NoSQL database like MongoDB or add it as a secondary database for some specific purposes. This would lead to rewriting the DatabaseClient which would complicate things.</li>
+<li>Example 2: Assume a database access layer in your application which is used to perform CRUD operations on your DB. Let&rsquo;s consider that we implement a Service class which calls the DatabaseClient class (However practically we should have a DataAccessor class between Service and DatabaseClient). The DatabaseClient is concrete class programmed to access postgres DB. The DatabaseClient is a heavy duty class with all helper methods required to access the DB. Assume that the client decides to switch to a NoSQL database like MongoDB or add it as a secondary database for some specific purposes. This would lead to rewriting the DatabaseClient which would complicate things.</li>
 </ul>
 <h3 id="strive-for-loosely-coupled-designs-between-objects-that-interact">Strive for loosely coupled designs between objects that interact<a class="headerlink" href="#strive-for-loosely-coupled-designs-between-objects-that-interact" title="Permanent link">&para;</a></h3>
 <ul>

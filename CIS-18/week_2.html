@@ -3357,12 +3357,12 @@
 <summary>Definitions</summary>
 <p><strong>Encapsulation</strong>: Group single responsibilities and make sure sensitive data is hidden from users.</p>
 </details>
-<p>Below are the important things to remember about encasulation:</p>
+<p>Below are the important things to remember about encapsulation:</p>
 <ul>
-<li>Private access modifies should be used to protect instance variables you don&rsquo;t wish to change outside the class</li>
+<li>Private access modifiers should be used to protect instance variables you don&rsquo;t wish to change outside the class</li>
 <li>Getters and Setters should be used to protect how objects interact with sensitive data and variables.</li>
 <li>Encapsulation provides access control like R, W, or RW</li>
-<li>Flexibile: Proper encapsulation means developers won&rsquo;t inadvertantly change encapsulated code while working on another piece of code that utilizes it.</li>
+<li>Flexible: Proper encapsulation means developers won&rsquo;t inadvertently change encapsulated code while working on another piece of code that utilizes it.</li>
 </ul>
 <h3 id="inheritance">Inheritance<a class="headerlink" href="#inheritance" title="Permanent link">&para;</a></h3>
 <details class="note" open="open">
@@ -3381,7 +3381,7 @@
 <li>So if a method should be <strong>private</strong> but inheritable, it should be <strong>protected</strong></li>
 </ul>
 </li>
-<li>To change inherited methods, they must be overriden by defining a new implementation in the <strong>child/subclass</strong></li>
+<li>To change inherited methods, they must be overridden by defining a new implementation in the <strong>child/subclass</strong></li>
 <li>Mark a class <strong>final</strong> (i.e. <code>final class SomeClass { ... }</code>) if you don&rsquo;t want it to be inherited.</li>
 <li>Actual type of an object/instance dictates which method is executed (Show display from week 1 again).</li>
 <li>If the class to be created is a special case of an existing class, inheritance is OK</li>
@@ -3452,7 +3452,7 @@
 <h3 id="abstraction">Abstraction<a class="headerlink" href="#abstraction" title="Permanent link">&para;</a></h3>
 <details class="note" open="open">
 <summary>Definitions</summary>
-<p><strong>Abstration</strong>: The process of hiding certain details and showing only essential information to the user.</p>
+<p><strong>Abstraction</strong>: The process of hiding certain details and showing only essential information to the user.</p>
 <p>We&rsquo;ve already talked about using methods to encapsulate and abstract algorithms, but abstraction in OOP is more broad, and can be accomplished with two different Java constructs: <a href="#abstract-class">Abstract classes</a> and <a href="#interface">Interfaces</a>.</p>
 <p>Abstraction should be used frequently in APIs and libraries to hide implementation details that would only create complexity for the consumers of the API or library or to achieve class security by hiding instance variables or methods that the API/library designers know changing would change or alter desired functionality.</p>
 </details>
@@ -3549,7 +3549,7 @@
 <li>Interfaces define behavior through <strong>method</strong> names and their <strong>return values</strong> (AKA method signatures). </li>
 </ul>
 </li>
-<li>Interfaces are <strong>always abstract and public</strong>, so access modifers are sometimes ommitted. </li>
+<li>Interfaces are <strong>always abstract and public</strong>, so access modifiers are sometimes omitted. </li>
 <li>Interface <strong>attributes/fields</strong> are by default <strong>public, static and final</strong></li>
 <li>An interface cannot contain a <strong>constructor</strong> because <strong>it cannot be used to create objects</strong></li>
 <li>Interfaces must be implemented (<strong>kinda like inherited</strong>), but uses <strong>implements</strong> instead of <strong>extends</strong>. <ul>

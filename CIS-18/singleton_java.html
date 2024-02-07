@@ -3231,11 +3231,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#thread-safe-lazy-singelton" class="md-nav__link">
-    Thread-Safe Lazy Singelton
+  <a href="#thread-safe-lazy-singleton" class="md-nav__link">
+    Thread-Safe Lazy Singleton
   </a>
   
-    <nav class="md-nav" aria-label="Thread-Safe Lazy Singelton">
+    <nav class="md-nav" aria-label="Thread-Safe Lazy Singleton">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3258,11 +3258,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#thread-safe-lazy-double-checked-locking-singelton" class="md-nav__link">
-    Thread-Safe Lazy Double-Checked Locking Singelton
+  <a href="#thread-safe-lazy-double-checked-locking-singleton" class="md-nav__link">
+    Thread-Safe Lazy Double-Checked Locking Singleton
   </a>
   
-    <nav class="md-nav" aria-label="Thread-Safe Lazy Double-Checked Locking Singelton">
+    <nav class="md-nav" aria-label="Thread-Safe Lazy Double-Checked Locking Singleton">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3359,8 +3359,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-of-defeating-singleton-with-deserialization" class="md-nav__link">
-    Example of Defeating Singleton with Deserialization
+  <a href="#example-of-defeating-singleton-with-de-serialization" class="md-nav__link">
+    Example of Defeating Singleton with De-serialization
   </a>
   
 </li>
@@ -3526,7 +3526,7 @@
 <li>Not Thread-safe (i.e. would fail in multi-threaded code).</li>
 <li>Reflection can destroy this Singleton implementation.</li>
 </ul>
-<h3 id="thread-safe-lazy-singelton">Thread-Safe Lazy Singelton<a class="headerlink" href="#thread-safe-lazy-singelton" title="Permanent link">&para;</a></h3>
+<h3 id="thread-safe-lazy-singleton">Thread-Safe Lazy Singleton<a class="headerlink" href="#thread-safe-lazy-singleton" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3571,7 +3571,7 @@
 <li>Fails in Java 5 in certain scenarios where too many threads tried to get the instance of the singleton class simultaneously due to OLD Java memory model.</li>
 <li>Reflection can destroy this Singleton implementation.</li>
 </ul>
-<h3 id="thread-safe-lazy-double-checked-locking-singelton">Thread-Safe Lazy Double-Checked Locking Singelton<a class="headerlink" href="#thread-safe-lazy-double-checked-locking-singelton" title="Permanent link">&para;</a></h3>
+<h3 id="thread-safe-lazy-double-checked-locking-singleton">Thread-Safe Lazy Double-Checked Locking Singleton<a class="headerlink" href="#thread-safe-lazy-double-checked-locking-singleton" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3686,7 +3686,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="pros_6">Pros<a class="headerlink" href="#pros_6" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Enum gurantees single instantiation and global access.</li>
+<li>Enum guarantees single instantiation and global access.</li>
 <li>Thread-Safe</li>
 <li>Reflection <strong>CANNOT</strong> destroy this Singleton implementation.</li>
 </ul>
@@ -3748,9 +3748,9 @@
 <h2 id="issues-with-serialization">Issues with Serialization<a class="headerlink" href="#issues-with-serialization" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Serialization is when we need to store an object to the file-system, or other storage media, for later retrieval.</li>
-<li>The deserialization of the stored object ceates a new <strong>instance,</strong> however. This defeats the idea of a Singleton.</li>
+<li>The de-serialization of the stored object creates a new <strong>instance,</strong> however. This defeats the idea of a Singleton.</li>
 </ul>
-<h4 id="example-of-defeating-singleton-with-deserialization">Example of Defeating Singleton with Deserialization<a class="headerlink" href="#example-of-defeating-singleton-with-deserialization" title="Permanent link">&para;</a></h4>
+<h4 id="example-of-defeating-singleton-with-de-serialization">Example of Defeating Singleton with De-serialization<a class="headerlink" href="#example-of-defeating-singleton-with-de-serialization" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3802,7 +3802,7 @@
 <span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">writeObject</span><span class="p">(</span><span class="n">instanceOne</span><span class="p">);</span>
 <span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 
-<span class="w">        </span><span class="c1">// deserialize from file to object</span>
+<span class="w">        </span><span class="c1">// de-serialize from file to object</span>
 <span class="w">        </span><span class="n">ObjectInput</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectInputStream</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span>
 <span class="w">                </span><span class="s">&quot;filename.ser&quot;</span><span class="p">));</span>
 <span class="w">        </span><span class="n">SerializedSingleton</span><span class="w"> </span><span class="n">instanceTwo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">SerializedSingleton</span><span class="p">)</span><span class="w"> </span><span class="n">in</span><span class="p">.</span><span class="na">readObject</span><span class="p">();</span>

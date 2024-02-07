@@ -1352,11 +1352,11 @@
 </details>
 <details class="info" open="open">
 <summary>Problem 4</summary>
-<p>You are developing a stock trading platform that allows users to track the performance of various stocks in real-time. Users can create watchlists of stocks they are interested in, and they want to receive immediate notifications whenever the price of a stock on their watchlist crosses a certain threshold, such as a predefined buy or sell price. Additionally, you want to allow users to customize these notifications based on their preferences.</p>
+<p>You are developing a stock trading platform that allows users to track the performance of various stocks in real-time. Users can create watch-lists of stocks they are interested in, and they want to receive immediate notifications whenever the price of a stock on their watch-list crosses a certain threshold, such as a predefined buy or sell price. Additionally, you want to allow users to customize these notifications based on their preferences.</p>
 </details>
 <details class="-success">
 <summary>Answer 4</summary>
-<p>In this scenario, the Observer Design Pattern can be highly beneficial. You can implement a system where each stock is an observable subject, and users’ watchlists are the observers. When the price of a stock changes, it notifies all users who are observing that stock. Users can set their desired price thresholds and notification preferences when adding stocks to their watchlists. This way, when a stock’s price crosses a threshold, the relevant users can be notified in real-time. The Observer Pattern helps keep the stock monitoring system flexible and extensible, allowing users to customize their watchlists and notifications without modifying the core trading platform code.</p>
+<p>In this scenario, the Observer Design Pattern can be highly beneficial. You can implement a system where each stock is an observable subject, and users’ watch-lists are the observers. When the price of a stock changes, it notifies all users who are observing that stock. Users can set their desired price thresholds and notification preferences when adding stocks to their watch-lists. This way, when a stock’s price crosses a threshold, the relevant users can be notified in real-time. The Observer Pattern helps keep the stock monitoring system flexible and extensible, allowing users to customize their watch-lists and notifications without modifying the core trading platform code.</p>
 <div class="mermaid">classDiagram
   class Stock {
     + price: float
