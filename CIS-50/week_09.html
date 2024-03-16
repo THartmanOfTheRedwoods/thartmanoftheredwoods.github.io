@@ -13,21 +13,25 @@
       
       
       
+        <link rel="prev" href="cheatsheets.html">
       
       
-      <link rel="icon" href="assets/images/favicon.ico">
+        <link rel="next" href="Chapter_9.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
     
     
       
-        <title>Sep20 lesson - THartmanOfTheRedwoods Wiki</title>
+        <title>Column Store VS Row Store - THartmanOfTheRedwoods Wiki</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -46,16 +50,16 @@
       
     
     
-      <link rel="stylesheet" href="css/mode.css">
+      <link rel="stylesheet" href="../css/mode.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -66,7 +70,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -88,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#drives" class="md-skip">
+        <a href="#other-ways-to-store-data" class="md-skip">
           Skip to content
         </a>
       
@@ -108,9 +112,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
+    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
       
-  <img src="assets/images/simple_sign_logo_64.png" alt="logo">
+  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -127,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sep20 lesson
+              Column Store VS Row Store
             
           </span>
         </div>
@@ -220,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
     
@@ -239,7 +243,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="cross_platform/cordova.html" class="md-tabs__link">
+        <a href="../cross_platform/cordova.html" class="md-tabs__link">
           
   
     
@@ -259,7 +263,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="android/getapk.html" class="md-tabs__link">
+        <a href="../android/getapk.html" class="md-tabs__link">
           
   
     
@@ -279,7 +283,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="git/gitflow.html" class="md-tabs__link">
+        <a href="../git/gitflow.html" class="md-tabs__link">
           
   
     
@@ -299,7 +303,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="java/annotations.html" class="md-tabs__link">
+        <a href="../java/annotations.html" class="md-tabs__link">
           
   
     
@@ -317,7 +321,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="markdown-cheat-sheet.html" class="md-tabs__link">
+      <a href="../markdown-cheat-sheet.html" class="md-tabs__link">
         
   
     
@@ -336,7 +340,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="rasppi/boot-pi-4-from-ssd.html" class="md-tabs__link">
+        <a href="../rasppi/boot-pi-4-from-ssd.html" class="md-tabs__link">
           
   
     
@@ -356,7 +360,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="tomcat/install.html" class="md-tabs__link">
+        <a href="../tomcat/install.html" class="md-tabs__link">
           
   
     
@@ -376,7 +380,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="tux/os_command_map.html" class="md-tabs__link">
+        <a href="../tux/os_command_map.html" class="md-tabs__link">
           
   
     
@@ -396,7 +400,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="vim/cheat-sheet.html" class="md-tabs__link">
+        <a href="../vim/cheat-sheet.html" class="md-tabs__link">
           
   
     
@@ -416,7 +420,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="virtualbox/win11install.html" class="md-tabs__link">
+        <a href="../virtualbox/win11install.html" class="md-tabs__link">
           
   
     
@@ -436,7 +440,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="windows/os_command_map.html" class="md-tabs__link">
+        <a href="../windows/os_command_map.html" class="md-tabs__link">
           
   
     
@@ -456,7 +460,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="hardware/cables.html" class="md-tabs__link">
+        <a href="../hardware/cables.html" class="md-tabs__link">
           
   
     
@@ -472,11 +476,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="archive.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../archive.html" class="md-tabs__link">
           
   
     
@@ -517,9 +523,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
+    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
       
-  <img src="assets/images/simple_sign_logo_64.png" alt="logo">
+  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
 
     </a>
     THartmanOfTheRedwoods Wiki
@@ -533,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cross_platform/cordova.html" class="md-nav__link">
+      <a href="../cross_platform/cordova.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="android/getapk.html" class="md-nav__link">
+      <a href="../android/getapk.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -720,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="git/gitflow.html" class="md-nav__link">
+      <a href="../git/gitflow.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -797,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="java/annotations.html" class="md-nav__link">
+      <a href="../java/annotations.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -817,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/certificates/LAZY_DEV.html" class="md-nav__link">
+      <a href="../tux/certificates/LAZY_DEV.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="java/format_specifiers.html" class="md-nav__link">
+      <a href="../java/format_specifiers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="java/loop_usage.html" class="md-nav__link">
+      <a href="../java/loop_usage.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -877,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="java/operators.html" class="md-nav__link">
+      <a href="../java/operators.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -897,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="java/associativity.html" class="md-nav__link">
+      <a href="../java/associativity.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -917,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/certificates/LAZY_DEV.html" class="md-nav__link">
+      <a href="../tux/certificates/LAZY_DEV.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -944,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="markdown-cheat-sheet.html" class="md-nav__link">
+      <a href="../markdown-cheat-sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rasppi/boot-pi-4-from-ssd.html" class="md-nav__link">
+      <a href="../rasppi/boot-pi-4-from-ssd.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1066,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tomcat/install.html" class="md-nav__link">
+      <a href="../tomcat/install.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1147,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/os_command_map.html" class="md-nav__link">
+      <a href="../tux/os_command_map.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1167,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/imagemagick.html" class="md-nav__link">
+      <a href="../tux/imagemagick.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1187,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/network.html" class="md-nav__link">
+      <a href="../tux/network.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1207,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/nmcli.html" class="md-nav__link">
+      <a href="../tux/nmcli.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1227,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/pandoc.html" class="md-nav__link">
+      <a href="../tux/pandoc.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1247,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/parallel.html" class="md-nav__link">
+      <a href="../tux/parallel.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1267,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/ssh.html" class="md-nav__link">
+      <a href="../tux/ssh.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1287,7 +1293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/tesseract.html" class="md-nav__link">
+      <a href="../tux/tesseract.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1349,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/certificates/certificate_authority.html" class="md-nav__link">
+      <a href="../tux/certificates/certificate_authority.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1369,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/certificates/JAVA_KEYSTORE.html" class="md-nav__link">
+      <a href="../tux/certificates/JAVA_KEYSTORE.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1389,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tux/certificates/LAZY_DEV.html" class="md-nav__link">
+      <a href="../tux/certificates/LAZY_DEV.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1462,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="vim/cheat-sheet.html" class="md-nav__link">
+      <a href="../vim/cheat-sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1527,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="virtualbox/win11install.html" class="md-nav__link">
+      <a href="../virtualbox/win11install.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1594,7 +1600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="windows/os_command_map.html" class="md-nav__link">
+      <a href="../windows/os_command_map.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1666,7 +1672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="windows/network/arp.html" class="md-nav__link">
+      <a href="../windows/network/arp.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1686,7 +1692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="windows/network/nbtstat.html" class="md-nav__link">
+      <a href="../windows/network/nbtstat.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1706,7 +1712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="windows/network/netstat.html" class="md-nav__link">
+      <a href="../windows/network/netstat.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1726,7 +1732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="windows/network/ping.html" class="md-nav__link">
+      <a href="../windows/network/ping.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1746,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="windows/network/ipconfig.html" class="md-nav__link">
+      <a href="../windows/network/ipconfig.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1766,7 +1772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="windows/network/net.html" class="md-nav__link">
+      <a href="../windows/network/net.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1786,7 +1792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="windows/network/nslookup.html" class="md-nav__link">
+      <a href="../windows/network/nslookup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1806,7 +1812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="windows/network/tracert.html" class="md-nav__link">
+      <a href="../windows/network/tracert.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1879,7 +1885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hardware/cables.html" class="md-nav__link">
+      <a href="../hardware/cables.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1904,6 +1910,8 @@
       
   
   
+    
+  
   
     
     
@@ -1920,13 +1928,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
         
           <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
@@ -1939,7 +1947,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             Class Notes
@@ -1952,7 +1960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="archive.html" class="md-nav__link">
+      <a href="../archive.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1972,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fun.html" class="md-nav__link">
+      <a href="../fun.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1990,6 +1998,8 @@
                 
   
   
+    
+  
   
     
     
@@ -2028,13 +2038,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3" checked>
         
           <label class="md-nav__link" for="__nav_14_3" id="__nav_14_3_label" tabindex="0">
             
@@ -2047,7 +2057,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_14_3">
             <span class="md-nav__icon md-icon"></span>
             CIS-50
@@ -2060,7 +2070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_1.html" class="md-nav__link">
+      <a href="Chapter_1.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2080,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/data_consistency.html" class="md-nav__link">
+      <a href="data_consistency.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2100,7 +2110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_2.html" class="md-nav__link">
+      <a href="Chapter_2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2120,7 +2130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_3.html" class="md-nav__link">
+      <a href="Chapter_3.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2140,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/joins_ns.html" class="md-nav__link">
+      <a href="joins_ns.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2160,7 +2170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_4.html" class="md-nav__link">
+      <a href="Chapter_4.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2180,7 +2190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_5.html" class="md-nav__link">
+      <a href="Chapter_5.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2200,7 +2210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_6.html" class="md-nav__link">
+      <a href="Chapter_6.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2220,7 +2230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_7.html" class="md-nav__link">
+      <a href="Chapter_7.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2240,7 +2250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/cheatsheets.html" class="md-nav__link">
+      <a href="cheatsheets.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2258,9 +2268,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="CIS-50/week_09.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Column Store VS Row Store
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="week_09.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2269,6 +2297,207 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#other-ways-to-store-data" class="md-nav__link">
+    Other Ways to Store Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Ways to Store Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#column-store-vs-record-store" class="md-nav__link">
+    Column Store VS Record Store
+  </a>
+  
+    <nav class="md-nav" aria-label="Column Store VS Record Store">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-dbms" class="md-nav__link">
+    Relational DBMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-warehouses--analytical-databases" class="md-nav__link">
+    Data warehouses / Analytical Databases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-store-overview" class="md-nav__link">
+    C-Store Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="C-Store Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#column-store-architecture-benefits" class="md-nav__link">
+    Column store architecture benefits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-advantages-in-warehouses" class="md-nav__link">
+    Performance advantages in warehouses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-decisions" class="md-nav__link">
+    Design Decisions
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Decisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-coding-and-compression" class="md-nav__link">
+    Data coding and compression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-using-read-optimized-structures" class="md-nav__link">
+    Storage using read-optimized structures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demonstration-of-physical-storage" class="md-nav__link">
+    Demonstration of Physical Storage
+  </a>
+  
+    <nav class="md-nav" aria-label="Demonstration of Physical Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualizing-c-store-physical-storage" class="md-nav__link">
+    Visualizing C-Store Physical Storage
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualizing C-Store Physical Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#querying-multiple-projections" class="md-nav__link">
+    Querying Multiple Projections:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-architecture" class="md-nav__link">
+    Hardware Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-computers" class="md-nav__link">
+    Grid computers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizontal-data-partitioning" class="md-nav__link">
+    Horizontal data partitioning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactions-and-updates" class="md-nav__link">
+    Transactions and Updates
+  </a>
+  
+    <nav class="md-nav" aria-label="Transactions and Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges-of-updates-in-read-mostly-environments" class="md-nav__link">
+    Challenges of updates in read-mostly environments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-stor-in-the-wild" class="md-nav__link">
+    C-Stor in the Wild
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2280,7 +2509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_9.html" class="md-nav__link">
+      <a href="Chapter_9.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2300,7 +2529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_11.html" class="md-nav__link">
+      <a href="Chapter_11.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2320,7 +2549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_13.html" class="md-nav__link">
+      <a href="Chapter_13.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2340,7 +2569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_14.html" class="md-nav__link">
+      <a href="Chapter_14.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2360,7 +2589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-50/Chapter_15.html" class="md-nav__link">
+      <a href="Chapter_15.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2464,7 +2693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_1.html" class="md-nav__link">
+      <a href="../CIS-18/week_1.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2484,7 +2713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/sprint.html" class="md-nav__link">
+      <a href="../CIS-18/sprint.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2504,7 +2733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/user_story_intro.html" class="md-nav__link">
+      <a href="../CIS-18/user_story_intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2524,7 +2753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/user_story_lesson.html" class="md-nav__link">
+      <a href="../CIS-18/user_story_lesson.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2544,7 +2773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_2.html" class="md-nav__link">
+      <a href="../CIS-18/week_2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2564,7 +2793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/oo_principles.html" class="md-nav__link">
+      <a href="../CIS-18/oo_principles.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2584,7 +2813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_3.html" class="md-nav__link">
+      <a href="../CIS-18/week_3.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2604,7 +2833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_4.html" class="md-nav__link">
+      <a href="../CIS-18/week_4.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2624,7 +2853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_5.html" class="md-nav__link">
+      <a href="../CIS-18/week_5.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2644,7 +2873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_7.html" class="md-nav__link">
+      <a href="../CIS-18/week_7.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2664,7 +2893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/exam1_study.html" class="md-nav__link">
+      <a href="../CIS-18/exam1_study.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2684,7 +2913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_08.html" class="md-nav__link">
+      <a href="../CIS-18/week_08.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2704,7 +2933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_8.html" class="md-nav__link">
+      <a href="../CIS-18/week_8.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2724,7 +2953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_9.html" class="md-nav__link">
+      <a href="../CIS-18/week_9.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2744,7 +2973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_10.html" class="md-nav__link">
+      <a href="../CIS-18/week_10.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2764,7 +2993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/exam2_study.html" class="md-nav__link">
+      <a href="../CIS-18/exam2_study.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2784,7 +3013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_12.html" class="md-nav__link">
+      <a href="../CIS-18/week_12.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2804,7 +3033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_13.html" class="md-nav__link">
+      <a href="../CIS-18/week_13.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2824,7 +3053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_14.html" class="md-nav__link">
+      <a href="../CIS-18/week_14.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2844,7 +3073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-18/week_15.html" class="md-nav__link">
+      <a href="../CIS-18/week_15.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2934,7 +3163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/week_1.html" class="md-nav__link">
+      <a href="../CIS-12/week_1.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2954,7 +3183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/week_1_lecture.html" class="md-nav__link">
+      <a href="../CIS-12/week_1_lecture.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2974,7 +3203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/week_2.html" class="md-nav__link">
+      <a href="../CIS-12/week_2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2994,7 +3223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/floating_point_numbers.html" class="md-nav__link">
+      <a href="../CIS-12/floating_point_numbers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3014,7 +3243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="java/rounding_errors.html" class="md-nav__link">
+      <a href="../java/rounding_errors.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3034,7 +3263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/week_3.html" class="md-nav__link">
+      <a href="../CIS-12/week_3.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3054,7 +3283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/week_4.html" class="md-nav__link">
+      <a href="../CIS-12/week_4.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3074,7 +3303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/week_6L.html" class="md-nav__link">
+      <a href="../CIS-12/week_6L.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3094,7 +3323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/week_7.html" class="md-nav__link">
+      <a href="../CIS-12/week_7.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3114,7 +3343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/week_8.html" class="md-nav__link">
+      <a href="../CIS-12/week_8.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3134,7 +3363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/week_9.html" class="md-nav__link">
+      <a href="../CIS-12/week_9.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3154,7 +3383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/week_10.html" class="md-nav__link">
+      <a href="../CIS-12/week_10.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3174,7 +3403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CIS-12/week_12.html" class="md-nav__link">
+      <a href="../CIS-12/week_12.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3230,44 +3459,177 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#drives" class="md-nav__link">
-    Drives
+  <a href="#other-ways-to-store-data" class="md-nav__link">
+    Other Ways to Store Data
   </a>
   
-    <nav class="md-nav" aria-label="Drives">
+    <nav class="md-nav" aria-label="Other Ways to Store Data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#magnetic-drives" class="md-nav__link">
-    Magnetic Drives
+  <a href="#column-store-vs-record-store" class="md-nav__link">
+    Column Store VS Record Store
+  </a>
+  
+    <nav class="md-nav" aria-label="Column Store VS Record Store">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-dbms" class="md-nav__link">
+    Relational DBMS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ssd-or-solid-state" class="md-nav__link">
-    SSD or Solid State
+  <a href="#data-warehouses--analytical-databases" class="md-nav__link">
+    Data warehouses / Analytical Databases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-store-overview" class="md-nav__link">
+    C-Store Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="C-Store Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#column-store-architecture-benefits" class="md-nav__link">
+    Column store architecture benefits
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#smart-or-self-monitoring-analysis-and-reporting-technology" class="md-nav__link">
-    S.M.A.R.T or Self Monitoring Analysis and Reporting Technology
+  <a href="#performance-advantages-in-warehouses" class="md-nav__link">
+    Performance advantages in warehouses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-decisions" class="md-nav__link">
+    Design Decisions
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Decisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-coding-and-compression" class="md-nav__link">
+    Data coding and compression
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#interfaces" class="md-nav__link">
-    Interfaces
+  <a href="#storage-using-read-optimized-structures" class="md-nav__link">
+    Storage using read-optimized structures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demonstration-of-physical-storage" class="md-nav__link">
+    Demonstration of Physical Storage
+  </a>
+  
+    <nav class="md-nav" aria-label="Demonstration of Physical Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualizing-c-store-physical-storage" class="md-nav__link">
+    Visualizing C-Store Physical Storage
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualizing C-Store Physical Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#querying-multiple-projections" class="md-nav__link">
+    Querying Multiple Projections:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-architecture" class="md-nav__link">
+    Hardware Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-computers" class="md-nav__link">
+    Grid computers
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#raid" class="md-nav__link">
-    RAID
+  <a href="#horizontal-data-partitioning" class="md-nav__link">
+    Horizontal data partitioning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactions-and-updates" class="md-nav__link">
+    Transactions and Updates
+  </a>
+  
+    <nav class="md-nav" aria-label="Transactions and Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges-of-updates-in-read-mostly-environments" class="md-nav__link">
+    Challenges of updates in read-mostly environments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-stor-in-the-wild" class="md-nav__link">
+    C-Stor in the Wild
   </a>
   
 </li>
@@ -3292,72 +3654,393 @@
                   
 
 
-  <h1>Sep20 lesson</h1>
+  <h1>Column Store VS Row Store</h1>
 
-<h2 id="drives">Drives<a class="headerlink" href="#drives" title="Permanent link">&para;</a></h2>
-<h3 id="magnetic-drives">Magnetic Drives<a class="headerlink" href="#magnetic-drives" title="Permanent link">&para;</a></h3>
+<h2 id="other-ways-to-store-data">Other Ways to Store Data<a class="headerlink" href="#other-ways-to-store-data" title="Permanent link">&para;</a></h2>
+<h3 id="column-store-vs-record-store">Column Store VS Record Store<a class="headerlink" href="#column-store-vs-record-store" title="Permanent link">&para;</a></h3>
+<h4 id="relational-dbms">Relational DBMS<a class="headerlink" href="#relational-dbms" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Stacked, spinning platters with read/write head between each</li>
-<li>Platters spin at 5400, 7200, 10000, and 15000 RPM</li>
-<li>Data is organized in tracks (one loop) and sectors (segment of track)</li>
-<li>Low-Level-Formatting, or sector markings are written before leaving factory</li>
-<li>3.5&rdquo; and 2.5&rdquo; form factor</li>
+<li>Record-oriented storage</li>
+<li>Write-optimized systems</li>
+<li>Row store relational databases are write-optimized by storing attributes of a record contiguously in storage. This allows for a single disk write to push all of the fields of a single record out to disk.  This approach is efficient for write-heavy environments such as OLTP (Online Transaction Processing) systems, but is not ideal for datawarehouse systems..</li>
 </ul>
-<h3 id="ssd-or-solid-state">SSD or Solid State<a class="headerlink" href="#ssd-or-solid-state" title="Permanent link">&para;</a></h3>
+<h4 id="data-warehouses--analytical-databases">Data warehouses / Analytical Databases<a class="headerlink" href="#data-warehouses--analytical-databases" title="Permanent link">&para;</a></h4>
 <ul>
-<li>No moving parts</li>
-<li>NAND, or Not And, pair of transistor gates holds data in rows and columns</li>
-<li>Lifespan based of writes to drive because of limited transistor re-programming</li>
-<li>Currently a tiny bit more expensive than magnetic</li>
-<li>Sata, M.2 sata, M.2 NVME, PCI Express NVME</li>
-<li>Uses wear leveling to ensure LBA does not always refere to the same block</li>
-<li>Reserves blocks to use when other blocks approach re-programming limits</li>
-<li>Usually 2.5&rdquo; form factor</li>
-</ul>
-<h3 id="smart-or-self-monitoring-analysis-and-reporting-technology">S.M.A.R.T or Self Monitoring Analysis and Reporting Technology<a class="headerlink" href="#smart-or-self-monitoring-analysis-and-reporting-technology" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Used to predict drive failures and warn you before the failure takes place.</li>
-<li>Usually turned on/off in BIOS/UEFI</li>
-<li>SSDs Report # of writes.</li>
-</ul>
-<h3 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">&para;</a></h3>
-<ul>
-<li>IDE: Integrated Drive Electronics (No longer used)</li>
-<li>SCSI: Small Computer System Interface (No longer used)<ul>
-<li>supported up to 15 drives per cable.</li>
-</ul>
-</li>
-<li>SATA: Serial ATA, 7-pin data with 15 pin power connectors<ul>
-<li>Sata 1: 1.5 Gb/s</li>
-<li>Sata 2: 3 Gb/s</li>
-<li>Sata 3: 6 Gb/s</li>
-<li>Sata Express: 18 Gb/s</li>
-</ul>
-</li>
-<li>NVMe: Non-Volatile Memory Express, PCIex4, M.2, or U.2<ul>
-<li>Only SSD</li>
-<li>PCIex4 required</li>
-<li>32Gb/s or 5x Sata 3</li>
+<li>Column store architecture</li>
+<li>Read-optimized systems</li>
+<li>Column stores make databases read-optimized in two ways:<ul>
+<li><strong>Avoiding irrelevant data access</strong>: By storing data by column, C-Store allows users to only read the columns they need for a query, as opposed to reading entire rows in a row-store database. This can significantly improve read performance, especially for queries that only involve a subset of attributes.</li>
+<li><strong>Data compression</strong>: Column stores can compress data more effectively than row stores because they store each column separately. This is because each column likely contains similar data types, which can be compressed more efficiently than the mixed data types within a row.</li>
 </ul>
 </li>
 </ul>
-<h3 id="raid">RAID<a class="headerlink" href="#raid" title="Permanent link">&para;</a></h3>
+<h3 id="c-store-overview">C-Store Overview<a class="headerlink" href="#c-store-overview" title="Permanent link">&para;</a></h3>
+<p>C-Store is a column-oriented DBMS that is designed to be read-optimized. It achieves this by <strong>storing data by column</strong> rather than by row, and by <strong>using careful coding and packing of objects</strong> into storage. C-Store also uses <strong>bitmap indexes to complement B-tree structures</strong>. These design choices allow C-Store to outperform commercial row-oriented products on warehouse-style queries.</p>
+<h4 id="column-store-architecture-benefits">Column store architecture benefits<a class="headerlink" href="#column-store-architecture-benefits" title="Permanent link">&para;</a></h4>
 <ul>
-<li>RAID 0: Striping
-<a class="glightbox" href="images/raid0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Raid 0" src="images/raid0.png" /></a></li>
-<li>RAID 1: Mirroring
-<a class="glightbox" href="images/raid1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Raid 1" src="images/raid1.png" /></a></li>
-<li>RAID 5: Stripes with Parity info<ul>
-<li>Requires 3 or more drives</li>
-<li>No data duplication, so better space utilization
-<a class="glightbox" href="images/raid5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Raid 5" src="images/raid5.png" /></a></li>
+<li>Data stored in a traditional row store style</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transaction ID</th>
+<th>Date</th>
+<th>Product</th>
+<th>Quantity</th>
+<th>Price</th>
+<th>Customer ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2024-03-15</td>
+<td>Laptop</td>
+<td>2</td>
+<td>$800</td>
+<td>101</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2024-03-15</td>
+<td>Smartphone</td>
+<td>1</td>
+<td>$500</td>
+<td>102</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2024-03-15</td>
+<td>Tablet</td>
+<td>3</td>
+<td>$300</td>
+<td>103</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>In a C-Store database, data is stored column by column. Each column represents a single attribute, and all values for that attribute across all records are stored together.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transaction ID</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>2024-03-15</td>
+<td>2024-03-15</td>
+<td>2024-03-15</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>Laptop</td>
+<td>Smartphone</td>
+<td>Tablet</td>
+</tr>
+<tr>
+<td>Quantity</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>$800</td>
+<td>$500</td>
+<td>$300</td>
+</tr>
+<tr>
+<td>Customer ID</td>
+<td>101</td>
+<td>102</td>
+<td>103</td>
+</tr>
+</tbody>
+</table>
+<h4 id="performance-advantages-in-warehouses">Performance advantages in warehouses<a class="headerlink" href="#performance-advantages-in-warehouses" title="Permanent link">&para;</a></h4>
+<ul>
+<li>A column store architecture benefits by reducing the number of disk accesses required per query.</li>
+<li>This is because only the columns required for processing a given query are read, and irrelevant attributes are avoided.</li>
+<li>In warehouse environments, where <strong>typical queries involve aggregates performed over large numbers of data items</strong>, a column store architecture has a significant performance advantage.</li>
+</ul>
+<h3 id="design-decisions">Design Decisions<a class="headerlink" href="#design-decisions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Read Optimize Data</li>
+<li>Store data by columns rather than by row.</li>
+<li>C-Store chooses to compress the data whenever possible.</li>
+</ul>
+<h4 id="data-coding-and-compression">Data coding and compression<a class="headerlink" href="#data-coding-and-compression" title="Permanent link">&para;</a></h4>
+<ul>
+<li>This is done by using coding schemes that can represent data in fewer bits than the original format.</li>
+<li>Instead of storing a state like &ldquo;CA&rdquo; as a two-character abbreviation, C-Store can code it into a 6-bit value.</li>
+</ul>
+<h4 id="storage-using-read-optimized-structures">Storage using read-optimized structures<a class="headerlink" href="#storage-using-read-optimized-structures" title="Permanent link">&para;</a></h4>
+<ul>
+<li>With a Column Structure, All the values for a single attribute are stored together, rather than each row of data being stored contiguously.</li>
+<li>This allows C-Store to only read the columns that are required for a query, <strong>reducing the amount of data that needs to be accessed from disk.</strong></li>
+<li>Physically store a collection of columns, where each column is sorted on some attribute.</li>
+<li>These sorted collections of columns are called projections.</li>
+<li>C-Store can store multiple projections of the same data, with each projection sorted on a different attribute.<ul>
+<li>This allows C-Store to choose the most efficient projection to use when answering a query.</li>
 </ul>
 </li>
-<li>RAID 10: Stiping and Mirroring
-<a class="glightbox" href="images/raid10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Raid 10" src="images/raid10.png" /></a></li>
-<li>Raid 6
-<a class="glightbox" href="images/raid6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Raid 6" src="images/raid6.png" /></a></li>
 </ul>
+<h3 id="demonstration-of-physical-storage">Demonstration of Physical Storage<a class="headerlink" href="#demonstration-of-physical-storage" title="Permanent link">&para;</a></h3>
+<ul>
+<li>As noted, C-Store&rsquo;s storage are <strong>Collections of columns sorted on attributes</strong></li>
+<li>Projection storage is then used to gain differnt views of this data.</li>
+</ul>
+<h4 id="visualizing-c-store-physical-storage">Visualizing C-Store Physical Storage<a class="headerlink" href="#visualizing-c-store-physical-storage" title="Permanent link">&para;</a></h4>
+<p>Let&rsquo;s visualize the physical storage of a C-Store database using a simple example with multiple projections. In this example, we&rsquo;ll consider a database storing sales data with columns for Transaction ID, Date, Product, Quantity, Price, and Customer ID.</p>
+<ul>
+<li>Traditional Row Store view of this data.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Transaction ID</th>
+<th>Date</th>
+<th>Product</th>
+<th>Quantity</th>
+<th>Price</th>
+<th>Customer ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2024-03-15</td>
+<td>Laptop</td>
+<td>2</td>
+<td>$800</td>
+<td>101</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2024-03-15</td>
+<td>Smartphone</td>
+<td>1</td>
+<td>$500</td>
+<td>102</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2024-03-15</td>
+<td>Tablet</td>
+<td>3</td>
+<td>$300</td>
+<td>103</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>In a C-Store database, the data would be physically stored in columns rather than rows. Here&rsquo;s how it might look:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transaction ID:</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Date:</td>
+<td>2024-03-15</td>
+<td>2024-03-15</td>
+<td>2024-03-15</td>
+</tr>
+<tr>
+<td>Product:</td>
+<td>Laptop</td>
+<td>Smartphone</td>
+<td>Tablet</td>
+</tr>
+<tr>
+<td>Quantity:</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Price:</td>
+<td>$800</td>
+<td>$500</td>
+<td>$300</td>
+</tr>
+<tr>
+<td>Customer ID:</td>
+<td>101</td>
+<td>102</td>
+<td>103</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Each column contains all the values for a specific attribute across all transactions.</p>
+</li>
+<li>
+<p>Now let&rsquo;s see what we mean by storing <strong>Multiple Projections:</strong></p>
+</li>
+<li>Consider two different projections or views of this data:</li>
+</ul>
+<p><strong>Projection 1: Product Sales</strong> - <strong>Columns:</strong> Product, Quantity, Price</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product:</td>
+<td>Laptop</td>
+<td>Smartphone</td>
+<td>Tablet</td>
+</tr>
+<tr>
+<td>Quantity:</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Price:</td>
+<td>$800</td>
+<td>$500</td>
+<td>$300</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Projection 2: Customer Transactions</strong> - <strong>Columns:</strong> Customer ID, Transaction ID, Date, Product</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer ID:</td>
+<td>101</td>
+<td>102</td>
+<td>103</td>
+</tr>
+<tr>
+<td>Transaction ID:</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Date:</td>
+<td>2024-03-15</td>
+<td>2024-03-15</td>
+<td>2024-03-15</td>
+</tr>
+<tr>
+<td>Product:</td>
+<td>Laptop</td>
+<td>Smartphone</td>
+<td>Tablet</td>
+</tr>
+</tbody>
+</table>
+<h5 id="querying-multiple-projections">Querying Multiple Projections:<a class="headerlink" href="#querying-multiple-projections" title="Permanent link">&para;</a></h5>
+<p>Queries can be performed on each projection separately, allowing for efficient analysis based on different perspectives of the data.</p>
+<ul>
+<li>For example, to calculate the total sales revenue for each product in <strong>Projection 1</strong>, you could run a SQL query like:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Product</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Price</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalRevenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ProductSales</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Product</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>And to retrieve all transactions made by a specific customer in <strong>Projection 2</strong>, you could run a query like:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CustomerTransactions</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">CustomerID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">101</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>These queries can be executed <strong>independently on their respective projections, leveraging the columnar storage layout for efficient data retrieval and processing.</strong></p>
+<h3 id="hardware-architecture">Hardware Architecture<a class="headerlink" href="#hardware-architecture" title="Permanent link">&para;</a></h3>
+<ul>
+<li>C-Store is designed for a grid computing environment.</li>
+</ul>
+<h4 id="grid-computers">Grid computers<a class="headerlink" href="#grid-computers" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Grid computing involves a network of interconnected computers (nodes) to work together as a single system.</li>
+<li>Each node has its own processing power, memory, and storage.</li>
+<li>Grid computing allows C-Store to be K-safe, meaning it can tolerate K failures.</li>
+<li>This is achieved by storing redundant data on different nodes.</li>
+</ul>
+<h4 id="horizontal-data-partitioning">Horizontal data partitioning<a class="headerlink" href="#horizontal-data-partitioning" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Horizontal Partitioning is a technique that splits a table into smaller subsets based on a chosen criterion, typically by ranges of values or <strong>hash functions</strong>.</li>
+<li>Each subset, called a <strong>shard (or partition)</strong>, is then stored on a separate machine.</li>
+<li>The Grid computer architecture allows C-Store to horizontally partition data across the disks of the various nodes.  This is beneficial because it allows for very large amounts of data to be stored and retrieved in parallel.</li>
+</ul>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>horizontal partitioning benefits C-Store in a grid computing environment:</p>
+<p>Scalability: By distributing data across multiple machines, C-Store can handle much larger datasets than if it were limited to a single server. As the data volume grows, additional nodes can be added to the grid to accommodate the increase.</p>
+<p>Parallel Processing: Queries can be executed in parallel across different nodes, potentially speeding up query processing times significantly. Since each node holds a portion of the data, queries can be divided and executed simultaneously on multiple machines, retrieving relevant data faster.</p>
+<p>Fault Tolerance: If a single node fails, the data on that node remains accessible because other nodes still hold their respective partitions. This redundancy helps ensure data availability and system reliability.</p>
+</details>
+<h3 id="transactions-and-updates">Transactions and Updates<a class="headerlink" href="#transactions-and-updates" title="Permanent link">&para;</a></h3>
+<h4 id="challenges-of-updates-in-read-mostly-environments">Challenges of updates in read-mostly environments<a class="headerlink" href="#challenges-of-updates-in-read-mostly-environments" title="Permanent link">&para;</a></h4>
+<p>C-Store faces the challenge of balancing the need to update data frequently with the desire to optimize data structures for reading. Traditionally, these two goals are at odds with each other. C-Store addresses this challenge by using a hybrid architecture with a Writeable Store (WS) for updates and a Read-optimized Store (RS) for queries. Updates are funneled through the WS, which is designed for fast inserts and updates. Then, the data is periodically bulk-loaded into the RS. This bulk-loading process is performed by the tuple mover component. However, this approach can introduce latency into updates, since the data may not be immediately reflected in the RS.</p>
+<h3 id="c-stor-in-the-wild">C-Stor in the Wild<a class="headerlink" href="#c-stor-in-the-wild" title="Permanent link">&para;</a></h3>
+<p>Unfortunately I don&rsquo;t have ther resources at CR to let you play with an implementation of C-Stor, but I think its important for you all to know <strong>what it is</strong>, <strong>when you should use it (i.e. parallelism and warehousing data queries)</strong>, and <strong>what products support C-Store like architecture</strong>.</p>
+<p>C-Stor was presented in this article in 2005, and it didn&rsquo;t take long for commercial vendors to see the huge benefit of this type of architecture. Here is a short list of commercial databases that integrated some version of C-Stor like features into their products, or entirely NEW products:</p>
+<ol>
+<li>
+<p><strong>Amazon Redshift:</strong> Redshift is a fully managed data warehouse service provided by Amazon Web Services (AWS). It utilizes a columnar storage format and massively parallel processing (MPP) architecture to deliver high-performance query processing and scalability for analytics workloads in the cloud.</p>
+</li>
+<li>
+<p><strong>Google BigQuery:</strong> BigQuery is a serverless, highly scalable data warehouse service offered by Google Cloud Platform (GCP). It uses a columnar storage format and a distributed processing engine to deliver fast and cost-effective analytics capabilities for large datasets.</p>
+</li>
+<li>
+<p><strong>Oracle Database In-Memory Option:</strong> Oracle Database provides an in-memory option that enables columnar storage and processing for analytical workloads. With this option, tables or portions of tables can be populated into memory in a columnar format, improving query performance for analytics and reporting.</p>
+</li>
+<li>
+<p><strong>Microsoft SQL Server Columnstore Indexes:</strong> SQL Server offers columnstore indexes, which store and manage data in a columnar format for improved query performance, especially for data warehouse and analytics scenarios. Columnstore indexes can be applied to both clustered and non-clustered tables in SQL Server.</p>
+</li>
+<li>
+<p><strong>IBM Db2 BLU Acceleration:</strong> Db2 BLU Acceleration is a feature of IBM Db2 that provides columnar storage and in-memory processing capabilities. It leverages techniques such as columnar compression, data skipping, and SIMD (Single Instruction, Multiple Data) processing to accelerate query performance for analytical workloads.</p>
+</li>
+<li>
+<p><strong>SAP HANA:</strong> SAP HANA is an in-memory data platform that natively supports columnar storage and processing. It is designed for real-time analytics and transaction processing, offering high-speed data processing capabilities for large datasets.</p>
+</li>
+<li>
+<p><strong>Vertica by Micro Focus:</strong> Vertica is a columnar database designed for analytics and data warehousing applications. It uses a columnar storage format and a distributed architecture to provide high-performance query processing and scalability for large-scale analytics.</p>
+</li>
+</ol>
 
 
 
@@ -3427,12 +4110,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
     
     
-      <script src="assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
       
-        <script src="js/mathjax.js"></script>
+        <script src="../js/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
