@@ -3474,6 +3474,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -3533,6 +3535,26 @@
   
   <span class="md-ellipsis">
     Week 2 - Variables and Statements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_3py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 3 - Functions
   </span>
   
 
@@ -3701,6 +3723,26 @@
 <li>Which means that every class we create inherits all the methods defined in the Object class (e.g. equals, hashCode, &hellip;)</li>
 </ul>
 </li>
+</ul>
+<details class="-note">
+<summary>-note</summary>
+<p>Here are all the methods that a Java class inherits from the Object class, which is the ROOT object hierarchy:</p>
+<ol>
+<li><code>public final native Class&lt;?&gt; getClass()</code>: Returns the runtime class of this Object.</li>
+<li><code>public native int hashCode()</code>: Returns a hash code value for the object.</li>
+<li><code>public boolean equals(Object obj)</code>: Indicates whether some other object is &ldquo;equal to&rdquo; this one.</li>
+<li><code>protected native Object clone() throws CloneNotSupportedException</code>: Creates and returns a copy of this object.</li>
+<li><code>public String toString()</code>: Returns a string representation of the object.</li>
+<li><code>public final native void notify()</code>: Wakes up a single thread that is waiting on this object&rsquo;s monitor.</li>
+<li><code>public final native void notifyAll()</code>: Wakes up all threads that are waiting on this object&rsquo;s monitor.</li>
+<li><code>public final native void wait(long timeout) throws InterruptedException</code>: Causes the current thread to wait until either another thread invokes the <code>notify()</code> method or the <code>notifyAll()</code> method for this object, or a specified amount of time has elapsed.</li>
+<li><code>public final void wait(long timeout, int nanos) throws InterruptedException</code>: Causes the current thread to wait until another thread invokes the <code>notify()</code> method or the <code>notifyAll()</code> method for this object, or a specified amount of time has elapsed.</li>
+<li><code>public final void wait() throws InterruptedException</code>: Causes the current thread to wait until another thread invokes the <code>notify()</code> method or the <code>notifyAll()</code> method for this object.</li>
+<li><code>protected void finalize() throws Throwable</code>: Called by the garbage collector on an object when garbage collection determines that there are no more references to the object.</li>
+<li><code>public boolean equals(Object obj)</code>: Compares this object to the specified object. The default implementation is based on reference equality (<code>==</code>).</li>
+</ol>
+</details>
+<ul>
 <li>To inherit from a class, you must extend it (i.e. <code>public class Engine extends Part</code>).</li>
 <li>Java can only inherit/extend a single parent (i.e. no multiple inheritance).</li>
 <li>Only <strong>public</strong> and <strong>protected</strong> methods can be inherited.<ul>
