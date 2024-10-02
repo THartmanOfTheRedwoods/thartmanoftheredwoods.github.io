@@ -1,0 +1,5036 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional.">
+      
+      
+        <meta name="author" content="Trevor Hartman">
+      
+      
+      
+        <link rel="prev" href="Chapter_7.html">
+      
+      
+        <link rel="next" href="cheatsheets.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
+    
+    
+      
+        <title>SQL Intro Lesson - THartmanOfTheRedwoods Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/mode.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-tables-and-adding-data-very-basic-intro" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            THartmanOfTheRedwoods Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SQL Intro Lesson
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ai-committee/AI_Research.html" class="md-tabs__link">
+        
+  
+    
+  
+  AI Committee
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cross_platform/cordova.html" class="md-tabs__link">
+          
+  
+    
+  
+  Cross Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../android/getapk.html" class="md-tabs__link">
+          
+  
+    
+  
+  Android
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../git/gitflow.html" class="md-tabs__link">
+          
+  
+    
+  
+  Git
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../java/annotations.html" class="md-tabs__link">
+          
+  
+    
+  
+  Java
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../markdown-cheat-sheet.html" class="md-tabs__link">
+        
+  
+    
+  
+  Markdown
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../rasppi/boot-pi-4-from-ssd.html" class="md-tabs__link">
+          
+  
+    
+  
+  Raspberry Pi
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tomcat/install.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tomcat
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tux/os_command_map.html" class="md-tabs__link">
+          
+  
+    
+  
+  Tux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../vim/cheat-sheet.html" class="md-tabs__link">
+          
+  
+    
+  
+  Vim
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../virtualbox/win11install.html" class="md-tabs__link">
+          
+  
+    
+  
+  VirtualBox
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../windows/os_command_map.html" class="md-tabs__link">
+          
+  
+    
+  
+  Windows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../hardware/cables.html" class="md-tabs__link">
+          
+  
+    
+  
+  Hardware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../archive.html" class="md-tabs__link">
+          
+  
+    
+  
+  Class Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
+
+    </a>
+    THartmanOfTheRedwoods Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-committee/AI_Research.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Committee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cross Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cross Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cross_platform/cordova.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cordova
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Android
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Android
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android/getapk.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    APK Extract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/gitflow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/annotations.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/certificates/LAZY_DEV.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self-Signed JKS for Spring-Boot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/format_specifiers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Format Specifiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/loop_usage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loop Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/operators.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/associativity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operator Precedence &amp; Associativity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/certificates/LAZY_DEV.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simple Self-Signed JKS for Spring-Boot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown-cheat-sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Raspberry Pi
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Raspberry Pi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rasppi/boot-pi-4-from-ssd.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boot from USB SSD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tomcat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tomcat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tomcat/install.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Tux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/os_command_map.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command Cheat-sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/imagemagick.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImageMagick
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/network.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/nmcli.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Manger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/pandoc.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pandoc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/parallel.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/ssh.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/tesseract.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tesseract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+        
+          <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Certificates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9">
+            <span class="md-nav__icon md-icon"></span>
+            Certificates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/certificates/certificate_authority.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Issue Certs, Be a Certificate Authority
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/certificates/JAVA_KEYSTORE.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    X.509 to Java Keystore Conversion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/certificates/LAZY_DEV.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simple Self-Signed JKS for Spring-Boot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vim
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Vim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vim/cheat-sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheatsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VirtualBox
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            VirtualBox
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtualbox/win11install.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Windows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/os_command_map.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command Cheat-sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_2" >
+        
+          <label class="md-nav__link" for="__nav_13_2" id="__nav_13_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Network
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_2">
+            <span class="md-nav__icon md-icon"></span>
+            Network
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/arp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/nbtstat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nbtstat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/netstat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Netstat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/ping.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/ipconfig.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ipconfig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/net.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Net
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/nslookup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nslookup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/tracert.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tracert
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hardware
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/cables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
+        
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Class Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Class Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fun.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fun
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15_3" >
+        
+          <label class="md-nav__link" for="__nav_15_3" id="__nav_15_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Battles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_15_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15_3">
+            <span class="md-nav__icon md-icon"></span>
+            Battles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../battles/language_battle.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java VS Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../battles/paradigm_battle.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OOP VS FP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15_4" checked>
+        
+          <label class="md-nav__link" for="__nav_15_4" id="__nav_15_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CIS-50
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_15_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15_4">
+            <span class="md-nav__icon md-icon"></span>
+            CIS-50
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="data_consistency.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Consistency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Relational Database Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="joins_ns.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Joins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entity Relationship Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_5.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Data Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_6.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Normalization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_7.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Structured Query Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SQL Intro Lesson
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="week_06.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    SQL Intro Lesson
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-tables-and-adding-data-very-basic-intro" class="md-nav__link">
+    Creating tables and adding data (VERY BASIC INTRO)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-statement-rules-and-conventions" class="md-nav__link">
+    SQL statement rules and conventions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-data-using-select" class="md-nav__link">
+    Retrieving data using SELECT
+  </a>
+  
+    <nav class="md-nav" aria-label="Retrieving data using SELECT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-specific-columns" class="md-nav__link">
+    Retrieving specific columns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-rows-the-where-clause" class="md-nav__link">
+    Filtering rows: the WHERE clause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordering-data-the-order-by-clause" class="md-nav__link">
+    Ordering data: the ORDER BY clause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-unique-rows-the-distinct-keyword" class="md-nav__link">
+    Retrieving unique rows: the DISTINCT keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#column-expressions" class="md-nav__link">
+    Column expressions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literals" class="md-nav__link">
+    Literals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators-and-functions" class="md-nav__link">
+    Operators and functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators and functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    Comparison operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mathematics" class="md-nav__link">
+    Mathematics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character-string-operators-and-functions" class="md-nav__link">
+    Character string operators and functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-operators" class="md-nav__link">
+    Boolean operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comment-on-ternary-logic" class="md-nav__link">
+    Comment on Ternary Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordering-and-nulls" class="md-nav__link">
+    Ordering and NULLs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-and-time-operators-and-functions" class="md-nav__link">
+    Date and time operators and functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-expressions" class="md-nav__link">
+    Conditional expressions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-joins" class="md-nav__link">
+    Simple joins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#names-of-things" class="md-nav__link">
+    Names of things
+  </a>
+  
+    <nav class="md-nav" aria-label="Names of things">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-collisions-and-ambiguity" class="md-nav__link">
+    Name collisions and ambiguity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aliasing" class="md-nav__link">
+    Aliasing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-columns---primary-keys-and-foreign-keys" class="md-nav__link">
+    Identity columns - Primary Keys, and Foreign Keys!
+  </a>
+  
+    <nav class="md-nav" aria-label="Identity columns - Primary Keys, and Foreign Keys!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-relationships---remember-cardinality" class="md-nav__link">
+    Table relationships - REMEMBER Cardinality!
+  </a>
+  
+    <nav class="md-nav" aria-label="Table relationships - REMEMBER Cardinality!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-to-one" class="md-nav__link">
+    One-to-one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-many" class="md-nav__link">
+    One-to-many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#many-to-many" class="md-nav__link">
+    Many-to-many
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inner-and-outer-joins" class="md-nav__link">
+    Inner and Outer Joins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implicit-join-syntax" class="md-nav__link">
+    Implicit Join Syntax
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-data-using-insert" class="md-nav__link">
+    Adding data using INSERT
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding data using INSERT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specifying-columns" class="md-nav__link">
+    Specifying columns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inserting-multiple-rows" class="md-nav__link">
+    Inserting multiple rows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inserting-query-results" class="md-nav__link">
+    Inserting query results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-data-with-delete" class="md-nav__link">
+    Removing data with DELETE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifying-data-with-update" class="md-nav__link">
+    Modifying data with UPDATE
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cheatsheets.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL Cheat-sheets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_09.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Column Store VS Row Store
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_11.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OLTP Through the Looking Glass Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_11.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Performance Tuning and Query Optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_13.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Business Intelligence and Data Warehouses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_14.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Big Data and NoSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_15.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Connectivity and Web Technologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15_5" >
+        
+          <label class="md-nav__link" for="__nav_15_5" id="__nav_15_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CIS-18
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_15_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15_5">
+            <span class="md-nav__icon md-icon"></span>
+            CIS-18
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 1 - Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/sprint.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/user_story_intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Story Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/user_story_lesson.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Story Lesson
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 2 - Fundamental OOP Principles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/oo_principles.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Key OO Principles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 3 - Observer Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 4 - Decorator Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_5.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 5 - Factory Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_7.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 7 - Singleton Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/exam1_study.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exam 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_08.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 8a - Pipeline Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_8.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 8b - Command Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 9 - Adapter & Facade Design Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 10 - Template Method Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/exam2_study.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exam 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_12.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 12 - Iterator and Composite Design Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_13.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 13 - State Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_14.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 14 - Proxy Design Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-18/week_15.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 15 - Compound Design Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15_6" >
+        
+          <label class="md-nav__link" for="__nav_15_6" id="__nav_15_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CIS-12 in Java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_15_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15_6">
+            <span class="md-nav__icon md-icon"></span>
+            CIS-12 in Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 1 - Introduction to Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_1_lecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 1L - Lecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 2 - Variables and Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/floating_point_numbers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Floating Point Numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/rounding_errors.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rounding Errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 3 - Program Structure & More on Reading Input
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 4 - Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_6L.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 6 - Conditions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_7.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 7 - Methods Take 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_8.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 8 - Loops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 9 - Recursion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 10 - Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_12.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 12 - Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15_7" >
+        
+          <label class="md-nav__link" for="__nav_15_7" id="__nav_15_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CIS-12 in Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_15_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15_7">
+            <span class="md-nav__icon md-icon"></span>
+            CIS-12 in Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_1py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 1 - Programming as a way of Thinking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_2py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 2 - Variables and Statements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_3py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 3 - Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_4py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 4 - Functions and Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_6ch5py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 6 - Conditionals and Recursion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_6ch6py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 6 - Return Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-tables-and-adding-data-very-basic-intro" class="md-nav__link">
+    Creating tables and adding data (VERY BASIC INTRO)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-statement-rules-and-conventions" class="md-nav__link">
+    SQL statement rules and conventions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-data-using-select" class="md-nav__link">
+    Retrieving data using SELECT
+  </a>
+  
+    <nav class="md-nav" aria-label="Retrieving data using SELECT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-specific-columns" class="md-nav__link">
+    Retrieving specific columns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-rows-the-where-clause" class="md-nav__link">
+    Filtering rows: the WHERE clause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordering-data-the-order-by-clause" class="md-nav__link">
+    Ordering data: the ORDER BY clause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-unique-rows-the-distinct-keyword" class="md-nav__link">
+    Retrieving unique rows: the DISTINCT keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#column-expressions" class="md-nav__link">
+    Column expressions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literals" class="md-nav__link">
+    Literals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators-and-functions" class="md-nav__link">
+    Operators and functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators and functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    Comparison operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mathematics" class="md-nav__link">
+    Mathematics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character-string-operators-and-functions" class="md-nav__link">
+    Character string operators and functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-operators" class="md-nav__link">
+    Boolean operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comment-on-ternary-logic" class="md-nav__link">
+    Comment on Ternary Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordering-and-nulls" class="md-nav__link">
+    Ordering and NULLs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-and-time-operators-and-functions" class="md-nav__link">
+    Date and time operators and functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-expressions" class="md-nav__link">
+    Conditional expressions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-joins" class="md-nav__link">
+    Simple joins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#names-of-things" class="md-nav__link">
+    Names of things
+  </a>
+  
+    <nav class="md-nav" aria-label="Names of things">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-collisions-and-ambiguity" class="md-nav__link">
+    Name collisions and ambiguity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aliasing" class="md-nav__link">
+    Aliasing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-columns---primary-keys-and-foreign-keys" class="md-nav__link">
+    Identity columns - Primary Keys, and Foreign Keys!
+  </a>
+  
+    <nav class="md-nav" aria-label="Identity columns - Primary Keys, and Foreign Keys!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-relationships---remember-cardinality" class="md-nav__link">
+    Table relationships - REMEMBER Cardinality!
+  </a>
+  
+    <nav class="md-nav" aria-label="Table relationships - REMEMBER Cardinality!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-to-one" class="md-nav__link">
+    One-to-one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-many" class="md-nav__link">
+    One-to-many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#many-to-many" class="md-nav__link">
+    Many-to-many
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inner-and-outer-joins" class="md-nav__link">
+    Inner and Outer Joins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implicit-join-syntax" class="md-nav__link">
+    Implicit Join Syntax
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-data-using-insert" class="md-nav__link">
+    Adding data using INSERT
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding data using INSERT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specifying-columns" class="md-nav__link">
+    Specifying columns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inserting-multiple-rows" class="md-nav__link">
+    Inserting multiple rows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inserting-query-results" class="md-nav__link">
+    Inserting query results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-data-with-delete" class="md-nav__link">
+    Removing data with DELETE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifying-data-with-update" class="md-nav__link">
+    Modifying data with UPDATE
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>SQL Intro Lesson</h1>
+
+<h2 id="creating-tables-and-adding-data-very-basic-intro">Creating tables and adding data (VERY BASIC INTRO)<a class="headerlink" href="#creating-tables-and-adding-data-very-basic-intro" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Summary</strong>: Explains how to create new tables (e.g., <code>authors</code>) and insert data into them.</li>
+<li><strong>SQL Examples</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">author_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">first_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">last_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="p">(</span><span class="n">author_id</span><span class="p">,</span><span class="w"> </span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="p">)</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;George&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Orwell&#39;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="sql-statement-rules-and-conventions">SQL statement rules and conventions<a class="headerlink" href="#sql-statement-rules-and-conventions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Summary</strong>: General rules for writing SQL<ul>
+<li>Ensuring column and table names match exactly as defined in the database schema</li>
+<li>Use lower case for table names and UPPER CASE for SQL keywords.</li>
+<li>Every statement ends in a <strong>;</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="retrieving-data-using-select">Retrieving data using SELECT<a class="headerlink" href="#retrieving-data-using-select" title="Permanent link">&para;</a></h2>
+<h3 id="retrieving-specific-columns">Retrieving specific columns<a class="headerlink" href="#retrieving-specific-columns" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: This section covers how to retrieve specific columns from tables like <code>books</code> and <code>authors</code>.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">publication_year</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="filtering-rows-the-where-clause">Filtering rows: the WHERE clause<a class="headerlink" href="#filtering-rows-the-where-clause" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Describes how to filter rows from <code>books</code> based on conditions.</li>
+<li><strong>SQL Example 1</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">publication_year</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2000</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+<li><strong>SQL Example 2</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">first_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;David&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+<li><strong>SQL Example 3</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">publication_year</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">publication_year</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">1950</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">2000</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="ordering-data-the-order-by-clause">Ordering data: the ORDER BY clause<a class="headerlink" href="#ordering-data-the-order-by-clause" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Explains how to order query results from <code>authors</code>.</li>
+<li><strong>SQL Example 1</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">last_name</span><span class="p">,</span><span class="w"> </span><span class="n">first_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">last_name</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+<li><strong>SQL Example 2</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">condition</span><span class="o">`</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">bookstore_inventory</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">ASC</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">condition</span><span class="o">`</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="retrieving-unique-rows-the-distinct-keyword">Retrieving unique rows: the DISTINCT keyword<a class="headerlink" href="#retrieving-unique-rows-the-distinct-keyword" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Shows how to retrieve unique publication years from <code>books</code>.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">publication_year</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="column-expressions">Column expressions<a class="headerlink" href="#column-expressions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Summary</strong>: Using expressions to calculate or manipulate columns in queries (e.g., in <code>books</code>).</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">price_with_tax</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">bookstore_inventory</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="literals">Literals<a class="headerlink" href="#literals" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Summary</strong>: Introduces how to use literal values in queries.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;All Books&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">description</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="operators-and-functions">Operators and functions<a class="headerlink" href="#operators-and-functions" title="Permanent link">&para;</a></h2>
+<h3 id="comparison-operators">Comparison operators<a class="headerlink" href="#comparison-operators" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Describes how to compare values (e.g., in <code>awards</code>).</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">books_awards</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2020</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Equal to</td>
+<td><code>SELECT * FROM books WHERE price = 20;</code></td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>Not equal to (can also use <code>!=</code>)</td>
+<td><code>SELECT * FROM books WHERE price &lt;&gt; 20;</code></td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Not equal to (alternative to <code>&lt;&gt;</code>)</td>
+<td><code>SELECT * FROM books WHERE price != 20;</code></td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Greater than</td>
+<td><code>SELECT * FROM books WHERE price &gt; 20;</code></td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Less than</td>
+<td><code>SELECT * FROM books WHERE price &lt; 20;</code></td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Greater than or equal to</td>
+<td><code>SELECT * FROM books WHERE price &gt;= 20;</code></td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Less than or equal to</td>
+<td><code>SELECT * FROM books WHERE price &lt;= 20;</code></td>
+</tr>
+<tr>
+<td>BETWEEN</td>
+<td>Between a range of values (inclusive)</td>
+<td><code>SELECT * FROM books WHERE price BETWEEN 10 AND 20;</code></td>
+</tr>
+<tr>
+<td>NOT BETWEEN</td>
+<td>Not between a range of values</td>
+<td><code>SELECT * FROM books WHERE price NOT BETWEEN 10 AND 20;</code></td>
+</tr>
+<tr>
+<td>IN</td>
+<td>Matches any value in a list</td>
+<td><code>SELECT * FROM books WHERE genre IN ('Fiction', 'Fantasy');</code></td>
+</tr>
+<tr>
+<td>NOT IN</td>
+<td>Does not match any value in a list</td>
+<td><code>SELECT * FROM books WHERE genre NOT IN ('Fiction', 'Fantasy');</code></td>
+</tr>
+<tr>
+<td>IS NULL</td>
+<td>Checks if the value is NULL</td>
+<td><code>SELECT * FROM books WHERE price IS NULL;</code></td>
+</tr>
+<tr>
+<td>IS NOT NULL</td>
+<td>Checks if the value is not NULL</td>
+<td><code>SELECT * FROM books WHERE price IS NOT NULL;</code></td>
+</tr>
+<tr>
+<td>LIKE</td>
+<td>Matches a pattern using wildcards (<code>%</code> or <code>_</code>)</td>
+<td><code>SELECT * FROM books WHERE title LIKE 'Harry%';</code></td>
+</tr>
+<tr>
+<td>NOT LIKE</td>
+<td>Does not match a pattern</td>
+<td><code>SELECT * FROM books WHERE title NOT LIKE 'Harry%';</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mathematics">Mathematics<a class="headerlink" href="#mathematics" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Covers mathematical operations in queries.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">price</span><span class="p">,</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">9</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">discounted_price</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">bookstore_inventory</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Common Mathematics Operators</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Addition</td>
+<td><code>SELECT price + 10 FROM books;</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+<td><code>SELECT price - 5 FROM books;</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td><code>SELECT price * 1.1 FROM books;</code></td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division</td>
+<td><code>SELECT price / 2 FROM books;</code></td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulus (remainder of division)</td>
+<td><code>SELECT price % 3 FROM books;</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Unary minus (negates the value)</td>
+<td><code>SELECT -price FROM books;</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Common Mathematics Functions (MySQL)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ABS()</code></td>
+<td>Returns the absolute (positive) value of a number</td>
+<td><code>SELECT ABS(-5);</code></td>
+</tr>
+<tr>
+<td><code>CEIL()</code></td>
+<td>Returns the smallest integer greater than or equal to the number</td>
+<td><code>SELECT CEIL(4.1);</code></td>
+</tr>
+<tr>
+<td><code>FLOOR()</code></td>
+<td>Returns the largest integer less than or equal to the number</td>
+<td><code>SELECT FLOOR(4.9);</code></td>
+</tr>
+<tr>
+<td><code>ROUND()</code></td>
+<td>Rounds the number to a specified number of decimal places</td>
+<td><code>SELECT ROUND(4.567, 2);</code></td>
+</tr>
+<tr>
+<td><code>MOD()</code></td>
+<td>Returns the remainder of division (modulus)</td>
+<td><code>SELECT MOD(10, 3);</code></td>
+</tr>
+<tr>
+<td><code>POW()</code></td>
+<td>Returns the result of raising a number to a power</td>
+<td><code>SELECT POW(2, 3);</code></td>
+</tr>
+<tr>
+<td><code>SQRT()</code></td>
+<td>Returns the square root of a number</td>
+<td><code>SELECT SQRT(16);</code></td>
+</tr>
+<tr>
+<td><code>SIGN()</code></td>
+<td>Returns -1, 0, or 1 depending on the sign of the number</td>
+<td><code>SELECT SIGN(-5);</code></td>
+</tr>
+<tr>
+<td><code>GREATEST()</code></td>
+<td>Returns the largest value from a list of arguments</td>
+<td><code>SELECT GREATEST(1, 5, 3);</code></td>
+</tr>
+<tr>
+<td><code>LEAST()</code></td>
+<td>Returns the smallest value from a list of arguments</td>
+<td><code>SELECT LEAST(1, 5, 3);</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Common Statistics Functions</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AVG()</code></td>
+<td>Returns the average value of a numeric column</td>
+<td><code>SELECT AVG(price) FROM books;</code></td>
+</tr>
+<tr>
+<td><code>COUNT()</code></td>
+<td>Returns the number of rows (or non-<code>NULL</code> values)</td>
+<td><code>SELECT COUNT(*) FROM books;</code></td>
+</tr>
+<tr>
+<td><code>MAX()</code></td>
+<td>Returns the maximum value in a column</td>
+<td><code>SELECT MAX(price) FROM books;</code></td>
+</tr>
+<tr>
+<td><code>MIN()</code></td>
+<td>Returns the minimum value in a column</td>
+<td><code>SELECT MIN(price) FROM books;</code></td>
+</tr>
+<tr>
+<td><code>SUM()</code></td>
+<td>Returns the sum of all values in a numeric column</td>
+<td><code>SELECT SUM(price) FROM books;</code></td>
+</tr>
+<tr>
+<td><code>VARIANCE()</code></td>
+<td>Returns the variance of a numeric column</td>
+<td><code>SELECT VARIANCE(price) FROM books;</code></td>
+</tr>
+<tr>
+<td><code>STDDEV()</code></td>
+<td>Returns the standard deviation of a numeric column</td>
+<td><code>SELECT STDDEV(price) FROM books;</code></td>
+</tr>
+<tr>
+<td><code>GROUP_CONCAT()</code></td>
+<td>Concatenates values from multiple rows into a single string</td>
+<td><code>SELECT GROUP_CONCAT(title) FROM books;</code></td>
+</tr>
+<tr>
+<td><code>BIT_COUNT()</code></td>
+<td>Returns the number of bits set to 1 in the binary representation of a number</td>
+<td><code>SELECT BIT_COUNT(5);</code></td>
+</tr>
+<tr>
+<td><code>PERCENT_RANK()</code></td>
+<td>Returns the rank of a value within a result set as a percentage</td>
+<td><code>SELECT PERCENT_RANK() OVER (ORDER BY price) FROM books;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="character-string-operators-and-functions">Character string operators and functions<a class="headerlink" href="#character-string-operators-and-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Explains string operations, such as concatenating author names.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">full_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">authors</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Other DBs use other operators for string concatentation, like <strong>||</strong> or <strong>+</strong> so modify this example based on your desired RDBMS.</li>
+</ul>
+<h3 id="boolean-operators">Boolean operators<a class="headerlink" href="#boolean-operators" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Describes how to use boolean logic to filter results from <code>books</code>.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">bookstore_inventory</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">condition</span><span class="o">`</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s1">&#39;like new&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">.</span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AND</code></td>
+<td>Returns true if both conditions are true</td>
+<td><code>SELECT * FROM books WHERE price &gt; 10 AND genre = 'Fiction';</code></td>
+</tr>
+<tr>
+<td><code>OR</code></td>
+<td>Returns true if at least one condition is true</td>
+<td><code>SELECT * FROM books WHERE price &gt; 20 OR genre = 'Fiction';</code></td>
+</tr>
+<tr>
+<td><code>NOT</code></td>
+<td>Reverses the result of the condition</td>
+<td><code>SELECT * FROM books WHERE NOT genre = 'Fiction';</code></td>
+</tr>
+<tr>
+<td><code>XOR</code></td>
+<td>Returns true if one condition is true and the other is false</td>
+<td><code>SELECT * FROM books WHERE price &gt; 15 XOR genre = 'Fantasy';</code></td>
+</tr>
+<tr>
+<td><code>IS TRUE</code></td>
+<td>Checks if the expression evaluates to true</td>
+<td><code>SELECT * FROM books WHERE (price &gt; 20) IS TRUE;</code></td>
+</tr>
+<tr>
+<td><code>IS FALSE</code></td>
+<td>Checks if the expression evaluates to false</td>
+<td><code>SELECT * FROM books WHERE (price &gt; 20) IS FALSE;</code></td>
+</tr>
+<tr>
+<td><code>IS NULL</code></td>
+<td>Returns true if the value is <code>NULL</code></td>
+<td><code>SELECT * FROM books WHERE price IS NULL;</code></td>
+</tr>
+<tr>
+<td><code>IS NOT NULL</code></td>
+<td>Returns true if the value is not <code>NULL</code></td>
+<td><code>SELECT * FROM books WHERE price IS NOT NULL;</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="comment-on-ternary-logic">Comment on Ternary Logic<a class="headerlink" href="#comment-on-ternary-logic" title="Permanent link">&para;</a></h4>
+<p>In SQL, NULL represents an unknown or missing value, making boolean logic ternary rather than binary, with three possible outcomes: TRUE, FALSE, and UNKNOWN. This means standard comparison operators do not behave as expected with NULL, since any operation involving NULL results in UNKNOWN. Operators like the <strong>IS NULL</strong> operator are necessary to explicitly check for NULL values, as they accurately identify missing data where typical comparisons will fail.</p>
+<ul>
+<li>Example of Ternary Logic:<ul>
+<li>TRUE AND NULL → UNKNOWN</li>
+<li>FALSE OR NULL → UNKNOWN</li>
+<li>NOT NULL → UNKNOWN</li>
+</ul>
+</li>
+</ul>
+<h4 id="ordering-and-nulls">Ordering and NULLs<a class="headerlink" href="#ordering-and-nulls" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Summary</strong>: Explains how <code>NULL</code> values affect ordering.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">bookstore_inventory</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">ASC</span><span class="p">,</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Same as NULLS LAST in other DBs</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="date-and-time-operators-and-functions">Date and time operators and functions<a class="headerlink" href="#date-and-time-operators-and-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Discusses using date functions with the <code>books</code> table.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">publication_year</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">1990</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">2020</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="conditional-expressions">Conditional expressions<a class="headerlink" href="#conditional-expressions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Summary</strong>: Introduces conditional expressions using the <code>CASE</code> statement in <code>books</code>.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">title</span><span class="p">,</span>
+<span class="w">       </span><span class="k">CASE</span>
+<span class="w">          </span><span class="k">WHEN</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Expensive&#39;</span>
+<span class="w">          </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;Affordable&#39;</span>
+<span class="w">       </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">price_category</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">bookstore_inventory</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="simple-joins">Simple joins<a class="headerlink" href="#simple-joins" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Summary</strong>: Covers joining the <code>books</code> and <code>authors</code> tables.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">books</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">authors</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">authors</span><span class="p">.</span><span class="n">last_name</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">books</span><span class="p">.</span><span class="n">author_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">authors</span><span class="p">.</span><span class="n">author_id</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="names-of-things">Names of things<a class="headerlink" href="#names-of-things" title="Permanent link">&para;</a></h2>
+<h3 id="name-collisions-and-ambiguity">Name collisions and ambiguity<a class="headerlink" href="#name-collisions-and-ambiguity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>With many tables, we can have many identically named columns. How do we handle this?<ul>
+<li>Through using <strong>Qualified names</strong> like <strong>table1.columnA</strong> and <strong>table2.columnA</strong></li>
+</ul>
+</li>
+<li>But won&rsquo;t that make our queries long and difficult to parse/read?<ul>
+<li>YES! Luckily there is <strong>Aliasing</strong></li>
+</ul>
+</li>
+<li>Cool, but are there limits to what I can Alias something too?<ul>
+<li>YES! Please don&rsquo;t alias to reserved SQL <strong>keywords</strong>, if you have to you can use <strong>`</strong> to do this though.</li>
+<li>YES! Please don&rsquo;t put spaces in your names for columns or tables, if you have to you can use <strong>&ldquo;</strong> to do this though.</li>
+<li>It&rsquo;s suggested to alias to short lower-case only names, though this is a convention, it will make your life easier.</li>
+</ul>
+</li>
+</ul>
+<h3 id="aliasing">Aliasing<a class="headerlink" href="#aliasing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Covers renaming tables and columns in joins for clarity.</li>
+<li><strong>SQL Example 1</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">last_name</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">b</span><span class="w"> </span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">author_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">author_id</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+<li><strong>SQL Example 2</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">last_name</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="o">`</span><span class="n">name</span><span class="o">`</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">b</span><span class="w"> </span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">author_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">author_id</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="identity-columns---primary-keys-and-foreign-keys">Identity columns - Primary Keys, and Foreign Keys!<a class="headerlink" href="#identity-columns---primary-keys-and-foreign-keys" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Summary</strong>: Introduces identity columns, like <code>author_id</code> in <code>authors</code>.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">author_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">first_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">last_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">author_id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="table-relationships---remember-cardinality">Table relationships - REMEMBER Cardinality!<a class="headerlink" href="#table-relationships---remember-cardinality" title="Permanent link">&para;</a></h3>
+<h4 id="one-to-one">One-to-one<a class="headerlink" href="#one-to-one" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Summary</strong>: Covers one-to-one relationships between tables, such as <code>author_details</code> and <code>authors</code>.
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">author_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">first_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">last_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">author_id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">biographies</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">biography_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">author_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">bio</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">biography_id</span><span class="p">),</span>
+<span class="w">    </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">author_id</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">author_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">authors</span><span class="p">(</span><span class="n">author_id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+<li>In this relationship, each author can have only one biography, and each biography is linked to exactly one author through the author_id. The UNIQUE constraint on author_id in the biographies table enforces the 1:1 relationship.</li>
+</ul>
+<h4 id="one-to-many">One-to-many<a class="headerlink" href="#one-to-many" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Summary</strong>: Describes one-to-many relationships, such as between <code>authors</code> and <code>books</code>.
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">author_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">first_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">last_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">author_id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">book_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">    </span><span class="n">genre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">price</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+<span class="w">    </span><span class="n">author_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">book_id</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">author_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">authors</span><span class="p">(</span><span class="n">author_id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+<li>In this relationship, one author can be linked to many books, while each book is associated with exactly one author via author_id. This allows an author to have multiple entries in the books table.</li>
+</ul>
+<h4 id="many-to-many">Many-to-many<a class="headerlink" href="#many-to-many" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Summary</strong>: Explains many-to-many relationships, for example between <code>books</code> and <code>awards</code>.
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">book_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">book_id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">genres</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">genre_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">genre_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">genre_id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">book_genres</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">book_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">genre_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">book_id</span><span class="p">,</span><span class="w"> </span><span class="n">genre_id</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">book_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">books</span><span class="p">(</span><span class="n">book_id</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">genre_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">genres</span><span class="p">(</span><span class="n">genre_id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+<li>The book_genres table is a <strong>reference/linking</strong> table that facilitates the <strong>M</strong> relationship. Each book can be linked to multiple genres, and each genre can contain multiple books. The combination of book_id and genre_id as a <strong>composite primary key</strong> and ensures that the same book-genre pair cannot be repeated.</li>
+</ul>
+<h3 id="inner-and-outer-joins">Inner and Outer Joins<a class="headerlink" href="#inner-and-outer-joins" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Introduces the difference between inner and outer joins using <code>books</code> and <code>awards</code>.</li>
+<li><strong>SQL Example</strong>:</li>
+<li>An INNER JOIN is used here because we want only those books that have a corresponding author (i.e., we exclude books without authors).
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">last_name</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="n">b</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">author_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">author_id</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+<li>An INNER JOIN is appropriate because we only want to show books that have genres, excluding any books without a genre assignment.
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">last_name</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="n">b</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">author_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">author_id</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+<li>A LEFT OUTER JOIN is used to ensure that all authors are included, regardless of whether they have written any books. 
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">last_name</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="n">a</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">author_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">author_id</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+<li>A LEFT OUTER JOIN is used to include all genres, even those that do not have any books linked to them.
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">g</span><span class="p">.</span><span class="n">genre_name</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">genres</span><span class="w"> </span><span class="k">g</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">book_genres</span><span class="w"> </span><span class="n">bg</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">g</span><span class="p">.</span><span class="n">genre_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">genre_id</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">book_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">book_id</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="implicit-join-syntax">Implicit Join Syntax<a class="headerlink" href="#implicit-join-syntax" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Explains older implicit join syntax.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">books</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">authors</span><span class="p">.</span><span class="n">first_name</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="p">,</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">books</span><span class="p">.</span><span class="n">author_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">authors</span><span class="p">.</span><span class="n">author_id</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+<li><strong>VS</strong>
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">books</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">authors</span><span class="p">.</span><span class="n">first_name</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">books</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">books</span><span class="p">.</span><span class="n">author_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">authors</span><span class="p">.</span><span class="n">author_id</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="adding-data-using-insert">Adding data using INSERT<a class="headerlink" href="#adding-data-using-insert" title="Permanent link">&para;</a></h2>
+<h3 id="specifying-columns">Specifying columns<a class="headerlink" href="#specifying-columns" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Describes inserting specific values into the <code>books</code> table.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">publication_year</span><span class="p">,</span><span class="w"> </span><span class="n">price</span><span class="p">)</span><span class="w"> </span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;1984&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1949</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">.</span><span class="mi">99</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="inserting-multiple-rows">Inserting multiple rows<a class="headerlink" href="#inserting-multiple-rows" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Explains how to insert multiple rows into <code>books</code>.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">publication_year</span><span class="p">,</span><span class="w"> </span><span class="n">price</span><span class="p">)</span><span class="w"> </span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Animal Farm&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1945</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">.</span><span class="mi">99</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Homage to Catalonia&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1938</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">.</span><span class="mi">99</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="inserting-query-results">Inserting query results<a class="headerlink" href="#inserting-query-results" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Summary</strong>: Demonstrates inserting query results into the <code>awards</code> table.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">awards</span><span class="w"> </span><span class="p">(</span><span class="n">book_id</span><span class="p">,</span><span class="w"> </span><span class="n">award_name</span><span class="p">,</span><span class="w"> </span><span class="k">year</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">book_id</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Best Fiction&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2020</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">publication_year</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2015</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="removing-data-with-delete">Removing data with DELETE<a class="headerlink" href="#removing-data-with-delete" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Summary</strong>: Explains how to remove rows from <code>books</code>.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">publication_year</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1900</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="modifying-data-with-update">Modifying data with UPDATE<a class="headerlink" href="#modifying-data-with-update" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Summary</strong>: Covers updating rows in <code>books</code>.</li>
+<li><strong>SQL Example</strong>:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">05</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">publication_year</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2000</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <!-- Footer -->
+<footer class="md-footer">
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and theme information -->
+<div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ©2022 THartmanOfTheRedwoods Wiki, All rights reserved.
+    </div>
+  
+  
+    Made by
+    <a
+      href="https://github.com/viable-hartman/"
+      target="_blank" rel="noopener"
+    >
+      Trevor Hartman
+    </a>
+  
+</div>
+
+      <!-- Social links -->
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/THartmanOfTheRedwoods" target="_blank" rel="noopener" title="Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:trevor-hartman@redwoods.edu" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+        <script src="../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
