@@ -4011,153 +4011,250 @@
 <h2 id="lists-in-python">Lists in Python<a class="headerlink" href="#lists-in-python" title="Permanent link">&para;</a></h2>
 <p>Lists are similar to Arrays in other languages, but the are dynamic due to the dynamic nature of a Python. We just learned about string sequences, and guess what, lists are also sequences and many of the same operations we could use with strings we can use with lists.</p>
 <h3 id="1-overview-of-lists">1. <strong>Overview of Lists</strong><a class="headerlink" href="#1-overview-of-lists" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Definition</strong>: A list is a sequence that can store values of any data type, unlike strings that only store characters.</li>
-<li><strong>Creating Lists</strong>: Show examples of lists containing integers, strings, and mixed types.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
-<span class="n">mixed_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;nested&quot;</span><span class="p">,</span> <span class="s2">&quot;list&quot;</span><span class="p">]]</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong>Empty Lists</strong>: Mention that lists can also be empty, which can be useful as placeholders.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>- **Definition**: A list is a sequence that can store values of any data type, unlike strings that only store characters.
+- **Creating Lists**: Show examples of lists containing integers, strings, and mixed types.
+ ```python
+ fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]
+ mixed_list = [&quot;Python&quot;, 3.14, 42, [&quot;nested&quot;, &quot;list&quot;]]
+ ```
+- **Empty Lists**: Mention that lists can also be empty, which can be useful as placeholders.
+ ```python
+ empty_list = []
+ ```
+</code></pre></div></td></tr></table></div>
 <h3 id="2-accessing-and-modifying-list-elements">2. <strong>Accessing and Modifying List Elements</strong><a class="headerlink" href="#2-accessing-and-modifying-list-elements" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Indexing</strong>: Explain list indexing with examples for positive and negative indices.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>    <span class="c1"># First item</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">items</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># Last item</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong>Mutability</strong>: Lists are mutable, so elements can be reassigned.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">items</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>       <span class="c1"># Output: [10, 25, 30, 40]</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong>Checking Elements with <code>in</code></strong>: Introduce the <code>in</code> operator.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">30</span> <span class="ow">in</span> <span class="n">items</span><span class="p">)</span>    <span class="c1"># True</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">50</span> <span class="ow">in</span> <span class="n">items</span><span class="p">)</span>    <span class="c1"># False</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>- **Indexing**: Explain list indexing with examples for positive and negative indices.
+ ```python
+ items = [10, 20, 30, 40]
+ print(items[0])    # First item
+ print(items[-1])   # Last item
+ ```
+- **Mutability**: Lists are mutable, so elements can be reassigned.
+ ```python
+ items[1] = 25
+ print(items)       # Output: [10, 25, 30, 40]
+ ```
+- **Checking Elements with `in`**: Introduce the `in` operator.
+ ```python
+ print(30 in items)    # True
+ print(50 in items)    # False
+ ```
+</code></pre></div></td></tr></table></div>
 <h3 id="3-list-slicing">3. <strong>List Slicing</strong><a class="headerlink" href="#3-list-slicing" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Using Slice Syntax</strong>: Demonstrate slicing to access sublists.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">letters</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>     <span class="c1"># [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong>Omitting Indices</strong>: Show slicing from the start or to the end of the list.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">letters</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>      <span class="c1"># [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">letters</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>      <span class="c1"># [&#39;d&#39;, &#39;e&#39;]</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong>Copying Lists</strong>: Explain that omitting both indices creates a copy of the list.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">letters_copy</span> <span class="o">=</span> <span class="n">letters</span><span class="p">[:]</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>- **Using Slice Syntax**: Demonstrate slicing to access sublists.
+ ```python
+ letters = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+ print(letters[1:4])     # [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
+ ```
+- **Omitting Indices**: Show slicing from the start or to the end of the list.
+ ```python
+ print(letters[:3])      # [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
+ print(letters[3:])      # [&#39;d&#39;, &#39;e&#39;]
+ ```
+- **Copying Lists**: Explain that omitting both indices creates a copy of the list.
+ ```python
+ letters_copy = letters[:]
+ ```
+</code></pre></div></td></tr></table></div>
 <h3 id="4-list-operations">4. <strong>List Operations</strong><a class="headerlink" href="#4-list-operations" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Concatenation with <code>+</code></strong>: Combine two lists using the <code>+</code> operator.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="n">combined</span> <span class="o">=</span> <span class="n">list1</span> <span class="o">+</span> <span class="n">list2</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong>Repetition with <code>*</code></strong>: Use <code>*</code> to repeat elements in a list.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">repeated_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hi&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
-<span class="c1"># Output: [&#39;hi&#39;, &#39;hi&#39;, &#39;hi&#39;]</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong>Basic Aggregations</strong>: Introduce <code>sum</code>, <code>min</code>, and <code>max</code>.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>  <span class="c1"># 60</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>- **Concatenation with `+`**: Combine two lists using the `+` operator.
+ ```python
+ list1 = [1, 2, 3]
+ list2 = [4, 5, 6]
+ combined = list1 + list2
+ ```
+- **Repetition with `*`**: Use `*` to repeat elements in a list.
+ ```python
+ repeated_list = [&quot;hi&quot;] * 3
+ # Output: [&#39;hi&#39;, &#39;hi&#39;, &#39;hi&#39;]
+ ```
+- **Basic Aggregations**: Introduce `sum`, `min`, and `max`.
+ ```python
+ numbers = [10, 20, 30]
+ print(sum(numbers))  # 60
+ ```
+</code></pre></div></td></tr></table></div>
 <h3 id="5-list-methods">5. <strong>List Methods</strong><a class="headerlink" href="#5-list-methods" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Adding Elements</strong>:<ul>
-<li><strong><code>append()</code></strong>: Adds a single element at the end.
-   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">letters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
-<span class="c1"># Output: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;]</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong><code>extend()</code></strong>: Adds multiple elements.
-   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">letters</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">])</span>
-<span class="c1"># Output: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;]</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
-</li>
-<li><strong>Removing Elements</strong>:<ul>
-<li><strong><code>pop()</code></strong>: Removes by index.
-   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">letters</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>      <span class="c1"># Removes &#39;c&#39;</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong><code>remove()</code></strong>: Removes by value.
-   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">letters</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
-</li>
-</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>- **Adding Elements**:
+  - **`append()`**: Adds a single element at the end.
+   ```python
+   letters.append(&#39;f&#39;)
+   # Output: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;]
+   ```
+  - **`extend()`**: Adds multiple elements.
+   ```python
+   letters.extend([&#39;g&#39;, &#39;h&#39;])
+   # Output: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;]
+   ```
+- **Removing Elements**:
+  - **`pop()`**: Removes by index.
+   ```python
+   letters.pop(2)      # Removes &#39;c&#39;
+   ```
+  - **`remove()`**: Removes by value.
+   ```python
+   letters.remove(&#39;a&#39;)
+   ```
+</code></pre></div></td></tr></table></div>
 <h3 id="6-working-with-lists-and-strings">6. <strong>Working with Lists and Strings</strong><a class="headerlink" href="#6-working-with-lists-and-strings" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Converting a String to a List of Characters</strong>:
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
-<span class="n">name_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong>Splitting a String into Words</strong>:
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Learning Python is fun&quot;</span>
-<span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong>Joining List Elements into a String</strong>:
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>- **Converting a String to a List of Characters**:
+ ```python
+ name = &quot;python&quot;
+ name_list = list(name)
+ ```
+- **Splitting a String into Words**:
+ ```python
+ sentence = &quot;Learning Python is fun&quot;
+ words = sentence.split()
+ ```
+- **Joining List Elements into a String**:
+ ```python
+ sentence = &#39; &#39;.join(words)
+ ```
+</code></pre></div></td></tr></table></div>
 <h3 id="7-looping-through-lists">7. <strong>Looping Through Lists</strong><a class="headerlink" href="#7-looping-through-lists" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Using <code>for</code> Loops</strong>: Introduce iterating over a list.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong>Looping with Index</strong>:
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Index </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>- **Using `for` Loops**: Introduce iterating over a list.
+ ```python
+ numbers = [1, 2, 3]
+ for number in numbers:
+     print(number)
+ ```
+- **Looping with Index**:
+ ```python
+ for i in range(len(numbers)):
+     print(f&quot;Index {i}: {numbers[i]}&quot;)
+ ```
+</code></pre></div></td></tr></table></div>
 <h3 id="8-sorting-lists">8. <strong>Sorting Lists</strong><a class="headerlink" href="#8-sorting-lists" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong><code>sorted()</code> Function</strong>: Demonstrate sorting a list and that it does not modify the original.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">unsorted_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">sorted_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">unsorted_list</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></li>
-<li><strong>Using <code>join</code> with <code>sorted()</code></strong>: Combine sorted list items back into a string.
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
-<span class="n">sorted_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">letters</span><span class="p">))</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>- **`sorted()` Function**: Demonstrate sorting a list and that it does not modify the original.
+ ```python
+ unsorted_list = [3, 1, 2]
+ sorted_list = sorted(unsorted_list)
+ ```
+- **Using `join` with `sorted()`**: Combine sorted list items back into a string.
+ ```python
+ letters = [&#39;d&#39;, &#39;a&#39;, &#39;c&#39;]
+ sorted_str = &#39;&#39;.join(sorted(letters))
+ ```
+</code></pre></div></td></tr></table></div>
 <hr />
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Combine and Modify</strong></li>
 <li>
-<p>Write a function that takes two lists, combines them, and then removes any duplicates. The function should return the modified list.</p>
+<p><strong>Combine and Modify</strong></p>
+<ul>
+<li>Write a function that takes two lists, combines them, and then removes any duplicates. The function should return the modified list.</li>
+</ul>
 </li>
 <li>
 <p><strong>List Reversal Without <code>reverse()</code></strong></p>
-</li>
+<ul>
 <li>Write a function that takes a list and returns a new list with the elements in reverse order without using the <code>reverse()</code> method or slicing. Instead, use a loop to achieve the reversal.</li>
+</ul>
+</li>
 </ol>
 
 
