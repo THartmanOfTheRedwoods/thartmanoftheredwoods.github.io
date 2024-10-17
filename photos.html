@@ -3853,128 +3853,82 @@
                   
 
 
-  <h1>Photos</h1>
+<html>
+  <head>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <style>
+        .gallery {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .polaroid {
+            width: 150px;
+            padding: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: rotate(calc(-5deg + 10deg * var(--rotation)));
+            display: inline-block;
+        }
+        .polaroid img {
+            max-width: 100%;
+            display: block;
+        }
+    </style>
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+  <body>
+    <h1>Chroma-Key Photo Gallery</h1>
+    <div id="gallery" class="gallery"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const gallery = document.getElementById("gallery");
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script src=&quot;https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js&quot;&gt;&lt;/script&gt;
-&lt;style&gt;
-    .gallery {
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    .polaroid {
-        width: 150px;
-        padding: 10px;
-        background: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transform: rotate(calc(-5deg + 10deg * var(--rotation)));
-        display: inline-block;
-    }
-    .polaroid img {
-        max-width: 100%;
-        display: block;
-    }
-&lt;/style&gt;
+            // Fetch the images.txt file
+            fetch('images.txt')
+                .then(response => response.text())
+                .then(text => {
+                    // Split file content by new lines and filter out empty lines
+                    const imagePaths = text.split('\n').filter(line => line.trim() !== "");
 
-&lt;h1&gt;Chroma-Key Photo Gallery&lt;/h1&gt;
-&lt;div id=&quot;gallery&quot; class=&quot;gallery&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-    document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
-        const gallery = document.getElementById(&quot;gallery&quot;);
+                    imagePaths.forEach((path, index) => {
+                        const polaroid = document.createElement("div");
+                        polaroid.classList.add("polaroid");
+                        polaroid.style.setProperty("--rotation", Math.random());
 
-        // Fetch the images.txt file
-        fetch(&#39;images.txt&#39;)
-            .then(response =&gt; response.text())
-            .then(text =&gt; {
-                // Split file content by new lines and filter out empty lines
-                const imagePaths = text.split(&#39;\n&#39;).filter(line =&gt; line.trim() !== &quot;&quot;);
+                        const img = document.createElement("img");
+                        img.src = path.trim();  // Trim in case of extra spaces
+                        img.alt = `Image ${index + 1}`;
+                        polaroid.appendChild(img);
 
-                imagePaths.forEach((path, index) =&gt; {
-                    const polaroid = document.createElement(&quot;div&quot;);
-                    polaroid.classList.add(&quot;polaroid&quot;);
-                    polaroid.style.setProperty(&quot;--rotation&quot;, Math.random());
+                        gallery.appendChild(polaroid);
+                    });
 
-                    const img = document.createElement(&quot;img&quot;);
-                    img.src = path.trim();  // Trim in case of extra spaces
-                    img.alt = `Image ${index + 1}`;
-                    polaroid.appendChild(img);
-
-                    gallery.appendChild(polaroid);
-                });
-
-                // Initialize Masonry
-                new Masonry(gallery, {
-                    itemSelector: &#39;.polaroid&#39;,
-                    columnWidth: 160,
-                    fitWidth: true,
-                    gutter: 20
-                });
-            })
-            .catch(error =&gt; console.error(&quot;Error loading images:&quot;, error));
-    });
-&lt;/script&gt;
-</code></pre></div></td></tr></table></div>
+                    // Initialize Masonry
+                    new Masonry(gallery, {
+                        itemSelector: '.polaroid',
+                        columnWidth: 160,
+                        fitWidth: true,
+                        gutter: 20
+                    });
+                })
+                .catch(error => console.error("Error loading images:", error));
+        });
+    </script>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
 <p><a class="glightbox" href="data:image/png;base64,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" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="qrcode" src="data:image/png;base64,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" /></a> Take the gallery with you (Temporarily)!</p>
 
 
@@ -4057,5 +4011,5 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  </body>
 </html>
