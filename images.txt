@@ -70,3 +70,4 @@ chroma_images/fe1ab5032e30dfef59f30fce6881f9ce.png
 chroma_images/7b1d94bc9294862decbc582120e6fa5b.png
 chroma_images/aaf5d55672b60970b12fcb11c7c6bae0.png
 chroma_images/21a80f9944f900a242640f3fe6c42594.png
+chroma_images/60899d7527a59170b06d7edf271cdaa6.png
