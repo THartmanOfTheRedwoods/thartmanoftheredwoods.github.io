@@ -92,3 +92,5 @@ chroma_images/d8c5a23df81eeb02135de62535be36f8.png
 chroma_images/6ae2a69d95288228271cd958a72d5676.png
 chroma_images/9bac9ba7365ee95a2af184f40ec0363b.png
 chroma_images/50bf890756beee4770dfd0e0773fcd43.png
+chroma_images/e415efa507d8fd19fa25fb8858624b4a.png
+chroma_images/cb2e1657244dddb014206ceabb77dbbf.png
