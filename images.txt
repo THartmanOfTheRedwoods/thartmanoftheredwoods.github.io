@@ -106,3 +106,5 @@ chroma_images/107a48a259db204a305523901e8725c8.png
 chroma_images/27d6d2a2121c6c0409766fb7c9822fbf.png
 chroma_images/b25e76cb5e807410a428a1c8fb234793.png
 chroma_images/80d8c7de7153e9f819466f02cc05e556.png
+chroma_images/8cf468a24e912a6c8c774e4f04fe6394.png
+chroma_images/d28e2763ba84bd24561adfa0bdba500a.png
