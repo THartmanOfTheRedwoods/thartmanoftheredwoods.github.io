@@ -26,3 +26,5 @@ chroma_images/bab93a3970551c5d605c66cad7307c11.png
 chroma_images/70607be03484f2ae4b44a98c6604d12e.png
 chroma_images/c7ef521e86452592e4349f688bda2ec7.png
 chroma_images/0072e83638df8add71bcf0f12dd995c1.png
+chroma_images/8d25391a67b745cdb0717b24421dd2bd.png
+chroma_images/c115455ee949be302b18968d5b48bb7e.png
