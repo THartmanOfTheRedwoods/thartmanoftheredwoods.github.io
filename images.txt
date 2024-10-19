@@ -50,3 +50,4 @@ chroma_images/5c61a7cf0eaadb5eaba02e2375f64a93.png
 chroma_images/ab3ef53887684ef24c5d290c3eaec22f.png
 chroma_images/9f5fc82f1243c562cba2bdbcd5bdc3a8.png
 chroma_images/f1b60b36fb042a156993e5e8f4498542.png
+chroma_images/13086a656626f42f1620279a2dbc30e1.png
