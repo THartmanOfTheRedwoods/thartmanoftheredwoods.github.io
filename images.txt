@@ -57,3 +57,4 @@ chroma_images/fda8cfcd25b8783f7d2e6d947bad4211.png
 chroma_images/431a3abb3dfce684254920c5cb728259.png
 chroma_images/700dac21dd6ef95bc10f550ff6f9a3de.png
 chroma_images/0457cb49cadf4f38880c7e333b10de7c.png
+chroma_images/e69331fd29f29df989b7bcbef1e5738c.png
