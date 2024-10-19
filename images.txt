@@ -110,3 +110,5 @@ chroma_images/8cf468a24e912a6c8c774e4f04fe6394.png
 chroma_images/d28e2763ba84bd24561adfa0bdba500a.png
 chroma_images/312109889fa791ef79eea00ab42dd7f3.png
 chroma_images/4abddfc1b20be6b4acb180fbca05a7a9.png
+chroma_images/099a99faaa37a787e90878d3c9a02763.png
+chroma_images/0266ae67836840ebe780ee455c33bbf5.png
