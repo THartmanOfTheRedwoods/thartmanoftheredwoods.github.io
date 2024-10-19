@@ -190,3 +190,4 @@ chroma_images/d368cb0485757c58ea5d931592fb91bf.png
 chroma_images/675b203c15f5a7ee9184e9305ae08f46.png
 chroma_images/affbecba6f0e4c11248b9a9012b5177d.png
 chroma_images/03189596628f3cd9d69a3d3c3362cfb1.png
+chroma_images/a52d27309eea5f8d8ca63547ee711864.png
