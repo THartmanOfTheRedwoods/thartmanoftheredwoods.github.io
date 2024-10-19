@@ -191,3 +191,5 @@ chroma_images/675b203c15f5a7ee9184e9305ae08f46.png
 chroma_images/affbecba6f0e4c11248b9a9012b5177d.png
 chroma_images/03189596628f3cd9d69a3d3c3362cfb1.png
 chroma_images/a52d27309eea5f8d8ca63547ee711864.png
+chroma_images/4c0966bd85fb82b829f1e4f9163c1624.png
+chroma_images/8c597173cd30cb4e2b7aec7dfa2b1b5a.png
