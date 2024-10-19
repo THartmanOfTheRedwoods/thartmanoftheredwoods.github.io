@@ -75,3 +75,5 @@ chroma_images/35ceece12527885a14a900edf34a8e12.png
 chroma_images/d7069032a927b9e08fe015920b2301a4.png
 chroma_images/26106306f2e69f7278a819abd525ead4.png
 chroma_images/1ebde0ad45345ada1d8f2b2cc851e947.png
+chroma_images/8f67eb41f861f1badc30e31edaf2ca4f.png
+chroma_images/c4a99fd31b9c4eda129bf0365a17b815.png
