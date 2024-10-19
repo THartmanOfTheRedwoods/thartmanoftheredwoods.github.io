@@ -39,3 +39,5 @@ chroma_images/7c939ab91192f93c9dd3232752477679.png
 chroma_images/0ffaf5782d09cba3559c9f0ba296efae.png
 chroma_images/d5c11e4644a767decfb7e1c654e3befa.png
 chroma_images/231b4ab3ec7b0c36e8cfaccd4d24b2da.png
+chroma_images/16856f6c0ae3294d42322f099b70ead3.png
+chroma_images/18c69ee1dc714edef321c17395e928fa.png
