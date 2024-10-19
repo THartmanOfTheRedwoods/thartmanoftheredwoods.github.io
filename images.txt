@@ -121,3 +121,5 @@ chroma_images/7aa83d7b368bfd77f62270cd5a8f707a.png
 chroma_images/aec1c6086ff5b7d09fc37680a69d6790.png
 chroma_images/d40346ccf0f3ec4f298e208533b6e96f.png
 chroma_images/f01039b8f922ae1e033fa2d924eda4a1.png
+chroma_images/ae1d78122bf3808f83de1c0e90e502c5.png
+chroma_images/8021da07b27bf0d9f0e76cd2310838ea.png
