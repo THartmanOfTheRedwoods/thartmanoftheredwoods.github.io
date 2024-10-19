@@ -102,3 +102,4 @@ chroma_images/2a44ba2565f3ffe96972b1b97219d49a.png
 chroma_images/0ada546b852316ea6ff01285ec2a64fc.png
 chroma_images/a9f17ce782d9f5165f3de3d463453f42.png
 chroma_images/149fc8170dfcb6e217067680d6fe004d.png
+chroma_images/107a48a259db204a305523901e8725c8.png
