@@ -1,3 +1,4 @@
 chroma_images/0da70be24a89d41b67b9e7a3f8232fdb.png
 chroma_images/547aaed0754b9b2fb1416bff005dd570.png
 chroma_images/092570837e6087b896590529e6f35336.png
+chroma_images/778087baadcf01cb69fbe2bfab7f4ccb.png
