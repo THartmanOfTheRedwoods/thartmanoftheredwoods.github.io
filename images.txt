@@ -123,3 +123,4 @@ chroma_images/d40346ccf0f3ec4f298e208533b6e96f.png
 chroma_images/f01039b8f922ae1e033fa2d924eda4a1.png
 chroma_images/ae1d78122bf3808f83de1c0e90e502c5.png
 chroma_images/8021da07b27bf0d9f0e76cd2310838ea.png
+chroma_images/6fd1064691a024959d1893259a4dbfe7.png
