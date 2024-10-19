@@ -108,3 +108,5 @@ chroma_images/b25e76cb5e807410a428a1c8fb234793.png
 chroma_images/80d8c7de7153e9f819466f02cc05e556.png
 chroma_images/8cf468a24e912a6c8c774e4f04fe6394.png
 chroma_images/d28e2763ba84bd24561adfa0bdba500a.png
+chroma_images/312109889fa791ef79eea00ab42dd7f3.png
+chroma_images/4abddfc1b20be6b4acb180fbca05a7a9.png
