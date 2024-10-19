@@ -160,3 +160,5 @@ chroma_images/2a9a852d849db343c485c00d0f4caafb.png
 chroma_images/3413eecbdb0449b83caa71facd950555.png
 chroma_images/b9cc72d21c1e4c1540042e9df64bd127.png
 chroma_images/ba5b9278bfb7259f2665c2992d47cdcc.png
+chroma_images/72bf0578186af538ca044cb792a4112c.png
+chroma_images/b72f8eb919e4442c86324267689f9d77.png
