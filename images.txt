@@ -20,3 +20,4 @@ chroma_images/5a5c39073933f60b91e95c84f064650a.png
 chroma_images/32e6d7ff2edf51eb3e96add74aeef7c7.png
 chroma_images/8d57cb4bfe58549a4687be14d43cd97b.png
 chroma_images/54a321de3d739e341ed9bb9957fd624b.png
+chroma_images/d7ac7103d4b400d5129dfb1b6e469267.png
