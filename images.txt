@@ -34,3 +34,5 @@ chroma_images/f89785c9cfd6762a904c72c65412618e.png
 chroma_images/fedb0d6c66e37fbd278daa223b4c01d8.png
 chroma_images/484014e6d98c99a0e2a47fbc984d570f.png
 chroma_images/a5364eac6e032b9af36a506b08917ec3.png
+chroma_images/b1063c000178ae25f88cc516c59db38a.png
+chroma_images/7c939ab91192f93c9dd3232752477679.png
