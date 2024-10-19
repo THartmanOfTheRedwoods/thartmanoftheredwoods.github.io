@@ -62,3 +62,5 @@ chroma_images/f0b9f40b50b0c14259249d6e9f7ac60c.png
 chroma_images/93d173df60d1a202a932fcc46d5fdef8.png
 chroma_images/d66bf7c1003399dd150a75fd8d91dd3b.png
 chroma_images/9566a21bfef3d5e3b51fedd16e6ac1ef.png
+chroma_images/7b0a865029fff950649a03365b571926.png
+chroma_images/abb58f52482b35f22b18cc414928af0b.png
