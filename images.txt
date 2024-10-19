@@ -89,3 +89,4 @@ chroma_images/eabeb6cbee32194cbf6ae0c75b830aad.png
 chroma_images/43947d05dc1d0b6cdd65b12cdd02fab3.png
 chroma_images/42f99fdb6144ec3f067d865645523b33.png
 chroma_images/d8c5a23df81eeb02135de62535be36f8.png
+chroma_images/6ae2a69d95288228271cd958a72d5676.png
