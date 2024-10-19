@@ -178,3 +178,5 @@ chroma_images/896b7c209017762910ee520ccea6ba57.png
 chroma_images/4ecaf1b9423e8062440ccc044d811a45.png
 chroma_images/9751d4c93c7cbb654c7b173ca8096666.png
 chroma_images/f15c4917e200e6faf7cd225b08cca1ab.png
+chroma_images/20474f37b3aa9fcc949188d47ab43f48.png
+chroma_images/072bae1adfce928683e0845395f538a5.png
