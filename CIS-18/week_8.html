@@ -1690,12 +1690,18 @@
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
 <span class="w">    </span><span class="n">ConcreteCommand</span><span class="w"> </span><span class="p">..</span><span class="o">|&gt;</span><span class="w"> </span><span class="n">Command</span>
+<span class="w">    </span><span class="n">ConcreteCommand</span><span class="w"> </span><span class="o">*--</span><span class="w"> </span><span class="n">Receiver</span>
 <span class="w">    </span><span class="n">ConcreteCommand</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Receiver</span>
+<span class="w">    </span><span class="n">Invoker</span><span class="w"> </span><span class="o">*--</span><span class="w"> </span><span class="n">Command</span>
 <span class="w">    </span><span class="n">Invoker</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Command</span>
 <span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Receiver</span>
 <span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">ConcreteCommand</span>
+<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Invoker</span>
 <span class="w">    </span><span class="kd">class</span> <span class="nc">Command</span><span class="p">{</span>
 <span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
         <span class="err">+</span><span class="nc">execute</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">void</span>
