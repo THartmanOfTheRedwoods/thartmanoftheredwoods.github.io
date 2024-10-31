@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="parallel.html">
+        <link rel="prev" href="../git/gitflow.html">
       
       
-        <link rel="next" href="tesseract.html">
+        <link rel="next" href="annotations.html">
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>SSH - THartmanOfTheRedwoods Wiki</title>
+        <title>SpringBoot - THartmanOfTheRedwoods Wiki</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#helpful-ssh-commands" class="md-skip">
+        <a href="#what-is-spring-boot" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SSH
+              SpringBoot
             
           </span>
         </div>
@@ -299,11 +299,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../java/spring.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="spring.html" class="md-tabs__link">
           
   
     
@@ -376,13 +378,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="os_command_map.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../tux/os_command_map.html" class="md-tabs__link">
           
   
     
@@ -751,6 +751,8 @@
       
   
   
+    
+  
   
     
     
@@ -773,13 +775,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
@@ -792,7 +794,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Java
@@ -803,9 +805,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../java/spring.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SpringBoot
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="spring.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -814,6 +834,136 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-spring-boot" class="md-nav__link">
+    What is Spring Boot?
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Spring Boot?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java-bean-terminology" class="md-nav__link">
+    Java Bean Terminology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inversion-of-control-ioc-container-aka-dependency-injection-di" class="md-nav__link">
+    Inversion of Control (IoC) Container AKA Dependency Injection (DI)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-auto-configuration" class="md-nav__link">
+    Spring Boot Auto-Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-starters" class="md-nav__link">
+    Spring Boot Starters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-mvc-model-view-controller" class="md-nav__link">
+    Spring MVC (Model-View-Controller)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-data" class="md-nav__link">
+    Spring Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Spring Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-extra-word-on-spring-data" class="md-nav__link">
+    An Extra Word on Spring Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-security" class="md-nav__link">
+    Spring Security
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-actuator" class="md-nav__link">
+    Spring Boot Actuator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-cli" class="md-nav__link">
+    Spring Boot CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-aop-aspect-oriented-programming" class="md-nav__link">
+    Spring AOP (Aspect-Oriented Programming)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-devtools" class="md-nav__link">
+    Spring Boot DevTools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-cloud" class="md-nav__link">
+    Spring Cloud
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -825,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java/annotations.html" class="md-nav__link">
+      <a href="annotations.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -845,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="certificates/LAZY_DEV.html" class="md-nav__link">
+      <a href="../tux/certificates/LAZY_DEV.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -865,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java/format_specifiers.html" class="md-nav__link">
+      <a href="format_specifiers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java/loop_usage.html" class="md-nav__link">
+      <a href="loop_usage.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -905,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java/operators.html" class="md-nav__link">
+      <a href="operators.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -925,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java/associativity.html" class="md-nav__link">
+      <a href="associativity.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -945,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="certificates/LAZY_DEV.html" class="md-nav__link">
+      <a href="../tux/certificates/LAZY_DEV.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,8 +1269,6 @@
       
   
   
-    
-  
   
     
     
@@ -1145,13 +1293,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
@@ -1164,7 +1312,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Tux
@@ -1177,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="os_command_map.html" class="md-nav__link">
+      <a href="../tux/os_command_map.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1197,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="imagemagick.html" class="md-nav__link">
+      <a href="../tux/imagemagick.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1217,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="network.html" class="md-nav__link">
+      <a href="../tux/network.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1237,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="nmcli.html" class="md-nav__link">
+      <a href="../tux/nmcli.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1257,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pandoc.html" class="md-nav__link">
+      <a href="../tux/pandoc.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1277,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="parallel.html" class="md-nav__link">
+      <a href="../tux/parallel.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1295,27 +1443,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    SSH
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="ssh.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tux/ssh.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1324,46 +1454,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Sub-Menu
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#helpful-ssh-commands" class="md-nav__link">
-    Helpful SSH Commands
-  </a>
-  
-    <nav class="md-nav" aria-label="Helpful SSH Commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#convert-ssh-key-into-openssh-classic-key" class="md-nav__link">
-    Convert SSH Key into OpenSSH Classic Key
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1375,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tesseract.html" class="md-nav__link">
+      <a href="../tux/tesseract.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1437,7 +1527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="certificates/certificate_authority.html" class="md-nav__link">
+      <a href="../tux/certificates/certificate_authority.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1457,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="certificates/JAVA_KEYSTORE.html" class="md-nav__link">
+      <a href="../tux/certificates/JAVA_KEYSTORE.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1477,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="certificates/LAZY_DEV.html" class="md-nav__link">
+      <a href="../tux/certificates/LAZY_DEV.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3374,7 +3464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java/rounding_errors.html" class="md-nav__link">
+      <a href="rounding_errors.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4008,16 +4098,106 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#helpful-ssh-commands" class="md-nav__link">
-    Helpful SSH Commands
+  <a href="#what-is-spring-boot" class="md-nav__link">
+    What is Spring Boot?
   </a>
   
-    <nav class="md-nav" aria-label="Helpful SSH Commands">
+    <nav class="md-nav" aria-label="What is Spring Boot?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#convert-ssh-key-into-openssh-classic-key" class="md-nav__link">
-    Convert SSH Key into OpenSSH Classic Key
+  <a href="#java-bean-terminology" class="md-nav__link">
+    Java Bean Terminology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inversion-of-control-ioc-container-aka-dependency-injection-di" class="md-nav__link">
+    Inversion of Control (IoC) Container AKA Dependency Injection (DI)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-auto-configuration" class="md-nav__link">
+    Spring Boot Auto-Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-starters" class="md-nav__link">
+    Spring Boot Starters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-mvc-model-view-controller" class="md-nav__link">
+    Spring MVC (Model-View-Controller)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-data" class="md-nav__link">
+    Spring Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Spring Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-extra-word-on-spring-data" class="md-nav__link">
+    An Extra Word on Spring Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-security" class="md-nav__link">
+    Spring Security
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-actuator" class="md-nav__link">
+    Spring Boot Actuator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-cli" class="md-nav__link">
+    Spring Boot CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-aop-aspect-oriented-programming" class="md-nav__link">
+    Spring AOP (Aspect-Oriented Programming)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-devtools" class="md-nav__link">
+    Spring Boot DevTools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-cloud" class="md-nav__link">
+    Spring Cloud
   </a>
   
 </li>
@@ -4042,13 +4222,138 @@
                   
 
 
-  <h1>SSH</h1>
+  <h1>SpringBoot</h1>
 
-<h2 id="helpful-ssh-commands">Helpful SSH Commands<a class="headerlink" href="#helpful-ssh-commands" title="Permanent link">&para;</a></h2>
-<h3 id="convert-ssh-key-into-openssh-classic-key">Convert SSH Key into OpenSSH Classic Key<a class="headerlink" href="#convert-ssh-key-into-openssh-classic-key" title="Permanent link">&para;</a></h3>
+<h2 id="what-is-spring-boot">What is Spring Boot?<a class="headerlink" href="#what-is-spring-boot" title="Permanent link">&para;</a></h2>
+<p>Spring Boot is part of the broader <strong>Spring Framework</strong>, which aims to streamline building Java applications by providing components for dependency injection, web MVC, data access, security, and much more. Below is a breakdown of <strong>SOME</strong> of the key components within the Spring Boot framework.</p>
+<h3 id="java-bean-terminology">Java Bean Terminology<a class="headerlink" href="#java-bean-terminology" title="Permanent link">&para;</a></h3>
+<p>You will need to understand what a JavaBean is to properly understand the SpringBoot Framework, so let&rsquo;s define what a bean is:</p>
+<p>A <strong>JavaBean</strong> is a class that follows certain conventions for naming, properties, and methods, primarily to allow other frameworks and tools to interact with it consistently.</p>
+<p>The main characteristics of a JavaBean include:
+* <strong>Default (No-Argument) Constructor</strong>: This allows the JavaBean to be instantiated without parameters, which is helpful for frameworks that rely on reflection to create instances.
+* <strong>Getters and Setters</strong>: JavaBeans have private fields/properties with public getter and setter methods, allowing for encapsulation of data while making it accessible in a controlled way.
+* <strong>Serializable</strong>: JavaBeans typically implement <code>Serializable</code>, allowing instances to be serialized for storage, transmission, or other uses.</p>
+<h3 id="inversion-of-control-ioc-container-aka-dependency-injection-di">Inversion of Control (IoC) Container AKA Dependency Injection (DI)<a class="headerlink" href="#inversion-of-control-ioc-container-aka-dependency-injection-di" title="Permanent link">&para;</a></h3>
 <ul>
-<li>May need to do this for various legacy programs or API libraries like Java&rsquo;s JSch.<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ssh-keygen -p -f &lt;privateKeyFile&gt; -m pem -P passphrase -N passphrase
-</code></pre></div></td></tr></table></div>
+<li><strong>Purpose</strong>: The IoC container is the core of the Spring Framework. It manages the lifecycle of Spring beans (objects managed by Spring) and allows for dependency injection, which reduces tight coupling between classes.</li>
+<li><strong>Design Patterns</strong>:<ul>
+<li><strong>Dependency Injection Pattern</strong>: The container injects dependencies into objects, adhering to the DI pattern, where objects don&rsquo;t instantiate dependencies themselves.</li>
+<li><strong>Factory Pattern</strong>: The IoC container uses factory methods to create and manage beans based on configuration.</li>
+<li><strong>Singleton Pattern</strong>: By default, beans in Spring are singletons, meaning only one instance of each bean is created and shared across the application.</li>
+</ul>
+</li>
+</ul>
+<h3 id="spring-boot-auto-configuration">Spring Boot Auto-Configuration<a class="headerlink" href="#spring-boot-auto-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Auto-configuration in Spring Boot automatically configures many application components based on the presence of specific classes or properties. This eliminates much of the boilerplate code needed for configuration.</li>
+<li><strong>Design Patterns</strong>:<ul>
+<li><strong>Template Method Pattern</strong>: Auto-configuration classes extend configuration templates to define application behavior, allowing Spring Boot to provide default setups.</li>
+<li><strong>Decorator Pattern</strong>: Auto-configuration &ldquo;decorates&rdquo; or adds configuration layers on top of the existing setup by detecting which dependencies are available in the classpath.</li>
+</ul>
+</li>
+</ul>
+<h3 id="spring-boot-starters">Spring Boot Starters<a class="headerlink" href="#spring-boot-starters" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Starters are pre-defined dependencies for common tasks (like web development, JPA, security, etc.) that simplify project setup. They package frequently used libraries and dependencies to streamline development.</li>
+<li><strong>Design Patterns</strong>:<ul>
+<li><strong>Facade Pattern</strong>: Starters act as facades, bundling libraries for a specific purpose and providing a simplified interface to include required dependencies.</li>
+</ul>
+</li>
+</ul>
+<h3 id="spring-mvc-model-view-controller">Spring MVC (Model-View-Controller)<a class="headerlink" href="#spring-mvc-model-view-controller" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose</strong>: The MVC module helps build web applications by defining a clear separation between the Model (data), View (UI), and Controller (business logic) layers.</li>
+<li><strong>Design Patterns</strong>:<ul>
+<li><strong>Model-View-Controller Pattern</strong>: Implements the MVC architecture to separate concerns.</li>
+<li><strong>Front Controller Pattern</strong>: <code>DispatcherServlet</code> acts as the front controller that receives all incoming HTTP requests and delegates them to the appropriate controllers.<ul>
+<li><strong>Strategy Pattern</strong>: Controllers provide a strategy for handling requests, and the front controller allows the controllers to be dynamically selected and/or changed.</li>
+</ul>
+</li>
+<li><strong>Observer Pattern</strong>: Used in the view layer where models notify views of updates, ensuring UI elements update dynamically.</li>
+<li><strong>Composite Pattern</strong>: Also used in the view layer when presenting the view for nesting UI elememts and or components.</li>
+</ul>
+</li>
+</ul>
+<h3 id="spring-data">Spring Data<a class="headerlink" href="#spring-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Provides a unified approach to data access and simplifies interactions with data sources like relational databases, NoSQL databases, and more. It includes support for repositories to handle common CRUD operations.</li>
+<li><strong>Design Patterns</strong>:<ul>
+<li><strong>Repository Pattern</strong>: Abstracts data access and encapsulates storage, retrieval, and search behavior.</li>
+<li><strong>Proxy Pattern</strong>: Spring creates proxy instances of repository interfaces to provide runtime implementations, allowing it to execute database operations without manually implementing the interface.</li>
+<li><strong>Specification Pattern</strong>: Used in Spring Data JPA for dynamic queries, allowing developers to create complex queries based on various criteria.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="an-extra-word-on-spring-data">An Extra Word on Spring Data<a class="headerlink" href="#an-extra-word-on-spring-data" title="Permanent link">&para;</a></h4>
+<p>In the context of <strong>Spring Boot</strong>, a <code>CrudRepository</code> interface (or any other Spring Data repository) is considered a <strong>service bean</strong> because:</p>
+<ol>
+<li>
+<p><strong>Bean Definition in Spring</strong>: Spring automatically detects <code>@Repository</code> classes and manages their lifecycle by creating a &ldquo;bean&rdquo; (an object instance managed by Spring&rsquo;s container). Spring&rsquo;s IoC (Inversion of Control) container injects these beans wherever needed.</p>
+</li>
+<li>
+<p><strong>Persistence Operations</strong>: Classes implementing <code>CrudRepository</code> provide basic CRUD operations (Create, Read, Update, Delete) out-of-the-box. Spring manages these interfaces as service beans, allowing them to be injected into other classes (like controllers or services) to interact with the database.</p>
+</li>
+<li>
+<p><strong>Dependency Injection</strong>: Since <code>CrudRepository</code> extends <code>Repository</code>, Spring considers it a candidate for dependency injection. When injected, it acts as a service bean, enabling interaction with data storage while hiding implementation details.</p>
+</li>
+</ol>
+<p>So, in Spring Boot, interfaces extending <code>CrudRepository</code> become <strong>service beans</strong> because the Spring container recognizes them as repositories and manages their lifecycle and dependencies, treating them as core components within the service layer.</p>
+<h3 id="spring-security">Spring Security<a class="headerlink" href="#spring-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Manages authentication and authorization within applications. It handles user login, permissions, and data access control.</li>
+<li><strong>Design Patterns</strong>:<ul>
+<li><strong>Filter Chain Pattern</strong>: Spring Security applies a series of filters to incoming requests, allowing each filter to perform a specific task, such as authentication or authorization.</li>
+<li><strong>Proxy Pattern</strong>: Used for method security; Spring Security wraps secure methods with proxies that check permissions.</li>
+<li><strong>Strategy Pattern</strong>: Provides a strategy for handling authentication (e.g. username/password, OAuth2) and allows the authentication strategy to be dynamically changed.</li>
+</ul>
+</li>
+</ul>
+<h3 id="spring-boot-actuator">Spring Boot Actuator<a class="headerlink" href="#spring-boot-actuator" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Provides production-ready features such as monitoring and metrics for Spring Boot applications, offering endpoints to gather application insights, manage the application, and more.</li>
+<li><strong>Design Patterns</strong>:<ul>
+<li><strong>Observer Pattern</strong>: Monitors various application states and components, notifying appropriate services or administrators if any anomaly is detected.</li>
+<li><strong>Command Pattern</strong>: Actuator endpoints can be thought of as commands that execute certain actions (e.g. retrieving metrics or shutting down).</li>
+</ul>
+</li>
+</ul>
+<h3 id="spring-boot-cli">Spring Boot CLI<a class="headerlink" href="#spring-boot-cli" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose</strong>: The Command Line Interface (CLI) allows developers to quickly develop Spring Boot applications using Groovy scripts. It’s often used for prototyping and testing ideas quickly.</li>
+<li><strong>Design Patterns</strong>:<ul>
+<li><strong>Interpreter Pattern</strong>: The CLI interprets and runs Groovy scripts, allowing developers to write simpler syntax for Spring Boot applications.</li>
+<li><strong>Facade Pattern</strong>: Simplifies the setup process by handling all the necessary Spring Boot dependencies and configurations in the background.</li>
+</ul>
+</li>
+</ul>
+<h3 id="spring-aop-aspect-oriented-programming">Spring AOP (Aspect-Oriented Programming)<a class="headerlink" href="#spring-aop-aspect-oriented-programming" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Spring AOP allows cross-cutting concerns (like logging, transactions, or security) to be modularized and applied across the application transparently, usually via injection.</li>
+<li><strong>Design Patterns</strong>:<ul>
+<li><strong>Proxy Pattern</strong>: Spring AOP creates proxies to add behavior (like logging or security) to existing objects.</li>
+<li><strong>Decorator Pattern</strong>: Enhances or decorates methods with additional behavior without modifying the underlying code.</li>
+<li><strong>Chain of Responsibility Pattern</strong>: Multiple aspects can be applied in a sequence, each processing the input and passing it to the next aspect.</li>
+</ul>
+</li>
+</ul>
+<h3 id="spring-boot-devtools">Spring Boot DevTools<a class="headerlink" href="#spring-boot-devtools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose</strong>: DevTools provides tools to enhance the developer experience, such as automatic restarts, live reloading, and configuration optimizations for development environments.</li>
+<li><strong>Design Patterns</strong>:<ul>
+<li><strong>Observer Pattern</strong>: Watches files for changes and reloads the application when modifications are detected.</li>
+<li><strong>Facade Pattern</strong>: Simplifies configuration by providing a single entry point for various developer tools and settings.</li>
+</ul>
+</li>
+</ul>
+<h3 id="spring-cloud">Spring Cloud<a class="headerlink" href="#spring-cloud" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Provides tools to build distributed systems and microservices, offering solutions for configuration, service discovery, load balancing, circuit breakers, and more.</li>
+<li><strong>Design Patterns - This are really Architectural Patterns</strong>:<ul>
+<li><strong>Service Registry and Discovery Pattern</strong>: For service discovery, components like Eureka or Consul enable microservices to locate each other dynamically.</li>
+<li><strong>Circuit Breaker Pattern</strong>: Resilience tools like Spring Cloud Circuit Breaker or Resilience4j prevent system overload by “tripping” when a service is down.</li>
+<li><strong>Load Balancer Pattern</strong>: Distributes incoming requests across multiple service instances for high availability.</li>
+</ul>
 </li>
 </ul>
 
