@@ -1198,13 +1198,85 @@
 <nav aria-label="Representations" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph---mvc-pattern">
-    Mermaid Graph - MVC Pattern
+<a class="md-nav__link" href="#strategy-review">
+    Strategy Review
+  </a>
+<nav aria-label="Strategy Review" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-components">
+    Key Components
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intent">
+    Intent
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#uml">
     UML
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-review">
+    Composite Review
+  </a>
+<nav aria-label="Composite Review" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-components_1">
+    Key Components
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intent_1">
+    Intent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml_1">
+    UML
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#observer-review">
+    Observer Review
+  </a>
+<nav aria-label="Observer Review" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-components_2">
+    Key Components
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intent_2">
+    Intent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml_2">
+    UML
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bringing-it-all-together">
+    Bringing it all Together
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph---mvc-pattern">
+    Mermaid Graph - MVC Pattern
   </a>
 </li>
 </ul>
@@ -1589,13 +1661,85 @@
 <nav aria-label="Representations" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph---mvc-pattern">
-    Mermaid Graph - MVC Pattern
+<a class="md-nav__link" href="#strategy-review">
+    Strategy Review
+  </a>
+<nav aria-label="Strategy Review" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-components">
+    Key Components
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intent">
+    Intent
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#uml">
     UML
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-review">
+    Composite Review
+  </a>
+<nav aria-label="Composite Review" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-components_1">
+    Key Components
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intent_1">
+    Intent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml_1">
+    UML
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#observer-review">
+    Observer Review
+  </a>
+<nav aria-label="Observer Review" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-components_2">
+    Key Components
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intent_2">
+    Intent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml_2">
+    UML
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bringing-it-all-together">
+    Bringing it all Together
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph---mvc-pattern">
+    Mermaid Graph - MVC Pattern
   </a>
 </li>
 </ul>
@@ -1656,16 +1800,485 @@
 <li><strong>Definition</strong>: Multiple smaller design patterns working together to solve a common problem. It is only a compound design pattern if it has been used to solve multiple problems, not just because it uses multiple design patterns.</li>
 </ul>
 <h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
-<h4 id="mermaid-graph---mvc-pattern">Mermaid Graph - MVC Pattern<a class="headerlink" href="#mermaid-graph---mvc-pattern" title="Permanent link">¶</a></h4>
-<h4 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h4>
 <ul>
-<li>Combination of:<ul>
-<li>Composite: View</li>
-<li>Strategy: Controller</li>
-<li>Observer: Model</li>
+<li>MVC is a Combination of:<ul>
+<li>Composite: View -&gt; UI Composite Components (e.g. JavaFX Layouts) and UI Leaf Components (e.g. JavaFX button, labels, etc.)</li>
+<li>Strategy: View -&gt; Controller</li>
+<li>Observer: Model -&gt; Controller or View</li>
 </ul>
 </li>
 </ul>
+<h4 id="strategy-review">Strategy Review<a class="headerlink" href="#strategy-review" title="Permanent link">¶</a></h4>
+<p>The Strategy design pattern is a <strong>behavioral pattern</strong> that enables selecting an algorithm’s behavior at runtime. It defines a family of algorithms, encapsulates each one in a class, and makes them interchangeable. This pattern allows the algorithm to vary independently from the clients that use it.</p>
+<h5 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>Strategy Interface</strong>: Defines a common interface for all supported algorithms. Each concrete strategy implements this interface.</li>
+<li><strong>Concrete Strategies</strong>: Encapsulates and implements the algorithm using the Strategy interface.</li>
+<li><strong>Context</strong>: Composes a Strategy object and delegates calling strategy algorithm defined by a ConcreteStrategy.</li>
+</ul>
+<h5 id="intent">Intent<a class="headerlink" href="#intent" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>Encapsulate Algorithms</strong>: Encapsulate a family of algorithms, making them interchangeable.</li>
+<li><strong>Runtime Selection</strong>: Allows the client to choose the appropriate algorithm at runtime.</li>
+<li><strong>Separation of Concerns</strong>: Separate the algorithm’s implementation from the client that uses it, promoting flexibility and reusability.</li>
+</ul>
+<p>The Strategy pattern allows you to easily switch between different algorithms or behaviors without altering the client code that uses them. Thus, making the system more flexible and easier to maintain.</p>
+<h5 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h5>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code>classDiagram
+    class Context {
+        - Strategy strategy
+        + setStrategy(Strategy strategy) void
+        + doSomething(data) void
+    }
+
+    class Strategy {
+        &lt;&lt;interface&gt;&gt;
+        + execute(data) void
+    }
+
+    class ConcreteStrategyA {
+        + execute(data) void
+    }
+
+    class ConcreteStrategyB {
+        + execute(data) void
+    }
+
+    class Client {
+        + createStrategies() void
+        + executeContext() void
+    }
+
+    Context *--&gt; Strategy : delegates execute()
+    Strategy &lt;|-- ConcreteStrategyA
+    Strategy &lt;|-- ConcreteStrategyB
+    Client --&gt; Context : creates and sets strategy
+    Client ..&gt; ConcreteStrategyA : creates
+    Client ..&gt; ConcreteStrategyB : creates
+</code></pre></div></td></tr></table></div>
+<h4 id="composite-review">Composite Review<a class="headerlink" href="#composite-review" title="Permanent link">¶</a></h4>
+<p>The Composite design pattern is a <strong>structural pattern</strong> that allows you to treat individual objects and compositions of objects uniformly. It creates an upside-down tree structure of leaf and composite objects, enabling clients to interact with both types of objects in the same way.</p>
+<h5 id="key-components_1">Key Components<a class="headerlink" href="#key-components_1" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>Component</strong>: Defines the default behavior for the interface for all objects in the composition. It declares the interface for objects in the composition and (optionally) defines an interface for accessing a component’s parent in the recursive structure, allowing it to be managed uniformly.</li>
+<li><strong>Leaf</strong>: Represents the end objects of the composition. A leaf has no children and defines behavior for primitive objects in the composition.</li>
+<li><strong>Composite</strong>: Defines behavior for components having children and implements child-related operations in the Component interface. It stores child components and implements operations that involve traversing or manipulating its children.</li>
+<li><strong>Client</strong>: Manipulates objects in the composition through the Component interface.</li>
+</ul>
+<h5 id="intent_1">Intent<a class="headerlink" href="#intent_1" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>Uniform Interface</strong>: Provide a uniform interface for individual objects and compositions of objects.</li>
+<li><strong>Tree Structure</strong>: Create a tree structure of objects where individual objects and compositions of objects are treated uniformly.</li>
+<li><strong>Simplify Client Code</strong>: Allow clients to treat individual objects and compositions of objects consistently, simplifying the client code.</li>
+</ul>
+<p>The Composite pattern allows you to build complex hierarchies of objects while keeping the client code simple and flexible. This pattern is particularly useful when dealing with hierarchical/trees or recursive data structures, such as file systems, GUIs, and org-charts.</p>
+<h5 id="uml_1">UML<a class="headerlink" href="#uml_1" title="Permanent link">¶</a></h5>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>classDiagram
+    class Component {
+        &lt;&lt;interface&gt;&gt;
+        + execute(): void
+    }
+
+    class Leaf {
+        + execute(): void
+    }
+
+    class Composite {
+        - List&lt;Component&gt; children
+        + execute(): void : "for each child c c.execute()"
+        + add(Component component): void
+        + remove(Component component): void
+        + getChildren(): List&lt;Component&gt;
+    }
+
+    class Client {
+        + useComposite(): void
+    }
+
+    Component &lt;|-- Leaf : implements
+    Component &lt;|-- Composite : implements
+    Composite o--&gt; Component : contains
+    Client --&gt; Component : creates
+</code></pre></div></td></tr></table></div>
+<h4 id="observer-review">Observer Review<a class="headerlink" href="#observer-review" title="Permanent link">¶</a></h4>
+<p>The Observer design pattern is a <strong>behavioral pattern</strong> that defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. This pattern is also known as the Publish-Subscribe pattern.</p>
+<h5 id="key-components_2">Key Components<a class="headerlink" href="#key-components_2" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>Subject (AKA Observable)</strong>: Knows its observers and provides an interface for attaching and detaching Observer objects. It maintains a list of its observers and notifies them of any state changes.</li>
+<li><strong>Observer</strong>: Defines an updating interface for objects that should be notified of changes in a subject. It provides an update method that is called when the Subject’s state changes.</li>
+<li><strong>ConcreteSubject</strong>: Stores the state of interest to ConcreteObserver and sends a notification to its observers when its state changes.</li>
+<li><strong>ConcreteObserver</strong>: Maintains a reference to a ConcreteSubject object, stores state that should stay consistent with the Subject’s, and implements the Observer updating interface to keep its state consistent with the Subject’s.</li>
+</ul>
+<h5 id="intent_2">Intent<a class="headerlink" href="#intent_2" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>Decouple Subject and Observers</strong>: Establish a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.</li>
+<li><strong>Dynamic Dependencies</strong>: Allow an object (i.e. Subject) to dynamically maintain a list of Observers that should be notified of any state changes.</li>
+<li><strong>Loose Coupling</strong>: Promote loose coupling between the Subject and its Observers, making the system more flexible and easier to maintain.</li>
+</ul>
+<p>With the Observer pattern, you can create a system where objects can dynamically register to be notified of changes in other objects, enabling a more modular and decoupled design. This pattern is commonly used in <strong>event handling systems, model-view-controller (MVC) architectures</strong>, and other scenarios where objects need to stay synchronized with each other.</p>
+<h5 id="uml_2">UML<a class="headerlink" href="#uml_2" title="Permanent link">¶</a></h5>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span></pre></div></td><td class="code"><div><pre><span></span><code>classDiagram
+    class Subject {
+        &lt;&lt;interface&gt;&gt;
+        + register(Observer observer): void
+        + unregister(Observer observer): void
+        + notify(): void
+        + getState(): Object
+        + setState(Object state): void
+    }
+
+    class Observer {
+        &lt;&lt;interface&gt;&gt;
+        + update(): void
+        + setSubject(Subject subject): void
+    }
+
+    class ConcreteSubject {
+        - List~Observer~ observers
+        - Object state
+        + register(Observer observer): void
+        + unregister(Observer observer): void
+        + notify(): void "for each Observer o o.update()"
+        + getState(): Object
+        + setState(Object state): void
+    }
+
+    class ConcreteObserverA {
+        - Subject subject
+        + update(): void "subject.getState(); doSomething()"
+        + setSubject(Subject subject): void
+    }
+
+    class ConcreteObserverB {
+        - Subject subject
+        + update(): void
+        + setSubject(Subject subject): void
+    }
+
+    class Client {
+        - Subject subject
+                + main(): void "o = new ConcreteObserverA();subject.register(o)"
+    }
+
+    Subject &lt;|-- ConcreteSubject
+    Observer &lt;|-- ConcreteObserverA
+    Observer &lt;|-- ConcreteObserverB
+    ConcreteSubject o--&gt; Observer : maintains list
+    Client --&gt; Subject : creates
+    Client ..&gt; Observer : create and registers
+</code></pre></div></td></tr></table></div>
+<h4 id="bringing-it-all-together">Bringing it all Together<a class="headerlink" href="#bringing-it-all-together" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Observer Pattern</strong><ul>
+<li><strong>Subject Interface</strong>: Represents the Model in MVC.</li>
+<li><strong>ConcreteSubject</strong>: A specific Model implementation.</li>
+<li><strong>Observer Interface</strong>: Represents the Views in MVC.</li>
+<li><strong>ConcreteObserver</strong>: Specific Views that respond to changes in the Model.</li>
+</ul>
+</li>
+<li><strong>Strategy Pattern</strong><ul>
+<li><strong>ViewStrategy Interface</strong>: Defines how Views are rendered.</li>
+<li><strong>Concrete Strategies</strong>: Implement rendering logic (e.g., HTML, JSON).</li>
+</ul>
+</li>
+<li><strong>Composite Pattern</strong><ul>
+<li><strong>Component Interface</strong>: Represents a generic View element.</li>
+<li><strong>Leaf</strong>: Simple View components (e.g., a text field or button).</li>
+<li><strong>Composite</strong>: Complex Views containing nested components.</li>
+</ul>
+</li>
+<li><strong>Client</strong>: Routes requests, invokes the appropriate Controller, selects a ViewStrategy, and triggers the rendering pipeline.</li>
+</ul>
+<h4 id="mermaid-graph---mvc-pattern">Mermaid Graph - MVC Pattern<a class="headerlink" href="#mermaid-graph---mvc-pattern" title="Permanent link">¶</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span></pre></div></td><td class="code"><div><pre><span></span><code>classDiagram
+    class Subject {
+        &lt;&lt;interface&gt;&gt; ObserverPattern
+        + register(Observer observer): void
+        + unregister(Observer observer): void
+        + notifyObservers(): void
+        + getState(): Object
+        + setState(Object state): void
+    }
+
+    class ConcreteSubject {
+        &lt;&lt;ObserverPattern&gt;&gt;
+        - List~Observer~ observers
+        - Object state
+        + register(Observer observer): void
+        + unregister(Observer observer): void
+        + notifyObservers(): void
+        + getState(): Object
+        + setState(Object state): void
+    }
+
+    class Observer {
+        &lt;&lt;interface&gt;&gt; ObserverPattern
+        + update(): void
+        + setSubject(Subject subject): void
+    }
+
+    class ConcreteObserver {
+        &lt;&lt;ObserverPattern&gt;&gt;
+        - Subject subject
+        - Component viewRoot
+        + update(): void
+        + setSubject(Subject subject): void
+        + renderView(): void
+    }
+
+    class Component {
+        &lt;&lt;interface&gt;&gt; CompositePattern
+        + render(ViewStrategy strategy, HttpResponse response): void
+    }
+
+    class Leaf {
+        &lt;&lt;CompositePattern&gt;&gt;
+        + render(ViewStrategy strategy, HttpResponse response): void
+    }
+
+    class Composite {
+        &lt;&lt;CompositePattern&gt;&gt;
+        - List~Component~ children
+        + add(Component component): void
+        + remove(Component component): void
+        + getChildren(): List~Component~
+        + render(ViewStrategy strategy, HttpResponse response): void
+    }
+
+    class ViewStrategy {
+        &lt;&lt;interface&gt;&gt; StrategyPattern
+        + renderLeaf(String content, HttpResponse response): void
+        + renderCompositeStart(HttpResponse response): void
+        + renderCompositeEnd(HttpResponse response): void
+    }
+
+    class HTMLViewStrategy {
+        &lt;&lt;StrategyPattern&gt;&gt;
+        + renderLeaf(String content, HttpResponse response): void
+        + renderCompositeStart(HttpResponse response): void
+        + renderCompositeEnd(HttpResponse response): void
+    }
+
+    class JSONViewStrategy {
+        &lt;&lt;StrategyPattern&gt;&gt;
+        + renderLeaf(String content, HttpResponse response): void
+        + renderCompositeStart(HttpResponse response): void
+        + renderCompositeEnd(HttpResponse response): void
+    }
+
+    class Router {
+        + routeRequest(HttpRequest request, HttpResponse response): void
+    }
+
+    class Controller {
+        + setViewStrategy(ViewStrategy strategy): void
+        + renderView(Component view, HttpResponse response): void
+    }
+
+    Subject &lt;|-- ConcreteSubject
+    Observer &lt;|-- ConcreteObserver
+    Composite o-- Component : "children"
+    Component &lt;|-- Composite
+    Component &lt;|-- Leaf
+    ViewStrategy &lt;|-- HTMLViewStrategy
+    ViewStrategy &lt;|-- JSONViewStrategy
+    ConcreteObserver --&gt; Component : "viewRoot"
+</code></pre></div></td></tr></table></div>
 <h3 id="mvc-usage">MVC Usage<a class="headerlink" href="#mvc-usage" title="Permanent link">¶</a></h3>
 <ul>
 <li>View object is responsible for user input and output/presentation.</li>
