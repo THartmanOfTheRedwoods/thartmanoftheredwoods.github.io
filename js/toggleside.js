@@ -7,25 +7,28 @@ function toggleRadio(id) {
     }
 }
 
-document.getElementById('__sidebars_1').addEventListener('click', () => {
-    const sidebars = document.querySelectorAll('.md-sidebar');
-    sidebars.forEach(sidebar => {
-        sidebar.classList.toggle('hidden'); 
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('__sidebars_1').addEventListener('click', () => {
+        const sidebars = document.querySelectorAll('.md-sidebar');
+        sidebars.forEach(sidebar => {
+            sidebar.classList.toggle('hidden'); 
+        });
+        toggleRadio('__sidebars_1');
+        toggleRadio('__sidebars_2');
     });
-    toggleRadio('__sidebars_1');
-    toggleRadio('__sidebars_2');
-});
-document.getElementById('__sidebars_2').addEventListener('click', () => {
-    const sidebars = document.querySelectorAll('.md-sidebar');
-    sidebars.forEach(sidebar => {
-        sidebar.classList.toggle('hidden'); 
+    document.getElementById('__sidebars_2').addEventListener('click', () => {
+        const sidebars = document.querySelectorAll('.md-sidebar');
+        sidebars.forEach(sidebar => {
+            sidebar.classList.toggle('hidden'); 
+        });
+        toggleRadio('__sidebars_1');
+        toggleRadio('__sidebars_2');
     });
-    toggleRadio('__sidebars_1');
-    toggleRadio('__sidebars_2');
+    
+    // Initial state (optional)
+    //const sidebars = document.querySelectorAll('.md-sidebar');
+    //sidebars.forEach(sidebar => {
+    //    sidebar.classList.add('hidden'); 
+    //});
 });
 
-// Initial state (optional)
-//const sidebars = document.querySelectorAll('.md-sidebar');
-//sidebars.forEach(sidebar => {
-//    sidebar.classList.add('hidden'); 
-//});
