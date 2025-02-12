@@ -880,13 +880,6 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ai-committee/AI_and_Learning.html">
-<span class="md-ellipsis">
-    AI and Learning
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -984,12 +977,36 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_6.html">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_14_7_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_14_7_8" id="__nav_14_7_8_label" tabindex="0">
 <span class="md-ellipsis">
     Normalization
   </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_14_7_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_14_7_8">
+<span class="md-nav__icon md-icon"></span>
+            Normalization
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/Chapter_6.html">
+<span class="md-ellipsis">
+    Lecture
+  </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CIS-50/anomalies.html">
+<span class="md-ellipsis">
+    Modification Anomalies
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../CIS-50/Chapter_7.html">
@@ -1788,8 +1805,8 @@
 <span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
 <span class="w">    </span><span class="n">ConcreateComponent</span><span class="w"> </span><span class="p">..</span><span class="o">|&gt;</span><span class="w"> </span><span class="n">Component</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
 <span class="w">    </span><span class="n">ComponentDecorator</span><span class="w"> </span><span class="p">..</span><span class="o">|&gt;</span><span class="w"> </span><span class="n">Component</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
-<span class="w">    </span><span class="n">ConcreateDecoratorA</span><span class="w"> </span><span class="o">--|&gt;</span><span class="w"> </span><span class="n">ComponentDecorator</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">extends</span>
-<span class="w">    </span><span class="n">ConcreateDecoratorB</span><span class="w"> </span><span class="o">--|&gt;</span><span class="w"> </span><span class="n">ComponentDecorator</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">extends</span>
+<span class="w">    </span><span class="n">ConcreteDecoratorA</span><span class="w"> </span><span class="o">--|&gt;</span><span class="w"> </span><span class="n">ComponentDecorator</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">extends</span>
+<span class="w">    </span><span class="n">ConcreteDecoratorB</span><span class="w"> </span><span class="o">--|&gt;</span><span class="w"> </span><span class="n">ComponentDecorator</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">extends</span>
 <span class="w">    </span><span class="n">ComponentDecorator</span><span class="w"> </span><span class="o">*--</span><span class="w"> </span><span class="n">Component</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">composition</span>
 <span class="w">    </span><span class="kd">class</span> <span class="nc">Component</span><span class="p">{</span>
 <span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
@@ -1807,15 +1824,15 @@
 <span class="w">        </span><span class="o">+</span><span class="n">methodA</span><span class="p">()</span>
 <span class="w">        </span><span class="o">+</span><span class="n">methodB</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreateDecoratorA</span><span class="p">{</span>
-<span class="w">        </span><span class="o">+</span><span class="n">ConcreateDecoratorA</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteDecoratorA</span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">ConcreteDecoratorA</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span>
 <span class="w">        </span><span class="o">+</span><span class="n">methodA</span><span class="p">()</span>
 <span class="w">        </span><span class="o">+</span><span class="n">methodB</span><span class="p">()</span>
 <span class="w">        </span><span class="o">+</span><span class="n">newBehavior</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreateDecoratorB</span><span class="p">{</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteDecoratorB</span><span class="p">{</span>
 <span class="w">        </span><span class="n">Object</span><span class="w"> </span><span class="n">newState</span>
-<span class="w">        </span><span class="o">+</span><span class="n">ConcreateDecoratorB</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">ConcreteDecoratorB</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span>
 <span class="w">        </span><span class="o">+</span><span class="n">methodA</span><span class="p">()</span>
 <span class="w">        </span><span class="o">+</span><span class="n">methodB</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
