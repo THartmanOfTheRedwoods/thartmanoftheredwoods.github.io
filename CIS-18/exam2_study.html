@@ -2028,17 +2028,11 @@
 </details>
 <details class="info" open="open">
 <summary>Problem 6</summary>
-</details>
-<details class="-success">
-<summary>Answer 6</summary>
-</details>
-<details class="info" open="open">
-<summary>Problem 7</summary>
 <p>You are developing a web application that needs to interact with a database. To optimize performance and resource utilization, you want to implement a connection pool for database connections. A connection pool allows you to reuse and manage a limited number of database connections efficiently.</p>
 <p>The challenge is to ensure that there is only one centralized connection pool that all parts of your application can access. If multiple connection pool instances are created, it could lead to resource wastage and inefficient handling of database connections.</p>
 </details>
 <details class="-success">
-<summary>Answer 7</summary>
+<summary>Answer 6</summary>
 <p>To address this problem, you can implement a Connection Pool Manager as a Singleton. The Singleton design pattern ensures that there’s only one instance of the Connection Pool Manager in your application, which will manage the database connections. Here’s a textual representation of the class diagram for the Singleton Connection Pool Manager:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2085,12 +2079,12 @@
 <p>By implementing the Connection Pool Manager as a Singleton, you ensure that there is only one centralized instance managing the database connections, preventing resource wastage and ensuring efficient handling of connections throughout your application.</p>
 </details>
 <details class="info" open="open">
-<summary>Problem 8</summary>
+<summary>Problem 7</summary>
 <p>You are developing a task scheduling and execution system for a server that manages various background tasks. These tasks include data processing, file synchronization, and system maintenance. The server needs a flexible way to schedule and execute these tasks at different times, with the ability to monitor their progress and provide error handling.</p>
 <p>The challenge is to create a system that allows users to schedule and manage tasks dynamically. Users should be able to add, remove, and reschedule tasks at runtime without affecting the server’s core functionality. Additionally, the system should provide detailed logs and error handling for each task.</p>
 </details>
 <details class="-success">
-<summary>Answer 8</summary>
+<summary>Answer 7</summary>
 <p>The Command Design Pattern can be used to create a system that represents tasks as objects with a unified interface for scheduling, executing, monitoring, and handling errors. Here’s a textual representation of the solution:</p>
 <p>Define a Task interface that includes methods like execute(), cancel(), and logErrors(). Each task object implements this interface.</p>
 <p>Create concrete task classes, such as DataProcessingTask, FileSynchronizationTask, and SystemMaintenanceTask, each implementing the Task interface.</p>
@@ -2185,12 +2179,12 @@
 <p>The Command Design Pattern provides a flexible and extensible solution for managing and executing tasks in a dynamic scheduling environment, allowing users to control tasks at runtime without affecting the server’s core functionality. It also ensures proper logging and error handling for each task.</p>
 </details>
 <details class="info" open="open">
-<summary>Problem 9</summary>
+<summary>Problem 8</summary>
 <p>You are developing software for a medical facility that has a variety of complex medical equipment, including ventilators, heart monitors, infusion pumps, and more. Each of these devices comes from different manufacturers and operates using distinct communication protocols, alarms, and status updates.</p>
 <p>The challenge is to create a unified and user-friendly interface for medical staff to monitor and control all the medical equipment in the facility. This interface should provide real-time monitoring of vital signs, allow staff to set alarms, and provide emergency shut-off controls, all without needing to understand the technical details of each device’s operation.</p>
 </details>
 <details class="-success">
-<summary>Answer 9</summary>
+<summary>Answer 8</summary>
 <p>The Facade Design Pattern can be used to create a Medical Equipment Monitoring System that acts as a unified control interface for medical staff. Here’s a textual representation of the solution:</p>
 <p>Define a MedicalEquipmentMonitoringFacade class that provides high-level methods for monitoring and controlling medical equipment.</p>
 <p>The facade should include methods like monitorVitalSigns(), setAlarmThreshold(), and emergencyShutdown(), which encapsulate complex interactions with individual medical devices.</p>
@@ -2247,12 +2241,12 @@
 <p>The Facade Design Pattern simplifies medical equipment monitoring and control for healthcare professionals by providing a centralized and easy-to-use interface while abstracting the complexities of various medical device communication protocols and data formats.</p>
 </details>
 <details class="info" open="open">
-<summary>Problem 10</summary>
+<summary>Problem 9</summary>
 <p>You are developing a software application that assists job seekers in creating customized resumes. Users can select from various themes and provide their personal information, educational background, work experience, and skills. However, users have different preferences for the format and content of their resumes, which can be highly personalized.</p>
 <p>The challenge is to create a flexible resume generation system that allows users to customize their resumes while maintaining a consistent structure and design. You want to enable users to choose from various themes and easily add, modify, or remove sections as per their preferences.</p>
 </details>
 <details class="-success">
-<summary>Answer 10</summary>
+<summary>Answer 9</summary>
 <p>The Template Method Design Pattern can be used to create a resume generation system that provides a flexible structure for users to customize their resumes while adhering to a common format. Here’s a textual representation of the solution:</p>
 <p>Define an abstract ResumeTemplate class that serves as a template for generating resumes. It should contain common sections like “Contact Information,” “Objective,” “Education,” “Work Experience,” and “Skills.”</p>
 <p>Implement concrete resume classes, such as StandardResume and CreativeResume, which inherit from the ResumeTemplate class. Each concrete class represents a different resume style.</p>
@@ -2304,12 +2298,12 @@
 <p>The Template Method Design Pattern allows users to customize their resumes while maintaining a consistent structure and design. Users can select different resume styles and customize their content according to their preferences, without the need to start from scratch or worry about the overall formatting.</p>
 </details>
 <details class="info" open="open">
-<summary>Problem 11</summary>
+<summary>Problem 10</summary>
 <p>You are working on a data processing system that needs to perform a series of data transformation and analysis tasks on a large dataset. These tasks include data cleaning, filtering, transformation, and statistical analysis. Each task is independent, and the order of execution may vary based on the specific data processing requirements.</p>
 <p>The challenge is to create an efficient and flexible data processing system that can handle complex data flows. You want to ensure that data can flow seamlessly, with the ability to add, remove, or rearrange processing steps without affecting the core functionality.</p>
 </details>
 <details class="-success">
-<summary>Answer 11</summary>
+<summary>Answer 10</summary>
 <p>The Pipeline Design Pattern can be used to create a data processing system that consists of a series of interconnected data processing stages. Here’s a textual representation of the solution:</p>
 <p>Define a set of processing stages, such as DataCleaningStage, DataFilteringStage, DataTransformationStage, and DataAnalysisStage. Each stage should have a standardized input and output interface.</p>
 <p>Create a pipeline controller that manages the order of execution and the flow of data between processing stages. The controller organizes the stages into a pipeline and ensures data flows sequentially through them.</p>
@@ -2401,12 +2395,12 @@
 <p>The Pipeline Design Pattern provides an efficient and flexible solution for data processing, allowing users to create complex data pipelines and adjust the order of execution without impacting the core functionality.</p>
 </details>
 <details class="info" open="open">
-<summary>Problem 12</summary>
+<summary>Problem 11</summary>
 <p>You are developing an online learning platform with various courses. Each course contains different types of assessments, such as quizzes, assignments, and exams. The assessments share some common functionalities like setting deadlines, grading, and feedback distribution, but they also have unique features specific to their type.</p>
 <p>The challenge is to create a flexible assessment system that allows course instructors to define and manage assessments for their courses. Instructors should be able to specify different assessment types, grading criteria, and feedback mechanisms while ensuring a consistent process for deadline management and result distribution.</p>
 </details>
 <details class="-success">
-<summary>Answer 12</summary>
+<summary>Answer 11</summary>
 <p>The Template Method Design Pattern can be used to create a flexible assessment system for online courses. Here’s a textual representation of the solution:</p>
 <p>Define an abstract AssessmentTemplate class that serves as a template for creating assessments. It should contain common methods for setting deadlines, grading, and distributing feedback.</p>
 <p>Implement concrete assessment classes, such as QuizAssessment, AssignmentAssessment, and ExamAssessment, which inherit from the AssessmentTemplate class. Each concrete class represents a specific type of assessment.</p>
