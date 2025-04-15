@@ -1935,12 +1935,18 @@
 <span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
 <span class="w">    </span><span class="n">Iterator</span><span class="w"> </span><span class="o">&lt;--</span><span class="w"> </span><span class="n">Client</span>
 <span class="w">    </span><span class="n">Iterator</span><span class="w"> </span><span class="o">&lt;|</span><span class="p">..</span><span class="w"> </span><span class="n">ConcreteIterator</span>
 <span class="w">    </span><span class="n">Aggregate</span><span class="w"> </span><span class="o">&lt;--</span><span class="w"> </span><span class="n">Client</span>
 <span class="w">    </span><span class="n">Aggregate</span><span class="w"> </span><span class="o">&lt;|</span><span class="p">..</span><span class="w"> </span><span class="n">ConcreteAggregate</span>
-<span class="w">    </span><span class="n">ConcreteIterator</span><span class="w"> </span><span class="o">&lt;--</span><span class="w"> </span><span class="n">ConcreteAggregate</span>
+<span class="w">    </span><span class="n">ConcreteIterator</span><span class="w"> </span><span class="o">&lt;--&gt;</span><span class="w"> </span><span class="n">ConcreteAggregate</span>
+<span class="w">    </span><span class="n">Aggregate</span><span class="w"> </span><span class="p">..</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Iterator</span>
 <span class="w">    </span><span class="kd">class</span> <span class="nc">Client</span><span class="p">{</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kd">class</span> <span class="nc">Iterator</span><span class="p">{</span>
@@ -1950,8 +1956,12 @@
 <span class="w">        </span><span class="o">+</span><span class="n">remove</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteIterator</span><span class="p">{</span>
-<span class="w">      </span><span class="o">+</span><span class="n">bool</span><span class="w"> </span><span class="n">is_wild</span>
-<span class="w">      </span><span class="o">+</span><span class="n">run</span><span class="p">()</span>
+<span class="w">      </span><span class="o">-</span><span class="n">iterationState</span>
+<span class="w">      </span><span class="o">-</span><span class="n">collection</span><span class="p">:</span><span class="w"> </span><span class="n">ConcreteAggregate</span>
+<span class="w">      </span><span class="o">+</span><span class="n">ConcreteIterator</span><span class="p">(</span><span class="n">ConcreteAggregate</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="s">"this.collection = c"</span>
+<span class="w">      </span><span class="o">+</span><span class="n">hasNext</span><span class="p">()</span>
+<span class="w">      </span><span class="o">+</span><span class="n">next</span><span class="p">()</span>
+<span class="w">      </span><span class="o">+</span><span class="n">remove</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kd">class</span> <span class="nc">Aggregate</span><span class="p">{</span>
 <span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
@@ -1984,7 +1994,8 @@
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
 <span class="w">    </span><span class="n">Component</span><span class="w"> </span><span class="o">&lt;--</span><span class="w"> </span><span class="n">Client</span>
 <span class="w">    </span><span class="n">Component</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Leaf</span>
 <span class="w">    </span><span class="n">Component</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Composite</span>
@@ -2002,9 +2013,10 @@
 <span class="w">        </span><span class="o">+</span><span class="n">operation</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kd">class</span> <span class="nc">Composite</span><span class="p">{</span>
-<span class="w">        </span><span class="o">+</span><span class="n">operation</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">"for(Component c : children) c.operation"</span>
-<span class="w">        </span><span class="o">+</span><span class="n">add</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span>
-<span class="w">        </span><span class="o">+</span><span class="n">remove</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span>
+<span class="w">        </span><span class="o">-</span><span class="n">children</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">~</span><span class="n">Component</span><span class="o">~</span>
+<span class="w">        </span><span class="o">+</span><span class="n">operation</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">"for(Component c : children) c.operation()"</span>
+<span class="w">        </span><span class="o">+</span><span class="n">add</span><span class="p">(</span><span class="n">Component</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
+<span class="w">        </span><span class="o">+</span><span class="n">remove</span><span class="p">(</span><span class="n">Component</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
 <span class="w">        </span><span class="o">+</span><span class="n">getChild</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
