@@ -1277,8 +1277,8 @@
 <nav aria-label="Representations" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph---state-pattern">
-    Mermaid Graph - State Pattern
+<a class="md-nav__link" href="#mermaid-graph---proxy-pattern">
+    Mermaid Graph - Proxy Pattern
   </a>
 </li>
 <li class="md-nav__item">
@@ -1330,8 +1330,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#main-oop-principles-of-state-pattern">
-    Main OOP Principles of State Pattern
+<a class="md-nav__link" href="#main-oop-principles-of-proxy-pattern">
+    Main OOP Principles of Proxy Pattern
   </a>
 </li>
 </ul>
@@ -1717,8 +1717,8 @@
 <nav aria-label="Representations" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph---state-pattern">
-    Mermaid Graph - State Pattern
+<a class="md-nav__link" href="#mermaid-graph---proxy-pattern">
+    Mermaid Graph - Proxy Pattern
   </a>
 </li>
 <li class="md-nav__item">
@@ -1770,8 +1770,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#main-oop-principles-of-state-pattern">
-    Main OOP Principles of State Pattern
+<a class="md-nav__link" href="#main-oop-principles-of-proxy-pattern">
+    Main OOP Principles of Proxy Pattern
   </a>
 </li>
 </ul>
@@ -1799,7 +1799,7 @@
 <li><strong>Easy Definition</strong>: Control access to an actual object where the real functionality lies.</li>
 </ul>
 <h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
-<h4 id="mermaid-graph---state-pattern">Mermaid Graph - State Pattern<a class="headerlink" href="#mermaid-graph---state-pattern" title="Permanent link">¶</a></h4>
+<h4 id="mermaid-graph---proxy-pattern">Mermaid Graph - Proxy Pattern<a class="headerlink" href="#mermaid-graph---proxy-pattern" title="Permanent link">¶</a></h4>
 <h4 id="basic-proxy-pattern">Basic Proxy Pattern<a class="headerlink" href="#basic-proxy-pattern" title="Permanent link">¶</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1821,11 +1821,12 @@
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
 <span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Subject</span>
 <span class="w">    </span><span class="n">Subject</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">RealSubject</span>
 <span class="w">    </span><span class="n">Subject</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Proxy</span>
-<span class="w">    </span><span class="n">Proxy</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">RealSubject</span>
+<span class="w">    </span><span class="n">Proxy</span><span class="w"> </span><span class="o">*--&gt;</span><span class="w"> </span><span class="n">RealSubject</span>
 <span class="w">    </span><span class="kd">class</span> <span class="nc">Client</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="p">}</span>
@@ -1839,6 +1840,7 @@
 <span class="w">        </span><span class="o">+</span><span class="n">request2</span><span class="p">()</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kd">class</span> <span class="nc">Proxy</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">-</span><span class="n">Subject</span><span class="w"> </span><span class="n">realSubject</span>
 <span class="w">        </span><span class="o">+</span><span class="n">request1</span><span class="p">()</span><span class="w"> </span><span class="s">"realSubject.request1();"</span>
 <span class="w">        </span><span class="o">+</span><span class="n">request2</span><span class="p">()</span><span class="w"> </span><span class="s">"reqlSubject.request2();"</span>
 <span class="w">    </span><span class="p">}</span>
@@ -1876,9 +1878,9 @@
 <span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">Subject</span>
 <span class="w">    </span><span class="n">Subject</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">RealSubject</span>
 <span class="w">    </span><span class="n">Subject</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">Proxy</span>
-<span class="w">    </span><span class="n">InvocationHandler</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">RealInvoicationHandler</span>
-<span class="w">    </span><span class="n">Proxy</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">RealInvoicationHandler</span>
-<span class="w">    </span><span class="n">RealInvoicationHandler</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">RealSubject</span>
+<span class="w">    </span><span class="n">InvocationHandler</span><span class="w"> </span><span class="o">&lt;|--</span><span class="w"> </span><span class="n">RealInvocationHandler</span>
+<span class="w">    </span><span class="n">Proxy</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">RealInvocationHandler</span>
+<span class="w">    </span><span class="n">RealInvocationHandler</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">RealSubject</span>
 <span class="w">    </span><span class="kd">class</span> <span class="nc">Client</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kd">class</span> <span class="nc">Subject</span><span class="w"> </span><span class="p">{</span>
@@ -1898,9 +1900,9 @@
 <span class="w">        </span><span class="o">&lt;&lt;</span><span class="kd">interface</span><span class="err">&gt;&gt;</span>
         <span class="err">+</span><span class="nc">invoke</span><span class="p">()</span><span class="w"> </span><span class="n">Object</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">class</span> <span class="nc">RealInvoicationHandler</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">RealInvocationHandler</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="o">+</span><span class="n">invoke</span><span class="p">()</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="s">"realSubject.request?()"</span>
-<span class="w">    </span><span class="p">}</span><span class="w">    </span>
+<span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h4>
 <h3 id="basic-proxy-uml">Basic Proxy UML<a class="headerlink" href="#basic-proxy-uml" title="Permanent link">¶</a></h3>
@@ -1931,7 +1933,12 @@
 </ul>
 <h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="src/remoteproxy.zip">Remote Proxy Design Pattern</a></li>
+<li><a href="src/remoteproxy.zip">OLD RMI Remote Proxy Design Pattern</a><ul>
+<li>RMI is not really a viable option anymore, and it isolates your proxy in Java.</li>
+<li>A Better way of marshalling objects transparently would be to use GSON or Jackson to Object-map/serialize HTTPS transmitted JSON to and from objects.</li>
+</ul>
+</li>
+<li><a href="https://github.com/THartmanOfTheRedwoods/JavaRemoteProxyPatternExample">Remote Proxy Design Pattern</a></li>
 <li><a href="src/virtualproxy.zip">Virtual Proxy Design Pattern</a></li>
 <li><a href="src/javaproxy.zip">Protection Proxy Design Pattern</a></li>
 </ul>
@@ -1947,7 +1954,7 @@
 <li>Java’s built in support for Proxy can build a dynamic proxy class on demand and dispatch all calls on it to a handler of your choosing.</li>
 <li>Like any wrapper, proxies will increase the number of classes and objects in your designs.</li>
 </ul>
-<h3 id="main-oop-principles-of-state-pattern">Main OOP Principles of State Pattern<a class="headerlink" href="#main-oop-principles-of-state-pattern" title="Permanent link">¶</a></h3>
+<h3 id="main-oop-principles-of-proxy-pattern">Main OOP Principles of Proxy Pattern<a class="headerlink" href="#main-oop-principles-of-proxy-pattern" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="oo_principles.html#dependency-inversion-principle">Dependency Inversion Principle</a> The stub  classes in the RMI remote proxy are examples of abstractions for the real-world object.</li>
 <li><a href="oo_principles.html#program-to-interfaces-not-implementations">Program to interfaces, not Implementations</a> The Subject and Proxy implement a shared interface, thus making it so the client doesn’t need to distinguish between them.</li>
