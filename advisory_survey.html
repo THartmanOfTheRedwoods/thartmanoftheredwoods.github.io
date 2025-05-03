@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS Program Industry Feedback Survey</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: var(--light-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.1em;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-option input {
+            margin-right: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+            font-family: inherit;
+            font-size: 0.95em;
+        }
+
+        .signature-fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .signature-fields input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto 0;
+            padding: 12px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        #responseMessage {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        @media (max-width: 768px) {
+            .signature-fields {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CIS Program Industry Feedback Survey</h1>
+
+        <form id="cisSurveyForm">
+            <!-- Question 1 -->
+            <div class="form-group">
+                <div class="question-text">1) Do you believe our CIS Program is successfully responding to local industry needs with our current course offerings in the areas listed above?</div>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="q1_response" value="Yes" required> Yes
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="q1_response" value="No"> No
+                    </label>
+                </div>
+
+                <textarea name="q1_comments" placeholder="Please elaborate on your answer..."></textarea>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="form-group">
+                <div class="question-text">2) Do you have any current or upcoming industry needs that our CIS Program is currently not addressing? If so, please elaborate.</div>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="q2_response" value="Yes" required> Yes
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="q2_response" value="No"> No
+                    </label>
+                </div>
+
+                <textarea name="q2_comments" placeholder="Please describe any unmet needs..."></textarea>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="form-group">
+                <div class="question-text">3) Do you have any interest or see added value in students obtaining a CIS programming certificate/degree before entering the local workforce? Additionally, do you have any specific need(s) for programming support at your business?</div>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="q3_response" value="Yes" required> Yes
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="q3_response" value="No"> No
+                    </label>
+                </div>
+
+                <textarea name="q3_comments" placeholder="Please share your perspective..."></textarea>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="form-group">
+                <div class="question-text">4) Are we doing anything within our CIS Program that you'd suggest we stop doing? If so, please elaborate.</div>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="q4_response" value="Yes" required> Yes
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="q4_response" value="No"> No
+                    </label>
+                </div>
+
+                <textarea name="q4_comments" placeholder="Please specify what we should reconsider..."></textarea>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="form-group">
+                <div class="question-text">5) Do you have any additional thoughts or comments you'd like to add that are not already addressed in the questions above? Do you have any new developments you'd like to share with our CIS Faculty?</div>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="q5_response" value="Yes" required> Yes
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="q5_response" value="No"> No
+                    </label>
+                </div>
+
+                <textarea name="q5_comments" placeholder="Please share any additional feedback..."></textarea>
+            </div>
+
+            <!-- Signature -->
+            <div class="form-group">
+                <div class="question-text">6) Please provide your information:</div>
+
+                <div class="signature-fields">
+                    <div>
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    <div>
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
+                    <div>
+                        <label for="job_title">Job Title</label>
+                        <input type="text" id="job_title" name="job_title" required>
+                    </div>
+                    <div>
+                        <label for="company">Company/Organization</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Survey</button>
+        </form>
+
+        <div id="responseMessage"></div>
+    </div>
+
+    <script>
+        document.getElementById('cisSurveyForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Collect form data
+            const formData = new FormData(e.target);
+            const surveyData = {
+                questions: {}
+            };
+
+            // Process questions 1-5
+            for (let i = 1; i <= 5; i++) {
+                surveyData.questions[`q${i}`] = {
+                    response: formData.get(`q${i}_response`),
+                    comments: formData.get(`q${i}_comments`)
+                };
+            }
+
+            // Add signature
+            surveyData.signature = {
+                first_name: formData.get('first_name'),
+                last_name: formData.get('last_name'),
+                job_title: formData.get('job_title'),
+                company: formData.get('company')
+            };
+
+            // Enhanced metadata
+            surveyData.metadata = {
+                submitted_at: new Date().toISOString(),
+                user_agent: navigator.userAgent,
+                browser: {
+                    name: navigator.appName,
+                    version: navigator.appVersion,
+                    platform: navigator.platform,
+                    language: navigator.language
+                },
+                screen: {
+                    width: window.screen.width,
+                    height: window.screen.height,
+                    color_depth: window.screen.colorDepth
+                },
+                // This will only work if you have a service to fetch the IP from, so consider removing if problematic.
+                ip_address: await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip)
+            };
+
+            try {
+                const response = await fetch('https://us-central1-norcalsellers.cloudfunctions.net/ghissueform', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(surveyData)
+                });
+
+                const result = await response.json();
+                const responseElement = document.getElementById('responseMessage');
+
+                if (response.ok) {
+                    responseElement.textContent = `Survey submitted successfully! Response ID #${result.issue_number} created.`;
+                    responseElement.className = 'success';
+                    responseElement.style.display = 'block';
+                    e.target.reset();
+                } else {
+                    throw new Error(result.message || 'Failed to submit survey');
+                }
+            } catch (error) {
+                const responseElement = document.getElementById('responseMessage');
+                responseElement.textContent = `Error: ${error.message}`;
+                responseElement.className = 'error';
+                responseElement.style.display = 'block';
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
