@@ -5088,7 +5088,7 @@
 <h4 id="handling-relationships">Handling Relationships:<a class="headerlink" href="#handling-relationships" title="Permanent link">&para;</a></h4>
 <p>Directus automatically handles relationships. For example, to get Videos with their Stock:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;http://127.0.0.1:8055/items/Video?fields=*,stock.*&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;http://127.0.0.1:8055/items/Stock?fields=*,video_id.*&#39;</span><span class="w"> </span><span class="se">\</span>
 -H<span class="w"> </span><span class="s1">&#39;Authorization: Bearer YOUR_ACCESS_TOKEN&#39;</span>
 </code></pre></div></td></tr></table></div></p>
 
