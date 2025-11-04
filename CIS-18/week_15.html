@@ -1,25 +1,65 @@
 
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional.">
+      
+      
+        <meta name="author" content="Trevor Hartman">
+      
+      
+      
+        <link rel="prev" href="week_14.html">
+      
+      
+        <link rel="next" href="../CIS-12/week_1.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
+    
+    
+      
+        <title>Week 15 - Compound Design Patterns - THartmanOfTheRedwoods Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
 
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
-<meta content="Trevor Hartman" name="author"/>
-<link href="week_14.html" rel="prev"/>
-<link href="../CIS-12/week_1.html" rel="next"/>
-<link href="../assets/images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.5.2, mkdocs-material-9.2.0" name="generator"/>
-<title>Week 15 - Compound Design Patterns - THartmanOfTheRedwoods Wiki</title>
-<link href="../assets/stylesheets/main.0e669242.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.85d0ee34.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
-<link href="../css/mode.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
- <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto+Slab";--md-code-font:"Roboto+Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/mode.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -31,104 +71,170 @@
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
             </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="red" data-md-color-primary="red" data-md-color-scheme="slate" dir="ltr">
-<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#compound-design-pattern">
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#compound-design-pattern" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
-<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
-</div>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-header__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             THartmanOfTheRedwoods Wiki
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Week 15 - Compound Design Patterns
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="red" data-md-color-media="" data-md-color-primary="red" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
-</label>
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
-</label>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
 </form>
-<form class="md-header__option" data-md-component="sidebars">
-<input aria-label="Hide Sidebars" class="md-option" data-md-color-accent="red" data-md-color-media="" data-md-color-primary="red" data-md-color-scheme="slate" id="__sidebars_1" name="__sidebars" type="radio"/>
-<label class="md-header__button md-icon" for="__sidebars_2" title="Hide Sidebars">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
-</label>
-<input aria-label="Show Sidebars" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__sidebars_2" name="__sidebars" type="radio"/>
-<label class="md-header__button md-icon" for="__sidebars_1" hidden="" title="Show Sidebars">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
-</label>
+      
+    
+    
+    <form class="md-header__option" data-md-component="sidebars">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red" aria-label="Hide Sidebars" type="radio" name="__sidebars" id="__sidebars_1">
+      <label class="md-header__button md-icon" title="Hide Sidebars" for="__sidebars_2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Show Sidebars" type="radio" name="__sidebars" id="__sidebars_2">
+      <label class="md-header__button md-icon" title="Show Sidebars" for="__sidebars_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+      </label>
 </form>
-<label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-</label>
-<div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="__search"></label>
-<div class="md-search__inner" role="search">
-<form class="md-search__form" name="search">
-<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
-<label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</label>
-<nav aria-label="Search" class="md-search__options">
-<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
-</a>
-<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
-</button>
-</nav>
-<div class="md-search__suggest" data-md-component="search-suggest"></div>
-</form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</nav>
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../index.html">
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
         
   
     
@@ -136,9 +242,24 @@
   Home
 
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../cross_platform/cordova.html">
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cross_platform/cordova.html" class="md-tabs__link">
           
   
     
@@ -146,9 +267,22 @@
   Mobile
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../git/gitflow.html">
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../git/gitflow.html" class="md-tabs__link">
           
   
     
@@ -156,9 +290,19 @@
   Git
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../java/spring.html">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../java/spring.html" class="md-tabs__link">
           
   
     
@@ -166,9 +310,17 @@
   Java
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../markdown-cheat-sheet.html">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../markdown-cheat-sheet.html" class="md-tabs__link">
         
   
     
@@ -176,9 +328,18 @@
   Markdown
 
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../rasppi/boot-pi-4-from-ssd.html">
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../rasppi/boot-pi-4-from-ssd.html" class="md-tabs__link">
           
   
     
@@ -186,9 +347,19 @@
   Raspberry Pi
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../tomcat/install.html">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tomcat/install.html" class="md-tabs__link">
           
   
     
@@ -196,9 +367,19 @@
   Tomcat
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../tux/os_command_map.html">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tux/os_command_map.html" class="md-tabs__link">
           
   
     
@@ -206,9 +387,19 @@
   Tux
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../vim/cheat-sheet.html">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../vim/cheat-sheet.html" class="md-tabs__link">
           
   
     
@@ -216,9 +407,19 @@
   Vim
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../virtualbox/win11install.html">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../virtualbox/win11install.html" class="md-tabs__link">
           
   
     
@@ -226,9 +427,19 @@
   VirtualBox
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../windows/os_command_map.html">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../windows/os_command_map.html" class="md-tabs__link">
           
   
     
@@ -236,9 +447,19 @@
   Windows
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../hardware/cables.html">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../hardware/cables.html" class="md-tabs__link">
           
   
     
@@ -246,9 +467,21 @@
   Hardware
 
         </a>
-</li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../archive.html">
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../archive.html" class="md-tabs__link">
           
   
     
@@ -256,9 +489,25 @@
   Class Notes
 
         </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../extras/fun/rooftopescape.html">
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../extras/fun/rooftopescape.html" class="md-tabs__link">
           
   
     
@@ -266,1770 +515,4797 @@
   Extras
 
         </a>
-</li>
-</ul>
-</div>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
 </nav>
+    
+  
 </header>
-<div class="md-container" data-md-component="container">
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="THartmanOfTheRedwoods Wiki">
-<img alt="logo" src="../assets/images/simple_sign_logo_64.png"/>
-</a>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="THartmanOfTheRedwoods Wiki" class="md-nav__button md-logo" aria-label="THartmanOfTheRedwoods Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/simple_sign_logo_64.png" alt="logo">
+
+    </a>
     THartmanOfTheRedwoods Wiki
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../index.html">
-<span class="md-ellipsis">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Home
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Mobile
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
             Mobile
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Cross Platform
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_1">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
             Cross Platform
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../cross_platform/cordova.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cross_platform/cordova.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Cordova
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Android
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
             Android
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../android/getapk.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android/getapk.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     APK Extract
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Git
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
             Git
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../git/gitflow.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/gitflow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Workflows
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Java
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
             Java
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java/spring.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/spring.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     SpringBoot
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java/annotations.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/annotations.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Annotations
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/certificates/LAZY_DEV.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/certificates/LAZY_DEV.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Self-Signed JKS for Spring-Boot
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java/format_specifiers.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/format_specifiers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Format Specifiers
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java/loop_usage.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/loop_usage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Loop Usage
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java/operators.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/operators.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Operators
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java/associativity.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/associativity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Operator Precedence &amp; Associativity
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../markdown-cheat-sheet.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown-cheat-sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Markdown
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Raspberry Pi
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
             Raspberry Pi
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../rasppi/boot-pi-4-from-ssd.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rasppi/boot-pi-4-from-ssd.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Boot from USB SSD
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Tomcat
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_7">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
             Tomcat
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tomcat/install.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tomcat/install.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Install
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Tux
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_8">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
             Tux
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/os_command_map.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/os_command_map.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Command Cheat-sheet
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/imagemagick.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/imagemagick.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     ImageMagick
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/network.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/network.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Network
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/nmcli.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/nmcli.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Network Manger
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/pandoc.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/pandoc.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Pandoc
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/parallel.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/parallel.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Parallel
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+        
+          <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Redis
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_8_7_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_8_7">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_7">
+            <span class="md-nav__icon md-icon"></span>
             Redis
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/redis_ha.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/redis_ha.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     High Availability
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/redis_cli_test.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/redis_cli_test.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     CLI Testing
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/redis_ha_recovery.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/redis_ha_recovery.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     HA Recovery
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/ssh.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/ssh.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     SSH
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/tesseract.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/tesseract.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Tesseract
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_10" >
+        
+          <label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Certificates
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_8_10_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_8_10">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_10">
+            <span class="md-nav__icon md-icon"></span>
             Certificates
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/certificates/certificate_authority.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/certificates/certificate_authority.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Issue Certs, Be a Certificate Authority
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/certificates/JAVA_KEYSTORE.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/certificates/JAVA_KEYSTORE.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     X.509 to Java Keystore Conversion
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tux/certificates/LAZY_DEV.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tux/certificates/LAZY_DEV.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Simple Self-Signed JKS for Spring-Boot
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Vim
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_9">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
             Vim
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../vim/cheat-sheet.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vim/cheat-sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Cheatsheet
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     VirtualBox
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_10_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_10">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
             VirtualBox
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../virtualbox/win11install.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtualbox/win11install.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Install
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Windows
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_11">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
             Windows
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/os_command_map.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/os_command_map.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Command Cheat-sheet
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_11_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Network
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_11_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_11_2">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
             Network
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/arp.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/arp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Arp
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/nbtstat.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/nbtstat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Nbtstat
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/netstat.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/netstat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Netstat
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/ping.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/ping.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Ping
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/ipconfig.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/ipconfig.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Ipconfig
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/net.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/net.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Net
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/nslookup.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/nslookup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Nslookup
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows/network/tracert.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/network/tracert.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Tracert
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Hardware
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_12_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_12">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
             Hardware
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../hardware/cables.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/cables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Cables
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_13" type="checkbox"/>
-<label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
+        
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Class Notes
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_13_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_13">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
             Class Notes
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../archive.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Index
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_13_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_13_2" id="__nav_13_2_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_2" >
+        
+          <label class="md-nav__link" for="__nav_13_2" id="__nav_13_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     AI
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_13_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_13_2">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_2">
+            <span class="md-nav__icon md-icon"></span>
             AI
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ai-committee/AI_Research.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-committee/AI_Research.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     AI Committee
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ai-committee/AI_Policy.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-committee/AI_Policy.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     AI Policy
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_13_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_13_3" id="__nav_13_3_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_3" >
+        
+          <label class="md-nav__link" for="__nav_13_3" id="__nav_13_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Battles
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_13_3_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_13_3">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_3">
+            <span class="md-nav__icon md-icon"></span>
             Battles
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../battles/language_battle.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../battles/language_battle.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Java VS Python
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../battles/paradigm_battle.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../battles/paradigm_battle.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     OOP VS FP
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_13_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_13_4" id="__nav_13_4_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_4" >
+        
+          <label class="md-nav__link" for="__nav_13_4" id="__nav_13_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     CIS-50
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_13_4_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_13_4">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_4">
+            <span class="md-nav__icon md-icon"></span>
             CIS-50
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_1.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Database Systems
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/data_consistency.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/data_consistency.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Data Consistency
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_2.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Data Models
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_3.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     The Relational Database Model
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/joins_ns.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/joins_ns.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Joins
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_4.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Entity Relationship Modeling
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_5.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_5.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Advanced Data Modeling
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_13_4_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_13_4_8" id="__nav_13_4_8_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_4_8" >
+        
+          <label class="md-nav__link" for="__nav_13_4_8" id="__nav_13_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Normalization
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_13_4_8_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_13_4_8">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_13_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_4_8">
+            <span class="md-nav__icon md-icon"></span>
             Normalization
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_6.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_6.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Lecture
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/anomalies.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/anomalies.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Modification Anomalies
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_7.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_7.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Structured Query Language
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/week_06.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/week_06.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     SQL Intro Lesson
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/cheatsheets.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/cheatsheets.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     SQL Cheat-sheets
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/week_09.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/week_09.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Column Store VS Row Store
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/week_11.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/week_11.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     OLTP Through the Looking Glass Notes
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_9.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Database Design
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_11.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_11.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Database Performance Tuning and Query Optimization
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_13.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_13.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Business Intelligence and Data Warehouses
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_15.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_15.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Database Connectivity and Web Technologies
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Containers.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Containers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Containers
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/directus.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/directus.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Directus
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-50/Chapter_14.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-50/Chapter_14.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Big Data and NoSQL
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_13_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_13_5" id="__nav_13_5_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_5" checked>
+        
+          <label class="md-nav__link" for="__nav_13_5" id="__nav_13_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     CIS-18
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_13_5_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_13_5">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_13_5">
+            <span class="md-nav__icon md-icon"></span>
             CIS-18
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_1.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 1 - Review
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="conversion.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conversion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Python to Java Cheatsheet
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="UML_Lesson.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UML_Lesson.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     UML Lesson
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="sprint.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Sprint Planning
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="user_story_intro.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user_story_intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     User Story Intro
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="user_story_lesson.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user_story_lesson.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     User Story Lesson
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_2.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 2 - Fundamental OOP Principles
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="oo_principles.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="oo_principles.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Key OO Principles
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_3.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 3 - Observer Design Pattern
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_4.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 4 - Decorator Design Pattern
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_5.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_5.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 5 - Factory Design Pattern
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_7.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_7.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 7 - Singleton Design Pattern
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="exam1_study.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exam1_study.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Exam 1
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_08.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_08.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 8a - Pipeline Design Pattern
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_8.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_8.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 8b - Command Design Pattern
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_9.html">
-<span class="md-ellipsis">
-    Week 9 - Adapter &amp; Facade Design Patterns
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 9 - Adapter & Facade Design Patterns
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_10.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 10 - Template Method Design Pattern
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="exam2_study.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exam2_study.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Exam 2
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_12.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_12.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 12 - Iterator and Composite Design Patterns
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_13.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_13.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 13 - State Design Pattern
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="state_lecture.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="state_lecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     State DP - Lecture Notes
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="week_14.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week_14.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 14 - Proxy Design Pattern
   </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
     Week 15 - Compound Design Patterns
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="week_15.html">
-<span class="md-ellipsis">
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="week_15.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
     Week 15 - Compound Design Patterns
   </span>
-</a>
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
       Sub-Menu
     </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#compound-design-pattern">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compound-design-pattern" class="md-nav__link">
     Compound Design Pattern
   </a>
-<nav aria-label="Compound Design Pattern" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#classification">
+  
+    <nav class="md-nav" aria-label="Compound Design Pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classification" class="md-nav__link">
     Classification
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pattern-definition">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-definition" class="md-nav__link">
     Pattern Definition
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#representations">
+        
+          <li class="md-nav__item">
+  <a href="#representations" class="md-nav__link">
     Representations
   </a>
-<nav aria-label="Representations" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#strategy-review">
+  
+    <nav class="md-nav" aria-label="Representations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategy-review" class="md-nav__link">
     Strategy Review
   </a>
-<nav aria-label="Strategy Review" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#key-components">
+  
+    <nav class="md-nav" aria-label="Strategy Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
     Key Components
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#intent">
+        
+          <li class="md-nav__item">
+  <a href="#intent" class="md-nav__link">
     Intent
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uml">
+        
+          <li class="md-nav__item">
+  <a href="#uml" class="md-nav__link">
     UML
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#composite-review">
+        
+          <li class="md-nav__item">
+  <a href="#composite-review" class="md-nav__link">
     Composite Review
   </a>
-<nav aria-label="Composite Review" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#key-components_1">
+  
+    <nav class="md-nav" aria-label="Composite Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-components_1" class="md-nav__link">
     Key Components
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#intent_1">
+        
+          <li class="md-nav__item">
+  <a href="#intent_1" class="md-nav__link">
     Intent
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uml_1">
+        
+          <li class="md-nav__item">
+  <a href="#uml_1" class="md-nav__link">
     UML
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#observer-review">
+        
+          <li class="md-nav__item">
+  <a href="#observer-review" class="md-nav__link">
     Observer Review
   </a>
-<nav aria-label="Observer Review" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#key-components_2">
+  
+    <nav class="md-nav" aria-label="Observer Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-components_2" class="md-nav__link">
     Key Components
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#intent_2">
+        
+          <li class="md-nav__item">
+  <a href="#intent_2" class="md-nav__link">
     Intent
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uml_2">
+        
+          <li class="md-nav__item">
+  <a href="#uml_2" class="md-nav__link">
     UML
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bringing-it-all-together">
+        
+          <li class="md-nav__item">
+  <a href="#bringing-it-all-together" class="md-nav__link">
     Bringing it all Together
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph---mvc-pattern">
+        
+          <li class="md-nav__item">
+  <a href="#mermaid-graph---mvc-pattern" class="md-nav__link">
     Mermaid Graph - MVC Pattern
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mvc-usage">
+        
+          <li class="md-nav__item">
+  <a href="#mvc-usage" class="md-nav__link">
     MVC Usage
   </a>
-<nav aria-label="MVC Usage" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mvc-sequence-diagram">
+  
+    <nav class="md-nav" aria-label="MVC Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mvc-sequence-diagram" class="md-nav__link">
     MVC Sequence Diagram
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#real-world-usages">
+        
+          <li class="md-nav__item">
+  <a href="#real-world-usages" class="md-nav__link">
     Real World Usages
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#java-code-example">
+        
+          <li class="md-nav__item">
+  <a href="#java-code-example" class="md-nav__link">
     Java Code Example
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+        
+          <li class="md-nav__item">
+  <a href="#main-take-aways-from-the-textbook" class="md-nav__link">
     Main Take-Aways from the textbook
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-oop-principles-of-state-pattern">
+        
+          <li class="md-nav__item">
+  <a href="#main-oop-principles-of-state-pattern" class="md-nav__link">
     Main OOP Principles of State Pattern
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_13_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_13_6" id="__nav_13_6_label" tabindex="0">
-<span class="md-ellipsis">
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_6" >
+        
+          <label class="md-nav__link" for="__nav_13_6" id="__nav_13_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     CIS-12 in Java
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_13_6_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_13_6">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_6">
+            <span class="md-nav__icon md-icon"></span>
             CIS-12 in Java
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_1.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 1 - Introduction to Programming
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_1_lecture.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_1_lecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 1L - Lecture
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_2.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 2 - Variables and Operators
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/floating_point_numbers.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/floating_point_numbers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Floating Point Numbers
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../java/rounding_errors.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/rounding_errors.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Rounding Errors
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_3.html">
-<span class="md-ellipsis">
-    Week 3 - Program Structure &amp; More on Reading Input
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 3 - Program Structure & More on Reading Input
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_4.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 4 - Methods
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_6L.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_6L.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 6 - Conditions
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_7.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_7.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 7 - Methods Take 2
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_8.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_8.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 8 - Loops
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_9.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_9.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 9 - Recursion
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_10.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 10 - Arrays
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_12.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_12.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 12 - Objects
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_13_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_13_7" id="__nav_13_7_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_7" >
+        
+          <label class="md-nav__link" for="__nav_13_7" id="__nav_13_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     CIS-12 in Python
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_13_7_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_13_7">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_7">
+            <span class="md-nav__icon md-icon"></span>
             CIS-12 in Python
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_1py.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_1py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 1 - Programming as a way of Thinking
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_2py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_2py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 2 - Variables and Statements
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_3py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_3py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 3 - Functions
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_4py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_4py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 4 - Functions and Interfaces
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_6ch5py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_6ch5py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 6 - Conditionals and Recursion
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_6ch6py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_6ch6py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 6 - Return Values
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_7py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_7py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 7 - Iteration &amp; Search
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_8py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_8py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 8 - Strings &amp; Regular Expressions
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_8ch9py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_8ch9py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 8 - Lists
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_9py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_9py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 9 - Dictionaries
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_9ch11py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_9ch11py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 9 - Tuples
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_11py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_11py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 11 - Text Analysis &amp; Generation
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_12py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_12py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 12 - Files &amp; Databases
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_12py_async.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_12py_async.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 12 - Async &amp; Await
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_13pyCh14.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_13pyCh14.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 13 - Introduction to Classes &amp; Attributes
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_13pyCh15.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_13pyCh15.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 13 - OOP &amp; Classes &amp; Methods
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_14py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_14py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 14 - Classes &amp; Objects
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_15py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_15py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 15 - Inheritance
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CIS-12/week_15Ch18py.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIS-12/week_15Ch18py.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Week 15 - Python Extras
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_14" type="checkbox"/>
-<label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Extras
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_14_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_14">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
             Extras
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_14_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_14_1" id="__nav_14_1_label" tabindex="0">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_1" >
+        
+          <label class="md-nav__link" for="__nav_14_1" id="__nav_14_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Fun
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_14_1_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_14_1">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_1">
+            <span class="md-nav__icon md-icon"></span>
             Fun
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../extras/fun/rooftopescape.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extras/fun/rooftopescape.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Roof Escape
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../extras/fun/graph_challenge.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extras/fun/graph_challenge.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Room Route
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../extras/fun/think_different.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extras/fun/think_different.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     String Problem, Think Different
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_14_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_14_2" id="__nav_14_2_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_2" >
+        
+          <label class="md-nav__link" for="__nav_14_2" id="__nav_14_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Projects
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_14_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_14_2">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_2">
+            <span class="md-nav__icon md-icon"></span>
             Projects
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../extras/projects/winter-break-2024.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extras/projects/winter-break-2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Winter Break 2024
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_14_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_14_3" id="__nav_14_3_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3" >
+        
+          <label class="md-nav__link" for="__nav_14_3" id="__nav_14_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Science
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_14_3_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_14_3">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_3">
+            <span class="md-nav__icon md-icon"></span>
             Science
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../extras/science/significant.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extras/science/significant.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Uncertainty &amp; Significant Digits
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_14_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_14_4" id="__nav_14_4_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4" >
+        
+          <label class="md-nav__link" for="__nav_14_4" id="__nav_14_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Science Night
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_14_4_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_14_4">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_4">
+            <span class="md-nav__icon md-icon"></span>
             Science Night
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../extras/science-night/potato-science.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extras/science-night/potato-science.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Potato Cannon
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../extras/science-night/chroma-science.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extras/science-night/chroma-science.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Chroma-Key
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../extras/science-night/chroma-backgrounds.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extras/science-night/chroma-backgrounds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Chroma-Key Backgrounds
   </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../extras/science-night/photos.html">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extras/science-night/photos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Photos
   </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_14_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_14_5" id="__nav_14_5_label" tabindex="0">
-<span class="md-ellipsis">
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5" >
+        
+          <label class="md-nav__link" for="__nav_14_5" id="__nav_14_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Library Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_5">
+            <span class="md-nav__icon md-icon"></span>
+            Library Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/pyre.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pyre
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_6" >
+        
+          <label class="md-nav__link" for="__nav_14_6" id="__nav_14_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
     Testing
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_14_5_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_14_5">
-<span class="md-nav__icon md-icon"></span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_6">
+            <span class="md-nav__icon md-icon"></span>
             Testing
           </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../extras/qa/test_intro.html">
-<span class="md-ellipsis">
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extras/qa/test_intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     QA Intro
   </span>
-</a>
-</li>
-</ul>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
       Sub-Menu
     </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#compound-design-pattern">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compound-design-pattern" class="md-nav__link">
     Compound Design Pattern
   </a>
-<nav aria-label="Compound Design Pattern" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#classification">
+  
+    <nav class="md-nav" aria-label="Compound Design Pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classification" class="md-nav__link">
     Classification
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pattern-definition">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-definition" class="md-nav__link">
     Pattern Definition
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#representations">
+        
+          <li class="md-nav__item">
+  <a href="#representations" class="md-nav__link">
     Representations
   </a>
-<nav aria-label="Representations" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#strategy-review">
+  
+    <nav class="md-nav" aria-label="Representations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategy-review" class="md-nav__link">
     Strategy Review
   </a>
-<nav aria-label="Strategy Review" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#key-components">
+  
+    <nav class="md-nav" aria-label="Strategy Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
     Key Components
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#intent">
+        
+          <li class="md-nav__item">
+  <a href="#intent" class="md-nav__link">
     Intent
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uml">
+        
+          <li class="md-nav__item">
+  <a href="#uml" class="md-nav__link">
     UML
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#composite-review">
+        
+          <li class="md-nav__item">
+  <a href="#composite-review" class="md-nav__link">
     Composite Review
   </a>
-<nav aria-label="Composite Review" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#key-components_1">
+  
+    <nav class="md-nav" aria-label="Composite Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-components_1" class="md-nav__link">
     Key Components
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#intent_1">
+        
+          <li class="md-nav__item">
+  <a href="#intent_1" class="md-nav__link">
     Intent
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uml_1">
+        
+          <li class="md-nav__item">
+  <a href="#uml_1" class="md-nav__link">
     UML
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#observer-review">
+        
+          <li class="md-nav__item">
+  <a href="#observer-review" class="md-nav__link">
     Observer Review
   </a>
-<nav aria-label="Observer Review" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#key-components_2">
+  
+    <nav class="md-nav" aria-label="Observer Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-components_2" class="md-nav__link">
     Key Components
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#intent_2">
+        
+          <li class="md-nav__item">
+  <a href="#intent_2" class="md-nav__link">
     Intent
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uml_2">
+        
+          <li class="md-nav__item">
+  <a href="#uml_2" class="md-nav__link">
     UML
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bringing-it-all-together">
+        
+          <li class="md-nav__item">
+  <a href="#bringing-it-all-together" class="md-nav__link">
     Bringing it all Together
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-graph---mvc-pattern">
+        
+          <li class="md-nav__item">
+  <a href="#mermaid-graph---mvc-pattern" class="md-nav__link">
     Mermaid Graph - MVC Pattern
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mvc-usage">
+        
+          <li class="md-nav__item">
+  <a href="#mvc-usage" class="md-nav__link">
     MVC Usage
   </a>
-<nav aria-label="MVC Usage" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mvc-sequence-diagram">
+  
+    <nav class="md-nav" aria-label="MVC Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mvc-sequence-diagram" class="md-nav__link">
     MVC Sequence Diagram
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#real-world-usages">
+        
+          <li class="md-nav__item">
+  <a href="#real-world-usages" class="md-nav__link">
     Real World Usages
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#java-code-example">
+        
+          <li class="md-nav__item">
+  <a href="#java-code-example" class="md-nav__link">
     Java Code Example
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+        
+          <li class="md-nav__item">
+  <a href="#main-take-aways-from-the-textbook" class="md-nav__link">
     Main Take-Aways from the textbook
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main-oop-principles-of-state-pattern">
+        
+          <li class="md-nav__item">
+  <a href="#main-oop-principles-of-state-pattern" class="md-nav__link">
     Main OOP Principles of State Pattern
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-</ul>
+      
+    </ul>
+  
 </nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>Week 15 - Compound Design Patterns</h1>
-<h2 id="compound-design-pattern">Compound Design Pattern<a class="headerlink" href="#compound-design-pattern" title="Permanent link">¶</a></h2>
-<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">¶</a></h3>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Week 15 - Compound Design Patterns</h1>
+
+<h2 id="compound-design-pattern">Compound Design Pattern<a class="headerlink" href="#compound-design-pattern" title="Permanent link">&para;</a></h2>
+<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Compound: Multiple design patterns working together to solve a common problem.</li>
 </ul>
-<h3 id="pattern-definition">Pattern Definition<a class="headerlink" href="#pattern-definition" title="Permanent link">¶</a></h3>
+<h3 id="pattern-definition">Pattern Definition<a class="headerlink" href="#pattern-definition" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Definition</strong>: Multiple smaller design patterns working together to solve a common problem. It is only a compound design pattern if it has been used to solve multiple problems, not just because it uses multiple design patterns.</li>
 </ul>
-<h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
+<h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">&para;</a></h3>
 <ul>
 <li>MVC is a Combination of:<ul>
 <li>Composite: View -&gt; UI Composite Components (e.g. JavaFX Layouts) and UI Leaf Components (e.g. JavaFX button, labels, etc.)</li>
@@ -2038,22 +5314,22 @@
 </ul>
 </li>
 </ul>
-<h4 id="strategy-review">Strategy Review<a class="headerlink" href="#strategy-review" title="Permanent link">¶</a></h4>
-<p>The Strategy design pattern is a <strong>behavioral pattern</strong> that enables selecting an algorithm’s behavior at runtime. It defines a family of algorithms, encapsulates each one in a class, and makes them interchangeable. This pattern allows the algorithm to vary independently from the clients that use it.</p>
-<h5 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">¶</a></h5>
+<h4 id="strategy-review">Strategy Review<a class="headerlink" href="#strategy-review" title="Permanent link">&para;</a></h4>
+<p>The Strategy design pattern is a <strong>behavioral pattern</strong> that enables selecting an algorithm&rsquo;s behavior at runtime. It defines a family of algorithms, encapsulates each one in a class, and makes them interchangeable. This pattern allows the algorithm to vary independently from the clients that use it.</p>
+<h5 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>Strategy Interface</strong>: Defines a common interface for all supported algorithms. Each concrete strategy implements this interface.</li>
 <li><strong>Concrete Strategies</strong>: Encapsulates and implements the algorithm using the Strategy interface.</li>
 <li><strong>Context</strong>: Composes a Strategy object and delegates calling strategy algorithm defined by a ConcreteStrategy.</li>
 </ul>
-<h5 id="intent">Intent<a class="headerlink" href="#intent" title="Permanent link">¶</a></h5>
+<h5 id="intent">Intent<a class="headerlink" href="#intent" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>Encapsulate Algorithms</strong>: Encapsulate a family of algorithms, making them interchangeable.</li>
 <li><strong>Runtime Selection</strong>: Allows the client to choose the appropriate algorithm at runtime.</li>
-<li><strong>Separation of Concerns</strong>: Separate the algorithm’s implementation from the client that uses it, promoting flexibility and reusability.</li>
+<li><strong>Separation of Concerns</strong>: Separate the algorithm&rsquo;s implementation from the client that uses it, promoting flexibility and reusability.</li>
 </ul>
 <p>The Strategy pattern allows you to easily switch between different algorithms or behaviors without altering the client code that uses them. Thus, making the system more flexible and easier to maintain.</p>
-<h5 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h5>
+<h5 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">&para;</a></h5>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2116,24 +5392,25 @@
     Client ..&gt; ConcreteStrategyA : creates
     Client ..&gt; ConcreteStrategyB : creates
 </code></pre></div></td></tr></table></div>
-<object data="images/strategy_design_pattern.svg" height="700" width="700"> </object>
-<h4 id="composite-review">Composite Review<a class="headerlink" href="#composite-review" title="Permanent link">¶</a></h4>
+<object data="images/strategy_design_pattern.svg" width="700" height="700"> </object>
+
+<h4 id="composite-review">Composite Review<a class="headerlink" href="#composite-review" title="Permanent link">&para;</a></h4>
 <p>The Composite design pattern is a <strong>structural pattern</strong> that allows you to treat individual objects and compositions of objects uniformly. It creates an upside-down tree structure of leaf and composite objects, enabling clients to interact with both types of objects in the same way.</p>
-<h5 id="key-components_1">Key Components<a class="headerlink" href="#key-components_1" title="Permanent link">¶</a></h5>
+<h5 id="key-components_1">Key Components<a class="headerlink" href="#key-components_1" title="Permanent link">&para;</a></h5>
 <ul>
-<li><strong>Component</strong>: Defines the default behavior for the interface for all objects in the composition. It declares the interface for objects in the composition and (optionally) defines an interface for accessing a component’s parent in the recursive structure, allowing it to be managed uniformly.</li>
+<li><strong>Component</strong>: Defines the default behavior for the interface for all objects in the composition. It declares the interface for objects in the composition and (optionally) defines an interface for accessing a component&rsquo;s parent in the recursive structure, allowing it to be managed uniformly.</li>
 <li><strong>Leaf</strong>: Represents the end objects of the composition. A leaf has no children and defines behavior for primitive objects in the composition.</li>
 <li><strong>Composite</strong>: Defines behavior for components having children and implements child-related operations in the Component interface. It stores child components and implements operations that involve traversing or manipulating its children.</li>
 <li><strong>Client</strong>: Manipulates objects in the composition through the Component interface.</li>
 </ul>
-<h5 id="intent_1">Intent<a class="headerlink" href="#intent_1" title="Permanent link">¶</a></h5>
+<h5 id="intent_1">Intent<a class="headerlink" href="#intent_1" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>Uniform Interface</strong>: Provide a uniform interface for individual objects and compositions of objects.</li>
 <li><strong>Tree Structure</strong>: Create a tree structure of objects where individual objects and compositions of objects are treated uniformly.</li>
 <li><strong>Simplify Client Code</strong>: Allow clients to treat individual objects and compositions of objects consistently, simplifying the client code.</li>
 </ul>
 <p>The Composite pattern allows you to build complex hierarchies of objects while keeping the client code simple and flexible. This pattern is particularly useful when dealing with hierarchical/trees or recursive data structures, such as file systems, GUIs, and org-charts.</p>
-<h5 id="uml_1">UML<a class="headerlink" href="#uml_1" title="Permanent link">¶</a></h5>
+<h5 id="uml_1">UML<a class="headerlink" href="#uml_1" title="Permanent link">&para;</a></h5>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2171,7 +5448,7 @@
 
     class Composite {
         - List&lt;Component&gt; children
-        + execute(): void : "for each child c c.execute()"
+        + execute(): void : &quot;for each child c c.execute()&quot;
         + add(Component component): void
         + remove(Component component): void
         + getChildren(): List&lt;Component&gt;
@@ -2186,24 +5463,25 @@
     Composite o--&gt; Component : contains
     Client --&gt; Component : creates
 </code></pre></div></td></tr></table></div>
-<object data="images/composite_design_pattern.svg" height="700" width="700"> </object>
-<h4 id="observer-review">Observer Review<a class="headerlink" href="#observer-review" title="Permanent link">¶</a></h4>
+<object data="images/composite_design_pattern.svg" width="700" height="700"> </object>
+
+<h4 id="observer-review">Observer Review<a class="headerlink" href="#observer-review" title="Permanent link">&para;</a></h4>
 <p>The Observer design pattern is a <strong>behavioral pattern</strong> that defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. This pattern is also known as the Publish-Subscribe pattern.</p>
-<h5 id="key-components_2">Key Components<a class="headerlink" href="#key-components_2" title="Permanent link">¶</a></h5>
+<h5 id="key-components_2">Key Components<a class="headerlink" href="#key-components_2" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>Subject (AKA Observable)</strong>: Knows its observers and provides an interface for attaching and detaching Observer objects. It maintains a list of its observers and notifies them of any state changes.</li>
-<li><strong>Observer</strong>: Defines an updating interface for objects that should be notified of changes in a subject. It provides an update method that is called when the Subject’s state changes.</li>
+<li><strong>Observer</strong>: Defines an updating interface for objects that should be notified of changes in a subject. It provides an update method that is called when the Subject&rsquo;s state changes.</li>
 <li><strong>ConcreteSubject</strong>: Stores the state of interest to ConcreteObserver and sends a notification to its observers when its state changes.</li>
-<li><strong>ConcreteObserver</strong>: Maintains a reference to a ConcreteSubject object, stores state that should stay consistent with the Subject’s, and implements the Observer updating interface to keep its state consistent with the Subject’s.</li>
+<li><strong>ConcreteObserver</strong>: Maintains a reference to a ConcreteSubject object, stores state that should stay consistent with the Subject&rsquo;s, and implements the Observer updating interface to keep its state consistent with the Subject&rsquo;s.</li>
 </ul>
-<h5 id="intent_2">Intent<a class="headerlink" href="#intent_2" title="Permanent link">¶</a></h5>
+<h5 id="intent_2">Intent<a class="headerlink" href="#intent_2" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>Decouple Subject and Observers</strong>: Establish a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.</li>
 <li><strong>Dynamic Dependencies</strong>: Allow an object (i.e. Subject) to dynamically maintain a list of Observers that should be notified of any state changes.</li>
 <li><strong>Loose Coupling</strong>: Promote loose coupling between the Subject and its Observers, making the system more flexible and easier to maintain.</li>
 </ul>
 <p>With the Observer pattern, you can create a system where objects can dynamically register to be notified of changes in other objects, enabling a more modular and decoupled design. This pattern is commonly used in <strong>event handling systems, model-view-controller (MVC) architectures</strong>, and other scenarios where objects need to stay synchronized with each other.</p>
-<h5 id="uml_2">UML<a class="headerlink" href="#uml_2" title="Permanent link">¶</a></h5>
+<h5 id="uml_2">UML<a class="headerlink" href="#uml_2" title="Permanent link">&para;</a></h5>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2273,14 +5551,14 @@
         - Object state
         + register(Observer observer): void
         + unregister(Observer observer): void
-        + notify(): void "for each Observer o o.update()"
+        + notify(): void &quot;for each Observer o o.update()&quot;
         + getState(): Object
         + setState(Object state): void
     }
 
     class ConcreteObserverA {
         - Subject subject
-        + update(): void "subject.getState(); doSomething()"
+        + update(): void &quot;subject.getState(); doSomething()&quot;
         + setSubject(Subject subject): void
     }
 
@@ -2292,7 +5570,7 @@
 
     class Client {
         - Subject subject
-                + main(): void "o = new ConcreteObserverA();subject.register(o)"
+                + main(): void &quot;o = new ConcreteObserverA();subject.register(o)&quot;
     }
 
     Subject &lt;|-- ConcreteSubject
@@ -2302,8 +5580,9 @@
     Client --&gt; Subject : creates
     Client ..&gt; Observer : create and registers
 </code></pre></div></td></tr></table></div>
-<object data="images/observer_design_pattern.svg" height="700" width="700"> </object>
-<h4 id="bringing-it-all-together">Bringing it all Together<a class="headerlink" href="#bringing-it-all-together" title="Permanent link">¶</a></h4>
+<object data="images/observer_design_pattern.svg" width="700" height="700"> </object>
+
+<h4 id="bringing-it-all-together">Bringing it all Together<a class="headerlink" href="#bringing-it-all-together" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Observer Pattern</strong><ul>
 <li><strong>Subject Interface</strong>: Represents the Model in MVC.</li>
@@ -2325,7 +5604,7 @@
 </li>
 <li><strong>Client</strong>: Routes requests, invokes the appropriate Controller, selects a ViewStrategy, and triggers the rendering pipeline.</li>
 </ul>
-<h4 id="mermaid-graph---mvc-pattern">Mermaid Graph - MVC Pattern<a class="headerlink" href="#mermaid-graph---mvc-pattern" title="Permanent link">¶</a></h4>
+<h4 id="mermaid-graph---mvc-pattern">Mermaid Graph - MVC Pattern<a class="headerlink" href="#mermaid-graph---mvc-pattern" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
 <span class="normal">  2</span>
 <span class="normal">  3</span>
@@ -2450,9 +5729,9 @@
         &amp;lt;&amp;lt;ObserverPattern&amp;gt;&amp;gt;
         - List~Observer~ observers
         - Object state
-        + register(Observer observer): void "observers.add(observer)"
+        + register(Observer observer): void &quot;observers.add(observer)&quot;
         + unregister(Observer observer): void
-        + notifyObservers(): void "for o in observers: o.update()"
+        + notifyObservers(): void &quot;for o in observers: o.update()&quot;
         + getState(): Object
         + setState(Object state): void
     }
@@ -2465,12 +5744,12 @@
 
     class ConcreteObserver {
         &amp;lt;&amp;lt;ObserverPattern&amp;gt;&amp;gt;
-        - Subject subject "Model we're observing"
-        - Component viewRoot "View for whole page."
-        - Controller controller "Strategy to delegate rendering to"
-        + update(): void "this.renderView()"
+        - Subject subject &quot;Model we&#39;re observing&quot;
+        - Component viewRoot &quot;View for whole page.&quot;
+        - Controller controller &quot;Strategy to delegate rendering to&quot;
+        + update(): void &quot;this.renderView()&quot;
         + setSubject(Subject subject): void
-        - renderView(): void "viewRoot.add(new Component()), controller.renderView(viewRoot)"
+        - renderView(): void &quot;viewRoot.add(new Component()), controller.renderView(viewRoot)&quot;
     }
 
     class Component {
@@ -2484,7 +5763,7 @@
         &amp;lt;&amp;lt;CompositePattern&amp;gt;&amp;gt;
         + add(Component component)
         + remove(Component component)
-        + render(ViewStrategy strategy, HttpResponse response): void "Apply strategy to render leaf component."
+        + render(ViewStrategy strategy, HttpResponse response): void &quot;Apply strategy to render leaf component.&quot;
     }
 
     class Composite {
@@ -2493,13 +5772,13 @@
         + add(Component component): void
         + remove(Component component): void
         + getChildren(): List~Component~
-        + render(ViewStrategy strategy, HttpResponse response): void "Apply strategy to render composite component and child components."
+        + render(ViewStrategy strategy, HttpResponse response): void &quot;Apply strategy to render composite component and child components.&quot;
     }
 
     class ViewStrategy {
         &amp;lt;&amp;lt;interface StrategyPattern&amp;gt;&amp;gt;
         + renderLeaf(String content, HttpResponse response): void
-        + renderCompositeStart(HttpResponse response): void "Called by Component of Composite Pattern"
+        + renderCompositeStart(HttpResponse response): void &quot;Called by Component of Composite Pattern&quot;
         + renderCompositeEnd(HttpResponse response): void
     }
 
@@ -2530,31 +5809,31 @@
         + renderView(Component view, HttpResponse response): void
     }
 
-    Router --&gt; Controller : "1. Creates and later sets Strategy Context/Controller"
-    Router --&gt; Subject : "2. Creates the Model/Observer Subject and later triggers model state change."
-    Router --&gt; Component : "3. Creates viewRoot Composite component"
-    Router --&gt; ConcreteObserver : "4. Links Model-Observer to rootView and Controller"
-    Controller *--&gt; ViewStrategy : "5. UI -&gt; ViewStrategy -&gt; later delegates rendering to Component and Strategy"
-    ConcreteObserver *--&gt; Component : "6. Observer linked with viewRoot so model driven changes can be rendered."
-    ConcreteObserver *--&gt; Controller : "7. On Model update, adds child view content, then delegates to controller.renderView"
-    Controller --&gt; Component : "8. on renderView delegates to viewRoot.render()"
-    Component --&gt; ViewStrategy : "9. Applies view Strategy to aid rendering"
-    Composite *-- Component : "10. on render uses strategy to render, then delegates to children.render(strategy, response)"
-    Subject &lt;|-- ConcreteSubject : "implements Subject Interface"
-    ConcreteSubject *-- Observer : "Maintains list of observers, registered by client Router"
-    Observer &lt;|-- ConcreteObserver: "Implements Observer Interface"
-    Component &lt;|-- Composite: "Implements Component Interface and Maintains list of child components"
-    Component &lt;|-- Leaf: "Implements Component Interface"
-    ViewStrategy &lt;|-- HTMLViewStrategy: "Concrete Strategy to render model data as HTML"
-    ViewStrategy &lt;|-- JSONViewStrategy: "Concrete Strategy to render model data as JSON"
+    Router --&gt; Controller : &quot;1. Creates and later sets Strategy Context/Controller&quot;
+    Router --&gt; Subject : &quot;2. Creates the Model/Observer Subject and later triggers model state change.&quot;
+    Router --&gt; Component : &quot;3. Creates viewRoot Composite component&quot;
+    Router --&gt; ConcreteObserver : &quot;4. Links Model-Observer to rootView and Controller&quot;
+    Controller *--&gt; ViewStrategy : &quot;5. UI -&gt; ViewStrategy -&gt; later delegates rendering to Component and Strategy&quot;
+    ConcreteObserver *--&gt; Component : &quot;6. Observer linked with viewRoot so model driven changes can be rendered.&quot;
+    ConcreteObserver *--&gt; Controller : &quot;7. On Model update, adds child view content, then delegates to controller.renderView&quot;
+    Controller --&gt; Component : &quot;8. on renderView delegates to viewRoot.render()&quot;
+    Component --&gt; ViewStrategy : &quot;9. Applies view Strategy to aid rendering&quot;
+    Composite *-- Component : &quot;10. on render uses strategy to render, then delegates to children.render(strategy, response)&quot;
+    Subject &lt;|-- ConcreteSubject : &quot;implements Subject Interface&quot;
+    ConcreteSubject *-- Observer : &quot;Maintains list of observers, registered by client Router&quot;
+    Observer &lt;|-- ConcreteObserver: &quot;Implements Observer Interface&quot;
+    Component &lt;|-- Composite: &quot;Implements Component Interface and Maintains list of child components&quot;
+    Component &lt;|-- Leaf: &quot;Implements Component Interface&quot;
+    ViewStrategy &lt;|-- HTMLViewStrategy: &quot;Concrete Strategy to render model data as HTML&quot;
+    ViewStrategy &lt;|-- JSONViewStrategy: &quot;Concrete Strategy to render model data as JSON&quot;
 </code></pre></div></td></tr></table></div>
-<h3 id="mvc-usage">MVC Usage<a class="headerlink" href="#mvc-usage" title="Permanent link">¶</a></h3>
+<h3 id="mvc-usage">MVC Usage<a class="headerlink" href="#mvc-usage" title="Permanent link">&para;</a></h3>
 <ul>
 <li>View object is responsible for user input and output/presentation.</li>
 <li>The controller object implements the logic for the allowable transactions that can be performed on the model.</li>
 <li>The model object encapsulates the fine-grained business logic and data then notifies view/controller of updates.</li>
 </ul>
-<h4 id="mvc-sequence-diagram">MVC Sequence Diagram<a class="headerlink" href="#mvc-sequence-diagram" title="Permanent link">¶</a></h4>
+<h4 id="mvc-sequence-diagram">MVC Sequence Diagram<a class="headerlink" href="#mvc-sequence-diagram" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2571,19 +5850,20 @@
 <span class="w">    </span><span class="n">Controller</span><span class="o">--&gt;&gt;-</span><span class="n">View</span><span class="p">:</span><span class="w"> </span><span class="mf">6.</span><span class="w"> </span><span class="n">Update</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">View</span>
 <span class="w">    </span><span class="n">View</span><span class="o">--&gt;&gt;-</span><span class="n">Web</span><span class="w"> </span><span class="n">User</span><span class="p">:</span><span class="w"> </span><span class="mf">7.</span><span class="w"> </span><span class="n">Notify</span><span class="w"> </span><span class="n">User</span>
 </code></pre></div></td></tr></table></div>
-<object data="images/mvc_seq_uml.svg" height="700" width="700"> </object>
-<h3 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">¶</a></h3>
+<object data="images/mvc_seq_uml.svg" width="700" height="700"> </object>
+
+<h3 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">&para;</a></h3>
 <ul>
 <li>ASP.Net MVC</li>
 <li>Django</li>
 <li>Magento</li>
 <li>Spring </li>
 </ul>
-<h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">¶</a></h3>
+<h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://github.com/THartmanOfTheRedwoods/MVC_ObserverCompositeStrategy.git">MVC Example Design Pattern</a></li>
 </ul>
-<h3 id="main-take-aways-from-the-textbook">Main Take-Aways from the textbook<a class="headerlink" href="#main-take-aways-from-the-textbook" title="Permanent link">¶</a></h3>
+<h3 id="main-take-aways-from-the-textbook">Main Take-Aways from the textbook<a class="headerlink" href="#main-take-aways-from-the-textbook" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The Model View Controller (MVC) Pattern is a compound pattern consisting of the Observer, Strategy, and Composite Patterns.</li>
 <li>The model makes use of the Observer Pattern so that it can keep observers updated yet stay decoupled from them.</li>
@@ -2594,53 +5874,93 @@
 <li>MVC has been adapted to the web.</li>
 <li>There are many web MVC frameworks with various adaptations of the MVC pattern to fit the client/server application structure.</li>
 </ul>
-<h3 id="main-oop-principles-of-state-pattern">Main OOP Principles of State Pattern<a class="headerlink" href="#main-oop-principles-of-state-pattern" title="Permanent link">¶</a></h3>
+<h3 id="main-oop-principles-of-state-pattern">Main OOP Principles of State Pattern<a class="headerlink" href="#main-oop-principles-of-state-pattern" title="Permanent link">&para;</a></h3>
 <ul>
 <li>All principles that apply to <strong>Strategy, Composite, and Observer</strong> Design Patterns. </li>
 <li><a href="oo_principles.html#strive-for-loosely-coupled-designs-between-objects-that-interact">Loosely Coupled</a>: Separation of concerns, the controller decouples the view from the model and vice versa.</li>
 </ul>
-</article>
-</div>
-</div>
-</main>
-<!-- Footer -->
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <!-- Footer -->
 <footer class="md-footer">
-<!-- Further information -->
-<div class="md-footer-meta md-typeset">
-<div class="md-footer-meta__inner md-grid">
-<!-- Copyright and theme information -->
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and theme information -->
 <div class="md-copyright">
-<div class="md-copyright__highlight">
+  
+    <div class="md-copyright__highlight">
       ©2025 THartmanOfTheRedwoods Wiki, All rights reserved.
     </div>
   
   
     Made by
-    <a href="https://github.com/viable-hartman/" rel="noopener" target="_blank">
+    <a
+      href="https://github.com/viable-hartman/"
+      target="_blank" rel="noopener"
+    >
       Trevor Hartman
     </a>
+  
 </div>
-<!-- Social links -->
-<div class="md-social">
-<a class="md-social__link" href="https://github.com/THartmanOfTheRedwoods" rel="noopener" target="_blank" title="Github">
-<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-</a>
-<a class="md-social__link" href="mailto:trevor-hartman@redwoods.edu" rel="noopener" target="_blank" title="">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"></path></svg>
-</a>
+
+      <!-- Social links -->
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/THartmanOfTheRedwoods" target="_blank" rel="noopener" title="Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:trevor-hartman@redwoods.edu" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
+    </a>
+  
 </div>
-</div>
-</div>
+      
+    </div>
+  </div>
 </footer>
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
-<script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
-<script src="../js/mathjax.js"></script>
-<script src="../js/toggleside.js"></script>
-<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+        <script src="../js/mathjax.js"></script>
+      
+        <script src="../js/toggleside.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
