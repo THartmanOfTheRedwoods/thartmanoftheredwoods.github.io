@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.8">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4983,7 +4981,7 @@
 <li><a href="https://www.amazon.com/gp/product/B08GJBL7QY/">Timetec 1TB SSD 3D NAND SATA III 6Gb/s M.2 2280 NGFF 512TBW Read Speed Up to 550MB/s SLC Cache Performance Boost Internal Solid State Drive for PC Computer Laptop and Desktop (1TB)</a></li>
 </ul>
 <h3 id="hardware-assembly">Hardware Assembly<a class="headerlink" href="#hardware-assembly" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="images/expansion.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Assembly Image" src="images/expansion.jpg" /></a></p>
+<p><a class="glightbox" href="images/expansion.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Assembly Image" src="images/expansion.jpg" /></a></p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Download latest <a href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit">Raspberry Pi OS with desktop</a> image from the pi foundation&rsquo;s website.</li>
@@ -5013,13 +5011,13 @@ sudo<span class="w"> </span>reboot<span class="w"> </span>now
 sudo<span class="w"> </span>reboot<span class="w"> </span>now
 </code></pre></div></td></tr></table></div></li>
 <li>After reboot, you should now be able to copy your microSD card to your USB SSD as depicted below:
-<a class="glightbox" href="images/sdcopy.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="SD Card Copier Open" src="images/sdcopy.png" /></a>
-<a class="glightbox" href="images/sdcopyrun.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="SD Card Copier Run" src="images/sdcopyrun.png" /></a></li>
+<a class="glightbox" href="images/sdcopy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="SD Card Copier Open" src="images/sdcopy.png" /></a>
+<a class="glightbox" href="images/sdcopyrun.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="SD Card Copier Run" src="images/sdcopyrun.png" /></a></li>
 <li>After the SD Card Copier process completes, verify that you have the latest <strong>boot-loader</strong> so that we can update which drive to use via <code>raspi-config</code> next.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>rpi-eeprom-update<span class="w"> </span>-d<span class="w"> </span>-a
 </code></pre></div></td></tr></table></div><ul>
 <li>You can see the LATEST and CURRENT match below:</li>
-<li><a class="glightbox" href="images/bootloader.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Boot Loader Verify" src="images/bootloader.png" /></a></li>
+<li><a class="glightbox" href="images/bootloader.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Boot Loader Verify" src="images/bootloader.png" /></a></li>
 </ul>
 </li>
 <li>Now set the bootloader as depicted in the video to boot from your USB SSD using:
@@ -5105,7 +5103,7 @@ Your browser does not support the video tag.
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="../js/mathjax.js"></script>
       

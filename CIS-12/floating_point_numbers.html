@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.8">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -5015,9 +5013,9 @@
 <li>23 bits for the mantissa</li>
 </ul>
 <p style="text-align: center;">Floating Point Internals</p>
-<p><a class="glightbox" href="images/fp01.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Floating Point internals." src="images/fp01.svg" /></a></p>
+<p><a class="glightbox" href="images/fp01.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Floating Point internals." src="images/fp01.svg" /></a></p>
 <p style="text-align: center;">The three sections of a floating point number.</p>
-<p><a class="glightbox" href="images/fp02.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="The three sections of a floating point number." src="images/fp02.svg" /></a></p>
+<p><a class="glightbox" href="images/fp02.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The three sections of a floating point number." src="images/fp02.svg" /></a></p>
 <p>So far, so good. Now, how numbers are interpreted is usually explained with the formula:</p>
 <div class="arithmatex">\[
 (-1)^{S} * 1.M * 2^{(E-127)}
@@ -5030,12 +5028,12 @@
 </blockquote>
 <h3 id="a-different-way-to-explain">A DIFFERENT WAY TO EXPLAIN&hellip;<a class="headerlink" href="#a-different-way-to-explain" title="Permanent link">&para;</a></h3>
 <p>Although correct, this way of explaining floating point will leaves some of us completely clueless. Fortunately, there is a different way to explain it. Instead of Exponent, think of a Window between two consecutive power of two integers. Instead of a Mantissa, think of an Offset within that window.</p>
-<p><a class="glightbox" href="images/fp03.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="The three sections of a floating Point number." src="images/fp03.svg" /></a></p>
+<p><a class="glightbox" href="images/fp03.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The three sections of a floating Point number." src="images/fp03.svg" /></a></p>
 <p>The window tells within which two consecutive power-of-two the number will be: [0.5,1], [1,2], [2,4], [4,8] and so on (up to [2127
 ,2128]).</p>
 <p>The offset divides the window in <span class="arithmatex">\(2^{23} = 8388608\)</span> buckets. With the window and the offset you can approximate a number. The window is an excellent mechanism to protect from overflowing. Once you have reached the maximum in a window (e.g [2,4]), you can &ldquo;float&rdquo; it right and represent the number within the next window (e.g [4,8]). It only costs a little bit of precision since the window becomes twice as large.</p>
 <p>The next figure illustrates how the number 6.1 would be encoded. The window must start at 4 and span to next power of two, 8. The offset is about half way down the window.</p>
-<p><a class="glightbox" href="images/fp04.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Value 6.1 approximated with floating point." src="images/fp04.svg" /></a></p>
+<p><a class="glightbox" href="images/fp04.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Value 6.1 approximated with floating point." src="images/fp04.svg" /></a></p>
 <h3 id="precision">PRECISION<a class="headerlink" href="#precision" title="Permanent link">&para;</a></h3>
 <p>How much precision is lost when the window covers a wider range? Let&rsquo;s take an example with window [1,2] where the 8388608 offsets cover a range of 1 which gives a precision of <span class="arithmatex">\((2 - 1) / 8388608 = 0.00000011920929\)</span>. In the window [2048,4096] the 8388608 offsets cover a range of <span class="arithmatex">\(4096 - 2048 = 2048\)</span> which gives a precision of <span class="arithmatex">\(4096 - 2048 / 8388608 = 0.0002\)</span>.</p>
 <h3 id="an-other-example">AN OTHER EXAMPLE<a class="headerlink" href="#an-other-example" title="Permanent link">&para;</a></h3>
@@ -5051,13 +5049,13 @@
 <li>E = 128 = 10000000b</li>
 <li>M = 4781507 = 10010001111010111000011b</li>
 </ul>
-<p><a class="glightbox" href="images/fp05.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="3.14 floating point binary representation." src="images/fp05.svg" /></a></p>
+<p><a class="glightbox" href="images/fp05.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="3.14 floating point binary representation." src="images/fp05.svg" /></a></p>
 <p>The value <span class="arithmatex">\(3.14\)</span> is therefore approximated to <span class="arithmatex">\(3.1400001049041748046875\)</span>. The corresponding value with the ugly formula:</p>
 <div class="arithmatex">\[
 3.14 = (-1)^{0} ∗ 1.57 ∗ 2^{(128 - 127)}
 \]</div>
 <p>And finally the graphic representation with window and offset:</p>
-<p><a class="glightbox" href="images/fp06.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="3.14 window and offset." src="images/fp06.svg" /></a></p>
+<p><a class="glightbox" href="images/fp06.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="3.14 window and offset." src="images/fp06.svg" /></a></p>
 <h3 id="credit">CREDIT<a class="headerlink" href="#credit" title="Permanent link">&para;</a></h3>
 <p><a href="https://fabiensanglard.net/floating_point_visually_explained/">All credit for this brilliant breakdown goes to Fabien Sanglard</a></p>
 
@@ -5132,7 +5130,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="../js/mathjax.js"></script>
       

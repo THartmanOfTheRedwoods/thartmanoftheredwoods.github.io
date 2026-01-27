@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.8">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -5244,7 +5242,7 @@
 <li>In all 3 notations it is a <strong>rectangle</strong> usually with an <strong>UPPERCASE</strong> noun <strong>NAME</strong></li>
 </ul>
 <h5 id="attributes-characteristics-of-entities">Attributes: Characteristics of Entities<a class="headerlink" href="#attributes-characteristics-of-entities" title="Permanent link">&para;</a></h5>
-<p><a class="glightbox" href="images/chap04_01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Notation Comparison" src="images/chap04_01.png" /></a></p>
+<p><a class="glightbox" href="images/chap04_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Notation Comparison" src="images/chap04_01.png" /></a></p>
 <ul>
 <li>Chen&rsquo;s notation: Ovals with UPPERCASE attribute name, connected via a line to entity rectangle </li>
 <li>UML and Crow&rsquo;s Foot: In a separate box below the entity rectangle.</li>
@@ -5269,16 +5267,16 @@
 </ul>
 </li>
 <li><strong>Multivalued Attribute</strong>: Attributes that can have multiple values (Car: Top, Body, Trim Color, etc.)<ul>
-<li><a class="glightbox" href="images/chap04_02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Multivalued Attribute Notation" src="images/chap04_02.png" /></a></li>
+<li><a class="glightbox" href="images/chap04_02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Multivalued Attribute Notation" src="images/chap04_02.png" /></a></li>
 <li>Implementing in ERD:<ul>
 <li>Method 1: Ceate new attributes for each value type (i.e. CAR_TOPCOLOR, CAR_BODYCOLOR, CAR_TRIMCOLOR), but this is <strong>only OK if</strong>:<ul>
-<li><a class="glightbox" href="images/chap04_03.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Multivalued Attribute implementation method 1" src="images/chap04_03.png" /></a></li>
+<li><a class="glightbox" href="images/chap04_03.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Multivalued Attribute implementation method 1" src="images/chap04_03.png" /></a></li>
 <li>Every instance will have the same number of values for the multivalued attribute</li>
 <li>No instance will ever have more values</li>
 </ul>
 </li>
 <li>Method 2: Create a new <strong>Entity</strong> with a 1:M relationship back to the <strong>Entity</strong> the <strong>Multivalued</strong> attribute was attached to.<ul>
-<li><a class="glightbox" href="images/chap04_04.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Multivalued Attribute implementation method 2" src="images/chap04_04.png" /></a></li>
+<li><a class="glightbox" href="images/chap04_04.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Multivalued Attribute implementation method 2" src="images/chap04_04.png" /></a></li>
 </ul>
 </li>
 </ul>
@@ -5290,7 +5288,7 @@
 <li>UML/Crow&rsquo;s Foot Notation: None</li>
 <li>Storing these in the DB depend on Application constraints and computational complexity.</li>
 <li>Most modern RDBMs&rsquo; include features to support calculated attributes.</li>
-<li><a class="glightbox" href="images/chap04_05.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Derived Attribute Comparison" src="images/chap04_05.png" /></a></li>
+<li><a class="glightbox" href="images/chap04_05.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Derived Attribute Comparison" src="images/chap04_05.png" /></a></li>
 </ul>
 </li>
 </ul>
@@ -5303,7 +5301,7 @@
 <li>Relationships are always <strong>bi-directional connectivity</strong>, so when deciding on relationship classification ask yourself how the entities are connected going in both directions (e.g. Person -&gt; Dept and Dept -&gt; Person).</li>
 <li>Relationship <strong>connectivity</strong> can have minimum and maximum limits dubbed <strong>cardinality</strong></li>
 <li><strong>Cardinality</strong> is usually indicated in parenthesis like: (min, max), and are established by business rules.
-<a class="glightbox" href="images/chap04_06.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Connectivity and Cardinality" src="images/chap04_06.png" /></a><ul>
+<a class="glightbox" href="images/chap04_06.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Connectivity and Cardinality" src="images/chap04_06.png" /></a><ul>
 <li>Cardinality is enforced either at the application level or by databadse triggers</li>
 </ul>
 </li>
@@ -5319,12 +5317,12 @@
 <li>A <strong>Weak or Non-Identifying relationship</strong> is one where the primary key of the related entity <strong>does NOT</strong> contain the primary key from the other related entity.<ul>
 <li>The typical 1:M relationship where the primary key from the <strong>1</strong> side becomes a foreign key on the <strong>M</strong> side is a <strong>weak relationship</strong>.</li>
 <li>A Dashed connecting line in a Crow&rsquo;s Foot diagram indicates a weak relationship.</li>
-<li><a class="glightbox" href="images/chap04_07.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Crow's Foot Weak Relationship" src="images/chap04_07.png" /></a></li>
+<li><a class="glightbox" href="images/chap04_07.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Crow's Foot Weak Relationship" src="images/chap04_07.png" /></a></li>
 </ul>
 </li>
 <li>A <strong>Strong or Identifying relationship</strong> is one where the primary key of the related entity <strong>IS</strong> in the primary key of the other related entity.<ul>
 <li>A Solid connecting line in a Crow&rsquo;s Foot diagram indicates a strong relationship.</li>
-<li><a class="glightbox" href="images/chap04_08.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Crow's Foot Weak Relationship" src="images/chap04_08.png" /></a></li>
+<li><a class="glightbox" href="images/chap04_08.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Crow's Foot Weak Relationship" src="images/chap04_08.png" /></a></li>
 </ul>
 </li>
 <li>The DB Designer must consider transactions, efficiency, and information requirements to decide the type of strength relationship to use.</li>
@@ -5333,7 +5331,7 @@
 <ul>
 <li><strong>Strong/Regular Entity</strong> simple need to satisfy <strong>existence independence</strong></li>
 <li>A <strong>Weak Entity</strong> must be <strong>existence-dependent</strong> and have a <strong>Strong relationship</strong><ul>
-<li><a class="glightbox" href="images/chap04_09.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Weak Entity in Chen and Crow's Foot notation" src="images/chap04_09.png" /></a></li>
+<li><a class="glightbox" href="images/chap04_09.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Weak Entity in Chen and Crow's Foot notation" src="images/chap04_09.png" /></a></li>
 </ul>
 </li>
 </ul>
@@ -5352,12 +5350,12 @@
 <details class="note" open="open">
 <summary>Note</summary>
 <p>The <strong>relationship strength</strong> depends on how the <strong>PK</strong> of the related entity is formulated, while the <strong>relationship participation</strong> depends on how the <strong>business rule</strong> is written.
-<a class="glightbox" href="images/chap04_10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Crow's Foot notation symbol cheatsheet" src="images/chap04_10.png" /></a></p>
+<a class="glightbox" href="images/chap04_10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Crow's Foot notation symbol cheatsheet" src="images/chap04_10.png" /></a></p>
 <p>Below is a great connectivity example showing how Class is optional to Professors (i.e. professors may do research only), while every Class has to have 1 and only 1 Professor.
-<a class="glightbox" href="images/chap04_11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Crow's Foot notation symbol cheatsheet" src="images/chap04_11.png" /></a></p>
+<a class="glightbox" href="images/chap04_11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Crow's Foot notation symbol cheatsheet" src="images/chap04_11.png" /></a></p>
 </details>
 <h4 id="relationship-degree">Relationship Degree<a class="headerlink" href="#relationship-degree" title="Permanent link">&para;</a></h4>
-<p><a class="glightbox" href="images/chap04_12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Unary, binary, and Ternary Degree Relationships" src="images/chap04_12.png" /></a></p>
+<p><a class="glightbox" href="images/chap04_12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Unary, binary, and Ternary Degree Relationships" src="images/chap04_12.png" /></a></p>
 <h4 id="recursive-relationships">Recursive Relationships<a class="headerlink" href="#recursive-relationships" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Method 1: Unary, add an attribute column that matches PK of table (e.g. Employee has a Manager). This is a 1:1 relationship where each entry will only have a single manager.</li>
@@ -5372,7 +5370,7 @@
 <li>Develop the initial ERD.</li>
 <li>Identify the attributes and primary keys that adequately describe the entities.</li>
 <li>Revise and review the ERD.
-<a class="glightbox" href="images/chap04_13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Tiny College ERD" src="images/chap04_13.png" /></a></li>
+<a class="glightbox" href="images/chap04_13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tiny College ERD" src="images/chap04_13.png" /></a></li>
 </ul>
 <h3 id="db-design-tradeoffs-reconciling-conflicting-goals">DB Design Tradeoffs, Reconciling Conflicting Goals<a class="headerlink" href="#db-design-tradeoffs-reconciling-conflicting-goals" title="Permanent link">&para;</a></h3>
 <h4 id="the-3-things-always-to-consider">The 3 things always to consider<a class="headerlink" href="#the-3-things-always-to-consider" title="Permanent link">&para;</a></h4>
@@ -5453,7 +5451,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="../js/mathjax.js"></script>
       

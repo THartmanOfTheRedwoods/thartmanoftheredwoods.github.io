@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.8">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -5459,7 +5457,7 @@
 <li><strong>data cache/buffer cache:</strong> Reserved memory area caching sys-catalog, indexes, and read/write data.</li>
 <li><strong>SQL cache/Procedure cache:</strong> Reserved memory area storing processed recent SQL queries, stored procedures, triggers, and functions.</li>
 <li><strong>I/O Request:</strong> Reads/Writes data from data-cache to physical device in blocks of powers of 2.
-<a class="glightbox" href="images/chap11_002.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Basic RDBMS Architecture" src="images/chap11_002.png" /></a></li>
+<a class="glightbox" href="images/chap11_002.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Basic RDBMS Architecture" src="images/chap11_002.png" /></a></li>
 <li>Listener: Handles processing of client requests.</li>
 <li>User: User process per client.</li>
 <li>Scheduler: Organizes concurrent requests.</li>
@@ -5496,7 +5494,7 @@
 <h4 id="database-statistics">Database Statistics<a class="headerlink" href="#database-statistics" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Include statistics on: # CPUs, CPU Speed, Temp Space Avail., # rows, # disk blocks used, Max/Avg row length, # Cols/Row, 
-<a class="glightbox" href="images/chap11_003.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Sample Database Statistics" src="images/chap11_003.png" /></a></li>
+<a class="glightbox" href="images/chap11_003.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sample Database Statistics" src="images/chap11_003.png" /></a></li>
 <li>Provides a snapshot of DB characteristics.</li>
 <li>Can be gathered manually or automatically (ANALYZE command gathers stats)<ul>
 <li>Oracle: ANALYZE <TABLE|INDEX> object_name COMPUTE STATISTICS;</li>
@@ -5513,7 +5511,7 @@
 <li>Execution: Executes query based on chosen plan.</li>
 <li>Fetching: Fetches data and returns result set.</li>
 </ol>
-<p><a class="glightbox" href="images/chap11_004.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Query Processing" src="images/chap11_004.png" /></a></p>
+<p><a class="glightbox" href="images/chap11_004.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Query Processing" src="images/chap11_004.png" /></a></p>
 <details class="note" open="open">
 <summary>Note</summary>
 <p>Processing DDL (Create, etc.) is different then processing DML (SELECT, INSERT, UPDATE, DELETE as DML deals with user data while DDL changes the schema/system catalog.</p>
@@ -5539,7 +5537,7 @@
 <li>Places the chosen plan into the SQL Cache</li>
 </ul>
 </li>
-<li><a class="glightbox" href="images/chap11_005.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Sample DBMS Access Plan" src="images/chap11_005.png" /></a></li>
+<li><a class="glightbox" href="images/chap11_005.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sample DBMS Access Plan" src="images/chap11_005.png" /></a></li>
 </ul>
 </li>
 </ul>
@@ -5593,14 +5591,14 @@
 <summary>Note</summary>
 <p>The purpose of indexes is to speed up access to specific rows in large tables. So why not index everything? First, indexes also consume space, so space constraints can limit index usage. Further, indexing every column can harm the query optimizer performance by forcing it to analyze more index options while building its query plan. Third, low <strong>Data Sparsity,</strong> which refers to the range of values in a column, can make indexes moot since they contain a relatively small number of keys to a large subset of rows. High <strong>Data Sparsity</strong> columns, on the other hand, are ideal candidates for indexes.</p>
 </details>
-<p><a class="glightbox" href="images/chap11_006.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Example Index Illustration" src="images/chap11_006.png" /></a></p>
+<p><a class="glightbox" href="images/chap11_006.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example Index Illustration" src="images/chap11_006.png" /></a></p>
 <h4 id="index-data-structures">Index Data Structures<a class="headerlink" href="#index-data-structures" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Hash Index:</strong> Simple and fast lookups via a <strong>key</strong> that is <strong>hashed</strong> into a value that points to matching database rows. Great for indexes hitting equality conditions.</li>
 <li><strong>B-tree Index:</strong> Auto-balancing data-structure, where the leaf nodes contain pointers to the data rows. Most common index, and is great for high sparsity data.</li>
 <li><strong>Bitmap Index:</strong> Index suited best for low sparsity data, and is represented by BIT Arrays, where each BIT represents if the row pointed to meets a condition. Very low space usage.</li>
 </ul>
-<p><a class="glightbox" href="images/chap11_007.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="B-Tree and Bitmap Index Comparison" src="images/chap11_007.png" /></a></p>
+<p><a class="glightbox" href="images/chap11_007.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="B-Tree and Bitmap Index Comparison" src="images/chap11_007.png" /></a></p>
 <h3 id="optimizer-choices">Optimizer Choices<a class="headerlink" href="#optimizer-choices" title="Permanent link">&para;</a></h3>
 <details class="note" open="open">
 <summary>Note</summary>
@@ -5611,12 +5609,12 @@
 <li><strong>Rule-based Optimizer:</strong> Decides how to execute a query by assigning fixed costs via preset rules (e.g. costs are based off of <strong>full-table-scans</strong>, PK/Index matches, etc.)</li>
 <li><strong>Cost-based Optimizer:</strong> Decides query execution through algorithmic analysis of statistics about various DB objects (e.g. num-rows, num-columns, I/O speed, RAM, etc.)</li>
 </ul>
-<p><a class="glightbox" href="images/chap11_008.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Cost-based Optimizer Example" src="images/chap11_008.png" /></a></p>
+<p><a class="glightbox" href="images/chap11_008.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Cost-based Optimizer Example" src="images/chap11_008.png" /></a></p>
 <h4 id="optimizer-hints">Optimizer Hints<a class="headerlink" href="#optimizer-hints" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Optimizer Hints:</strong> Are special instructions end-users can add to SQL queries to alter how the query optimizer decides to execute a query.</li>
 </ul>
-<p><a class="glightbox" href="images/chap11_009.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Optimizer Hints" src="images/chap11_009.png" /></a></p>
+<p><a class="glightbox" href="images/chap11_009.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Optimizer Hints" src="images/chap11_009.png" /></a></p>
 <h3 id="sql-performance-tuning">SQL Performance Tuning<a class="headerlink" href="#sql-performance-tuning" title="Permanent link">&para;</a></h3>
 <details class="note" open="open">
 <summary>Note</summary>
@@ -5793,7 +5791,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="../js/mathjax.js"></script>
       

@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.8">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -5130,7 +5128,7 @@
 <li>Table/Relation concept leads to structural and data independence.</li>
 </ul>
 <h3 id="basic-components--table-structure">Basic Components &amp; Table Structure<a class="headerlink" href="#basic-components--table-structure" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="images/chap03_01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Table Components" src="images/chap03_01.png" /></a></p>
+<p><a class="glightbox" href="images/chap03_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Table Components" src="images/chap03_01.png" /></a></p>
 <table>
 <thead>
 <tr>
@@ -5162,7 +5160,7 @@
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" href="images/chap03_02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Keys" src="images/chap03_02.png" /></a></p>
+<p><a class="glightbox" href="images/chap03_02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Keys" src="images/chap03_02.png" /></a></p>
 <ul>
 <li>Keys are <em>Full Functional Dependencies</em>, Knowing the Key attribute(s) -&gt; determins the values of other attributes.</li>
 <li><em>Full</em> indicates ALL <em>Key Attributes</em> are necessary to determine determinants.<ul>
@@ -5197,7 +5195,7 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" href="images/chap03_03.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Integrity Rules" src="images/chap03_03.png" /></a></p>
+<p><a class="glightbox" href="images/chap03_03.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Integrity Rules" src="images/chap03_03.png" /></a></p>
 <ul>
 <li>Some designers use <em>flags</em> instead of <em>NULLS</em> to alert user/application of certain conditions.</li>
 </ul>
@@ -5226,49 +5224,49 @@
 </details>
 <ul>
 <li>SELECT (or RESTRICT): Single table as input (unary), and retrives ALL or horizontal subsection of relation (i.e. rows).
-<a class="glightbox" href="images/chap03_04.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Select" src="images/chap03_04.png" /></a><ul>
+<a class="glightbox" href="images/chap03_04.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select" src="images/chap03_04.png" /></a><ul>
 <li>σ<sub>cus_code=10010</sub>(customer)</li>
 </ul>
 </li>
 <li>PROJECT: Single table as input (unary), and retrieves ALL vertical subsection of relation (i.e. columns)
-<a class="glightbox" href="images/chap03_05.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Project" src="images/chap03_05.png" /></a><ul>
+<a class="glightbox" href="images/chap03_05.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Project" src="images/chap03_05.png" /></a><ul>
 <li>π<sub>cus_fname,cus_lname</sub>(customer)</li>
 </ul>
 </li>
 <li>UNION: Combines rows of TWO relations (minus duplicates) with same attributes and domains (i.e. 2 tables with same number of columns and column types in the same order).
-<a class="glightbox" href="images/chap03_06.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Union" src="images/chap03_06.png" /></a><ul>
+<a class="glightbox" href="images/chap03_06.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Union" src="images/chap03_06.png" /></a><ul>
 <li>π<sub>supplier_name</sub>(supplier) ⋃ π<sub>vendor_name</sub>(vendor)</li>
 </ul>
 </li>
 <li>INTERSECT: Yields only rows in common between TWO relations with same attributes and domains
-<a class="glightbox" href="images/chap03_07.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Intersect" src="images/chap03_07.png" /></a><ul>
+<a class="glightbox" href="images/chap03_07.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Intersect" src="images/chap03_07.png" /></a><ul>
 <li>π<sub>supplier_name</sub>(supplier) ⋂ π<sub>vendor_name</sub>(vendor)</li>
 </ul>
 </li>
 <li>DIFFERENCE: Yields only rows found in relation 1 that aren&rsquo;t in relation 2
-<a class="glightbox" href="images/chap03_08.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Difference" src="images/chap03_08.png" /></a><ul>
+<a class="glightbox" href="images/chap03_08.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Difference" src="images/chap03_08.png" /></a><ul>
 <li>π<sub>supplier_name</sub>(supplier) – π<sub>vendor_name</sub>(vendor)</li>
 </ul>
 </li>
 <li>PRODUCT: All possible combinations for rows from TWO tabnles.
-<a class="glightbox" href="images/chap03_09.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Product" src="images/chap03_09.png" /></a><ul>
+<a class="glightbox" href="images/chap03_09.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Product" src="images/chap03_09.png" /></a><ul>
 <li>customer × agent</li>
 </ul>
 </li>
 <li>JOIN:
-<a class="glightbox" href="images/chap03_11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Tables to Join" src="images/chap03_11.png" /></a><ul>
-<li>Natural Join: <a class="glightbox" href="images/chap03_10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Natural Join" src="images/chap03_10.png" /></a><ul>
+<a class="glightbox" href="images/chap03_11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tables to Join" src="images/chap03_11.png" /></a><ul>
+<li>Natural Join: <a class="glightbox" href="images/chap03_10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Natural Join" src="images/chap03_10.png" /></a><ul>
 <li>customer ⋈ agent</li>
 <li>π<sub>cus_code,cus_lname,cus_fname,cus_initial,cus_renew_date,agent_code,agent_areacode,agent_phone,agent_lname,agent_ytd_sls</sub>(σ<sub>customer.agent_code=agent.agent_code</sub>(customer × agent))</li>
 </ul>
 </li>
-<li>Left Outer Join: <a class="glightbox" href="images/chap03_12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Left Outer Join" src="images/chap03_12.png" /></a><ul>
+<li>Left Outer Join: <a class="glightbox" href="images/chap03_12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Left Outer Join" src="images/chap03_12.png" /></a><ul>
 <li>Yields all of the rows in the relation 1, including those that do not have matching values in relation 2</li>
 <li>{(a1,&hellip;,an)} be the singleton relation on the attributes that are unique to the relation <strong>agent</strong></li>
 <li>customer ⋈ agent ⋃ ((customer – π<sub>c1,c2,c3,&hellip;,cn</sub>(customer ⋈ agent)) × {(a1,&hellip;,an)})</li>
 </ul>
 </li>
-<li>Right Outer Join: <a class="glightbox" href="images/chap03_13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Right Outer Join" src="images/chap03_13.png" /></a><ul>
+<li>Right Outer Join: <a class="glightbox" href="images/chap03_13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Right Outer Join" src="images/chap03_13.png" /></a><ul>
 <li>Yields all of the rows in the relation 2, including those that do not have matching values in relation 1</li>
 </ul>
 </li>
@@ -5277,7 +5275,7 @@
 </li>
 <li>DIVIDE: Relation 1 is divided by Relation 2 on a <strong>common attribute</strong> to yield all data in Relation 1 that matches all data in Relation 2.<ul>
 <li>To be included in the result, unshared columns/attributes must have all the <strong>common attributes</strong> from table 2 associated in its rows.
-<a class="glightbox" href="images/chap03_14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Divide" src="images/chap03_14.png" /></a></li>
+<a class="glightbox" href="images/chap03_14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Divide" src="images/chap03_14.png" /></a></li>
 <li>r ÷ s</li>
 </ul>
 </li>
@@ -5297,7 +5295,7 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" href="images/chap03_15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Data Dictionary" src="images/chap03_15.png" /></a></p>
+<p><a class="glightbox" href="images/chap03_15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Data Dictionary" src="images/chap03_15.png" /></a></p>
 <h4 id="system-catalog---system-view">System Catalog - System View<a class="headerlink" href="#system-catalog---system-view" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Is a detailed, system data dictionary.</li>
@@ -5318,18 +5316,18 @@
 <ul>
 <li>1:M Is normal<ul>
 <li>Easily implemented by putting the <strong>primary key</strong> of the <strong>1</strong> side in the table of the <strong>many</strong> side as a foreign key.</li>
-<li><a class="glightbox" href="images/chap03_16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="One to Many" src="images/chap03_16.png" /></a></li>
+<li><a class="glightbox" href="images/chap03_16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="One to Many" src="images/chap03_16.png" /></a></li>
 </ul>
 </li>
 <li>1:1 Is rare<ul>
 <li>Typically done by putting the <strong>primary key</strong> of one of the <strong>1</strong> sides in the other table. If the tables already have a <strong>1:M</strong> relationship, the <strong>1:1</strong> relationship should be enforced by moving the <strong>primary key</strong> of the <strong>M</strong> side into the table with the <strong>1</strong> side.</li>
 <li>You can also link on other <strong>candidate keys</strong> as long as they are non-null and unique as defined.</li>
-<li><a class="glightbox" href="images/chap03_17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="One to One" src="images/chap03_17.png" /></a></li>
+<li><a class="glightbox" href="images/chap03_17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="One to One" src="images/chap03_17.png" /></a></li>
 </ul>
 </li>
 <li>M:N Turns into multiple 1:M&rsquo;s by introducing a linking table (i.e. composite, bridge, associative entity)<ul>
 <li>Create a <strong>linking table</strong> with the <strong>primary key</strong> of the <strong>M</strong> side and the <strong>primary key</strong> of the <strong>N</strong> side becoming the <strong>primary key</strong> of the <strong>linking table</strong>. Introduce any other attributes to the linking table you think should be associated with the relationship.</li>
-<li><a class="glightbox" href="images/chap03_18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Many to Many" src="images/chap03_18.png" /></a></li>
+<li><a class="glightbox" href="images/chap03_18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Many to Many" src="images/chap03_18.png" /></a></li>
 </ul>
 </li>
 </ul>
@@ -5345,7 +5343,7 @@
 <h3 id="purpose-of-indexing">Purpose of Indexing<a class="headerlink" href="#purpose-of-indexing" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Index: An ordered arrangement of keys and pointers. Each key points to the location of the data identified by the key.
-<a class="glightbox" href="images/chap03_19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Example Index" src="images/chap03_19.png" /></a></li>
+<a class="glightbox" href="images/chap03_19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example Index" src="images/chap03_19.png" /></a></li>
 <li>Used to locate a needed item quickly via pointers.</li>
 <li>Can also be used to QUICKLY retrieve data ordered by a specific attribute or attributes (think Customers ordered by name, or Products ordered by Manufacturer).</li>
 <li>Primary Key is a special index called a <strong>Unique Index</strong> that can only have a single pointer.</li>
@@ -5500,7 +5498,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="../js/mathjax.js"></script>
       

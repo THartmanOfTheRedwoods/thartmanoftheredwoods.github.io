@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.8">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
@@ -60,17 +60,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -5254,15 +5252,15 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" href="images/wk11_01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OLTP vs OLAP" src="images/wk11_01.png" /></a></p>
+<p><a class="glightbox" href="images/wk11_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="OLTP vs OLAP" src="images/wk11_01.png" /></a></p>
 <h3 id="oltp-eventual-consistency-is-favored-over-strong-consistency">OLTP (Eventual Consistency is favored over strong consistency)<a class="headerlink" href="#oltp-eventual-consistency-is-favored-over-strong-consistency" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Note the <strong>Some activity may not appear yet</strong></li>
 </ul>
-<p><a class="glightbox" href="images/wk11_02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Google Activity Eventually Consistent" src="images/wk11_02.png" /></a></p>
+<p><a class="glightbox" href="images/wk11_02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Google Activity Eventually Consistent" src="images/wk11_02.png" /></a></p>
 <p><a href="https://myactivity.google.com/myactivity">Tryit yourself</a></p>
 <h3 id="newsql-for-oltp">NewSQL for OLTP<a class="headerlink" href="#newsql-for-oltp" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="images/wk11_03.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Old Vs New - No Vs SQL" src="images/wk11_03.png" /></a></p>
+<p><a class="glightbox" href="images/wk11_03.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Old Vs New - No Vs SQL" src="images/wk11_03.png" /></a></p>
 <h3 id="oltp--what-has-changed">OLTP – What has changed?<a class="headerlink" href="#oltp--what-has-changed" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Modern hardware has become cheaper and better (cheaper RAM, faster processors),<ul>
@@ -5356,8 +5354,8 @@
 </ul>
 <h3 id="shore-decompostion">SHORE DECOMPOSTION<a class="headerlink" href="#shore-decompostion" title="Permanent link">&para;</a></h3>
 <p>Due to the tight integrations of all managers in Shore, it was not possible to cleanly separate all the components, hence <strong>they were removed in an order</strong> i.e. (logging, locking or latching, latching or locking, buffer manager)</p>
-<p><a class="glightbox" href="images/wk11_04.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Vanilla VS Paper Version" src="images/wk11_04.png" /></a>
-<a class="glightbox" href="images/wk11_05.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Possible OLTP Optimizations" src="images/wk11_05.png" /></a></p>
+<p><a class="glightbox" href="images/wk11_04.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Vanilla VS Paper Version" src="images/wk11_04.png" /></a>
+<a class="glightbox" href="images/wk11_05.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Possible OLTP Optimizations" src="images/wk11_05.png" /></a></p>
 <h3 id="components-in-shore-and-their-removal">Components in SHORE and Their Removal<a class="headerlink" href="#components-in-shore-and-their-removal" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Logging<ul>
@@ -5421,7 +5419,7 @@ there and then given to the storage manager</li>
 <li>Calls to SHORES&rsquo;s methods for New Order and Payment transactions<ul>
 <li>New Order transaction has 10 times instructions of Payment</li>
 <li>For simplicity, we discuss Payment transaction
-<a class="glightbox" href="images/wk11_06.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Performance Study - Payment Transaction" src="images/wk11_06.png" /></a></li>
+<a class="glightbox" href="images/wk11_06.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Performance Study - Payment Transaction" src="images/wk11_06.png" /></a></li>
 </ul>
 </li>
 <li>RESULT - Modifications took us from 640 -&gt; 12700 transactions/second. <strong>(20 fold increase)</strong></li>
@@ -5572,7 +5570,7 @@ Future Work:<ul>
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="../js/mathjax.js"></script>
       
