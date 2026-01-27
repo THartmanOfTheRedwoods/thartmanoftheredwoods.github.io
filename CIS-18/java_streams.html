@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="UML_Lesson.html">
+        <link rel="prev" href="oo_principles.html">
       
       
-        <link rel="next" href="user_story_intro.html">
+        <link rel="next" href="week_3.html">
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Sprint Planning - THartmanOfTheRedwoods Wiki</title>
+        <title>Java Streams - THartmanOfTheRedwoods Wiki</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#agile-development" class="md-skip">
+        <a href="#everything-about-java-streams-put-together" class="md-skip">
           Skip to content
         </a>
       
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sprint Planning
+              Java Streams
             
           </span>
         </div>
@@ -3045,27 +3045,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Sprint Planning
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="sprint.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="sprint.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3074,87 +3056,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Sub-Menu
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#agile-development" class="md-nav__link">
-    Agile Development
-  </a>
-  
-    <nav class="md-nav" aria-label="Agile Development">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scrum-meetings" class="md-nav__link">
-    Scrum Meetings!
-  </a>
-  
-    <nav class="md-nav" aria-label="Scrum Meetings!">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sprint-planning" class="md-nav__link">
-    Sprint Planning
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#daily-stand-up" class="md-nav__link">
-    Daily Stand-Up
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sprint-review" class="md-nav__link">
-    Sprint Review
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sprint-retrospective" class="md-nav__link">
-    Sprint Retrospective
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-14-day-sprint-diagram" class="md-nav__link">
-    Example 14 Day Sprint Diagram
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3264,9 +3165,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="java_streams.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Java Streams
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="java_streams.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3275,6 +3194,374 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Sub-Menu">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#everything-about-java-streams-put-together" class="md-nav__link">
+    Everything about Java Streams put together
+  </a>
+  
+    <nav class="md-nav" aria-label="Everything about Java Streams put together">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boilerplate-code" class="md-nav__link">
+    Boilerplate code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-streams-creation" class="md-nav__link">
+    Java Streams Creation
+  </a>
+  
+    <nav class="md-nav" aria-label="Java Streams Creation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stream-of-employees-from-an-existing-array" class="md-nav__link">
+    Stream of Employees from an existing array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-of-employees-from-an-existing-list" class="md-nav__link">
+    Stream of employees from an existing list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-from-a-list-of-individual-employee-objects" class="md-nav__link">
+    Stream from a list of individual Employee objects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-streambuilder-to-build-a-stream-of-employee-objects" class="md-nav__link">
+    Using Stream.Builder to build a stream of Employee objects
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-streams-operations" class="md-nav__link">
+    Java Streams Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Java Streams Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    Terminal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intermediate" class="md-nav__link">
+    Intermediate
+  </a>
+  
+    <nav class="md-nav" aria-label="Intermediate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foreach" class="md-nav__link">
+    forEach
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collect" class="md-nav__link">
+    collect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findfirst" class="md-nav__link">
+    findFirst
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toarray" class="md-nav__link">
+    toArray
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flatmap" class="md-nav__link">
+    flatMap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peek" class="md-nav__link">
+    peek
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-types-and-pipelines" class="md-nav__link">
+    Method Types and Pipelines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lazy-evaluation" class="md-nav__link">
+    Lazy Evaluation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-based-stream-operations" class="md-nav__link">
+    Comparison Based Stream Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparison Based Stream Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sorted" class="md-nav__link">
+    sorted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-and-max" class="md-nav__link">
+    min and max
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allmatch-anymatch-and-nonematch" class="md-nav__link">
+    allMatch, anyMatch, and noneMatch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-stream-specialisations" class="md-nav__link">
+    Java Stream Specialisations
+  </a>
+  
+    <nav class="md-nav" aria-label="Java Stream Specialisations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation" class="md-nav__link">
+    Creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specialised-operations" class="md-nav__link">
+    Specialised Operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduction-operations" class="md-nav__link">
+    Reduction Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Reduction Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reduce" class="md-nav__link">
+    reduce()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-collect" class="md-nav__link">
+    Advanced collect
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced collect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joining" class="md-nav__link">
+    joining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toset" class="md-nav__link">
+    toSet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tocollection" class="md-nav__link">
+    toCollection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summarizingdouble" class="md-nav__link">
+    summarizingDouble
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partitioningby" class="md-nav__link">
+    partitioningBy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groupingby" class="md-nav__link">
+    groupingBy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping" class="md-nav__link">
+    mapping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reducing" class="md-nav__link">
+    reducing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-streams" class="md-nav__link">
+    Parallel Streams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infinite-streams" class="md-nav__link">
+    Infinite Streams
+  </a>
+  
+    <nav class="md-nav" aria-label="Infinite Streams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate" class="md-nav__link">
+    generate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterate" class="md-nav__link">
+    iterate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4975,52 +5262,339 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#agile-development" class="md-nav__link">
-    Agile Development
+  <a href="#everything-about-java-streams-put-together" class="md-nav__link">
+    Everything about Java Streams put together
   </a>
   
-    <nav class="md-nav" aria-label="Agile Development">
+    <nav class="md-nav" aria-label="Everything about Java Streams put together">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scrum-meetings" class="md-nav__link">
-    Scrum Meetings!
+  <a href="#boilerplate-code" class="md-nav__link">
+    Boilerplate code
   </a>
   
-    <nav class="md-nav" aria-label="Scrum Meetings!">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-streams-creation" class="md-nav__link">
+    Java Streams Creation
+  </a>
+  
+    <nav class="md-nav" aria-label="Java Streams Creation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sprint-planning" class="md-nav__link">
-    Sprint Planning
+  <a href="#stream-of-employees-from-an-existing-array" class="md-nav__link">
+    Stream of Employees from an existing array
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#daily-stand-up" class="md-nav__link">
-    Daily Stand-Up
+  <a href="#stream-of-employees-from-an-existing-list" class="md-nav__link">
+    Stream of employees from an existing list
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sprint-review" class="md-nav__link">
-    Sprint Review
+  <a href="#stream-from-a-list-of-individual-employee-objects" class="md-nav__link">
+    Stream from a list of individual Employee objects
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sprint-retrospective" class="md-nav__link">
-    Sprint Retrospective
+  <a href="#using-streambuilder-to-build-a-stream-of-employee-objects" class="md-nav__link">
+    Using Stream.Builder to build a stream of Employee objects
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-streams-operations" class="md-nav__link">
+    Java Streams Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Java Streams Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    Terminal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-14-day-sprint-diagram" class="md-nav__link">
-    Example 14 Day Sprint Diagram
+  <a href="#intermediate" class="md-nav__link">
+    Intermediate
+  </a>
+  
+    <nav class="md-nav" aria-label="Intermediate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foreach" class="md-nav__link">
+    forEach
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collect" class="md-nav__link">
+    collect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findfirst" class="md-nav__link">
+    findFirst
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toarray" class="md-nav__link">
+    toArray
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flatmap" class="md-nav__link">
+    flatMap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peek" class="md-nav__link">
+    peek
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-types-and-pipelines" class="md-nav__link">
+    Method Types and Pipelines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lazy-evaluation" class="md-nav__link">
+    Lazy Evaluation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-based-stream-operations" class="md-nav__link">
+    Comparison Based Stream Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparison Based Stream Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sorted" class="md-nav__link">
+    sorted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-and-max" class="md-nav__link">
+    min and max
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allmatch-anymatch-and-nonematch" class="md-nav__link">
+    allMatch, anyMatch, and noneMatch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-stream-specialisations" class="md-nav__link">
+    Java Stream Specialisations
+  </a>
+  
+    <nav class="md-nav" aria-label="Java Stream Specialisations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation" class="md-nav__link">
+    Creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specialised-operations" class="md-nav__link">
+    Specialised Operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduction-operations" class="md-nav__link">
+    Reduction Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Reduction Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reduce" class="md-nav__link">
+    reduce()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-collect" class="md-nav__link">
+    Advanced collect
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced collect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joining" class="md-nav__link">
+    joining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toset" class="md-nav__link">
+    toSet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tocollection" class="md-nav__link">
+    toCollection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summarizingdouble" class="md-nav__link">
+    summarizingDouble
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partitioningby" class="md-nav__link">
+    partitioningBy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groupingby" class="md-nav__link">
+    groupingBy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping" class="md-nav__link">
+    mapping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reducing" class="md-nav__link">
+    reducing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-streams" class="md-nav__link">
+    Parallel Streams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infinite-streams" class="md-nav__link">
+    Infinite Streams
+  </a>
+  
+    <nav class="md-nav" aria-label="Infinite Streams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate" class="md-nav__link">
+    generate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterate" class="md-nav__link">
+    iterate
   </a>
   
 </li>
@@ -5050,119 +5624,409 @@
                   
 
 
-  <h1>Sprint Planning</h1>
+  <h1>Java Streams</h1>
 
-<h2 id="agile-development">Agile Development<a class="headerlink" href="#agile-development" title="Permanent link">&para;</a></h2>
-<h3 id="scrum-meetings">Scrum Meetings!<a class="headerlink" href="#scrum-meetings" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="images/sprint01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sprint Cycle" loading="lazy" src="images/sprint01.png" /></a>
-<a class="glightbox" href="images/sprint02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sprint Cycle" loading="lazy" src="images/sprint02.png" /></a>
-<a class="glightbox" href="images/sprint03.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sprint Cycle" loading="lazy" src="images/sprint03.png" /></a>
-<a class="glightbox" href="images/sprint04.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sprint Cycle" loading="lazy" src="images/sprint04.png" /></a></p>
-<h4 id="sprint-planning">Sprint Planning<a class="headerlink" href="#sprint-planning" title="Permanent link">&para;</a></h4>
+<h2 id="everything-about-java-streams-put-together">Everything about Java Streams put together<a class="headerlink" href="#everything-about-java-streams-put-together" title="Permanent link">&para;</a></h2>
+<h3 id="boilerplate-code">Boilerplate code<a class="headerlink" href="#boilerplate-code" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Frequency: 2 Week Development Cycle</li>
+<li>We’ll use the following code later to perform some of our streams operations:*</li>
 </ul>
-<details class="note" open="open">
-<summary>Goal of Sprint Planning Meeting</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Employee</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ID</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">salary</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Employee</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ID</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">salary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">salary</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSalary</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">salary</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">incrementSalary</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">percentage</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">salary</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">salary</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">percentage</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Employee</span><span class="o">[]</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">Employee</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mickey Mouse&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100000.0</span><span class="p">),</span>
+<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">Employee</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Donald Duck&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">200000.0</span><span class="p">),</span>
+<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">Employee</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Goofy Goo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">300000.0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">};</span>
+<span class="w">        </span><span class="n">Employee</span><span class="w"> </span><span class="n">brotherBear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Employee</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Brother Bear&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">5000.0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Employee</span><span class="w"> </span><span class="n">mufasa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Employee</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mufasa - The Lion King&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">500000.0</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="java-streams-creation">Java Streams Creation<a class="headerlink" href="#java-streams-creation" title="Permanent link">&para;</a></h3>
+<p><strong>Following are some snippets to help create streams.</strong></p>
+<h4 id="stream-of-employees-from-an-existing-array">Stream of Employees from an existing array<a class="headerlink" href="#stream-of-employees-from-an-existing-array" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Stream</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="n">employeeStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stream</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">employees</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="stream-of-employees-from-an-existing-list">Stream of employees from an existing list<a class="headerlink" href="#stream-of-employees-from-an-existing-list" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="n">empList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">employees</span><span class="p">);</span>
+<span class="n">Stream</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="n">employeeStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="stream-from-a-list-of-individual-employee-objects">Stream from a list of individual Employee objects<a class="headerlink" href="#stream-from-a-list-of-individual-employee-objects" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Stream</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="n">employeeStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stream</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">brotherBear</span><span class="p">,</span><span class="w"> </span><span class="n">mufasa</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="using-streambuilder-to-build-a-stream-of-employee-objects">Using Stream.Builder to build a stream of Employee objects<a class="headerlink" href="#using-streambuilder-to-build-a-stream-of-employee-objects" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Stream</span><span class="p">.</span><span class="na">Builder</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stream</span><span class="p">.</span><span class="na">builder</span><span class="p">();</span>
+<span class="n">builder</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="n">brotherBear</span><span class="p">);</span>
+<span class="n">builder</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="n">mufasa</span><span class="p">);</span>
+<span class="n">builder</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Employee</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SherKhan&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">450000.0</span><span class="p">));</span>
+<span class="n">Stream</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="n">employeeStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="java-streams-operations">Java Streams Operations<a class="headerlink" href="#java-streams-operations" title="Permanent link">&para;</a></h3>
+<p>There are two types of stream operations — <strong>intermediate</strong> &amp; <strong>terminal</strong>.</p>
+<h4 id="terminal">Terminal<a class="headerlink" href="#terminal" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>An operation that marks the stream as consumed. And ends the stream operation.</p>
+</blockquote>
+<h4 id="intermediate">Intermediate<a class="headerlink" href="#intermediate" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>An operation that returns a new stream after performing the supplied operation on input stream.</p>
+</blockquote>
+<p><strong>Following are some snippets of available operations on Java Streams and their usages.</strong></p>
+<h5 id="foreach">forEach<a class="headerlink" href="#foreach" title="Permanent link">&para;</a></h5>
+<p><em>Operation Type: Terminal</em></p>
+<p>Loop over stream element and call the supplied function over each. <code>forEach()</code> is a terminal operation, i.e. once <code>forEach()</code> is called, the stream is considered to be consumed.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="n">empList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">employees</span><span class="p">);</span>
+<span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">forEach</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">incrementSalary</span><span class="p">(</span><span class="mf">10.0</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p><strong>NOTE:</strong> Stream can be consumed only once. If attempted to consume after being consumed, the following exception is thrown:
+<strong>IllegalStateException: stream has already been operated upon or closed.</strong></p>
+</blockquote>
+<h5 id="map">map<a class="headerlink" href="#map" title="Permanent link">&para;</a></h5>
+<p><em>Operation Type: Intermediate</em></p>
+<p><code>map()</code> applies the supplied function to each element of the current stream and returns a new stream. The resultant stream can be of the same or different type.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="n">empList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">employees</span><span class="p">);</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">salaries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getSalary</span><span class="p">).</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// stream of integers returned as stream of squared versions of themselves.</span>
+<span class="n">Stream</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">squared</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stream</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">).</span><span class="na">map</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h5 id="collect">collect<a class="headerlink" href="#collect" title="Permanent link">&para;</a></h5>
+<p><em>Operation Type: Terminal</em></p>
+<p>Once all the stream processing is done, we can use the <code>collect()</code> with a suitable collector option.</p>
+<h5 id="filter">filter<a class="headerlink" href="#filter" title="Permanent link">&para;</a></h5>
+<p><em>Operation Type: Intermediate</em></p>
+<p><code>filter()</code> as the name suggests, helps filter a given stream.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="n">employeesWithSalariesUnder200K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getSalary</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">200000</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+</code></pre></div></td></tr></table></div>
+<h5 id="findfirst">findFirst<a class="headerlink" href="#findfirst" title="Permanent link">&para;</a></h5>
+<p><em>Operation Type: Terminal</em></p>
+<p><code>findFirst()</code> returns an Optional for the first entry in the stream; the Optional can, of course, be empty.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Optional</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="n">employee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">findFirst</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<h5 id="toarray">toArray<a class="headerlink" href="#toarray" title="Permanent link">&para;</a></h5>
+<p><em>Operation Type: Terminal</em></p>
+<p><code>collect()</code> is used to collect the stream into a Collection. If we need to get an array out of the stream, we can simply use <code>toArray()</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Employee</span><span class="o">[]</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">toArray</span><span class="p">(</span><span class="n">Employee</span><span class="o">[]</span><span class="p">::</span><span class="k">new</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h5 id="flatmap">flatMap<a class="headerlink" href="#flatmap" title="Permanent link">&para;</a></h5>
+<p><em>Operation Type: Intermediate</em></p>
+<p><code>flatMap()</code> helps us flatten a complex stream.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">couples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;Donald Duck&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Daisy Duck&quot;</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;Mickey Mouse&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Minnie Mouse&quot;</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;Nobita&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Shizuka&quot;</span><span class="p">));</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">couples</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">flatMap</span><span class="p">(</span><span class="n">Collection</span><span class="p">::</span><span class="n">stream</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+</code></pre></div></td></tr></table></div>
+<h5 id="peek">peek<a class="headerlink" href="#peek" title="Permanent link">&para;</a></h5>
+<p><em>Operation Type: Intermediate</em></p>
+<p><code>peek()</code> is an intermediate operation that helps perform a function over each element of a stream.</p>
+<hr />
+<h3 id="method-types-and-pipelines">Method Types and Pipelines<a class="headerlink" href="#method-types-and-pipelines" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>A stream pipeline consists of a stream source, followed by zero or more intermediate operations, and a terminal operation.</p>
+</blockquote>
+<p><strong>Example:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="n">employeesWithSalariesUnder200K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getSalary</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">200000</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="lazy-evaluation">Lazy Evaluation<a class="headerlink" href="#lazy-evaluation" title="Permanent link">&para;</a></h3>
+<p>One thing that significantly improves Java streams is the ability to evaluate operations lazily.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Employee</span><span class="w"> </span><span class="n">employee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stream</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">employees</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getSalary</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100000</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="na">findFirst</span><span class="p">()</span>
+<span class="w">  </span><span class="p">.</span><span class="na">orElse</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="comparison-based-stream-operations">Comparison Based Stream Operations<a class="headerlink" href="#comparison-based-stream-operations" title="Permanent link">&para;</a></h3>
+<h4 id="sorted">sorted<a class="headerlink" href="#sorted" title="Permanent link">&para;</a></h4>
+<p><code>sorted()</code> sorts the input stream based on the comparator passed inside it.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">      </span><span class="p">.</span><span class="na">sorted</span><span class="p">((</span><span class="n">e1</span><span class="p">,</span><span class="w"> </span><span class="n">e2</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e1</span><span class="p">.</span><span class="na">getSalary</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">e2</span><span class="p">.</span><span class="na">getSalary</span><span class="p">())</span>
+<span class="w">      </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="min-and-max">min and max<a class="headerlink" href="#min-and-max" title="Permanent link">&para;</a></h4>
+<p>As the name suggests, these are used to get the maximum or minimum element from a stream based on a comparator.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Employee</span><span class="w"> </span><span class="n">highestSalariedEmployee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">      </span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparing</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getSalary</span><span class="p">))</span>
+<span class="w">      </span><span class="p">.</span><span class="na">orElseThrow</span><span class="p">(</span><span class="n">NoSuchElementException</span><span class="p">::</span><span class="k">new</span><span class="p">);</span>
+
+<span class="n">Employee</span><span class="w"> </span><span class="n">lowestSalariedEmployee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">      </span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparing</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getSalary</span><span class="p">))</span>
+<span class="w">      </span><span class="p">.</span><span class="na">orElseThrow</span><span class="p">(</span><span class="n">NoSuchElementException</span><span class="p">::</span><span class="k">new</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="allmatch-anymatch-and-nonematch">allMatch, anyMatch, and noneMatch<a class="headerlink" href="#allmatch-anymatch-and-nonematch" title="Permanent link">&para;</a></h4>
+<p>All of these operations take a <code>Predicate</code> and return a <code>boolean</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">boolean</span><span class="w"> </span><span class="n">allEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intList</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">allMatch</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">oneEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intList</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">anyMatch</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">noneMultipleOfThree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intList</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">noneMatch</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="java-stream-specialisations">Java Stream Specialisations<a class="headerlink" href="#java-stream-specialisations" title="Permanent link">&para;</a></h3>
+<p>So far we have dealt with object streams. But, there exist streams to work with the primitive data types — <code>IntStream</code>, <code>DoubleStream</code>, <code>LongStream</code>.</p>
+<h4 id="creation">Creation<a class="headerlink" href="#creation" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Double</span><span class="w"> </span><span class="n">latestEmpId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">      </span><span class="p">.</span><span class="na">mapToDouble</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getSalary</span><span class="p">)</span>
+<span class="w">      </span><span class="p">.</span><span class="na">max</span><span class="p">()</span>
+<span class="w">      </span><span class="p">.</span><span class="na">orElseThrow</span><span class="p">(</span><span class="n">NoSuchElementException</span><span class="p">::</span><span class="k">new</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="specialised-operations">Specialised Operations<a class="headerlink" href="#specialised-operations" title="Permanent link">&para;</a></h4>
+<p>Specialised streams provide some additional operations that make dealing with numbers quite effortless.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Double</span><span class="w"> </span><span class="n">averageSalary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">mapToDouble</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getSalary</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">average</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">orElseThrow</span><span class="p">(</span><span class="n">NoSuchElementException</span><span class="p">::</span><span class="k">new</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="reduction-operations">Reduction Operations<a class="headerlink" href="#reduction-operations" title="Permanent link">&para;</a></h3>
+<p>A <strong>reduction</strong> is the process of combining a stream into a summarised result by applying a combination operation. We already saw a few reduction operations like <code>findFirst()</code>, <code>min()</code>, and <code>max()</code>.</p>
+<h4 id="reduce">reduce()<a class="headerlink" href="#reduce" title="Permanent link">&para;</a></h4>
+<p>Let’s see the general-purpose <code>reduce()</code> operation. The most common form of <code>reduce()</code> is:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">T</span><span class="w"> </span><span class="nf">reduce</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">identity</span><span class="p">,</span><span class="w"> </span><span class="n">BinaryOperator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accumulator</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>where <code>identity</code> is the initial value and <code>accumulator</code> is the repeating binary operation.</p>
+<p>For example, sum of all salaries -</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Double</span><span class="w"> </span><span class="n">totalSalaries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getSalary</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">reduce</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">Double</span><span class="p">::</span><span class="n">sum</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="advanced-collect">Advanced collect<a class="headerlink" href="#advanced-collect" title="Permanent link">&para;</a></h3>
+<p>We already saw how we used <code>Collectors.toList()</code> to get the list out of the stream. Let’s now see a few more ways to collect elements from the stream.</p>
+<h4 id="joining">joining<a class="headerlink" href="#joining" title="Permanent link">&para;</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">empNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getName</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">joining</span><span class="p">(</span><span class="s">&quot;, &quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p><code>Collectors.joining()</code> helps join 2 strings by putting a delimiter between them by internally using <code>java.util.StringJoiner</code>.</p>
+<h4 id="toset">toSet<a class="headerlink" href="#toset" title="Permanent link">&para;</a></h4>
+<p>We can also use <code>toSet()</code> to get a set out of stream elements:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@Test</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">whenCollectBySet_thenGetSet</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">empNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getName</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toSet</span><span class="p">());</span>
+
+<span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="n">empNames</span><span class="p">.</span><span class="na">size</span><span class="p">(),</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="tocollection">toCollection<a class="headerlink" href="#tocollection" title="Permanent link">&para;</a></h4>
+<p>We can use <code>Collectors.toCollection()</code> to extract the elements into any other collection by passing in a <code>Supplier&lt;Collection&gt;</code>. We can also use a constructor reference for the <code>Supplier</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Vector</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">empNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getName</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toCollection</span><span class="p">(</span><span class="n">Vector</span><span class="p">::</span><span class="k">new</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
+<p>Here, an empty collection is created internally, and its <code>add()</code> method is called on each element of the stream.</p>
+<h4 id="summarizingdouble">summarizingDouble<a class="headerlink" href="#summarizingdouble" title="Permanent link">&para;</a></h4>
+<p>If summarised statistics are a requirement that is to be built from a stream, <code>summarizingDouble()</code> is the collector. It applies a double-producing mapping function to each input element and returns a special class containing statistical information for the resulting values -</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">DoubleSummaryStatistics</span><span class="w"> </span><span class="n">stats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">summarizingDouble</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getSalary</span><span class="p">));</span>
+
+<span class="n">Integer</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stats</span><span class="p">.</span><span class="na">getCount</span><span class="p">();</span>
+<span class="n">Double</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stats</span><span class="p">.</span><span class="na">getSum</span><span class="p">();</span>
+<span class="n">Double</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stats</span><span class="p">.</span><span class="na">getMax</span><span class="p">();</span>
+<span class="n">Double</span><span class="w"> </span><span class="n">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stats</span><span class="p">.</span><span class="na">getMin</span><span class="p">();</span>
+<span class="n">Double</span><span class="w"> </span><span class="n">avg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stats</span><span class="p">.</span><span class="na">getAverage</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p>The <code>DoubleSummaryStatistics</code> objects get us statistics like – <em>count, sum, min, max, average, etc.</em></p>
+<p><code>summaryStatistics()</code> can be used to generate similar results when we’re using one of the specialised streams -</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">DoubleSummaryStatistics</span><span class="w"> </span><span class="n">stats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">mapToDouble</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getSalary</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">summaryStatistics</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="partitioningby">partitioningBy<a class="headerlink" href="#partitioningby" title="Permanent link">&para;</a></h4>
+<p>We can partition a stream into two — based on whether the elements satisfy certain criteria or not.</p>
+<p>Let’s split our List of numerical data, into Even and Odds:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mapOfEvenOdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stream</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">).</span><span class="na">collect</span><span class="p">(</span>
+<span class="w">    </span><span class="n">Collectors</span><span class="p">.</span><span class="na">partitioningBy</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
+
+<span class="n">assertEquals</span><span class="p">(</span><span class="n">mapOfEvenOdd</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="kc">true</span><span class="p">).</span><span class="na">size</span><span class="p">(),</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// 4 even numbers</span>
+<span class="n">assertEquals</span><span class="p">(</span><span class="n">mapOfEvenOdd</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="kc">false</span><span class="p">).</span><span class="na">size</span><span class="p">(),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1 odd number</span>
+</code></pre></div></td></tr></table></div>
+<p>Here, the stream is partitioned into a Map, with evens and odds stored as <code>true</code> and <code>false</code> keys.</p>
+<h4 id="groupingby">groupingBy<a class="headerlink" href="#groupingby" title="Permanent link">&para;</a></h4>
+<p><code>groupingBy()</code> is an extension of <code>partitioningBy()</code>. It partitions the stream into more than two groups. It takes a classification function as its parameter. This classification function is applied to each element of the stream.</p>
+<p>The value returned by the function is used as a key to the map that we get from the <code>groupingBy()</code> collector -</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">groupByAlphabet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">collect</span><span class="p">(</span>
+<span class="w">    </span><span class="n">Collectors</span><span class="p">.</span><span class="na">groupingBy</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Character</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getName</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">))));</span>
+</code></pre></div></td></tr></table></div>
+<p>Here, we grouped the employees based on the initial character of their first name.</p>
+<h4 id="mapping">mapping<a class="headerlink" href="#mapping" title="Permanent link">&para;</a></h4>
+<p>In the above example, we saw how we can use <code>groupingBy()</code> to group elements of the stream with the use of a <code>Map</code>. And we were able to group <code>Employee</code> objects using the first character in their first names. What if we wanted to map the first characters of their first names, with something other than <code>Employee</code> objects? Like mapping the first character of the first name with <code>Employee</code> IDs. That&rsquo;s what we can achieve with <code>mapping()</code> -</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">idsGroupedByFirstChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">collect</span><span class="p">(</span>
+<span class="w">    </span><span class="n">Collectors</span><span class="p">.</span><span class="na">groupingBy</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Character</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getName</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span>
+<span class="w">        </span><span class="n">Collectors</span><span class="p">.</span><span class="na">mapping</span><span class="p">(</span><span class="n">Employee</span><span class="p">::</span><span class="n">getId</span><span class="p">,</span><span class="w"> </span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">())));</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="reducing">reducing<a class="headerlink" href="#reducing" title="Permanent link">&para;</a></h4>
+<p><code>reducing()</code> is similar to <code>reduce()</code> – which we explored before. It simply returns a collector which performs a reduction of its input elements -</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Double</span><span class="w"> </span><span class="n">percentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.0</span><span class="p">;</span>
+<span class="n">Double</span><span class="w"> </span><span class="n">salIncrOverhead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">reducing</span><span class="p">(</span>
+<span class="w">    </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getSalary</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">percentage</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s2</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
+<p>Here, by <code>reducing()</code>, we are incrementing each Employee&rsquo;s salary by 10% and then collecting all the increments. The overall operation is broken down into multiple pieces - Identity, Mapper, BinaryOperator. Here, <code>0.0</code> is the identity (<em>initial value</em>), <code>e -&gt; e.getSalary() * percentage / 100</code> is the mapper piece. BinaryOperator is the addition expression - <code>(s1, s2) -&gt; s1 + s2</code>.</p>
+<hr />
+<h3 id="parallel-streams">Parallel Streams<a class="headerlink" href="#parallel-streams" title="Permanent link">&para;</a></h3>
+<p>Parallel streams help us execute code in parallel on separate processor cores. The final result is the combination of each individual outcome.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">empList</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">parallel</span><span class="p">().</span><span class="na">forEach</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">incrementSalary</span><span class="p">(</span><span class="mf">10.0</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
+<p>Here, <code>incrementSalary</code> would get executed on multiple elements in parallel. As in the case with writing multi-threaded code, one needs to be aware of a couple of things while using <code>parallel()</code>:</p>
 <ol>
-<li>Set expectations.</li>
-<li>Review the backlog, and cover upcoming tasks for the 2-week sprint.</li>
-<li>Teams should highlight any potential roadblocks that could delay progress. </li>
+<li>Code is to be thread-safe. Special care is to be taken if operations performed access shared data.</li>
+<li>If order is of importance, parallel streams should be avoided. The result after each run would differ.</li>
 </ol>
-</details>
-<details class="success" open="open">
-<summary>Minimum set of Sprint Planning Questions</summary>
-<ul>
-<li>What did we learn at <a href="#sprint-review">sprint review</a> and <a href="">sprint retrospective</a> that needs to be considered in our planning conversations today?</li>
-<li>What is at the top of the product backlog?</li>
-<li>What do we need to know about these backlog items in order to fully commit to getting them done in the upcoming sprint?</li>
-<li>How much of the product backlog do we think we can complete in the upcoming sprint?</li>
-<li>Do we need more clarification on this feature?</li>
-<li>What is our confidence level regarding this (sprint backlog) as a reasonable plan for this sprint?</li>
-<li>How is this yet-to-build backlog item similar/relative to other known/completed work we have done in the past? How does this comparison help us estimate the relative size of the new work?</li>
-<li>What outside help will we need to succeed with our plans?</li>
-<li>What&rsquo;s the biggest risk that may prevent us from completing this sprint? </li>
-<li>Who is taking time off during the next sprint? How should we plan differently given the team&rsquo;s (adjusted) capacity?</li>
-</ul>
-</details>
-<h4 id="daily-stand-up">Daily Stand-Up<a class="headerlink" href="#daily-stand-up" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Frequency: Daily Development Work</li>
-</ul>
-<details class="note" open="open">
-<summary>Goal of Daily Stand-Up Meeting</summary>
-<ol>
-<li>Each team member shares what they are working on and how it contributes to sprint goals</li>
-<li>Set the expectations for what will be worked on and if there is overlap</li>
-<li>Allows team members to request and get help on blockers</li>
-</ol>
-</details>
-<details class="success" open="open">
-<summary>Minimum set of Daily Stand-Up Questions</summary>
-<ul>
-<li>Are we on track with the sprint goal?</li>
-<li>Are we working on the most important items?</li>
-<li>Do we have any new requests?</li>
-<li>What do we still need to learn in this sprint?</li>
-<li>Have we identified any new risks?</li>
-<li>Who would benefit from another pair of eyes on something?</li>
-<li>Who could use some help? </li>
-<li>Who has some time available to help?</li>
-</ul>
-</details>
-<h4 id="sprint-review">Sprint Review<a class="headerlink" href="#sprint-review" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Frequency: End of 2 Week Sprint</li>
-</ul>
-<details class="note" open="open">
-<summary>Goal of Sprint Review Meeting</summary>
-<ol>
-<li>Discuss what the team has accomplished</li>
-<li>Collect actionable feedback to improve next sprints</li>
-</ol>
-</details>
-<details class="success" open="open">
-<summary>Minimum set of Sprint Review Questions</summary>
-<ul>
-<li>What questions do you have? </li>
-<li>How would you use this product?</li>
-<li>What excites you about the product increment we reviewed? Why is that?</li>
-<li>How do you feel about the product increment we reviewed? Why is that?</li>
-<li>If you could change one thing about the product we&rsquo;ve built, what would you change? Why is that?</li>
-<li>Let&rsquo;s say one feature should be eliminated. Which feature gets your vote? Why did you choose this one?</li>
-<li>What&rsquo;s your favorite feature or characteristic about this product? Why is it your favorite?</li>
-<li>What do you really hate about this product? Why is that?</li>
-<li>What other product on the market should we learn from? Why is that?</li>
-<li>How can we improve future sprint reviews?</li>
-</ul>
-</details>
-<h4 id="sprint-retrospective">Sprint Retrospective<a class="headerlink" href="#sprint-retrospective" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Frequency: End of 2 Week Sprint, after Sprint Review</li>
-</ul>
-<details class="note" open="open">
-<summary>Goal of Sprint Retrospective Meeting</summary>
-<ol>
-<li>How the team accomplished sprint items (i.e. what worked, what didn&rsquo;t)</li>
-<li>Improve future sprint planning and process using sprint review feedback</li>
-</ol>
-</details>
-<details class="success" open="open">
-<summary>Minimum set of Sprint Retrospective Questions</summary>
-<ul>
-<li>What did we do well—that if we don&rsquo;t discuss we might forget?</li>
-<li>What didn&rsquo;t go so well?</li>
-<li>What are we feeling about the upcoming sprint now that we have identified these issues?</li>
-<li>What have we learned?</li>
-<li>What still puzzles us?</li>
-<li>What are the most important things we learned today?</li>
-<li>Does anyone have an &ldquo;appreciation&rdquo; to share with another team member?</li>
-<li>Where are we confused or unclear on any of the items we discussed today?</li>
-<li>Are we in agreement on what action item(s) we will take from this sprint retrospective into the upcoming sprint planning?</li>
-</ul>
-</details>
-<h4 id="example-14-day-sprint-diagram">Example 14 Day Sprint Diagram<a class="headerlink" href="#example-14-day-sprint-diagram" title="Permanent link">&para;</a></h4>
-<p><a class="glightbox" href="images/sprint-timeline-14-day.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="14 Day Sprint Diagram" loading="lazy" src="images/sprint-timeline-14-day.png" /></a></p>
+<hr />
+<h3 id="infinite-streams">Infinite Streams<a class="headerlink" href="#infinite-streams" title="Permanent link">&para;</a></h3>
+<p>At times, we might need a continuous stream of elements while still performing operations. Knowing the range of elements beforehand might not be possible, unlike <code>List</code> or <code>Map</code> where elements are pre-populated. We have Infinite Streams for such cases; also known as unbounded streams.</p>
+<p>Two ways to generate infinite streams -</p>
+<h4 id="generate">generate<a class="headerlink" href="#generate" title="Permanent link">&para;</a></h4>
+<p>Provide a <code>Supplier</code> which gets called anytime we need new stream elements to be generated.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Stream</span><span class="p">.</span><span class="na">generate</span><span class="p">(</span><span class="n">Math</span><span class="p">::</span><span class="n">random</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p>With infinite streams, we need to provide an eventual termination condition. Here, we used <code>limit()</code>; it limits the stream to 5 random numbers, generated with the Supplier - <code>Math.random()</code></p>
+<h4 id="iterate">iterate<a class="headerlink" href="#iterate" title="Permanent link">&para;</a></h4>
+<p><code>iterate()</code> takes two parameters - an initial value, called seed element, and a function which generates the next element using the previous value. <code>iterate()</code>, by design, is stateful and hence may not be useful in parallel streams -</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">firstFiveMultiplesOfTwo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stream</span><span class="p">.</span><span class="na">iterate</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+</code></pre></div></td></tr></table></div>
+<p>Here, <code>2</code> is the seed value, and the following expression is the lambda for consecutive iterations. The value <code>2</code> is passed to it, which generates <code>4</code>, which continues until the total elements, including the seed value, amount to <code>5</code>.</p>
 
 
 
