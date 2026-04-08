@@ -16,7 +16,7 @@
         <link rel="prev" href="week_09.html">
       
       
-        <link rel="next" href="Chapter_9.html">
+        <link rel="next" href="schema_chooser.html">
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
@@ -2734,6 +2734,50 @@
     
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_4_13" checked>
+        
+          <label class="md-nav__link" for="__nav_13_4_13" id="__nav_13_4_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    New Databases (Schmea/Features)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_13_4_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_13_4_13">
+            <span class="md-nav__icon md-icon"></span>
+            New Databases (Schmea/Features)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -2820,11 +2864,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paper-structure" class="md-nav__link">
-    PAPER STRUCTURE
+  <a href="#shore-paper-structure" class="md-nav__link">
+    (SHORE) PAPER STRUCTURE
   </a>
   
-    <nav class="md-nav" aria-label="PAPER STRUCTURE">
+    <nav class="md-nav" aria-label="(SHORE) PAPER STRUCTURE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2931,8 +2975,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#authors" class="md-nav__link">
-    Authors:
+  <a href="#can-mysql-be-like-shore" class="md-nav__link">
+    Can MySQL be like SHORE?
   </a>
   
 </li>
@@ -2945,6 +2989,54 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="schema_chooser.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schema Chooser
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Chapter_13.html#star-schemas" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Star Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -5123,11 +5215,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paper-structure" class="md-nav__link">
-    PAPER STRUCTURE
+  <a href="#shore-paper-structure" class="md-nav__link">
+    (SHORE) PAPER STRUCTURE
   </a>
   
-    <nav class="md-nav" aria-label="PAPER STRUCTURE">
+    <nav class="md-nav" aria-label="(SHORE) PAPER STRUCTURE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5234,8 +5326,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#authors" class="md-nav__link">
-    Authors:
+  <a href="#can-mysql-be-like-shore" class="md-nav__link">
+    Can MySQL be like SHORE?
   </a>
   
 </li>
@@ -5307,7 +5399,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="paper-structure">PAPER STRUCTURE<a class="headerlink" href="#paper-structure" title="Permanent link">&para;</a></h3>
+<h3 id="shore-paper-structure">(SHORE) PAPER STRUCTURE<a class="headerlink" href="#shore-paper-structure" title="Permanent link">&para;</a></h3>
 <h4 id="objective">OBJECTIVE<a class="headerlink" href="#objective" title="Permanent link">&para;</a></h4>
 <p>To optimize the OLTP databases systems for main memory storage as well as other database variants so as to reach new benchmarks.</p>
 <h4 id="methodology">METHODOLOGY<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h4>
@@ -5326,13 +5418,21 @@
 </ul>
 <h3 id="whats-tpc-c">WHAT&rsquo;S TPC-C?<a class="headerlink" href="#whats-tpc-c" title="Permanent link">&para;</a></h3>
 <ul>
-<li>It is an OLTP benchmark - <strong>mix of 5 concurrent transactions</strong> of different types and complexity.</li>
+<li>It is a benchmark designed to measure the performance of On-Line Transaction Processing (OLTP) systems. It simulates a wholesale supplier&rsquo;s complex, multi-warehouse ordering environment to test database throughput measured in transactions per minute under heavy, concurrent loads.</li>
 <li>Designed to represent any industry that manage, sell or distribute a product or service.</li>
 <li><strong>Designed to scale</strong> with suppliers and warehouses.</li>
 <li>90% of the transactions are of type:<ol>
 <li>New order transaction (entering orders)</li>
 <li>Payment transaction (recording payments)</li>
 </ol>
+</li>
+<li>Notable Aspects:<ul>
+<li><strong>Simulated Workload</strong>: It models a warehouse system handling order entry, payments, delivery, order status, and stock tracking.</li>
+<li><strong>Transaction Mix</strong>: Consists of 45% New Order, 43% Payment, and about 4% each for Delivery, Order Status, and Stock Level transactions.</li>
+<li><strong>Metrics</strong>: Performance is measured in transactions per minute, which represents the number of new order transactions completed.</li>
+<li><strong>Purpose</strong>: Evaluates system hardware and software (i.e. database) speed, scalability, and efficiency in handling high volume transactions.</li>
+<li><strong>Standardization</strong>: Approved in 1992, it remains a standard tool, often implemented via tools like HammerDB (known as TPROC-C).</li>
+</ul>
 </li>
 </ul>
 <h3 id="four-major-overheads-were-found--removed">FOUR MAJOR OVERHEADS WERE FOUND &amp; REMOVED<a class="headerlink" href="#four-major-overheads-were-found--removed" title="Permanent link">&para;</a></h3>
@@ -5344,15 +5444,25 @@
 </li>
 <li>Locking<ul>
 <li>All accesses to database structures are governed by Lock Manager.</li>
+<li><strong>Logical Locks</strong> protect data consistency at the <strong>transaction</strong> level (i.e. they prevent two users from updating the same row simultaneously).</li>
 </ul>
 </li>
 <li>Latching<ul>
 <li>In multi-threaded database, data structures have to be latched before they can be accessed.</li>
-<li>But we are use single-threaded system which is in memory.</li>
+<li><strong>Latches</strong> protect the underlying data structures (i.e. <strong>B-tree nodes</strong>, <strong>buffer pool pages</strong>, or <strong>allocation maps</strong>) from being corrupted by simultaneous thread access.<ul>
+<li>Common latch types in RDBMS:<ul>
+<li>Shared (SH): Allows multiple concurrent readers.</li>
+<li>Exclusive (EX): Required to modify in-memory structure like Buffer Pool or B-Tree.</li>
+<li>Keep-Destroy (KP-DT): Used to prevent a structure from memory removal or to mark it for permenent deletion.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SHORE utilizes a single threaded system which is in memory, avoiding the need for latching.</li>
 </ul>
 </li>
 <li>BufferManagement<ul>
-<li>Main memory database system do not need to access pages through a buffer pool.</li>
+<li>Main memory database system do not need to access pages through a buffer pool because the ENTIRE database is in memory!</li>
 </ul>
 </li>
 </ol>
@@ -5393,11 +5503,20 @@
 <li>Addition of if-statements to avoid processing LSNs</li>
 </ul>
 </li>
+<li>Under what conditions can I remove this?<ul>
+<li>Bulk Data Loading</li>
+<li>If a DB does not require Point-In-Time Recovery (PITR).</li>
+<li>If recovery can be performed from a replica or master-master configuration.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Locking (locking and latching can be removed in any order)<ul>
 <li>Features:<ul>
-<li>Provides two-phase locking with transactions having ACID properties</li>
+<li>Provides two-phase locking with transactions having ACID properties<ul>
+<li><strong>ACID</strong>: Atomic (All queries or none), Consistent (consistent data state), Isolated (Simultaneous Transactions don&rsquo;t interfere, Durable (Once a Transaction is saved, it can&rsquo;t be un-saved even by power outage).</li>
+</ul>
+</li>
 <li>Each transaction tracks and lists the locks it holds</li>
 <li>Locks are gained when transaction enters the prepared state and released at the end of transaction</li>
 </ul>
@@ -5407,6 +5526,15 @@
 <li>Modified the methods related to pinning (finding) records, by using B-tree index access</li>
 </ul>
 </li>
+<li>Under what conditions can I remove this?<ul>
+<li>Dirty-Reads/Isolation Levels are OK (Not allowed for Banking)!</li>
+<li>Hints are provided to tell RDBMS which locks to ignore</li>
+<li>Single User or Single Access systems.</li>
+<li>Read-Only Databases</li>
+<li>Bulk Data Loading</li>
+<li>If the Application using the DB gurantees synchronization</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Latching<ul>
@@ -5414,6 +5542,12 @@
 <li>Modified all mutex requests to return immediately (as if mutual exclusion request was satisfied)</li>
 <li>Addition of if-statements to avoid the requests for latches</li>
 <li>Replaced B-tree methods with methods that did not use latching</li>
+</ul>
+</li>
+<li>Under what conditions can I remove this?<ul>
+<li>If data is physically partitioned across multiple notes with single-thread access.</li>
+<li>If the entire database is single-threaded</li>
+<li>If datastrucutres are pre-populated and read-only</li>
 </ul>
 </li>
 </ul>
@@ -5431,6 +5565,12 @@ there and then given to the storage manager</li>
 <li>Shore&rsquo;s page allocation mechanism was dropped to use standard malloc library for creation of new records</li>
 <li>Not able to completely remove page interface to buffer frames</li>
 <li>But mapping between pages and buffer frames was accelerated to reduce overhead</li>
+</ul>
+</li>
+<li>Under what conditions can I remove this?<ul>
+<li>If the <strong>ENTIRE</strong> database is in memory.</li>
+<li>If you&rsquo;re dealing with LARGE, mostly READ-ONCE datasets</li>
+<li>If System I/O constraints with modern NVME drives is sufficient.</li>
 </ul>
 </li>
 </ul>
@@ -5518,8 +5658,8 @@ Future Work:<ul>
 <li>HEKATON - SqlServer</li>
 <li>Google Cloud Spanner</li>
 </ul>
-<h3 id="authors">Authors:<a class="headerlink" href="#authors" title="Permanent link">&para;</a></h3>
-<p>Stavros Harizopoulous, Daniel Abadi, Samuel Madden and Michael Stonebraker</p>
+<h3 id="can-mysql-be-like-shore">Can MySQL be like SHORE?<a class="headerlink" href="#can-mysql-be-like-shore" title="Permanent link">&para;</a></h3>
+<p><a href="mysql_shore_like.html">MySQL (SHORE-Like)</a></p>
 
 
 
