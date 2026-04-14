@@ -5363,7 +5363,7 @@
 </li>
 </ul>
 </li>
-<li>Code Items to Note: <code>import hashlib</code>, <code>def md5_digest</code>, mode <code>rb</code>.
+<li>Code Items to Note: <code>import hashlib</code>, <code>def get_md5_hash</code>, mode <code>rb</code>.
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -5376,19 +5376,51 @@
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">hashlib</span> <span class="kn">import</span> <span class="n">md5</span>
 
-<span class="k">def</span> <span class="nf">find_txt_files</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
-  <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">depth</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-      <span class="k">break</span>
-    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-      <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.txt&#39;</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="p">))</span>
-    <span class="n">depth</span> <span class="o">-=</span> <span class="mi">1</span>
+<span class="k">def</span> <span class="nf">get_md5_hash</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">block_size</span><span class="o">=</span><span class="mi">4096</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">md5_hash</span> <span class="o">=</span> <span class="n">md5</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">block_size</span><span class="p">),</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+            <span class="n">md5_hash</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">md5_hash</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
 
-<span class="n">root_dir</span> <span class="o">=</span> <span class="s2">&quot;/path/to/your/root/directory&quot;</span>
-<span class="n">find_txt_files</span><span class="p">(</span><span class="n">root_dir</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">duplicate_file_finder</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">dups</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">depth</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span> <span class="o">-</span> <span class="n">directory</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">depth</span> <span class="o">&gt;=</span> <span class="n">max_depth</span><span class="p">:</span>
+            <span class="c1"># Prune directories at the max depth</span>
+            <span class="k">del</span> <span class="n">dirs</span><span class="p">[:]</span>
+
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">f_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+            <span class="nb">hash</span> <span class="o">=</span> <span class="n">get_md5_hash</span><span class="p">(</span><span class="n">f_path</span><span class="p">)</span>
+            <span class="n">dups</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="nb">hash</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f_path</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dups</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">&gt;</span>  <span class="mi">1</span><span class="p">}</span>
+
+<span class="n">root_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span>
+<span class="n">root_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span> <span class="s1">&#39;home&#39;</span><span class="p">,</span> <span class="s1">&#39;viable&#39;</span><span class="p">,</span> <span class="s1">&#39;Development&#39;</span><span class="p">,</span> <span class="s1">&#39;thartmanoftheredwoods.mkdocs/docs&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Searching </span><span class="si">{</span><span class="n">root_directory</span><span class="si">}</span><span class="s2"> for duplicate files.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">duplicate_file_finder</span><span class="p">(</span><span class="n">root_directory</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="walking-through-directories">Walking Through Directories<a class="headerlink" href="#walking-through-directories" title="Permanent link">&para;</a></h3>
