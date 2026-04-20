@@ -5316,7 +5316,7 @@
 <ol>
 <li><strong>Explanation</strong><ul>
 <li>Since user defined types create mutable objects, we sometimes need a way to preserve the objects data or its state (i.e. the state/value of the objects attributes).<ul>
-<li>We can preserve an objects state utilizing the <code>copy</code> module, which does a deep copy of an object and its attributes, and returns a new equivalent object.</li>
+<li>We can preserve an objects state utilizing the <code>copy</code> module, which can do a shallow OR deep copy of an object and its attributes, and returns a new equivalent object.</li>
 <li>A programmer can now modify the object copy without concern about modifying the original object (At the expense of a full copy, of course).</li>
 </ul>
 </li>
@@ -5330,9 +5330,13 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">copy</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">copy</span>
 
-<span class="n">book_copy</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">new_book</span><span class="p">)</span>
+<span class="n">book_copy</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">new_book</span><span class="p">)</span>  <span class="c1"># Shallow Copy, though essentially deep since all</span>
+                            <span class="c1"># a Book&#39;s attributes are immutable or primitive</span>
+                            <span class="c1"># types.</span>
 <span class="n">update_year</span><span class="p">(</span><span class="n">book_copy</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
 <span class="n">display_book</span><span class="p">(</span><span class="n">new_book</span><span class="p">)</span>   <span class="c1"># Original book remains unchanged</span>
 <span class="n">display_book</span><span class="p">(</span><span class="n">book_copy</span><span class="p">)</span>  <span class="c1"># Copy has the updated year</span>
