@@ -1283,6 +1283,11 @@
 <nav aria-label="Representations" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#textbook-pipeline">
+    TextBook Pipeline
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#mermaid-graph---pipeline-pattern">
     Mermaid Graph - Pipeline Pattern
   </a>
@@ -1923,6 +1928,11 @@
 <nav aria-label="Representations" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#textbook-pipeline">
+    TextBook Pipeline
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#mermaid-graph---pipeline-pattern">
     Mermaid Graph - Pipeline Pattern
   </a>
@@ -2011,6 +2021,16 @@
 <li><strong>Easy Definition</strong>: A chain of Stages where the output of each Stage is the input to the next modifying the payload object at each stage.</li>
 </ul>
 <h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
+<h4 id="textbook-pipeline">TextBook Pipeline<a class="headerlink" href="#textbook-pipeline" title="Permanent link">¶</a></h4>
+<ul>
+<li><code>StageInterface.apply(Payload)</code> defines the unit of work</li>
+<li><code>Pipeline</code> <strong>chains stages so each one’s output feeds the next</strong>.</li>
+<li>I partner mine with:<ul>
+<li><strong>Strategy</strong>: ProcessorInterface/ProcessorType - Allows pipeline to swap out the processor allowing me to change execution (i.e. sequential, parallel, interrupt, retry, logged, etc.)</li>
+<li><strong>Composite</strong>: Since <code>PipelineInterface</code> extends <code>StageInterface</code> a <code>Pipeline</code> is ALSO a <code>Stage</code>, allowing composite pipeline relationships and even parallel pipelines.</li>
+</ul>
+</li>
+</ul>
 <h4 id="mermaid-graph---pipeline-pattern">Mermaid Graph - Pipeline Pattern<a class="headerlink" href="#mermaid-graph---pipeline-pattern" title="Permanent link">¶</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2246,6 +2266,7 @@
 <h4 id="pipeline-pattern_1">Pipeline Pattern<a class="headerlink" href="#pipeline-pattern_1" title="Permanent link">¶</a></h4>
 <ul>
 <li>UNIX/Linux/Windows shells: Think command pipes!</li>
+<li>Filter Chains</li>
 <li>Data processing pipelines like Talend and SSIS</li>
 <li>Render farms for video processing.</li>
 <li>Map/Reduce is an fine-tuned application of this pattern.</li>
@@ -2295,11 +2316,11 @@ pipeline.process(order);
 </code></pre></div></td></tr></table></div></p>
 <ul>
 <li>The Pipeline pattern increases testability</li>
-<li>The Pipeline patterns allow Pipeline Re-Use</li>
+<li>The Pipeline patterns allow Pipeline Re-Use (By making Pipeline a Composite of Stage)</li>
 <li>Handling Exceptions is trivial</li>
-<li>Single responsibility per stage making code re-use and modular code simpler.</li>
-<li>Adding a Builder Pattern allows for conditional Pipelines.</li>
-<li>Use this code when solving multi-stage problems.</li>
+<li>Single responsibility per stage, making code re-use and modularity simpler (Some people might consider this Strategy).</li>
+<li>Adding a <strong>Builder Pattern</strong> allows for conditional Pipelines.</li>
+<li>Use this code when solving multi-stage problems or filtering.</li>
 </ul>
 <h3 id="main-oop-principles-of-pipeline-pattern">Main OOP Principles of Pipeline Pattern<a class="headerlink" href="#main-oop-principles-of-pipeline-pattern" title="Permanent link">¶</a></h3>
 <ul>
