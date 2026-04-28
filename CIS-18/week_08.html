@@ -2271,8 +2271,9 @@
 </ul>
 </li>
 <li>Stages could also be called <strong>Filters</strong> in the wild.</li>
-<li>The Pipeline pattern increases readability.
-```java “Consider a bunch of this…”
+<li>The Pipeline pattern increases readability.</li>
+</ul>
+<p>```java “Consider a bunch of this…”
 …
 if(order.getStatus().equals(“success”)) {
     this.getVendorAdapter().sendOrder(order);
@@ -2291,7 +2292,8 @@ PipelineInterface pipeline = new Pipeline()
         .pipe(new SendInvoice())
         .pipe(new ExportOrder());
 pipeline.process(order);
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></td></tr></table></div></p>
+<ul>
 <li>The Pipeline pattern increases testability</li>
 <li>The Pipeline patterns allow Pipeline Re-Use</li>
 <li>Handling Exceptions is trivial</li>
