@@ -2294,26 +2294,100 @@
 <li>Stages could also be called <strong>Filters</strong> in the wild.</li>
 <li>The Pipeline pattern increases readability.</li>
 </ul>
-<p>```java “Consider a bunch of this…”
-…
-if(order.getStatus().equals(“success”)) {
-    this.getVendorAdapter().sendOrder(order);
-}
-…
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Consider a bunch of nested conditions...</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">Order</span><span class="w"> </span><span class="nf">processOrder</span><span class="p">(</span><span class="n">Order</span><span class="w"> </span><span class="n">order</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Order</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createOrder</span><span class="p">(</span><span class="n">order</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s">"CREATED"</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">getStatus</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">processPayment</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s">"PAID"</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">getStatus</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sendInvoice</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s">"INVOICED"</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">getStatus</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">exportOrder</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">                                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s">"EXPORTED"</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">getStatus</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                    </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">"Order {} processed successfully"</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+<span class="w">                                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                    </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">"Export failed for order {}"</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+<span class="w">                                </span><span class="p">}</span>
+<span class="w">                            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ExportException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">"Export error for order {}: {}"</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">"Invoice failed for order {}"</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">InvoiceException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">"Invoice error for order {}: {}"</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">"Payment failed for order {}"</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">PaymentException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">"Payment error for order {}: {}"</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">"Create failed for order {}"</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">CreateOrderException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">"Create error for order {}: {}"</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Versus</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>```java "Versus"
-PipelineInterface pipeline = new Pipeline()
-        .pipe(new CreateOrder())
-        .pipe(new ProcessPayment())
-        .pipe(new SendInvoice())
-        .pipe(new ExportOrder());
-pipeline.process(order);
-</code></pre></div></td></tr></table></div></p>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">PipelineInterface</span><span class="w"> </span><span class="n">pipeline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pipeline</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">pipe</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">CreateOrder</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="na">pipe</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ProcessPayment</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="na">pipe</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">SendInvoice</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="na">pipe</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ExportOrder</span><span class="p">());</span>
+<span class="n">pipeline</span><span class="p">.</span><span class="na">process</span><span class="p">(</span><span class="n">order</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>The Pipeline pattern increases testability</li>
 <li>The Pipeline patterns allow Pipeline Re-Use (By making Pipeline a Composite of Stage)</li>
