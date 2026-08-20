@@ -10,9 +10,9 @@
 <link href="schema_chooser.html" rel="prev"/>
 <link href="Chapter_11.html" rel="next"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-9.2.8" name="generator"/>
+<meta content="mkdocs-1.5.2, mkdocs-material-9.2.0" name="generator"/>
 <title>Database Design - THartmanOfTheRedwoods Wiki</title>
-<link href="../assets/stylesheets/main.046329b4.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.0e669242.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.85d0ee34.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -20,15 +20,17 @@
 <link href="../css/mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="red" data-md-color-primary="red" data-md-color-scheme="slate" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2093,7 +2095,7 @@
 <summary>Note</summary>
 <p>The purpose of the SDLC is to trace the history of an IS (Information System) and provide a model within which <strong>database design</strong> and <strong>application development</strong> are mapped out and evaluated. It is a <strong>Cyclical/Iterative process</strong>.</p>
 </details>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="images/chap09_001.png"><img alt="Systems Development Life Cycle" src="images/chap09_001.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="images/chap09_001.png"><img alt="Systems Development Life Cycle" src="images/chap09_001.png"/></a></p>
 <h4 id="description-of-phases">Description of Phases<a class="headerlink" href="#description-of-phases" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>Planning:</strong> yields a general overview of the company and its objectives</li>
@@ -2107,7 +2109,7 @@
 <summary>Note</summary>
 <p>The purpose of the DBLC is to trace the history of a Database System and provide a model within which <strong>database development</strong> is mapped out and evaluated. It is a <strong>Cyclical/Iterative process</strong> just like the SDLC.</p>
 </details>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="images/chap09_002.png"><img alt="Database Life Cycle" src="images/chap09_002.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="images/chap09_002.png"><img alt="Database Life Cycle" src="images/chap09_002.png"/></a></p>
 <h4 id="description-of-phases_1">Description of Phases<a class="headerlink" href="#description-of-phases_1" title="Permanent link">¶</a></h4>
 <ul>
 <li>Database initial study: define problems, constraints, objectives, scope, and boundaries</li>
@@ -2123,7 +2125,7 @@
 <li>Maintenance and evolution: preventative, corrective, adaptive, etc. </li>
 </ul>
 <h4 id="database-design-process">Database Design Process<a class="headerlink" href="#database-design-process" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="images/chap09_003.png"><img alt="Database Design Process" src="images/chap09_003.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="images/chap09_003.png"><img alt="Database Design Process" src="images/chap09_003.png"/></a></p>
 <h4 id="database-failures-to-plan-for">Database Failures to Plan for<a class="headerlink" href="#database-failures-to-plan-for" title="Permanent link">¶</a></h4>
 <ul>
 <li>Software: Operating System, DBMS software, applications, viruses, or malware.</li>
@@ -2135,7 +2137,7 @@
 <details class="note" open="open">
 <summary>Note</summary>
 <p>The DBLC and SDLC are often parallel activities as depicted below:
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="images/chap09_004.png"><img alt="Parallel Activities of DBLC and SDLC" src="images/chap09_004.png"/></a></p>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="images/chap09_004.png"><img alt="Parallel Activities of DBLC and SDLC" src="images/chap09_004.png"/></a></p>
 </details>
 <h3 id="conceptual-design">Conceptual Design<a class="headerlink" href="#conceptual-design" title="Permanent link">¶</a></h3>
 <details class="note" open="open">
@@ -2145,7 +2147,7 @@
 * The <strong>Minimum Data Rule</strong> is followed: “All that is needed is there, and all that is there is needed.”</p>
 </details>
 <h4 id="steps-in-conceptual-data-model">Steps in Conceptual Data Model<a class="headerlink" href="#steps-in-conceptual-data-model" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="images/chap09_006.png"><img alt="Conceptual Design Overview" src="images/chap09_006.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="images/chap09_006.png"><img alt="Conceptual Design Overview" src="images/chap09_006.png"/></a></p>
 <ol>
 <li>Data analysis and requirements engineering<ul>
 <li>Focused on: garnering information needs, end user data views, data sources and existing systems.</li>
@@ -2169,7 +2171,7 @@
     H[Modify the ER model,\nusing the results of Step 7]
 </div></li>
 <li>Process in Reality:
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="images/chap09_005.png"><img alt="ER Modeling Process" src="images/chap09_005.png"/></a></li>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="images/chap09_005.png"><img alt="ER Modeling Process" src="images/chap09_005.png"/></a></li>
 </ul>
 </li>
 <li>Model validation and verification<ul>
@@ -2179,7 +2181,7 @@
 <li>Module: Component handling specific business function</li>
 <li>Module Coupling: Low Coupling preferred because increases module independence.</li>
 <li>Cohesivity: Strength of entity relationships in the model
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="images/chap09_007.png"><img alt="ER Modeling Verification Process" src="images/chap09_007.png"/></a></li>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="images/chap09_007.png"><img alt="ER Modeling Verification Process" src="images/chap09_007.png"/></a></li>
 </ul>
 </li>
 </ul>
@@ -2235,7 +2237,7 @@
 <li>Identify Data Sets (i.e. Entities and Entity Types)</li>
 <li>Define Data Elements per Set (i.e. Attributes for each Entity)</li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="images/chap09_008.png"><img alt="Centralized Design" src="images/chap09_008.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="images/chap09_008.png"><img alt="Centralized Design" src="images/chap09_008.png"/></a></p>
 <h4 id="bottom-up">Bottom Up<a class="headerlink" href="#bottom-up" title="Permanent link">¶</a></h4>
 <details class="note" open="open">
 <summary>Note</summary>
@@ -2245,7 +2247,7 @@
 <li>First identifies the element items (i.e. Attributes)</li>
 <li>Groups items into data-sets (i.e. Entities)</li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="images/chap09_009.png"><img alt="Decentralized Design" src="images/chap09_009.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="images/chap09_009.png"><img alt="Decentralized Design" src="images/chap09_009.png"/></a></p>
 </article>
 </div>
 </div>
@@ -2284,7 +2286,7 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
-<script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+<script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
 <script src="../js/mathjax.js"></script>
 <script src="../js/toggleside.js"></script>
 <script src="../js/toggletheme.js"></script>
