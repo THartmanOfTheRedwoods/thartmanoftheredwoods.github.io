@@ -7,11 +7,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="A MkDocs project to help you build a portfolio of your progress towards becoming an IT, IS, or CS professional." name="description"/>
 <meta content="Trevor Hartman" name="author"/>
-<link href="factory.html" rel="prev"/>
-<link href="exam1_study.html" rel="next"/>
+<link href="singleton.html" rel="prev"/>
+<link href="observer.html" rel="next"/>
 <link href="../assets/images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.5.2, mkdocs-material-9.2.0" name="generator"/>
-<title>DungeonForge 2 Axes Chart - THartmanOfTheRedwoods Wiki</title>
+<title>Strategy - THartmanOfTheRedwoods Wiki</title>
 <link href="../assets/stylesheets/main.0e669242.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.85d0ee34.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#the-two-axes-view">
+<a class="md-skip" href="#the-strategy-design-pattern">
           Skip to content
         </a>
 </div>
@@ -63,7 +63,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              DungeonForge 2 Axes Chart
+              Strategy
             
           </span>
 </div>
@@ -1227,12 +1227,99 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="strategy.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Strategy
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="strategy.html">
 <span class="md-ellipsis">
     Strategy
   </span>
 </a>
+<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Sub-Menu
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-strategy-design-pattern">
+    The Strategy Design Pattern
+  </a>
+<nav aria-label="The Strategy Design Pattern" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classification">
+    Classification
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph">
+    Mermaid Graph
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml">
+    UML
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage">
+    Usage
+  </a>
+<nav aria-label="Usage" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-to-my-real-world-application">
+    Application to my Real World Application
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+    Main Take-Aways from the textbook
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-strategy-pattern">
+    Main OO Principles of Strategy Pattern
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="observer.html">
@@ -1255,32 +1342,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    DungeonForge 2 Axes Chart
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="dungeonforge_two_axes_factory.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="dungeonforge_two_axes_factory.html">
 <span class="md-ellipsis">
     DungeonForge 2 Axes Chart
   </span>
 </a>
-<nav aria-label="Sub-Menu" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Sub-Menu
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-two-axes-view">
-    The Two Axes View
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="exam1_study.html">
@@ -1834,9 +1901,76 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-two-axes-view">
-    The Two Axes View
+<a class="md-nav__link" href="#the-strategy-design-pattern">
+    The Strategy Design Pattern
   </a>
+<nav aria-label="The Strategy Design Pattern" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classification">
+    Classification
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pattern-definition">
+    Pattern Definition
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representations">
+    Representations
+  </a>
+<nav aria-label="Representations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-graph">
+    Mermaid Graph
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uml">
+    UML
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage">
+    Usage
+  </a>
+<nav aria-label="Usage" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-world-usages">
+    Real World Usages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-to-my-real-world-application">
+    Application to my Real World Application
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#java-code-example">
+    Java Code Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-take-aways-from-the-textbook">
+    Main Take-Aways from the textbook
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-oo-principles-of-strategy-pattern">
+    Main OO Principles of Strategy Pattern
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1845,39 +1979,110 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>DungeonForge 2 Axes Chart</h1>
-<h4 id="the-two-axes-view">The Two Axes View<a class="headerlink" href="#the-two-axes-view" title="Permanent link">¶</a></h4>
-<div class="mermaid">---
-title: Two patterns, 2 axes, one room
----
-flowchart TB
-    R["A room needs contents"] --&gt; Q1{"HOW MANY, and<br/>is there a chest?"}
-    R --&gt; Q2{"WHICH KIND<br/>of thing?"}
-
-    Q1 --&gt; P["FACTORY METHOD<br/>RoomPopulator subclass"]
-    P --&gt; P1["Standard: 0-N, no chest"]
-    P --&gt; P2["Treasure: 1 guard + chest"]
-    P --&gt; P3["Boss: boss + escort + hoard"]
-
-    Q2 --&gt; K["ABSTRACT FACTORY<br/>ThemeKit"]
-    K --&gt; K1["Crypt: skeletons, bone charms"]
-    K --&gt; K2["Forge: imps, slag cleavers"]
-    K --&gt; K3["Frost: wights, frozen tears"]
-
-    P1 --&gt; OUT["The actual room"]
-    P2 --&gt; OUT
-    P3 --&gt; OUT
-    K1 --&gt; OUT
-    K2 --&gt; OUT
-    K3 --&gt; OUT
-
-    style P fill:#FFC49B,stroke:#C1642B,stroke-width:3px,color:#000
-    style K fill:#FFE08A,stroke:#B8860B,stroke-width:3px,color:#000
-    style OUT fill:#B7E4C7,stroke:#2D6A4F,stroke-width:2px,color:#000
-</div>
-<blockquote>
-<p><strong>3 populators × 3 kits = 9 kinds of room, from 6 classes.</strong> Adding a fourth kit gives you 12 from 7. That multiplication is why the patterns are worth their indirection — and it only works because the two axes are independent.</p>
-</blockquote>
+<h1>Strategy</h1>
+<h2 id="the-strategy-design-pattern">The Strategy Design Pattern<a class="headerlink" href="#the-strategy-design-pattern" title="Permanent link">¶</a></h2>
+<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">¶</a></h3>
+<ul>
+<li>Behavioral Design Pattern</li>
+</ul>
+<h3 id="pattern-definition">Pattern Definition<a class="headerlink" href="#pattern-definition" title="Permanent link">¶</a></h3>
+<ul>
+<li>Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.</li>
+<li>In the strategy pattern, the interchangeable algorithms are called Strategies and the object that holds one and delegates to it is called the Context.</li>
+</ul>
+<h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">¶</a></h3>
+<h4 id="mermaid-graph">Mermaid Graph<a class="headerlink" href="#mermaid-graph" title="Permanent link">¶</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">classDiagram</span>
+<span class="w">    </span><span class="n">Strategy</span><span class="w"> </span><span class="o">&lt;|</span><span class="p">..</span><span class="w"> </span><span class="n">ConcreteStrategyA</span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">Strategy</span><span class="w"> </span><span class="o">&lt;|</span><span class="p">..</span><span class="w"> </span><span class="n">ConcreteStrategyB</span><span class="p">:</span><span class="w"> </span><span class="kd">implements</span>
+<span class="w">    </span><span class="n">Context</span><span class="w"> </span><span class="s">"1"</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="s">"1"</span><span class="w"> </span><span class="n">Strategy</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Association</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Strategy</span><span class="p">{</span>
+<span class="w">        </span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="kd">interface</span><span class="err">&amp;</span><span class="nc">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span>
+<span class="w">        </span><span class="o">+</span><span class="n">execute</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">data</span><span class="p">):</span><span class="w"> </span><span class="n">Object</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteStrategyA</span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">execute</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">data</span><span class="p">):</span><span class="w"> </span><span class="n">Object</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">ConcreteStrategyB</span><span class="p">{</span>
+<span class="w">        </span><span class="o">+</span><span class="n">execute</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">data</span><span class="p">):</span><span class="w"> </span><span class="n">Object</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">class</span> <span class="nc">Context</span><span class="p">{</span>
+<span class="w">        </span><span class="o">-</span><span class="n">Strategy</span><span class="w"> </span><span class="n">strategy</span>
+<span class="w">        </span><span class="o">+</span><span class="n">setStrategy</span><span class="p">(</span><span class="n">Strategy</span><span class="p">):</span><span class="w"> </span><span class="kt">void</span>
+<span class="w">        </span><span class="o">+</span><span class="n">doWork</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">data</span><span class="p">):</span><span class="w"> </span><span class="n">Object</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">¶</a></h4>
+<object data="images/strategy_uml.svg" style="max-width: 100%;height: auto;"></object>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h3>
+<ul>
+<li>Useful when several objects differ only in their behavior, or when one object needs to change its behavior while it is running.</li>
+</ul>
+<h4 id="real-world-usages">Real World Usages<a class="headerlink" href="#real-world-usages" title="Permanent link">¶</a></h4>
+<ul>
+<li>Java Collections use Strategy: a Comparator is handed to <code>sort()</code> so the ordering algorithm varies independently of the collection being sorted.</li>
+<li>Swing and AWT Layout Managers use Strategy: a Container HAS-A LayoutManager, and <code>setLayout()</code> swaps the arrangement algorithm at runtime.</li>
+<li>Java Cryptography (JCE) uses Strategy: <code>Cipher.getInstance("AES/CBC/PKCS5Padding")</code> selects an algorithm by name at runtime behind one interface.</li>
+<li>Thread pools use Strategy: a ThreadPoolExecutor takes a RejectedExecutionHandler that decides what happens when the work queue is full.</li>
+<li>Spring uses Strategy throughout: PlatformTransactionManager, ResourceLoader, and the various <code>*Resolver</code> interfaces are all swappable algorithms behind a common type.</li>
+<li>Lambdas and method references are Strategy with less ceremony: any functional interface parameter is an algorithm being passed in.</li>
+</ul>
+<h4 id="application-to-my-real-world-application">Application to my Real World Application<a class="headerlink" href="#application-to-my-real-world-application" title="Permanent link">¶</a></h4>
+<ul>
+<li>Application: ETL Pipeline</li>
+<li>Pattern Application: Vary the algorithm a Stage runs without changing the Stage itself</li>
+<li>Breakdown: Context is a Stage that HAS-A Strategy and delegates its real work to it. An Extract stage holds a ParseStrategy (CSV, JSON, fixed-width) so a new feed format is a new class rather than an edit; a Transform stage holds a TransformStrategy (Deduplicate, NormalizeDates, RedactPII); a Load stage holds a WriteStrategy (BulkInsert, Upsert, Append). Because the strategy is chosen from configuration at startup, one Pipeline binary serves many feeds, and because it is a field rather than a subclass, a stage can swap algorithms mid-run — for example dropping from BulkInsert to Upsert after the first duplicate-key failure.</li>
+</ul>
+<h3 id="java-code-example">Java Code Example<a class="headerlink" href="#java-code-example" title="Permanent link">¶</a></h3>
+<p><a href="strategy_java.html">Strategy Design Pattern</a></p>
+<h3 id="main-take-aways-from-the-textbook">Main Take-Aways from the textbook<a class="headerlink" href="#main-take-aways-from-the-textbook" title="Permanent link">¶</a></h3>
+<ul>
+<li>The Strategy Pattern defines a family of algorithms and makes them interchangeable.</li>
+<li>Behaviors live in their own set of classes instead of inside the class hierarchy that uses them.</li>
+<li>A Context <strong>HAS-A</strong> behavior rather than <strong>IS-A</strong> behavior; it delegates to the behavior instead of inheriting it.</li>
+<li>Because the behavior is a field, it can be replaced while the program is running. Inheritance cannot do this — an object’s class is fixed the moment it is constructed.</li>
+<li>Using inheritance to reuse behavior leads to a class explosion: N types multiplied by M behaviors. Composition turns that multiplication into an addition.</li>
+<li>The Context is written against the Strategy interface, so a new algorithm is a new class and nothing that already works has to change.</li>
+<li>Strategy and State have almost the same class diagram and opposite intent: with Strategy the <strong>client</strong> chooses the algorithm and the algorithms never reference each other, while with State the <strong>object</strong> chooses its own next state and the states do reference each other.</li>
+<li>Patterns give you a shared vocabulary. Saying “that field is a Strategy” tells another developer the structure, the intent, and the trade-off in three words.</li>
+</ul>
+<h3 id="main-oo-principles-of-strategy-pattern">Main OO Principles of Strategy Pattern<a class="headerlink" href="#main-oo-principles-of-strategy-pattern" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="oo_principles.html#encapsulate-what-varies">Encapsulate what Varies</a><ul>
+<li>The algorithm is the thing that varies, so it is pulled out of the Context and into its own set of classes. What stays the same — when the algorithm runs, and what happens with the result — stays in the Context.</li>
+</ul>
+</li>
+<li><a href="oo_principles.html#program-to-interfaces-not-implementations">Program to an Interface not an Implementation</a><ul>
+<li>The Context holds a reference of the <strong>Strategy</strong> interface type and never names a concrete strategy. Adding an algorithm requires no change to the Context.</li>
+</ul>
+</li>
+<li><a href="oo_principles.html#favor-composition-over-inheritance">Favor composition over inheritance</a><ul>
+<li>The Context maintains a <strong>Strategy</strong> reference, which is composition. This is what makes the behavior swappable at runtime, and it is the whole reason the pattern beats a subclass hierarchy.</li>
+</ul>
+</li>
+<li><a href="oo_principles.html#strive-for-loosely-coupled-designs-between-objects-that-interact">Strive for loosely coupled designs</a><ul>
+<li>The Context knows only that its Strategy has an <code>execute()</code> method, and the concrete strategies know nothing about each other at all. Either side can be replaced without the other noticing.</li>
+</ul>
+</li>
+</ul>
 </article>
 </div>
 </div>
@@ -1922,8 +2127,5 @@ flowchart TB
 <script src="../js/toggletheme.js"></script>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&amp;features=es6%2Ces5"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script type="module">import mermaid from "https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs";
-mermaid.initialize({
-    theme: (JSON.parse(__md_get("__palette").index == 0)) ? 'dark' : 'light'
-});</script><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
